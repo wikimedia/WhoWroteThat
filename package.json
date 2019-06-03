@@ -1,0 +1,14 @@
+{
+  "name": "WhoWroteThis",
+  "description": "A browser extension of WhoColor for Wikipedia",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "mocha": "^6.0.2"
+  }
+}

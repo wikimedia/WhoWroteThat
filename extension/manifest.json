@@ -7,7 +7,7 @@
   "version": "0.0.1",
   "browser_action": {
     "default_popup": "popup.html",
-    "default_title": "Who Wrote This"
+    "default_title": "Who Wrote That"
   },
   "content_scripts": [ {
     "matches": ["*://*.wikipedia.org/*"],
