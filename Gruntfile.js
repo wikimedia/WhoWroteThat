@@ -19,9 +19,9 @@ module.exports = function Gruntfile( grunt ) {
 				]
 			}
 		},
-		// qunit: {
-		// 	all: [ 'tests/index.html' ]
-		// },
+		qunit: {
+			all: [ 'tests/index.html' ]
+		},
 		concat: {
 			browserextension: {
 				options: {
@@ -41,18 +41,9 @@ module.exports = function Gruntfile( grunt ) {
 					}
 				},
 				files: {
-					'dist/wikiArticleWizard.userscript.js': [
-						'src/init.waw.js',
-						'src/waw.Config.js',
-						'src/init.loader.start.js', // start mw.loader.using
-						'src/waw.Utils.js',
-						'src/waw.ui.DialogPageLayout.js',
-						'src/waw.ui.ArticleItemWidget.js',
-						'src/waw.ui.ArticleSectionWidget.js',
-						'src/waw.ui.WizardDialog.js',
-						'src/waw.init.DOM.js',
-						'src/init.loader.end.js', // end mw.loader.using
-						'src/init.language.js'
+					'extension/js/content.js': [
+						'src/globals.js',
+						'src/Api.js'
 					]
 				}
 			}
@@ -60,6 +51,7 @@ module.exports = function Gruntfile( grunt ) {
 	} );
 
 	grunt.registerTask( 'lint', [ 'eslint' ] );
-	grunt.registerTask( 'build', [ 'lint', 'concat:browserextension' ] );
+	grunt.registerTask( 'test', [ 'lint', 'qunit' ] )
+	grunt.registerTask( 'build', [ 'test', 'concat:browserextension' ] );
 	grunt.registerTask( 'default', 'test' );
 };

@@ -5,12 +5,11 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "test": "mocha",
+    "test": "grunt test",
     "build": "grunt build"
   },
   "devDependencies": {
     "eslint": "^5.12.0",
-    "mocha": "^6.0.2",
     "eslint-config-wikimedia": "^0.5.0",
     "grunt": "^1.0.2",
     "grunt-contrib-concat": "^1.0.1",

@@ -6,6 +6,7 @@
         "browser": true
     },
     "globals": {
-        "$": false
+        "$": false,
+        "extwrt": false
     }
 }

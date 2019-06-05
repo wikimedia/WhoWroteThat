@@ -1,28 +1,4 @@
-/**
- * Browser extension for WhoWroteThat
- * Wikimedia Foundation
- * 
- * Latest update: 2019-06-05T20:05:39Z
- * (Wednesday, June 5th, 2019, 1:05:39 PM -0700)
- */
-/* >> Starting source: src/globals.js << */
-
-	// Define a variable that will be used throughout the code
-	// This isn't quite a global variable because it's only used
-	// inside the extension, but it is used as one through writing
-	// the individual files in /src, and will be used to store all
-	// the necessary objects and methods when the build step
-	// concatenates the files for the extension release.
-	var extwrt = { // eslint-disable-line no-unused-vars
-		ui: {},
-		dm: {},
-		globals: {
-			wikicolorUrl: 'https://www.wikiwho.net/'
-		}
-	};
-/* >> End source: src/globals.js << */
-/* >> Starting source: src/Api.js << */
-
+( function () {
 	var Api = function ( config ) {
 		config = config || {};
 		this.tries = 0;
@@ -96,4 +72,4 @@
 	Api.prototype.onAjaxFailure = function () {};
 
 	extwrt.Api = Api;
-/* >> End source: src/Api.js << */
+}() );
