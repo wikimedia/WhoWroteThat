@@ -15,7 +15,7 @@
     "js": [ "js/lib/jquery.js", "js/contentScript.js" ],
 	"run_at": "document_end"
   } ],
-  "web_accessible_resources": ["js/pageScript.js"],
+  "web_accessible_resources": ["js/generated.pageScript.js"],
   "permissions": [
     "activeTab"
   ]
