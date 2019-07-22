@@ -12,8 +12,10 @@
   "content_scripts": [ {
     "matches": ["*://*.wikipedia.org/*"],
     "all_frames": true,
-    "js": [ "js/lib/jquery.js", "js/content.js" ]
+    "js": [ "js/lib/jquery.js", "js/contentScript.js" ],
+	"run_at": "document_end"
   } ],
+  "web_accessible_resources": ["js/pageScript.js"],
   "permissions": [
     "activeTab"
   ]
