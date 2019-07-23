@@ -1,9 +1,22 @@
+( function () {
+	function loadWhoWroteThat() {
+		var $button = $( '<a>' )
+			.text( 'WhoWroteThat' )
+			.addClass( 'wwt-activationButton' )
+			.prependTo( '#p-personal' )
+			.click( onActivateButtonClick );
+
+		// Attach button to DOM; jQuery is available
+
+		function onActivateButtonClick( e ) {
+			mw.loader.using( [ 'oojs-ui' ] ).then( function () {
+
 /**
  * Browser extension for WhoWroteThat
  * Wikimedia Foundation
  * 
- * Latest update: 2019-06-05T20:05:39Z
- * (Wednesday, June 5th, 2019, 1:05:39 PM -0700)
+ * Latest update: 2019-07-23T02:52:53Z
+ * (Monday, July 22nd, 2019, 9:52:53 PM -0500)
  */
 /* >> Starting source: src/globals.js << */
 
@@ -97,3 +110,16 @@
 
 	extwrt.Api = Api;
 /* >> End source: src/Api.js << */
+/* >> Starting source: src/test.js << */
+
+	// TEST!
+	OO.ui.alert( 'The extension is working!' );
+/* >> End source: src/test.js << */
+
+			} );
+		}
+	}
+
+	var q = window.RLQ || ( window.RLQ = [] );
+	q.push( [ [ 'jquery', 'mediawiki.base' ], loadWhoWroteThat ] );
+}() );
