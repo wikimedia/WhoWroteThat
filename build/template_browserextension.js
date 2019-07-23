@@ -1,6 +1,9 @@
-( function ( $, mw ) {
+( function () {
 	function loadWhoWroteThat() {
-		var $button = $( <a> )
+		var $button = $( '<a>' )
+			.text( 'WhoWroteThat' )
+			.addClass( 'wwt-activationButton' )
+			.prependTo( '#p-personal' )
 			.click( onActivateButtonClick );
 
 		// Attach button to DOM; jQuery is available
@@ -16,4 +19,4 @@
 
 	var q = window.RLQ || ( window.RLQ = [] );
 	q.push( [ [ 'jquery', 'mediawiki.base' ], loadWhoWroteThat ] );
-}( jQuery, mediawiki ) );
+}() );

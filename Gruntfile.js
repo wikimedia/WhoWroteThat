@@ -46,7 +46,8 @@ module.exports = function Gruntfile( grunt ) {
 						// The actual behavior script
 						// Files should be in order
 						'src/globals.js',
-						'src/Api.js'
+						'src/Api.js',
+						'src/test.js'
 					]
 				}
 			}

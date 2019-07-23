@@ -13,7 +13,7 @@
     "matches": ["*://*.wikipedia.org/*"],
     "all_frames": true,
     "js": [ "js/lib/jquery.js", "js/contentScript.js" ],
-	"run_at": "document_end"
+    "run_at": "document_end"
   } ],
   "web_accessible_resources": ["js/generated.pageScript.js"],
   "permissions": [

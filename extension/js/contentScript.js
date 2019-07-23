@@ -1,6 +1,6 @@
 $( document ).ready( function () {
 	// Inject page script into the DOM
-	injectScript(chrome.extension.getURL('js/pageScript.js'), 'body');
+	injectScript(chrome.extension.getURL('js/generated.pageScript.js'), 'body');
 
 	/**
 	 * injectScript - Inject internal script to available access to the `window`
