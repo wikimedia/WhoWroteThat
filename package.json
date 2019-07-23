@@ -15,7 +15,7 @@
     "grunt-concat-with-template": "^0.1.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-qunit": "^2.0.0",
-    "grunt-contrib-watch": "1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "20.1.0",
     "qunit": "^2.6.1"
   }
