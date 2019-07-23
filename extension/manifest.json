@@ -1,20 +1,16 @@
 {
-  "manifest_version": 2,
-  "name": "WhoWroteThis for Wikipedia",
-  "author": "Wikimedia Foundation",
-  "description": "",
-  "homepage_url": "https://github.com/mooeypoo/WhoWroteThis",
-  "version": "0.0.1",
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_title": "Who Wrote That"
-  },
-  "content_scripts": [ {
-    "matches": ["*://*.wikipedia.org/*"],
-    "all_frames": true,
-    "js": [ "js/lib/jquery.js", "js/content.js" ]
-  } ],
-  "permissions": [
-    "activeTab"
-  ]
+	"manifest_version": 2,
+	"name": "WhoWroteThis for Wikipedia",
+	"author": "Wikimedia Foundation",
+	"description": "",
+	"homepage_url": "https://github.com/mooeypoo/WhoWroteThis",
+	"version": "0.0.1",
+	"content_scripts": [ {
+		"matches": [ "*://*.wikipedia.org/*" ],
+		"all_frames": true,
+		"js": [ "js/lib/jquery.js", "js/contentScript.js" ],
+		"run_at": "document_end"
+	} ],
+	"web_accessible_resources": [ "js/generated.pageScript.js" ],
+	"permissions": [ "activeTab" ]
 }

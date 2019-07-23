@@ -6,6 +6,7 @@ module.exports = function Gruntfile( grunt ) {
 	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
+	grunt.loadNpmTasks('grunt-concat-with-template');
 
 	grunt.initConfig( {
 		pkg: pkg,
@@ -15,7 +16,8 @@ module.exports = function Gruntfile( grunt ) {
 					'src/*.js',
 					'src/**/*.js',
 					'!extension/**',
-					'!node_modules/**'
+					'!node_modules/**',
+					'extension/js/contentScript.js'
 				]
 			}
 		},
@@ -41,17 +43,29 @@ module.exports = function Gruntfile( grunt ) {
 					}
 				},
 				files: {
-					'extension/js/content.js': [
+					'temp/fullScript.js': [
+						// The actual behavior script
+						// Files should be in order
 						'src/globals.js',
-						'src/Api.js'
+						'src/Api.js',
+						'src/test.js'
 					]
 				}
+			}
+		},
+		concat_with_template: {
+			browserextension: {
+				src: {
+					fullScript: 'temp/fullScript.js'
+				},
+				dest: 'extension/js/generated.pageScript.js',
+				tmpl: 'build/template_browserextension.js'
 			}
 		}
 	} );
 
 	grunt.registerTask( 'lint', [ 'eslint' ] );
 	grunt.registerTask( 'test', [ 'lint', 'qunit' ] )
-	grunt.registerTask( 'build', [ 'test', 'concat:browserextension' ] );
+	grunt.registerTask( 'build', [ 'test', 'concat:browserextension', 'concat_with_template:browserextension' ] );
 	grunt.registerTask( 'default', 'test' );
 };
