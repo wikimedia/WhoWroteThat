@@ -4,7 +4,7 @@ A browser extension (Chrome and Firefox) based on the https://github.com/wikiwho
 
 ** UNDER CONSTRUCTION **
 
-== Testing the Browser Extension ==
+## Testing the Browser Extension
 There's a Grunt job to output the code into a working browser extension. To test it:
 
 1. Clone the repo
