@@ -16,7 +16,8 @@ module.exports = function Gruntfile( grunt ) {
 					'src/*.js',
 					'src/**/*.js',
 					'!extension/**',
-					'!node_modules/**'
+					'!node_modules/**',
+					'extension/js/contentScript.js'
 				]
 			}
 		},

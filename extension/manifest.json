@@ -5,10 +5,6 @@
   "description": "",
   "homepage_url": "https://github.com/mooeypoo/WhoWroteThis",
   "version": "0.0.1",
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_title": "Who Wrote That"
-  },
   "content_scripts": [ {
     "matches": ["*://*.wikipedia.org/*"],
     "all_frames": true,

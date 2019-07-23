@@ -8,6 +8,7 @@
     "globals": {
         "$": false,
         "extwrt": false,
-        "OO": false
+        "OO": false,
+        "chrome": false
     }
 }

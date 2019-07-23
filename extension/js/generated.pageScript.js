@@ -15,8 +15,8 @@
  * Browser extension for WhoWroteThat
  * Wikimedia Foundation
  * 
- * Latest update: 2019-07-23T02:46:47Z
- * (Monday, July 22nd, 2019, 9:46:47 PM -0500)
+ * Latest update: 2019-07-23T02:52:53Z
+ * (Monday, July 22nd, 2019, 9:52:53 PM -0500)
  */
 /* >> Starting source: src/globals.js << */
 
