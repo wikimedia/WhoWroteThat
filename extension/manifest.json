@@ -6,7 +6,13 @@
 	"homepage_url": "https://github.com/mooeypoo/WhoWroteThis",
 	"version": "0.0.1",
 	"content_scripts": [ {
-		"matches": [ "*://*.wikipedia.org/*" ],
+		"matches": [
+			"*://en.wikipedia.org/*",
+			"*://de.wikipedia.org/*",
+			"*://eu.wikipedia.org/*",
+			"*://tr.wikipedia.org/*",
+			"*://es.wikipedia.org/*"
+		],
 		"all_frames": true,
 		"js": [ "js/lib/jquery.js", "js/contentScript.js" ],
 		"run_at": "document_end"
