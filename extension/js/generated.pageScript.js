@@ -12,11 +12,8 @@
 			mw.loader.using( [ 'oojs-ui' ] ).then( function () {
 
 /**
- * Browser extension for WhoWroteThat
+ * Browser extension for WhoWroteThat 0.1.0
  * Wikimedia Foundation
- * 
- * Latest update: 2019-07-23T02:52:53Z
- * (Monday, July 22nd, 2019, 9:52:53 PM -0500)
  */
 /* >> Starting source: src/globals.js << */
 

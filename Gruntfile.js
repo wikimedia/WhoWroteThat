@@ -6,17 +6,18 @@ module.exports = function Gruntfile( grunt ) {
 	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
-	grunt.loadNpmTasks('grunt-concat-with-template');
+	grunt.loadNpmTasks( 'grunt-concat-with-template' );
 
 	grunt.initConfig( {
 		pkg: pkg,
 		eslint: {
 			code: {
 				src: [
-					'src/*.js',
-					'src/**/*.js',
+					'**/*.js',
+					'!build/**',
 					'!extension/**',
 					'!node_modules/**',
+					'!temp/**',
 					'extension/js/contentScript.js'
 				]
 			}
@@ -53,6 +54,7 @@ module.exports = function Gruntfile( grunt ) {
 				}
 			}
 		},
+		// eslint-disable-next-line camelcase
 		concat_with_template: {
 			browserextension: {
 				src: {
@@ -65,7 +67,7 @@ module.exports = function Gruntfile( grunt ) {
 	} );
 
 	grunt.registerTask( 'lint', [ 'eslint' ] );
-	grunt.registerTask( 'test', [ 'lint', 'qunit' ] )
+	grunt.registerTask( 'test', [ 'lint', 'qunit' ] );
 	grunt.registerTask( 'build', [ 'test', 'concat:browserextension', 'concat_with_template:browserextension' ] );
 	grunt.registerTask( 'default', 'test' );
 };

@@ -9,6 +9,7 @@
         "$": false,
         "extwrt": false,
         "OO": false,
-        "chrome": false
+        "chrome": false,
+        "QUnit": false
     }
 }
