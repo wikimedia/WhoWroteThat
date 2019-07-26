@@ -1,7 +1,4 @@
 /**
- * Browser extension for WhoWroteThat
+ * Browser extension for <%= pkg.name %> <%= pkg.version %>
  * Wikimedia Foundation
- * 
- * Latest update: <%= grunt.template.today("isoUtcDateTime") %>
- * (<%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT o") %>)
  */

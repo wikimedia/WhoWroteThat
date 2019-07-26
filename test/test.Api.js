@@ -1,7 +1,11 @@
 ( function () {
 	QUnit.module( 'Api' );
 
-	QUnit.test( 'getQueryParameter', function ( assert ) {} );
+	QUnit.test( 'getQueryParameter', function ( assert ) {
+		assert( true );
+	} );
 
-	QUnit.test( 'getAjaxURL', function ( assert ) {} );
+	QUnit.test( 'getAjaxURL', function ( assert ) {
+		assert( true );
+	} );
 }() );
