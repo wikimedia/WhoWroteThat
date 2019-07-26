@@ -16,101 +16,126 @@
  * Wikimedia Foundation
  */
 /* >> Starting source: src/globals.js << */
-
-	// Define a variable that will be used throughout the code
-	// This isn't quite a global variable because it's only used
-	// inside the extension, but it is used as one through writing
-	// the individual files in /src, and will be used to store all
-	// the necessary objects and methods when the build step
-	// concatenates the files for the extension release.
-	var extwrt = { // eslint-disable-line no-unused-vars
-		ui: {},
-		dm: {},
-		globals: {
-			wikicolorUrl: 'https://www.wikiwho.net/'
-		}
-	};
+// Define a variable that will be used throughout the code
+// This isn't quite a global variable because it's only used
+// inside the extension, but it is used as one through writing
+// the individual files in /src, and will be used to store all
+// the necessary objects and methods when the build step
+// concatenates the files for the extension release.
+var extwrt = { // eslint-disable-line no-unused-vars,no-implicit-globals
+	ui: {},
+	dm: {},
+	globals: {
+		wikicolorUrl: 'https://www.wikiwho.net/'
+	}
+};
 /* >> End source: src/globals.js << */
 /* >> Starting source: src/Api.js << */
+/**
+ * @param {Object} config
+ * @cfg config.url The WikiColor base URL.
+ * @constructor
+ */
+extwrt.Api = function ( config ) {
+	config = config || {};
+	this.tries = 0;
+	this.url = config.url || '';
 
-	var Api = function ( config ) {
-		config = config || {};
-		this.tries = 0;
-		this.url = config.url || window.location;
-	};
+	// Remove trailing slash.
+	if ( this.url && this.url.slice( -1 ) === '/' ) {
+		this.url = this.url.slice( 0, -1 );
+	}
+};
 
-	/**
-	 * Get the value of a paramter from the given URL query string.
-	 *
-	 * @param  {string} querystring URL query string
-	 * @param  {string} param Parameter name
-	 * @return {string|null} Parameter value; null if not found
-	 */
-	Api.prototype.getQueryParameter = function ( querystring, param ) {
-		var urlParams, regex, results;
+/**
+ * Get the value of a paramter from the given URL query string.
+ *
+ * @param  {string} querystring URL query string
+ * @param  {string} param Parameter name
+ * @return {string|null} Parameter value; null if not found
+ */
+extwrt.Api.prototype.getQueryParameter = function ( querystring, param ) {
+	var urlParams, regex, results;
 
-		try {
-			urlParams = new URLSearchParams( querystring );
-			return urlParams.get( param );
-		} catch ( err ) {
-			// Fallback for IE and Edge
-			// eslint-disable-next-line no-useless-escape
-			param = param.replace( /[\[]/, '\\[' ).replace( /[\]]/, '\\]' );
-			regex = new RegExp( '[\\?&]' + param + '=([^&#]*)' );
-			results = regex.exec( querystring );
+	if ( querystring === '' ) {
+		return null;
+	}
 
-			return results === null ? '' : decodeURIComponent( results[ 1 ].replace( /\+/g, ' ' ) );
-		}
-	};
+	try {
+		urlParams = new URLSearchParams( querystring );
+		return urlParams.get( param );
+	} catch ( err ) {
+		// Fallback for IE and Edge
+		// eslint-disable-next-line no-useless-escape
+		param = param.replace( /[\[]/, '\\[' ).replace( /[\]]/, '\\]' );
+		regex = new RegExp( '[\\?&]' + param + '=([^&#]*)' );
+		results = regex.exec( querystring );
 
-	/**
-	 * Get the relevant AJAX url from whocolor based on the given
-	 * base URL of the wiki.
-	 *
-	 * @param  {string} baseURL URL of the wiki page that we want to analyze.
-	 * @return {string} Ajax URL for the data from whocolor
-	 */
-	Api.prototype.getAjaxURL = function ( baseURL ) {
-		var queryString, parts, oldId,
-			linkNode = document.createElement( 'a' );
+		return results === null ? '' : decodeURIComponent( results[ 1 ].replace( /\+/g, ' ' ) );
+	}
+};
 
-		linkNode.href = baseURL;
-		queryString = linkNode.search.substring( 1 );
-		oldId = this.getUrlParameter( queryString, 'oldid' );
+/**
+ * Get the relevant AJAX url from whocolor based on the given
+ * base URL of the wiki.
+ *
+ * @param  {string} wikiUrl URL of the wiki page that we want to analyze.
+ * @return {string} Ajax URL for the data from whocolor
+ */
+extwrt.Api.prototype.getAjaxURL = function ( wikiUrl ) {
+	var parts, oldId, title, lang, matches, queryString,
+		linkNode = document.createElement( 'a' );
+	linkNode.href = wikiUrl;
+	queryString = linkNode.search;
 
-		parts = [
-			baseURL,
-			location.hostname.split( '.' )[ 0 ], // Wiki language
-			'/whocolor/v1.0.0-beta/',
-			encodeURIComponent( $( 'h1#firstHeading' ).text().trim() ), // Page title
-			'/'
-		];
+	title = this.getQueryParameter( queryString, 'title' );
+	if ( title ) {
+		// URL is like: https://en.wikipedia.org/w/index.php?title=Foo&oldid=123
+		matches = linkNode.hostname.match( /([a-z]+)\.wiki.*/i );
+		lang = matches[ 1 ];
+	} else {
+		// URL is like: https://en.wikipedia.org/wiki/Foo
+		matches = wikiUrl.match( /:\/\/([a-z]+).wikipedia.org\/wiki\/(.*)/i );
+		lang = matches[ 1 ];
+		title = matches[ 2 ];
+	}
 
-		if ( oldId ) {
-			parts.push( oldId + '/' );
-		}
+	parts = [
+		this.url,
+		lang,
+		'whocolor/v1.0.0-beta',
+		title
+	];
 
-		return parts.join();
-	};
+	// Add oldid if it's present.
+	oldId = this.getQueryParameter( queryString, 'oldid' );
+	if ( oldId ) {
+		parts.push( oldId );
+	}
 
-	Api.prototype.getData = function ( url ) {
-		return $.getJSON( url || this.url )
-			.then(
-				this.onAjaxSuccess.bind( this ),
-				this.onAjaxFailure.bind( this )
-			);
-	};
+	// Compile the full URL.
+	return parts.join( '/' );
+};
 
-	Api.prototype.onAjaxSuccess = function () {};
+extwrt.Api.prototype.getData = function ( url ) {
+	return $.getJSON( url || this.url )
+		.then(
+			this.onAjaxSuccess.bind( this ),
+			this.onAjaxFailure.bind( this )
+		);
+};
 
-	Api.prototype.onAjaxFailure = function () {};
+extwrt.Api.prototype.onAjaxSuccess = function () {
+};
 
-	extwrt.Api = Api;
+extwrt.Api.prototype.onAjaxFailure = function () {
+};
 /* >> End source: src/Api.js << */
 /* >> Starting source: src/test.js << */
 
+	var api = new extwrt.Api( { url: extwrt.globals.wikicolorUrl } );
 	// TEST!
-	OO.ui.alert( 'The extension is working!' );
+	OO.ui.alert( 'The extension is working! URL: ' + api.getAjaxURL( window.location.href ) );
 /* >> End source: src/test.js << */
 
 			} );
