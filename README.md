@@ -4,6 +4,8 @@ A browser extension (Chrome and Firefox) based on the https://github.com/wikiwho
 
 ** UNDER CONSTRUCTION **
 
+[![CircleCI](https://circleci.com/gh/wikimedia/WhoWroteThat.svg?style=svg)](https://circleci.com/gh/wikimedia/WhoWroteThat)
+
 ## Wikipedias
 The extension works only on Wikipedias supported by WhoColor API:
 * English Wikipedia: `*://en.wikipedia.org/*`
