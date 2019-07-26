@@ -1,9 +1,9 @@
 {
 	"manifest_version": 2,
-	"name": "WhoWroteThis for Wikipedia",
+	"name": "WhoWroteThat for Wikipedia",
 	"author": "Wikimedia Foundation",
 	"description": "",
-	"homepage_url": "https://github.com/mooeypoo/WhoWroteThis",
+	"homepage_url": "https://github.com/wikimedia/WhoWroteThat",
 	"version": "0.0.1",
 	"content_scripts": [ {
 		"matches": [

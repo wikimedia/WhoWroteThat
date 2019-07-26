@@ -23,7 +23,7 @@ module.exports = function Gruntfile( grunt ) {
 			}
 		},
 		qunit: {
-			all: [ 'tests/index.html' ]
+			all: [ 'test/index.html' ]
 		},
 		concat: {
 			browserextension: {
