@@ -4,6 +4,14 @@ A browser extension (Chrome and Firefox) based on the https://github.com/wikiwho
 
 ** UNDER CONSTRUCTION **
 
+## Wikipedias
+The extension works only on Wikipedias supported by WhoColor API:
+* English Wikipedia: `*://en.wikipedia.org/*`
+* German Wikipedia: `*://de.wikipedia.org/*`
+* Basque Wikipedia: `*://eu.wikipedia.org/*`
+* Turkish Wikipedia: `*://tr.wikipedia.org/*`
+* Spanish Wikipedia: `*://es.wikipedia.org/*`
+
 ## Testing the Browser Extension
 There's a Grunt job to output the code into a working browser extension. To test it:
 
