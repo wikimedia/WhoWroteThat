@@ -7,6 +7,8 @@ module.exports = function Gruntfile( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
 	grunt.loadNpmTasks( 'grunt-concat-with-template' );
+	grunt.loadNpmTasks( 'grunt-contrib-less' );
+	grunt.loadNpmTasks( 'grunt-stylelint' );
 
 	grunt.initConfig( {
 		pkg: pkg,
@@ -22,8 +24,25 @@ module.exports = function Gruntfile( grunt ) {
 				]
 			}
 		},
+		stylelint: {
+			code: {
+				src: [
+					'src/less/*.less'
+				]
+			}
+		},
 		qunit: {
 			all: [ 'test/index.html' ]
+		},
+		less: {
+			browserextension: {
+				options: {
+					banner: grunt.file.read( 'build/header.browserextension.txt' )
+				},
+				files: {
+					'extension/generated.whowrotethat.css': 'src/less/index.less'
+				}
+			}
 		},
 		concat: {
 			browserextension: {
@@ -66,8 +85,8 @@ module.exports = function Gruntfile( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'lint', [ 'eslint' ] );
+	grunt.registerTask( 'lint', [ 'eslint', 'stylelint' ] );
 	grunt.registerTask( 'test', [ 'lint', 'qunit' ] );
-	grunt.registerTask( 'build', [ 'test', 'concat:browserextension', 'concat_with_template:browserextension' ] );
+	grunt.registerTask( 'build', [ 'test', 'less:browserextension', 'concat:browserextension', 'concat_with_template:browserextension' ] );
 	grunt.registerTask( 'default', 'test' );
 };
