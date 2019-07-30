@@ -34,11 +34,14 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+<<<<<<< HEAD
 /**
  * Interface to the [WikiWho](https://www.wikiwho.net/) WhoColor API.
  *
  * @class
  */
+=======
+>>>>>>> Convert to ES6 and add mocha tests and babel to build steps
 var Api =
 /*#__PURE__*/
 function () {
@@ -59,9 +62,14 @@ function () {
     }
   }
   /**
+<<<<<<< HEAD
    * Get the value of a parameter from the given URL query string.
    *
    * @protected
+=======
+   * Get the value of a paramter from the given URL query string.
+   *
+>>>>>>> Convert to ES6 and add mocha tests and babel to build steps
    * @param  {string} querystring URL query string
    * @param  {string} param Parameter name
    * @return {string|null} Parameter value; null if not found
@@ -90,10 +98,18 @@ function () {
       }
     }
     /**
+<<<<<<< HEAD
      * Get a WhoColor API URL based on a given wiki URL.
      *
      * @param  {string} wikiUrl URL of the wiki page that we want to analyze.
      * @return {string} Ajax URL for the data from WhoColor.
+=======
+     * Get the relevant AJAX url from whocolor based on the given
+     * base URL of the wiki.
+     *
+     * @param  {string} wikiUrl URL of the wiki page that we want to analyze.
+     * @return {string} Ajax URL for the data from whocolor
+>>>>>>> Convert to ES6 and add mocha tests and babel to build steps
      */
 
   }, {
@@ -135,8 +151,13 @@ function () {
     /**
      * Get the WhoColor data for a given wiki page.
      *
+<<<<<<< HEAD
      * @param  {string} wikiUrl URL of the wiki page that we want to analyze.
      * @return {Promise}
+=======
+     * @param {string} url The wiki page's full URL.
+     * @return {Promise|PromiseLike<any>|Promise<any>|*}
+>>>>>>> Convert to ES6 and add mocha tests and babel to build steps
      */
 
   }, {
@@ -176,10 +197,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+<<<<<<< HEAD
 var config = {
   wikicolorUrl: 'https://www.wikiwho.net/'
 };
 var _default = config;
+=======
+
+var _default = config = {
+  wikicolorUrl: 'https://www.wikiwho.net/'
+};
+
+>>>>>>> Convert to ES6 and add mocha tests and babel to build steps
 exports["default"] = _default;
 
 },{}]},{},[2]);
