@@ -2,7 +2,8 @@
 module.exports = function Gruntfile( grunt ) {
 	var pkg = grunt.file.readJSON( 'package.json' );
 
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-browserify' );
+	grunt.loadNpmTasks( 'grunt-run' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
@@ -20,6 +21,8 @@ module.exports = function Gruntfile( grunt ) {
 					'!extension/**',
 					'!node_modules/**',
 					'!temp/**',
+					'!test/**',
+					'test/suite/**',
 					'extension/js/contentScript.js'
 				]
 			}
@@ -30,9 +33,6 @@ module.exports = function Gruntfile( grunt ) {
 					'src/less/*.less'
 				]
 			}
-		},
-		qunit: {
-			all: [ 'test/index.html' ]
 		},
 		less: {
 			browserextension: {
@@ -50,7 +50,8 @@ module.exports = function Gruntfile( grunt ) {
 					banner: grunt.file.read( 'build/header.browserextension.txt' ),
 					// Remove wrapping IIFE ( function () {}() );\n
 					process: function ( src, filepath ) {
-						// Only remove the end if we're removing the starting (function () { ... wrapper
+						// Only remove the end if we're removing the starting
+						// (function () { ... wrapper
 						if ( new RegExp( /^\( function \(\) {/ ).test( src ) ) {
 							src = src
 								.replace( /^\( function \(\) {/, '' ) // Beginning of file
@@ -75,18 +76,47 @@ module.exports = function Gruntfile( grunt ) {
 		},
 		// eslint-disable-next-line camelcase
 		concat_with_template: {
-			browserextension: {
+			// If we ever want to include a pure es6 file without babelifying
+			browserextensiones6: {
 				src: {
 					fullScript: 'temp/fullScript.js'
 				},
 				dest: 'extension/js/generated.pageScript.js',
 				tmpl: 'build/template_browserextension.js'
+			},
+			browserextensionBabelified: {
+				src: {
+					fullScript: 'temp/fullScript.babelified.js'
+				},
+				dest: 'extension/js/generated.pageScript.js',
+				tmpl: 'build/template_browserextension.js'
+			}
+		},
+		browserify: {
+			browserextension: {
+				options: {
+					transform: [
+						[ 'babelify' ]
+					]
+				},
+				src: [ 'src/app.js' ],
+				dest: 'temp/fullScript.babelified.js'
+			}
+		},
+		run: {
+			options: {},
+			tests: {
+				cmd: 'npm',
+				args: [
+					'run',
+					'mocha'
+				]
 			}
 		}
 	} );
 
-	grunt.registerTask( 'lint', [ 'eslint', 'stylelint' ] );
-	grunt.registerTask( 'test', [ 'lint', 'qunit' ] );
-	grunt.registerTask( 'build', [ 'less:browserextension', 'concat:browserextension', 'concat_with_template:browserextension' ] );
+	grunt.registerTask( 'lint', [ 'eslint' ] );
+	grunt.registerTask( 'test', [ 'lint', 'run:tests' ] );
+	grunt.registerTask( 'build', [ 'less:browserextension', 'browserify:browserextension', 'concat_with_template:browserextensionBabelified' ] );
 	grunt.registerTask( 'default', [ 'test', 'build' ] );
 };

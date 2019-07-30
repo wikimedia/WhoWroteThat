@@ -1,26 +1,41 @@
 {
-  "name": "WhoWroteThat",
-  "description": "A browser extension of WhoColor for Wikipedia",
-  "version": "0.1.0",
-  "license": "MIT",
-  "scripts": {
-    "lint": "eslint .",
-    "test": "grunt test",
-    "build": "grunt build"
-  },
-  "devDependencies": {
-    "eslint": "^5.12.0",
-    "eslint-config-wikimedia": "^0.5.0",
-    "grunt": "^1.0.2",
-    "grunt-concat-with-template": "^0.1.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-less": "^2.0.0",
-    "grunt-contrib-qunit": "^2.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-eslint": "20.1.0",
-    "grunt-stylelint": "^0.11.0",
-    "qunit": "^2.6.1",
-    "stylelint": "^10.1.0",
-    "stylelint-config-wikimedia": "0.6.0"
-  }
+   "name": "WhoWroteThat",
+   "description": "A browser extension of WhoColor for Wikipedia",
+   "version": "0.1.0",
+   "license": "MIT",
+   "scripts": {
+      "lint": "eslint .",
+      "test": "grunt test",
+      "mocha": "./node_modules/.bin/mocha --require @babel/register test/testHelper.js --recursive test/suite  --colors",
+      "build": "grunt build"
+   },
+   "dependencies": {
+      "jquery": "~3.4.1",
+      "@babel/polyfill": "^7.0.0"
+   },
+   "devDependencies": {
+      "eslint": "^5.12.0",
+      "eslint-config-wikimedia": "^0.8.1",
+      "stylelint-config-wikimedia": "0.6.0",
+      "eslint-loader": "1.1.0",
+      "grunt": "^1.0.2",
+      "grunt-browserify": "^5.3.0",
+      "grunt-concat-with-template": "^0.1.0",
+      "grunt-contrib-concat": "^1.0.1",
+      "grunt-contrib-less": "^2.0.0",
+      "grunt-contrib-qunit": "^2.0.0",
+      "grunt-eslint": "20.1.0",
+      "stylelint": "^10.1.0",
+      "grunt-stylelint": "^0.11.0",
+      "grunt-run": "~0.8.1",
+      "@babel/cli": "^7.1.5",
+      "@babel/core": "^7.1.6",
+      "@babel/node": "^7.0.0",
+      "@babel/preset-env": "^7.1.6",
+      "@babel/register": "^7.0.0",
+      "babelify": "~10.0.0",
+      "chai": "^3.4.1",
+      "mocha": "^2.3.4",
+      "jsdom": "~15.1.1"
+   }
 }
