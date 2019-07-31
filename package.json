@@ -1,6 +1,7 @@
 {
   "name": "WhoWroteThat",
   "description": "A browser extension of WhoColor for Wikipedia",
+  "repository": "https://github.com/wikimedia/WhoWroteThat",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -18,7 +19,9 @@
     "grunt-contrib-qunit": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-eslint": "20.1.0",
+    "grunt-jsdoc": "^2.4.0",
     "grunt-stylelint": "^0.11.0",
+    "jsdoc-wmf-theme": "^0.0.3",
     "qunit": "^2.6.1",
     "stylelint": "^10.1.0",
     "stylelint-config-wikimedia": "0.6.0"

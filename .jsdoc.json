@@ -1,0 +1,37 @@
+{
+  "source": {
+    "include": [
+      "src/",
+      "test/"
+    ]
+  },
+  "opts": {
+    "encoding": "utf8",
+    "readme": "README.md",
+    "tutorials": "tutorials",
+    "recurse": true,
+    "template": "node_modules/jsdoc-wmf-theme",
+    "package": "package.json",
+    "destination": "docs"
+  },
+  "plugins": [
+    "plugins/markdown",
+    "plugins/summarize"
+  ],
+  "templates": {
+    "cleverLinks": true,
+    "default": {
+      "useLongnameInNav": true
+    },
+    "wmf": {
+      "maintitle": "WhoWroteThat",
+      "repository": "https://github.com/wikimedia/WhoWroteThat",
+      "linkMap": {
+        "Promise": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+        "Array": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+        "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+        "Error": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"
+      }
+    }
+  }
+}

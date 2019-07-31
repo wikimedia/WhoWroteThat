@@ -3,4 +3,5 @@ node_modules/
 temp/*
 !temp/.gitkeep
 .idea/
+docs/
 
