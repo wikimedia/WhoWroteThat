@@ -80,20 +80,16 @@ extwrt.Api.prototype.getAjaxURL = function ( wikiUrl ) {
 		parts.push( oldId );
 	}
 
-	// Compile the full URL.
-	return parts.join( '/' );
+	// Compile the full URL (including trailing slash, to avoid a redirection).
+	return parts.join( '/' ) + '/';
 };
 
+/**
+ * Get the WhoColor data for a given wiki page.
+ *
+ * @param {string} url The wiki page's full URL.
+ * @return {Promise|PromiseLike<any>|Promise<any>|*}
+ */
 extwrt.Api.prototype.getData = function ( url ) {
-	return $.getJSON( url || this.url )
-		.then(
-			this.onAjaxSuccess.bind( this ),
-			this.onAjaxFailure.bind( this )
-		);
-};
-
-extwrt.Api.prototype.onAjaxSuccess = function () {
-};
-
-extwrt.Api.prototype.onAjaxFailure = function () {
+	return $.getJSON( this.getAjaxURL( url ) );
 };
