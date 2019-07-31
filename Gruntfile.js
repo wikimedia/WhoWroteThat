@@ -87,6 +87,6 @@ module.exports = function Gruntfile( grunt ) {
 
 	grunt.registerTask( 'lint', [ 'eslint', 'stylelint' ] );
 	grunt.registerTask( 'test', [ 'lint', 'qunit' ] );
-	grunt.registerTask( 'build', [ 'test', 'less:browserextension', 'concat:browserextension', 'concat_with_template:browserextension' ] );
-	grunt.registerTask( 'default', 'test' );
+	grunt.registerTask( 'build', [ 'less:browserextension', 'concat:browserextension', 'concat_with_template:browserextension' ] );
+	grunt.registerTask( 'default', [ 'test', 'build' ] );
 };
