@@ -44,13 +44,13 @@ module.exports = function Gruntfile( grunt ) {
 				src: [
 					'**/*.js',
 					'!build/**',
-					'!extension/**',
 					'!docs/**',
+					'!dist/**',
 					'!node_modules/**',
 					'!temp/**',
 					'!test/**',
 					'test/suite/**',
-					'extension/js/contentScript.js'
+					'dist/extension/js/contentScript.js'
 				]
 			}
 		},
@@ -77,7 +77,15 @@ module.exports = function Gruntfile( grunt ) {
 					banner: grunt.file.read( 'build/header.browserextension.txt' )
 				},
 				files: {
-					'extension/generated.whowrotethat.css': 'src/less/index.less'
+					'dist/extension/generated.whowrotethat.css': 'src/less/index.less'
+				}
+			},
+			gadget: {
+				options: {
+					banner: grunt.file.read( 'build/header.gadget.txt' )
+				},
+				files: {
+					'dist/gadget/generated.whowrotethat.css': 'src/less/index.less'
 				}
 			}
 		},
@@ -98,7 +106,18 @@ module.exports = function Gruntfile( grunt ) {
 				files: [
 					{
 						src: 'build/template_browserextension.js',
-						dest: 'extension/js/generated.pageScript.js'
+						dest: 'dist/extension/js/generated.pageScript.js'
+					}
+				]
+			},
+			gadget: {
+				options: {
+					patterns: []
+				},
+				files: [
+					{
+						src: 'build/template_gadget.js',
+						dest: 'dist/gadget/generated.pageScript.js'
 					}
 				]
 			}
@@ -138,24 +157,25 @@ module.exports = function Gruntfile( grunt ) {
 			},
 			// Callback when that's done
 			function () {
-				// Update the config to reflect the file we created
-				grunt.config(
-					'replace.browserextension.options.patterns',
-					[
-						{
-							match: 'fullScript',
-							replacement: grunt.file.read( generatedFile )
-						},
-						{
-							match: 'languageBlob',
-							replacement: generateLangBlob()
-						}
-					]
-				);
+				[ 'browserextension', 'gadget' ].forEach( ( which ) => {
+					// Update the config to reflect the file we created
+					grunt.config(
+						'replace.' + which + '.options.patterns',
+						[
+							{
+								match: 'fullScript',
+								replacement: grunt.file.read( generatedFile )
+							},
+							{
+								match: 'languageBlob',
+								replacement: generateLangBlob()
+							}
+						]
+					);
+				} );
 
 				// Run the `replace` task
-				grunt.task.run( [ 'replace:browserextension' ] );
-
+				grunt.task.run( [ 'replace:browserextension', 'replace:gadget' ] );
 				// Done async
 				done();
 			}
@@ -164,6 +184,6 @@ module.exports = function Gruntfile( grunt ) {
 
 	grunt.registerTask( 'lint', [ 'eslint', 'banana' ] );
 	grunt.registerTask( 'test', [ 'lint', 'run:tests' ] );
-	grunt.registerTask( 'build', [ 'less:browserextension', 'generateProductionScript' ] );
+	grunt.registerTask( 'build', [ 'less', 'generateProductionScript' ] );
 	grunt.registerTask( 'default', [ 'test', 'build' ] );
 };
