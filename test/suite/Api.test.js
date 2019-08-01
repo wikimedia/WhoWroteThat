@@ -19,17 +19,17 @@ describe( 'Api test', () => {
 			{
 				msg: 'Should get the correct API url',
 				input: 'https://en.wikipedia.org/wiki/Foo',
-				expected: 'https://wikicolor.example.com/en/whocolor/v1.0.0-beta/Foo'
+				expected: 'https://wikicolor.example.com/en/whocolor/v1.0.0-beta/Foo/'
 			},
 			{
 				msg: 'Should get the correct API url from url parameter',
 				input: 'https://en.wikipedia.org/w/index.php?title=Foo',
-				expected: 'https://wikicolor.example.com/en/whocolor/v1.0.0-beta/Foo'
+				expected: 'https://wikicolor.example.com/en/whocolor/v1.0.0-beta/Foo/'
 			},
 			{
 				msg: 'Should get the correct API url with oldid parameter',
 				input: 'https://ru.wikipedia.org/w/index.php?title=Foo&oldid=123',
-				expected: 'https://wikicolor.example.com/ru/whocolor/v1.0.0-beta/Foo/123'
+				expected: 'https://wikicolor.example.com/ru/whocolor/v1.0.0-beta/Foo/123/'
 			}
 		];
 
