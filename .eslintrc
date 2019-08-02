@@ -1,15 +1,17 @@
 {
     "extends": "wikimedia",
     "env": {
-        "node": false,
-        "es6": false,
+        "node": true,
+        "es6": true,
         "browser": true
     },
     "globals": {
         "$": false,
         "extwrt": false,
         "OO": false,
-        "chrome": false,
-        "QUnit": false
+        "chrome": false
+    },
+    "parserOptions": {
+        "sourceType": "module"
     }
 }
