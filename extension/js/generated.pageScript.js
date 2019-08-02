@@ -32,6 +32,8 @@ var extwrt = { // eslint-disable-line no-unused-vars,no-implicit-globals
 /* >> End source: src/globals.js << */
 /* >> Starting source: src/Api.js << */
 /**
+ * Interface to the [WikiWho](https://www.wikiwho.net/) WhoColor API.
+ *
  * @param {Object} config
  * @cfg config.url The WikiColor base URL.
  * @constructor
@@ -48,8 +50,9 @@ extwrt.Api = function ( config ) {
 };
 
 /**
- * Get the value of a paramter from the given URL query string.
+ * Get the value of a parameter from the given URL query string.
  *
+ * @protected
  * @param  {string} querystring URL query string
  * @param  {string} param Parameter name
  * @return {string|null} Parameter value; null if not found
@@ -76,11 +79,10 @@ extwrt.Api.prototype.getQueryParameter = function ( querystring, param ) {
 };
 
 /**
- * Get the relevant AJAX url from whocolor based on the given
- * base URL of the wiki.
+ * Get a WhoColor API URL based on a given wiki URL.
  *
  * @param  {string} wikiUrl URL of the wiki page that we want to analyze.
- * @return {string} Ajax URL for the data from whocolor
+ * @return {string} Ajax URL for the data from WhoColor.
  */
 extwrt.Api.prototype.getAjaxURL = function ( wikiUrl ) {
 	var parts, oldId, title, lang, matches, queryString,
@@ -120,11 +122,11 @@ extwrt.Api.prototype.getAjaxURL = function ( wikiUrl ) {
 /**
  * Get the WhoColor data for a given wiki page.
  *
- * @param {string} url The wiki page's full URL.
- * @return {Promise|PromiseLike<any>|Promise<any>|*}
+ * @param  {string} wikiUrl URL of the wiki page that we want to analyze.
+ * @return {Promise}
  */
-extwrt.Api.prototype.getData = function ( url ) {
-	return $.getJSON( this.getAjaxURL( url ) );
+extwrt.Api.prototype.getData = function ( wikiUrl ) {
+	return $.getJSON( this.getAjaxURL( wikiUrl ) );
 };
 /* >> End source: src/Api.js << */
 /* >> Starting source: src/test.js << */

@@ -9,6 +9,7 @@ module.exports = function Gruntfile( grunt ) {
 	grunt.loadNpmTasks( 'grunt-concat-with-template' );
 	grunt.loadNpmTasks( 'grunt-contrib-less' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
+	grunt.loadNpmTasks( 'grunt-jsdoc' );
 
 	grunt.initConfig( {
 		pkg: pkg,
@@ -18,6 +19,7 @@ module.exports = function Gruntfile( grunt ) {
 					'**/*.js',
 					'!build/**',
 					'!extension/**',
+					'!docs/**',
 					'!node_modules/**',
 					'!temp/**',
 					'extension/js/contentScript.js'
@@ -29,6 +31,13 @@ module.exports = function Gruntfile( grunt ) {
 				src: [
 					'src/less/*.less'
 				]
+			}
+		},
+		jsdoc: {
+			all: {
+				options: {
+					configure: '.jsdoc.json'
+				}
 			}
 		},
 		qunit: {
