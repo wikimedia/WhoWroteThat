@@ -96,8 +96,8 @@ class Api {
 	 * @param  {string} wikiUrl URL of the wiki page that we want to analyze.
 	 * @return {Promise}
 	 */
-	getData( url ) {
-		return $.getJSON( this.getAjaxURL( url ) );
+	getData( wikiUrl ) {
+		return $.getJSON( this.getAjaxURL( wikiUrl ) );
 	}
 }
 
