@@ -132,8 +132,8 @@ function () {
 
   }, {
     key: "getData",
-    value: function getData(url) {
-      return $.getJSON(this.getAjaxURL(url));
+    value: function getData(wikiUrl) {
+      return $.getJSON(this.getAjaxURL(wikiUrl));
     }
   }]);
 
