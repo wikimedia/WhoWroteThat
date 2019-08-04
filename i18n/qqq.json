@@ -1,0 +1,7 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"ext-whowrotethat-activation-link": "The text for the link that toggles WhoWroteThat mode",
+	"ext-whowrotethat-activation-link-tooltip": "The tooltip for the link that toggles WhoWroteThat mode"
+}

@@ -7,7 +7,7 @@
     },
     "globals": {
         "$": false,
-        "extwrt": false,
+        "mw": false,
         "OO": false,
         "chrome": false
     },
