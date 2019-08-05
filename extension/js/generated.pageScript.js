@@ -1,10 +1,19 @@
 ( function () {
+	var languageJson = {"en":{"ext-whowrotethat-activation-link":"WhoWroteThat","ext-whowrotethat-activation-link-tooltip":"Activate WhoWroteThat"}};
 	function loadWhoWroteThat() {
-		var $button = $( '<a>' )
-			.text( 'WhoWroteThat' )
-			.addClass( 'wwt-activationButton' )
-			.prependTo( '#p-personal' )
-			.click( onActivateButtonClick );
+		var interfaceLang = $( 'html' ).attr( 'lang' ),
+			$button = $( '<a>' )
+				.text( 'WhoWroteThat' )
+				.addClass( 'wwt-activationButton' )
+				.prependTo( '#p-personal' )
+				.click( onActivateButtonClick );
+
+		// Load messages
+		mw.messages.set( $.extend(
+			// Make sure to fallback on English
+			languageJson.en,
+			languageJson[ interfaceLang ]
+		) );
 
 		// Attach button to DOM; jQuery is available
 
@@ -178,8 +187,11 @@ exports["default"] = _default;
 
 			} );
 		}
+
+
 	}
 
 	var q = window.RLQ || ( window.RLQ = [] );
-	q.push( [ [ 'jquery', 'mediawiki.base' ], loadWhoWroteThat ] );
+	q.push( [ [ 'jquery', 'mediawiki.base', 'mediawiki.jqueryMsg' ], loadWhoWroteThat ] );
+
 }() );

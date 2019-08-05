@@ -1,16 +1,41 @@
 /* eslint-env node */
 module.exports = function Gruntfile( grunt ) {
-	var pkg = grunt.file.readJSON( 'package.json' );
+	var pkg = grunt.file.readJSON( 'package.json' ),
+		generatedFile = 'temp/generated.fullScript.babelified.js',
+		// Get all language files
+		langFiles = grunt.file
+			.expand( { filter: 'isFile', cwd: 'i18n' }, [ '*' ] )
+			.filter( function ( f ) { return f !== 'qqq.json'; } ),
+		/**
+		 * Generate a language JSON blob from the i18n translation files
+		 *
+		 * @return {Object} JSON object of all translations, keyed by language code
+		 */
+		generateLangBlob = function () {
+			var langBlob = {};
+
+			langFiles.forEach( function ( filename ) {
+				var lang = filename.substring( 0, filename.indexOf( '.json' ) ),
+					json = grunt.file.readJSON( 'i18n/' + filename );
+
+				delete json[ '@metadata' ];
+
+				// Store in language blob
+				langBlob[ lang ] = json;
+			} );
+
+			return langBlob;
+		};
 
 	grunt.loadNpmTasks( 'grunt-browserify' );
 	grunt.loadNpmTasks( 'grunt-run' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
-	grunt.loadNpmTasks( 'grunt-contrib-qunit' );
-	grunt.loadNpmTasks( 'grunt-concat-with-template' );
+	grunt.loadNpmTasks( 'grunt-replace' );
 	grunt.loadNpmTasks( 'grunt-contrib-less' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
 	grunt.loadNpmTasks( 'grunt-jsdoc' );
+	grunt.loadNpmTasks( 'grunt-banana-checker' );
 
 	grunt.initConfig( {
 		pkg: pkg,
@@ -36,6 +61,9 @@ module.exports = function Gruntfile( grunt ) {
 				]
 			}
 		},
+		banana: {
+			all: 'i18n/'
+		},
 		jsdoc: {
 			all: {
 				options: {
@@ -53,63 +81,26 @@ module.exports = function Gruntfile( grunt ) {
 				}
 			}
 		},
-		concat: {
-			browserextension: {
+		browserify: {
+			fullScript: {
+				src: 'src/app.js',
+				dest: 'temp/generated.fullScript.babelified.js',
 				options: {
-					banner: grunt.file.read( 'build/header.browserextension.txt' ),
-					// Remove wrapping IIFE ( function () {}() );\n
-					process: function ( src, filepath ) {
-						// Only remove the end if we're removing the starting
-						// (function () { ... wrapper
-						if ( new RegExp( /^\( function \(\) {/ ).test( src ) ) {
-							src = src
-								.replace( /^\( function \(\) {/, '' ) // Beginning of file
-								.replace( /}\(\) \);\n$/, '' );
-						}
-						// eslint-disable-next-line quotes
-						return '/* >> Starting source: ' + filepath + " << */\n" +
-							src +
-							'/* >> End source: ' + filepath + ' << */';
-					}
-				},
-				files: {
-					'temp/fullScript.js': [
-						// The actual behavior script
-						// Files should be in order
-						'src/globals.js',
-						'src/Api.js',
-						'src/test.js'
-					]
+					transform: [ 'babelify' ]
 				}
 			}
 		},
-		// eslint-disable-next-line camelcase
-		concat_with_template: {
-			// If we ever want to include a pure es6 file without babelifying
-			browserextensiones6: {
-				src: {
-					fullScript: 'temp/fullScript.js'
-				},
-				dest: 'extension/js/generated.pageScript.js',
-				tmpl: 'build/template_browserextension.js'
-			},
-			browserextensionBabelified: {
-				src: {
-					fullScript: 'temp/fullScript.babelified.js'
-				},
-				dest: 'extension/js/generated.pageScript.js',
-				tmpl: 'build/template_browserextension.js'
-			}
-		},
-		browserify: {
+		replace: {
 			browserextension: {
 				options: {
-					transform: [
-						[ 'babelify' ]
-					]
+					patterns: []
 				},
-				src: [ 'src/app.js' ],
-				dest: 'temp/fullScript.babelified.js'
+				files: [
+					{
+						src: 'build/template_browserextension.js',
+						dest: 'extension/js/generated.pageScript.js'
+					}
+				]
 			}
 		},
 		run: {
@@ -124,8 +115,55 @@ module.exports = function Gruntfile( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'lint', [ 'eslint' ] );
+	/**
+	 * This task is made for the purpose of making sure we generate the file
+	 * (with browserify) first, and only afterwards we run the `replace` task.
+	 *
+	 * If we try to tell `replace` to read the temporary file, it will fail
+	 * because that will be done before the file is ready. Instead, we define
+	 * the replace task without replacement values, and only add those values
+	 * when we're sure that the file is ready to be read.
+	 *
+	 * @param [string] which Which task we output; 'browserextension'
+	 *  TODO: Add 'gadget' specifier later.
+	 */
+	grunt.registerTask( 'generateProductionScript', function () {
+		var done = this.async();
+
+		// Run `browserify`
+		grunt.util.spawn(
+			{
+				grunt: true,
+				args: [ 'browserify:fullScript' ]
+			},
+			// Callback when that's done
+			function () {
+				// Update the config to reflect the file we created
+				grunt.config(
+					'replace.browserextension.options.patterns',
+					[
+						{
+							match: 'fullScript',
+							replacement: grunt.file.read( generatedFile )
+						},
+						{
+							match: 'languageBlob',
+							replacement: generateLangBlob()
+						}
+					]
+				);
+
+				// Run the `replace` task
+				grunt.task.run( [ 'replace:browserextension' ] );
+
+				// Done async
+				done();
+			}
+		);
+	} );
+
+	grunt.registerTask( 'lint', [ 'eslint', 'banana' ] );
 	grunt.registerTask( 'test', [ 'lint', 'run:tests' ] );
-	grunt.registerTask( 'build', [ 'less:browserextension', 'browserify:browserextension', 'concat_with_template:browserextensionBabelified' ] );
+	grunt.registerTask( 'build', [ 'less:browserextension', 'generateProductionScript' ] );
 	grunt.registerTask( 'default', [ 'test', 'build' ] );
 };
