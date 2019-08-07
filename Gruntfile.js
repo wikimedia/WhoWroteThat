@@ -163,6 +163,10 @@ module.exports = function Gruntfile( grunt ) {
 						'replace.' + which + '.options.patterns',
 						[
 							{
+								match: 'jqueryInitialization',
+								replacement: grunt.file.read( 'src/singleton.activation.js' )
+							},
+							{
 								match: 'fullScript',
 								replacement: grunt.file.read( generatedFile )
 							},
