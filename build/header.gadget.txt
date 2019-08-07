@@ -1,0 +1,18 @@
+/*!
+ * WhoWroteThat <%= pkg.version %>
+ *
+ * This is a gadget to activate WhoWroteThat functionality.
+ * Written by Community Tech team, 2019
+ *
+ * The code for this gadget is being maintained on Github:
+ * https://github.com/wikimedia/WhoWroteThat
+ *
+ * ***************************************************
+ * ** Please do not change this local file directly **
+ * ***************************************************
+ *
+ * Any updates should be created from the official repository
+ * by running `grunt build` and using
+ * `dist/gadget/generated.whowrotethat.js` and
+ * `dist/gadget/generated.whowrotethat.css`
+ */
