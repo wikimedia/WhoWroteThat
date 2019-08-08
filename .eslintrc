@@ -13,5 +13,8 @@
     },
     "parserOptions": {
         "sourceType": "module"
+    },
+    "rules": {
+        "arrow-parens": [ "error", "as-needed" ]
     }
 }

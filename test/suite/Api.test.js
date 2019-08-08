@@ -34,7 +34,7 @@ describe( 'Api test', () => {
 		];
 
 		// Run all test cases
-		cases.forEach( ( testCase ) => {
+		cases.forEach( testCase => {
 			const a = new Api( { url: 'https://wikicolor.example.com/' } );
 			it( testCase.msg, () => {
 				expect( a.getAjaxURL( testCase.input ) ).to.equal( testCase.expected );
