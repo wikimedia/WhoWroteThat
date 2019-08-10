@@ -251,5 +251,5 @@ exports["default"] = _default;
 
 	}
 
-	loadWhoWroteThat();
+	$( document ).ready( loadWhoWroteThat );
 }() );

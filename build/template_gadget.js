@@ -20,5 +20,5 @@
 
 	}
 
-	loadWhoWroteThat();
+	$( document ).ready( loadWhoWroteThat );
 }() );
