@@ -186,7 +186,7 @@ module.exports = function Gruntfile( grunt ) {
 		);
 	} );
 
-	grunt.registerTask( 'lint', [ 'eslint', 'banana' ] );
+	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana' ] );
 	grunt.registerTask( 'test', [ 'lint', 'run:tests' ] );
 	grunt.registerTask( 'build', [ 'less', 'generateProductionScript' ] );
 	grunt.registerTask( 'default', [ 'test', 'build' ] );
