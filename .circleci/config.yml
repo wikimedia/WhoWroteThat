@@ -13,6 +13,6 @@ jobs:
       - run:
           name: Test and build
           command: |
-            ./node_modules/.bin/grunt build
+            ./node_modules/.bin/grunt
             git status
             git status | grep "nothing to commit, working tree clean"
