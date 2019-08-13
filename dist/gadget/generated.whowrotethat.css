@@ -25,7 +25,27 @@
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   padding: 16px;
-  color: #ffffff;
+  color: #fff;
+}
+.ext-wwt-infoBarWidget .ext-wwt-infoBarWidget-close.oo-ui-iconElement {
+  margin: 0 1em;
+  cursor: pointer;
+}
+.ext-wwt-infoBarWidget .ext-wwt-infoBarWidget-close.oo-ui-iconElement.oo-ui-flaggedElement-pending {
+  display: none;
+}
+.skin-timeless .ext-wwt-infoBarWidget {
+  top: 3.125em;
+}
+.skin-monobook .ext-wwt-infoBarWidget {
+  margin-left: -1em;
+  margin-bottom: 2em;
+  width: calc(100% + 1em + 1em);
+}
+.skin-monobook .ext-wwt-infoBarWidget .ext-wwt-infoBarWidget-close.oo-ui-iconElement {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ctitle%3Eclear%3C/title%3E%3Cg fill='%23fff'%3E%3Cpath d='M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm5.66 14.24l-1.41 1.41L10 11.41l-4.24 4.25-1.42-1.42L8.59 10 4.34 5.76l1.42-1.42L10 8.59l4.24-4.24 1.41 1.41L11.41 10z'/%3E%3C/g%3E%3C/svg%3E");
+  height: 1.42857143em;
+  width: 1.42857143em;
 }
 .skin-vector .ext-wwt-infoBarWidget {
   width: calc(100% + 1.5em + 1.5em);
@@ -38,19 +58,6 @@
 .rtl.skin-vector .ext-wwt-infoBarWidget {
   margin-right: -1.5em;
 }
-.skin-monobook .ext-wwt-infoBarWidget {
-  margin-left: -1em;
-  margin-bottom: 2em;
-  width: calc(100% + 1em + 1em);
-}
-.skin-monobook .ext-wwt-infoBarWidget .ext-wwt-infoBarWidget-close.oo-ui-iconElement {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ctitle%3Eclear%3C/title%3E%3Cg fill='%23fff'%3E%3Cpath d='M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm5.66 14.24l-1.41 1.41L10 11.41l-4.24 4.25-1.42-1.42L8.59 10 4.34 5.76l1.42-1.42L10 8.59l4.24-4.24 1.41 1.41L11.41 10z'/%3E%3C/g%3E%3C/svg%3E");
-  height: 1.42857143em;
-  width: 1.42857143em;
-}
-.skin-timeless .ext-wwt-infoBarWidget {
-  top: 3.125em;
-}
 .ext-wwt-infoBarWidget .oo-ui-iconElement-icon {
   width: 1em;
 }
@@ -61,13 +68,6 @@
 .rtl .ext-wwt-infoBarWidget .oo-ui-labelElement-label {
   margin-left: 0;
   margin-right: 2em;
-}
-.ext-wwt-infoBarWidget .ext-wwt-infoBarWidget-close.oo-ui-iconElement {
-  margin: 0 1em;
-  cursor: pointer;
-}
-.ext-wwt-infoBarWidget .ext-wwt-infoBarWidget-close.oo-ui-iconElement.oo-ui-flaggedElement-pending {
-  display: none;
 }
 .ext-wwt-infoBarWidget.oo-ui-flaggedElement-pending {
   background-color: #2a4b8d;
@@ -105,7 +105,7 @@
   margin-left: 2em;
 }
 .ext-wwt-infoBarWidget.oo-ui-flaggedElement-ready {
-  background-color: #3366cc;
+  background-color: #36c;
 }
 .ext-wwt-infoBarWidget.oo-ui-flaggedElement-ready .ext-wwt-infoBarWidget-info.oo-ui-labelWidget {
   flex-grow: 2;

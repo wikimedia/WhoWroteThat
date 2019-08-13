@@ -2,33 +2,26 @@
 
 .ext-wwt-infoBarWidget {
 	position: sticky;
-	top:0;
+	top: 0;
 	display: flex;
 	z-index: 1;
 	width: 100%;
-	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+	box-shadow: 0 2px 6px 0 rgba( 0, 0, 0, 0.25 );
 	box-sizing: border-box;
 	padding: 16px;
-	color: #ffffff;
-	.skin-vector & {
-		// This duplicates Vector, making sure that the
-		// bar stops at the edge of the content even though
-		// it is outside the content box itself.
+	color: #fff;
 
-		width: calc( 100% + 1.5em + 1.5em );
-		// content body has 1.25em padding top
-		margin-top: -1.25em;
-		// put in some space before the heading
-		margin-bottom: 1em;
+	.ext-wwt-infoBarWidget-close.oo-ui-iconElement {
+		margin: 0 1em;
+		cursor: pointer;
 
-		.ltr& {
-			// content body has 1.5em padding left and right
-			margin-left: -1.5em;
+		&.oo-ui-flaggedElement-pending {
+			display: none;
 		}
-		.rtl& {
-			// content body has 1.5em padding left and right
-			margin-right: -1.5em;
-		}
+	}
+
+	.skin-timeless & {
+		top: 3.125em;
 	}
 
 	.skin-monobook & {
@@ -40,14 +33,32 @@
 		// Since monobook uses 'Apex', we don't have the white (inverted)
 		// version of the 'close' icon. For that skin, we'll inject data-uri
 		.ext-wwt-infoBarWidget-close.oo-ui-iconElement {
+			// stylelint-disable-next-line function-url-quotes
 			background-image: url( "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ctitle%3Eclear%3C/title%3E%3Cg fill='%23fff'%3E%3Cpath d='M10 0a10 10 0 1 0 10 10A10 10 0 0 0 10 0zm5.66 14.24l-1.41 1.41L10 11.41l-4.24 4.25-1.42-1.42L8.59 10 4.34 5.76l1.42-1.42L10 8.59l4.24-4.24 1.41 1.41L11.41 10z'/%3E%3C/g%3E%3C/svg%3E" );
 			height: 1.42857143em; // Duplicate from WikimediaUI
 			width: 1.42857143em;
 		}
 	}
 
-	.skin-timeless & {
-		top: 3.125em;
+	.skin-vector & {
+		// This duplicates Vector, making sure that the
+		// bar stops at the edge of the content even though
+		// it is outside the content box itself.
+		width: calc( 100% + 1.5em + 1.5em );
+		// content body has 1.25em padding top
+		margin-top: -1.25em;
+		// put in some space before the heading
+		margin-bottom: 1em;
+
+		.ltr& {
+			// content body has 1.5em padding left and right
+			margin-left: -1.5em;
+		}
+
+		.rtl& {
+			// content body has 1.5em padding left and right
+			margin-right: -1.5em;
+		}
 	}
 
 	.oo-ui-iconElement-icon {
@@ -57,18 +68,10 @@
 	.oo-ui-labelElement-label {
 		flex-grow: 2;
 		margin-left: 2em;
+
 		.rtl & {
 			margin-left: 0;
 			margin-right: 2em;
-		}
-	}
-
-	.ext-wwt-infoBarWidget-close.oo-ui-iconElement {
-		margin: 0 1em;
-		cursor: pointer;
-
-		&.oo-ui-flaggedElement-pending {
-			display: none;
 		}
 	}
 
@@ -115,7 +118,7 @@
 	}
 
 	&.oo-ui-flaggedElement-ready {
-		background-color: #3366cc;
+		background-color: #36c;
 
 		.ext-wwt-infoBarWidget-info.oo-ui-labelWidget {
 			flex-grow: 2;
