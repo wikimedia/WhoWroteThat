@@ -3,5 +3,10 @@
 		"authors": []
 	},
 	"ext-whowrotethat-activation-link": "Who Wrote That?",
-	"ext-whowrotethat-activation-link-tooltip": "Activate WhoWroteThat"
+	"ext-whowrotethat-activation-link-tooltip": "Activate Who Wrote That?",
+	"ext-whowrotethat-state-pending": "<strong><em>Who Wrote That?</em></strong> is loading. This might take a while",
+	"ext-whowrotethat-state-error": "Error: $1",
+	"ext-whowrotethat-state-error-generic": "Could not load WhoWroteThat. Please refresh and try again.",
+	"ext-whowrotethat-ready-title": "Who Wrote That?",
+	"ext-whowrotethat-ready-general": "Hover to see contributions by the same author. Click for more details."
 }

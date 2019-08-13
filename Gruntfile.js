@@ -36,6 +36,7 @@ module.exports = function Gruntfile( grunt ) {
 	grunt.loadNpmTasks( 'grunt-stylelint' );
 	grunt.loadNpmTasks( 'grunt-jsdoc' );
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
+	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 
 	grunt.initConfig( {
 		pkg: pkg,
@@ -92,7 +93,7 @@ module.exports = function Gruntfile( grunt ) {
 		browserify: {
 			fullScript: {
 				src: 'src/app.js',
-				dest: 'temp/generated.fullScript.babelified.js',
+				dest: generatedFile,
 				options: {
 					transform: [ 'babelify' ]
 				}
@@ -122,6 +123,7 @@ module.exports = function Gruntfile( grunt ) {
 				]
 			}
 		},
+		clean: [ generatedFile ],
 		run: {
 			options: {},
 			tests: {
@@ -157,7 +159,7 @@ module.exports = function Gruntfile( grunt ) {
 			},
 			// Callback when that's done
 			function () {
-				[ 'browserextension', 'gadget' ].forEach( ( which ) => {
+				[ 'browserextension', 'gadget' ].forEach( which => {
 					// Update the config to reflect the file we created
 					grunt.config(
 						'replace.' + which + '.options.patterns',
@@ -188,6 +190,6 @@ module.exports = function Gruntfile( grunt ) {
 
 	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana' ] );
 	grunt.registerTask( 'test', [ 'lint', 'run:tests' ] );
-	grunt.registerTask( 'build', [ 'less', 'generateProductionScript' ] );
+	grunt.registerTask( 'build', [ 'less', 'generateProductionScript', 'clean' ] );
 	grunt.registerTask( 'default', [ 'test', 'build' ] );
 };

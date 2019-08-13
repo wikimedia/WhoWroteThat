@@ -36,6 +36,9 @@ var wwtActivationSingleton = ( function () {
 
 			// Attach event
 			$( link ).on( 'click', onClickFunction );
+
+			// Store original DOM
+			$( 'body' ).data( 'wwt-originalOutput', $parserOutput.clone() );
 		};
 
 	return {
@@ -51,6 +54,8 @@ var wwtActivationSingleton = ( function () {
 		initialize: function ( translations, onClickFunction ) {
 			// Bail out if we're anywhere that is not an article page in read mode
 			if (
+				// Initialization already happened
+				$parserOutput.data( 'wwt-originalOutput' ) ||
 				// Does not have the needed parser content
 				!$parserOutput.length ||
 				// Not main namespace

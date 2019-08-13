@@ -1,5 +1,5 @@
 ( function () {
-	var languageJson = {"en":{"ext-whowrotethat-activation-link":"Who Wrote That?","ext-whowrotethat-activation-link-tooltip":"Activate WhoWroteThat"}};
+	var languageJson = {"en":{"ext-whowrotethat-activation-link":"Who Wrote That?","ext-whowrotethat-activation-link-tooltip":"Activate Who Wrote That?","ext-whowrotethat-state-pending":"<strong><em>Who Wrote That?</em></strong> is loading. This might take a while","ext-whowrotethat-state-error":"Error: $1","ext-whowrotethat-state-error-generic":"Could not load WhoWroteThat. Please refresh and try again.","ext-whowrotethat-ready-title":"Who Wrote That?","ext-whowrotethat-ready-general":"Hover to see contributions by the same author. Click for more details."}};
 	function loadWhoWroteThat() {
 		// eslint-disable-next-line no-unused-vars
 var wwtActivationSingleton = ( function () {
@@ -39,6 +39,9 @@ var wwtActivationSingleton = ( function () {
 
 			// Attach event
 			$( link ).on( 'click', onClickFunction );
+
+			// Store original DOM
+			$( 'body' ).data( 'wwt-originalOutput', $parserOutput.clone() );
 		};
 
 	return {
@@ -54,6 +57,8 @@ var wwtActivationSingleton = ( function () {
 		initialize: function ( translations, onClickFunction ) {
 			// Bail out if we're anywhere that is not an article page in read mode
 			if (
+				// Initialization already happened
+				$parserOutput.data( 'wwt-originalOutput' ) ||
 				// Does not have the needed parser content
 				!$parserOutput.length ||
 				// Not main namespace
@@ -75,7 +80,7 @@ var wwtActivationSingleton = ( function () {
 		wwtActivationSingleton.initialize( languageJson, onActivateButtonClick );
 
 		function onActivateButtonClick( e ) {
-			mw.loader.using( [ 'oojs-ui' ] ).then( function () {
+			mw.loader.using( [ 'oojs-ui', 'oojs-ui.styles.icons-user', 'oojs-ui.styles.icons-interactions' ] ).then( function () {
 
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
@@ -212,21 +217,147 @@ exports["default"] = _default;
 },{}],2:[function(require,module,exports){
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var InfoBarWidget = function InfoBarWidget() {
+  var _this = this;
+
+  var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  // Parent constructor
+  OO.ui.ButtonWidget.parent.call(this, config);
+  OO.ui.mixin.IconElement.call(this, config);
+  OO.ui.mixin.LabelElement.call(this, config);
+  OO.ui.mixin.TitledElement.call(this, config);
+  OO.ui.mixin.FlaggedElement.call(this, config);
+  this.closeIcon = new OO.ui.IconWidget({
+    icon: 'clear',
+    flags: ['invert'],
+    classes: ['ext-wwt-infoBarWidget-close']
+  });
+  this.userInfoLabel = new OO.ui.LabelWidget({
+    label: mw.msg('ext-whowrotethat-ready-general'),
+    classes: ['ext-wwt-infoBarWidget-info']
+  });
+  this.$pendingAnimation = $('<div>').addClass('ext-wwt-infoBarWidget-spinner').append($('<div>').addClass('ext-wwt-infoBarWidget-spinner-bounce')); // Set properties
+
+  this.setState(config.state || 'pending');
+  this.setLabel($('<span>').append(mw.msg('ext-whowrotethat-state-pending')).contents()); // Close event
+
+  this.closeIcon.$element.on('click', function () {
+    return _this.emit('close');
+  }); // Initialize
+
+  this.$element.addClass('ext-wwt-infoBarWidget').append(this.$pendingAnimation, this.$icon, this.$label, this.userInfoLabel.$element, this.closeIcon.$element);
+};
+/* Setup */
+
+
+OO.inheritClass(InfoBarWidget, OO.ui.Widget);
+OO.mixinClass(InfoBarWidget, OO.ui.mixin.IconElement);
+OO.mixinClass(InfoBarWidget, OO.ui.mixin.LabelElement);
+OO.mixinClass(InfoBarWidget, OO.ui.mixin.TitledElement);
+OO.mixinClass(InfoBarWidget, OO.ui.mixin.FlaggedElement);
+/**
+ * Define legal states for the widget
+ *
+ * @type {Array}
+ */
+
+InfoBarWidget["static"].legalFlags = ['pending', 'ready', 'err'];
+/**
+ * Change the state of the widget
+ *
+ * @param {string} state Widget state; 'pending', 'ready' or 'error'
+ */
+
+InfoBarWidget.prototype.setState = function (state) {
+  var flags = {};
+
+  if (this.state !== state) {
+    this.constructor["static"].legalFlags.forEach(function (flag) {
+      flags[flag] = flag === state;
+    });
+    flags.invert = true;
+    this.setFlags(flags);
+
+    if (state === 'ready') {
+      this.setLabel($('<span>').append(mw.msg('ext-whowrotethat-ready-title')).contents());
+      this.userInfoLabel.setLabel($('<span>').append(mw.msg('ext-whowrotethat-ready-general')).contents());
+      this.setIcon('userAvatar');
+    } else if (state === 'pending') {
+      this.setIcon('');
+    } else {
+      this.setIcon('error');
+      this.setErrorMessage();
+    }
+
+    this.$pendingAnimation.toggle(state === 'pending');
+    this.userInfoLabel.toggle(state === 'ready');
+    this.closeIcon.toggle(state !== 'pending');
+    this.state = state;
+  }
+};
+/**
+ * Set an error with a specific label
+ *
+ * @param {string} message Error label message key
+ */
+
+
+InfoBarWidget.prototype.setErrorMessage = function () {
+  var message = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'ext-whowrotethat-state-error-generic';
+  this.setLabel(mw.msg('ext-whowrotethat-state-error', mw.msg(message)));
+};
+
+var _default = InfoBarWidget;
+exports["default"] = _default;
+
+},{}],3:[function(require,module,exports){
+"use strict";
+
 var _config = _interopRequireDefault(require("./config"));
 
 var _Api = _interopRequireDefault(require("./Api"));
 
+var _InfoBarWidget = _interopRequireDefault(require("./InfoBarWidget"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-// eslint-disable-next-line no-unused-vars
-var a = new _Api["default"]({
-  url: _config["default"].wikicolorUrl
-}); // Test
-// TEST!
+var components = $('body').data('wwt-components'); // Initialize
 
-OO.ui.alert('The extension is working! URL: ' + a.getAjaxURL(window.location.href));
+if (!components) {
+  // Store, so we don't append and create objects if they've been created
+  // TODO: We could potentially store all that data in some view model that's shared
+  // across the widgets.
+  components = {
+    widget: new _InfoBarWidget["default"](),
+    api: new _Api["default"]({
+      url: _config["default"].wikicolorUrl
+    }),
+    $originalOutput: $('body').data('wwt-originalOutput')
+  };
+  $('body').data('wwt-components', components);
 
-},{"./Api":1,"./config":3}],3:[function(require,module,exports){
+  if ($('body').hasClass('skin-timeless')) {
+    $('#mw-content-wrapper').prepend(components.widget.$element);
+  } else {
+    $('#content').prepend(components.widget.$element);
+  }
+}
+
+components.widget.toggle(true);
+components.widget.setState('pending');
+components.widget.on('close', function () {
+  // Close button; revert back to the original content
+  // $( '.mw-parser-output' ).empty().append( components.$originalOutput );
+  // Hide the widget
+  components.widget.toggle(false);
+});
+
+},{"./Api":1,"./InfoBarWidget":2,"./config":4}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -239,7 +370,7 @@ var config = {
 var _default = config;
 exports["default"] = _default;
 
-},{}]},{},[2]);
+},{}]},{},[3]);
 
 
 			} );
