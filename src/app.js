@@ -10,7 +10,7 @@ if ( !components ) {
 	// across the widgets.
 	components = {
 		widget: new InfoBarWidget(),
-		api: new Api( { url: config.wikicolorUrl } ),
+		api: new Api( { url: config.wikiWhoUrl } ),
 		$originalOutput: $( 'body' ).data( 'wwt-originalOutput' )
 	};
 

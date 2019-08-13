@@ -19,23 +19,23 @@ describe( 'Api test', () => {
 			{
 				msg: 'Should get the correct API url',
 				input: 'https://en.wikipedia.org/wiki/Foo',
-				expected: 'https://wikicolor.example.com/en/whocolor/v1.0.0-beta/Foo/'
+				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/Foo/'
 			},
 			{
 				msg: 'Should get the correct API url from url parameter',
 				input: 'https://en.wikipedia.org/w/index.php?title=Foo',
-				expected: 'https://wikicolor.example.com/en/whocolor/v1.0.0-beta/Foo/'
+				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/Foo/'
 			},
 			{
 				msg: 'Should get the correct API url with oldid parameter',
 				input: 'https://ru.wikipedia.org/w/index.php?title=Foo&oldid=123',
-				expected: 'https://wikicolor.example.com/ru/whocolor/v1.0.0-beta/Foo/123/'
+				expected: 'https://wikiwho.example.com/ru/whocolor/v1.0.0-beta/Foo/123/'
 			}
 		];
 
 		// Run all test cases
 		cases.forEach( testCase => {
-			const a = new Api( { url: 'https://wikicolor.example.com/' } );
+			const a = new Api( { url: 'https://wikiwho.example.com/' } );
 			it( testCase.msg, () => {
 				expect( a.getAjaxURL( testCase.input ) ).to.equal( testCase.expected );
 			} );

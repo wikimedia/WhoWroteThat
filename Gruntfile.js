@@ -1,21 +1,21 @@
 /* eslint-env node */
 module.exports = function Gruntfile( grunt ) {
-	var pkg = grunt.file.readJSON( 'package.json' ),
+	const pkg = grunt.file.readJSON( 'package.json' ),
 		generatedFile = 'temp/generated.fullScript.babelified.js',
 		// Get all language files
 		langFiles = grunt.file
 			.expand( { filter: 'isFile', cwd: 'i18n' }, [ '*' ] )
-			.filter( function ( f ) { return f !== 'qqq.json'; } ),
+			.filter( f => f !== 'qqq.json' ),
 		/**
 		 * Generate a language JSON blob from the i18n translation files
 		 *
 		 * @return {Object} JSON object of all translations, keyed by language code
 		 */
-		generateLangBlob = function () {
-			var langBlob = {};
+		generateLangBlob = () => {
+			const langBlob = {};
 
 			langFiles.forEach( function ( filename ) {
-				var lang = filename.substring( 0, filename.indexOf( '.json' ) ),
+				const lang = filename.substring( 0, filename.indexOf( '.json' ) ),
 					json = grunt.file.readJSON( 'i18n/' + filename );
 
 				delete json[ '@metadata' ];
@@ -149,7 +149,7 @@ module.exports = function Gruntfile( grunt ) {
 	 *  TODO: Add 'gadget' specifier later.
 	 */
 	grunt.registerTask( 'generateProductionScript', function () {
-		var done = this.async();
+		let done = this.async();
 
 		// Run `browserify`
 		grunt.util.spawn(
@@ -158,7 +158,7 @@ module.exports = function Gruntfile( grunt ) {
 				args: [ 'browserify:fullScript' ]
 			},
 			// Callback when that's done
-			function () {
+			() => {
 				[ 'browserextension', 'gadget' ].forEach( which => {
 					// Update the config to reflect the file we created
 					grunt.config(

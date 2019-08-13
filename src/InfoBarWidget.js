@@ -1,4 +1,4 @@
-var InfoBarWidget = function InfoBarWidget( config = {} ) {
+const InfoBarWidget = function InfoBarWidget( config = {} ) {
 	// Parent constructor
 	OO.ui.ButtonWidget.parent.call( this, config );
 	OO.ui.mixin.IconElement.call( this, config );
