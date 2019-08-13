@@ -106,14 +106,14 @@ var Api =
 function () {
   /**
   * @param {Object} config
-  * @cfg config.url The WikiColor base URL.
+  * @cfg config.url The WikiWho base URL.
   * @constructor
   */
-  function Api(config) {
+  function Api() {
+    var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
     _classCallCheck(this, Api);
 
-    config = config || {};
-    this.tries = 0;
     this.url = config.url || ''; // Remove trailing slash.
 
     if (this.url && this.url.slice(-1) === '/') {
@@ -146,7 +146,7 @@ function () {
         // Fallback for IE and Edge
         // eslint-disable-next-line no-useless-escape
         param = param.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-        regex = new RegExp('[\\?&]' + param + '=([^&#]*)');
+        regex = new RegExp("[?&]".concat(param, "=([^&#]*)"));
         results = regex.exec(querystring);
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
       }
@@ -335,7 +335,7 @@ if (!components) {
   components = {
     widget: new _InfoBarWidget["default"](),
     api: new _Api["default"]({
-      url: _config["default"].wikicolorUrl
+      url: _config["default"].wikiWhoUrl
     }),
     $originalOutput: $('body').data('wwt-originalOutput')
   };
@@ -365,7 +365,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 var config = {
-  wikicolorUrl: 'https://www.wikiwho.net/'
+  wikiWhoUrl: 'https://www.wikiwho.net/'
 };
 var _default = config;
 exports["default"] = _default;

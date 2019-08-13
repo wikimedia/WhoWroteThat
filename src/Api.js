@@ -6,12 +6,10 @@
 class Api {
 	/**
 	* @param {Object} config
-	* @cfg config.url The WikiColor base URL.
+	* @cfg config.url The WikiWho base URL.
 	* @constructor
 	*/
-	constructor( config ) {
-		config = config || {};
-		this.tries = 0;
+	constructor( config = {} ) {
 		this.url = config.url || '';
 
 		// Remove trailing slash.
@@ -29,7 +27,7 @@ class Api {
 	 * @return {string|null} Parameter value; null if not found
 	 */
 	getQueryParameter( querystring, param ) {
-		var urlParams, regex, results;
+		let urlParams, regex, results;
 
 		if ( querystring === '' ) {
 			return null;
@@ -42,7 +40,7 @@ class Api {
 			// Fallback for IE and Edge
 			// eslint-disable-next-line no-useless-escape
 			param = param.replace( /[\[]/, '\\[' ).replace( /[\]]/, '\\]' );
-			regex = new RegExp( '[\\?&]' + param + '=([^&#]*)' );
+			regex = new RegExp( `[?&]${param}=([^&#]*)` );
 			results = regex.exec( querystring );
 
 			return results === null ? '' : decodeURIComponent( results[ 1 ].replace( /\+/g, ' ' ) );
@@ -56,7 +54,7 @@ class Api {
 	 * @return {string} Ajax URL for the data from WhoColor.
 	 */
 	getAjaxURL( wikiUrl ) {
-		var parts, oldId, title, lang, matches, queryString,
+		let parts, oldId, title, lang, matches, queryString,
 			linkNode = document.createElement( 'a' );
 		linkNode.href = wikiUrl;
 		queryString = linkNode.search;

@@ -1,5 +1,5 @@
 const config = {
-	wikicolorUrl: 'https://www.wikiwho.net/'
+	wikiWhoUrl: 'https://www.wikiwho.net/'
 };
 
 export default config;
