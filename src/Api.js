@@ -16,6 +16,8 @@ class Api {
 		if ( this.url && this.url.slice( -1 ) === '/' ) {
 			this.url = this.url.slice( 0, -1 );
 		}
+
+		this.results = null;
 	}
 
 	/**
@@ -89,13 +91,102 @@ class Api {
 	}
 
 	/**
-	 * Get the WhoColor data for a given wiki page.
+	 * Extract token and editor IDs from a WikiWho span element with `id='token-X'` and
+	 * `class='token-editor-Y'` attributes.
 	 *
-	 * @param  {string} wikiUrl URL of the wiki page that we want to analyze.
-	 * @return {Promise}
+	 * @param {HTMLElement} element
+	 * @return {Object} An object with two parameters: tokenId and editorId (string).
+	 */
+	getIdsFromElement( element ) {
+		const out = { tokenId: false, editorId: false },
+			tokenMatches = element.id.match( /token-(\d+)/ ),
+			editorMatches = element.className.match( /token-editor-([^\s]+)/ );
+		if ( tokenMatches && tokenMatches[ 1 ] ) {
+			out.tokenId = parseInt( tokenMatches[ 1 ] );
+		}
+		if ( editorMatches && editorMatches[ 1 ] ) {
+			out.editorId = editorMatches[ 1 ];
+		}
+		return out;
+	}
+
+	/**
+	 * Get the WikiWho replacement for `.mw-parser-output` HTML.
+	 * @return {string}
+	 */
+	getReplacementHtml() {
+		return this.results.extended_html;
+	}
+
+	/**
+	 * Get user and revision information for a given token.
+	 *
+	 * @param {int} tokenId
+	 * @return {{revisionId: *, score: *, userId: *, username: *, revisionTime: *}|boolean} Object
+	 * that represents the token info or false if a token wasn't found.
+	 */
+	getTokenInfo( tokenId ) {
+		let revId, revision, username, score;
+
+		// Get the token information. results.tokens structure:
+		// [ [ conflict_score, str, o_rev_id, in, out, editor/class_name, age ], ... ]
+		// e.g. Array(7) [ 0, "indicate", 769691068, [], [], "18201938", 76652371.587203 ]
+		const token = this.results.tokens[ tokenId ];
+		if ( !token ) {
+			return false;
+		}
+
+		// Get revision information. results.revisions structure:
+		// { rev_id: [ timestamp, parent_rev_id, user_id, editor_name ], ... }
+		// e.g. Array(4) [ "2017-03-11T02:12:47Z", 769315355, "18201938", "Biogeographist" ]
+		revId = token[ 2 ];
+		revision = this.results.revisions[ revId ];
+		username = revision[ 3 ];
+
+		// Get the user's edit score (percentage of content edited).
+		// results.present_editors structure:
+		// [ [ username, user_id, score ], ... ]
+		for ( let i = 0; i < this.results.present_editors.length; i++ ) {
+			if ( this.results.present_editors[ i ][ 0 ] === username ) {
+				score = parseFloat( this.results.present_editors[ i ][ 2 ] ).toFixed( 1 );
+				break;
+			}
+		}
+
+		// Put it all together.
+		return {
+			username: username,
+			userId: token[ 5 ],
+			revisionId: revId,
+			revisionTime: new Date( revision[ 0 ] ),
+			score: score
+		};
+	}
+
+	/**
+	 * Get the WikiWho data for a given wiki page.
+	 *
+	 * @param {string} wikiUrl URL of the wiki page that we want to analyze.
+	 * @return {Promise} A promise that resolves when the data is ready,
+	 * or rejects if there was an error.
 	 */
 	getData( wikiUrl ) {
-		return $.getJSON( this.getAjaxURL( wikiUrl ) );
+		const api = this;
+		if ( this.resultsPromise ) {
+			return this.resultsPromise;
+		}
+		this.resultsPromise = $.getJSON( this.getAjaxURL( wikiUrl ) )
+			.then( function ( result ) {
+				// Handle error response.
+				if ( !result.success && result.info ) {
+					// The API gives us an error message, but we don't use it because it's only
+					// in English.
+					return $.Deferred().reject( 'ext-whowrotethat-api-error-wikiwho-generic' );
+				}
+				// Store all results.
+				api.results = result;
+			} );
+		return this.resultsPromise;
 	}
 }
 

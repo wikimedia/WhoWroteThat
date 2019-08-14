@@ -25,6 +25,36 @@ if ( !components ) {
 
 components.widget.toggle( true );
 components.widget.setState( 'pending' );
+components.api.getData( window.location.href )
+	.then(
+		// Success handler.
+		function () {
+			const api = components.api;
+			// Insert modified HTML.
+			$( '.mw-parser-output' ).html( api.getReplacementHtml() );
+			// Highlight when hover a user's contributions.
+			// @TODO This is just testing code and should be replaced by the proper behaviour.
+			$( '.mw-parser-output .editor-token' )
+				.on( 'mouseenter', function () {
+					const ids = api.getIdsFromElement( this );
+					// Activate all this user's contribution spans.
+					$( '.token-editor-' + ids.editorId ).addClass( 'active' );
+					// Information for popup.
+					// eslint-disable-next-line no-console
+					console.log( api.getTokenInfo( ids.tokenId ) );
+				} )
+				.on( 'mouseleave', function () {
+					// Deactivate all spans.
+					$( '.mw-parser-output .editor-token' ).removeClass( 'active' );
+				} );
+			components.widget.setState( 'ready' );
+		},
+		// Error handler.
+		function ( errorCode ) {
+			components.widget.setState( 'err' );
+			components.widget.setErrorMessage( errorCode );
+		}
+	);
 components.widget.on( 'close', () => {
 	// Close button; revert back to the original content
 	// $( '.mw-parser-output' ).empty().append( components.$originalOutput );
