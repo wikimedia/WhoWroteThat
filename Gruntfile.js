@@ -1,7 +1,6 @@
 /* eslint-env node */
 module.exports = function Gruntfile( grunt ) {
 	const pkg = grunt.file.readJSON( 'package.json' ),
-		generatedFile = 'temp/generated.fullScript.babelified.js',
 		// Get all language files
 		langFiles = grunt.file
 			.expand( { filter: 'isFile', cwd: 'i18n' }, [ '*' ] )
@@ -92,34 +91,35 @@ module.exports = function Gruntfile( grunt ) {
 			}
 		},
 		browserify: {
-			fullScript: {
-				src: 'src/app.js',
-				dest: generatedFile,
+			gadget: {
+				src: 'src/outputs/gadget.js',
+				dest: 'dist/gadget/generated.whowrotethat.js',
+				options: {
+					transform: [ 'babelify' ]
+				}
+			},
+			browserextension: {
+				src: 'src/outputs/browserextension.js',
+				dest: 'dist/extension/js/generated.pageScript.js',
 				options: {
 					transform: [ 'babelify' ]
 				}
 			}
 		},
 		replace: {
-			browserextension: {
+			language: {
 				options: {
-					patterns: []
+					patterns: [
+						{
+							match: 'languageBlob',
+							replacement: generateLangBlob()
+						}
+					]
 				},
 				files: [
 					{
-						src: 'build/template_browserextension.js',
-						dest: 'dist/extension/js/generated.pageScript.js'
-					}
-				]
-			},
-			gadget: {
-				options: {
-					patterns: []
-				},
-				files: [
-					{
-						src: 'build/template_gadget.js',
-						dest: 'dist/gadget/generated.pageScript.js'
+						src: 'build/template_language.js',
+						dest: 'temp/languages.js'
 					}
 				]
 			}
@@ -145,60 +145,8 @@ module.exports = function Gruntfile( grunt ) {
 		}
 	} );
 
-	/**
-	 * This task is made for the purpose of making sure we generate the file
-	 * (with browserify) first, and only afterwards we run the `replace` task.
-	 *
-	 * If we try to tell `replace` to read the temporary file, it will fail
-	 * because that will be done before the file is ready. Instead, we define
-	 * the replace task without replacement values, and only add those values
-	 * when we're sure that the file is ready to be read.
-	 *
-	 * @param [string] which Which task we output; 'browserextension'
-	 *  TODO: Add 'gadget' specifier later.
-	 */
-	grunt.registerTask( 'generateProductionScript', function () {
-		let done = this.async();
-
-		// Run `browserify`
-		grunt.util.spawn(
-			{
-				grunt: true,
-				args: [ 'browserify:fullScript' ]
-			},
-			// Callback when that's done
-			() => {
-				[ 'browserextension', 'gadget' ].forEach( which => {
-					// Update the config to reflect the file we created
-					grunt.config(
-						'replace.' + which + '.options.patterns',
-						[
-							{
-								match: 'jqueryInitialization',
-								replacement: grunt.file.read( 'src/singleton.activation.js' )
-							},
-							{
-								match: 'fullScript',
-								replacement: grunt.file.read( generatedFile )
-							},
-							{
-								match: 'languageBlob',
-								replacement: generateLangBlob()
-							}
-						]
-					);
-				} );
-
-				// Run the `replace` and `copy` tasks.
-				grunt.task.run( [ 'replace:browserextension', 'copy:browserextension', 'replace:gadget' ] );
-				// Done async
-				done();
-			}
-		);
-	} );
-
 	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana', 'jsdoc' ] );
 	grunt.registerTask( 'test', [ 'lint', 'run:tests' ] );
-	grunt.registerTask( 'build', [ 'clean', 'less', 'generateProductionScript' ] );
+	grunt.registerTask( 'build', [ 'clean', 'less', 'replace:language', 'browserify', 'copy' ] );
 	grunt.registerTask( 'default', [ 'test', 'build' ] );
 };
