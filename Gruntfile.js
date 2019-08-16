@@ -128,8 +128,7 @@ module.exports = function Gruntfile( grunt ) {
 			browserextension: {
 				files: [
 					{ src: 'build/extension_manifest.json', dest: 'dist/extension/manifest.json' },
-					{ src: 'build/extension_content_script.js', dest: 'dist/extension/js/contentScript.js' },
-					{ src: 'node_modules/jquery/dist/jquery.min.js', dest: 'dist/extension/js/lib/jquery.js' }
+					{ src: 'build/extension_content_script.js', dest: 'dist/extension/js/contentScript.js' }
 				]
 			}
 		},
