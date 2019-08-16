@@ -14,7 +14,7 @@
 			"*://es.wikipedia.org/*"
 		],
 		"all_frames": true,
-		"js": [ "js/lib/jquery.js", "js/contentScript.js" ],
+		"js": [ "js/contentScript.js" ],
 		"css": [ "generated.whowrotethat.css" ],
 		"run_at": "document_end"
 	} ],

@@ -11,7 +11,6 @@
       "build": "grunt build"
    },
    "dependencies": {
-      "jquery": "3.3.1",
       "@babel/polyfill": "^7.0.0"
    },
    "devDependencies": {
