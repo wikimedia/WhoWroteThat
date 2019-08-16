@@ -1,7 +1,6 @@
 .DS_STORE
 node_modules/
-temp/*
-!temp/.gitkeep
+temp/
+dist/
 .idea/
 docs/
-

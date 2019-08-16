@@ -11,7 +11,7 @@
       "build": "grunt build"
    },
    "dependencies": {
-      "jquery": "~3.4.1",
+      "jquery": "3.3.1",
       "@babel/polyfill": "^7.0.0"
    },
    "devDependencies": {
@@ -30,6 +30,7 @@
       "grunt-browserify": "^5.3.0",
       "grunt-contrib-clean": "^2.0.0",
       "grunt-contrib-concat": "^1.0.1",
+      "grunt-contrib-copy": "^1.0.0",
       "grunt-contrib-less": "^2.0.0",
       "grunt-contrib-qunit": "^2.0.0",
       "grunt-eslint": "20.1.0",

@@ -31,6 +31,7 @@ module.exports = function Gruntfile( grunt ) {
 	grunt.loadNpmTasks( 'grunt-run' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
+	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-replace' );
 	grunt.loadNpmTasks( 'grunt-contrib-less' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
@@ -123,7 +124,16 @@ module.exports = function Gruntfile( grunt ) {
 				]
 			}
 		},
-		clean: [ generatedFile ],
+		copy: {
+			browserextension: {
+				files: [
+					{ src: 'build/extension_manifest.json', dest: 'dist/extension/manifest.json' },
+					{ src: 'build/extension_content_script.js', dest: 'dist/extension/js/contentScript.js' },
+					{ src: 'node_modules/jquery/dist/jquery.min.js', dest: 'dist/extension/js/lib/jquery.js' }
+				]
+			}
+		},
+		clean: [ 'dist/', 'temp/' ],
 		run: {
 			options: {},
 			tests: {
@@ -180,8 +190,8 @@ module.exports = function Gruntfile( grunt ) {
 					);
 				} );
 
-				// Run the `replace` task
-				grunt.task.run( [ 'replace:browserextension', 'replace:gadget' ] );
+				// Run the `replace` and `copy` tasks.
+				grunt.task.run( [ 'replace:browserextension', 'copy:browserextension', 'replace:gadget' ] );
 				// Done async
 				done();
 			}
@@ -190,6 +200,6 @@ module.exports = function Gruntfile( grunt ) {
 
 	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana' ] );
 	grunt.registerTask( 'test', [ 'lint', 'run:tests' ] );
-	grunt.registerTask( 'build', [ 'less', 'generateProductionScript', 'clean' ] );
+	grunt.registerTask( 'build', [ 'clean', 'less', 'generateProductionScript' ] );
 	grunt.registerTask( 'default', [ 'test', 'build' ] );
 };
