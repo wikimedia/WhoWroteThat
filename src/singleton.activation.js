@@ -8,9 +8,9 @@ var wwtActivationSingleton = ( function () {
 		 * Only attaches the button for pages in the main namespace, and only
 		 * in view mode.
 		 *
-		 * @param  {[type]} allTranslations An object representing all available
+		 * @param  {Object} allTranslations An object representing all available
 		 *  translations, keyed by language code.
-		 * @param  {[type]} onClickFunction The function that is triggered when
+		 * @param  {Function} onClickFunction The function that is triggered when
 		 *  the activation button is clicked.
 		 */
 		initialize = function ( allTranslations, onClickFunction ) {

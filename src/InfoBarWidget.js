@@ -1,3 +1,9 @@
+/**
+ * @class
+ * @param {Object} config Configuration options.
+ * @param {string} config.state The state of the infobar; see {@link InfoBarWidget#setState}.
+ * @constructor
+ */
 const InfoBarWidget = function InfoBarWidget( config = {} ) {
 	// Parent constructor
 	OO.ui.ButtonWidget.parent.call( this, config );
