@@ -8,5 +8,6 @@
 	"ext-whowrotethat-state-error": "Error: $1",
 	"ext-whowrotethat-state-error-generic": "Could not load WhoWroteThat. Please refresh and try again.",
 	"ext-whowrotethat-ready-title": "Who Wrote That?",
-	"ext-whowrotethat-ready-general": "Hover to see contributions by the same author. Click for more details."
+	"ext-whowrotethat-ready-general": "Hover to see contributions by the same author. Click for more details.",
+	"ext-whowrotethat-api-error-wikiwho-generic": "WikiWho data is not currently available for this article. Please try again soon."
 }
