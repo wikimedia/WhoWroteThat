@@ -29,4 +29,16 @@ import languageBlob from '../../temp/languages'; // This is generated during the
 
 	var q = window.RLQ || ( window.RLQ = [] );
 	q.push( [ [ 'jquery', 'mediawiki.base', 'mediawiki.util', 'mediawiki.jqueryMsg' ], loadWhoWroteThat ] );
+
+	// For debugging purposes, export methods to the window global
+	window.wwtDebug = {
+		resetWelcomePopup: () => {
+			// Notify the extension
+			window.postMessage( {
+				from: 'whowrotethat',
+				type: 'tour-welcome',
+				action: 'reset'
+			}, '*' );
+		}
+	};
 }() );
