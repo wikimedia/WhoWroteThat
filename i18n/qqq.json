@@ -5,9 +5,11 @@
 	"ext-whowrotethat-activation-link": "The text for the link that toggles WhoWroteThat mode",
 	"ext-whowrotethat-activation-link-tooltip": "The tooltip for the link that toggles WhoWroteThat mode",
 	"ext-whowrotethat-state-pending": "Displays in the information bar during loading.",
-	"ext-whowrotethat-state-error": "Displays in the information bar in case there were errors while loading.",
-	"ext-whowrotethat-state-error-generic": "A generic error suggesting to the user that they should refresh.",
+	"ext-whowrotethat-state-error": "Prefix for the error display in the information bar in case there were errors while loading.",
+	"ext-whowrotethat-error-refresh": "Error message shown when an error is probably recoverable.",
+	"ext-whowrotethat-error-later": "Error message shown when an error may be recoverable after some time has passed.",
+	"ext-whowrotethat-error-contact": "Error message shown if an error is unlikely to be recoverable, with a link to the Who Wrote That contact page.\n* $1 is the HTML link to the contact page, with the text specified in {{wm-msg|ext-whowrotethat-state-error-contact-link}}",
+	"ext-whowrotethat-error-contact-link": "The text of the link to the contact page shown in {{wm-msg|ext-whowrotethat-state-error-contact}}.",
 	"ext-whowrotethat-ready-title": "Title of the extension that appears when the system is loaded and displays information about the selection.",
-	"ext-whowrotethat-ready-general": "Instruction label that appears when the system is ready, before any hover or selection was made yet.",
-	"ext-whowrotethat-api-error-wikiwho-generic": "Error message displayed when an article's data could not be fetched."
+	"ext-whowrotethat-ready-general": "Instruction label that appears when the system is ready, before any hover or selection was made yet."
 }

@@ -4,10 +4,12 @@
 	},
 	"ext-whowrotethat-activation-link": "Who Wrote That?",
 	"ext-whowrotethat-activation-link-tooltip": "Activate Who Wrote That?",
-	"ext-whowrotethat-state-pending": "<strong><em>Who Wrote That?</em></strong> is loading. This might take a while",
-	"ext-whowrotethat-state-error": "Error: $1",
-	"ext-whowrotethat-state-error-generic": "Could not load WhoWroteThat. Please refresh and try again.",
+	"ext-whowrotethat-state-pending": "<strong><em>Who Wrote That?</em></strong> is loading. This might take a while.",
+	"ext-whowrotethat-state-error": "API Error: $1",
+	"ext-whowrotethat-error-refresh": "Please refresh the page or try again later.",
+	"ext-whowrotethat-error-later": "Please try again later.",
+	"ext-whowrotethat-error-contact": "Please $1 about this issue.",
+	"ext-whowrotethat-error-contact-link": "contact us",
 	"ext-whowrotethat-ready-title": "Who Wrote That?",
-	"ext-whowrotethat-ready-general": "Hover to see contributions by the same author. Click for more details.",
-	"ext-whowrotethat-api-error-wikiwho-generic": "WikiWho data is not currently available for this article. Please try again soon."
+	"ext-whowrotethat-ready-general": "Hover to see contributions by the same author. Click for more details."
 }
