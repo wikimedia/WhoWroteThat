@@ -13,6 +13,18 @@
 			"*://tr.wikipedia.org/*",
 			"*://es.wikipedia.org/*"
 		],
+		"exclude_globs": [
+			"*://en.wikipedia.org/wiki/Special:*",
+			"*://de.wikipedia.org/wiki/Spezial:*",
+			"*://eu.wikipedia.org/wiki/Berezi:*",
+			"*://tr.wikipedia.org/wiki/Özel:*",
+			"*://es.wikipedia.org/wiki/Especial:*",
+			"*://en.wikipedia.org/*title=Special:*",
+			"*://de.wikipedia.org/*title=Spezial:*",
+			"*://eu.wikipedia.org/*title=Berezi:*",
+			"*://tr.wikipedia.org/*title=Özel:*",
+			"*://es.wikipedia.org/*title=Especial:*"
+		],
 		"all_frames": true,
 		"js": [ "js/contentScript.js" ],
 		"css": [ "generated.whowrotethat.css" ],

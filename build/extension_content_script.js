@@ -14,5 +14,8 @@ function injectScript( filePath, tag ) {
 	node.appendChild( script );
 }
 
+// Write to console, for later debugging and bug filtering process for the extension
+window.console.info( 'WhoWroteThat Extension: Loaded on page.' );
+
 // Inject page script into the DOM
 injectScript( chrome.extension.getURL( 'js/generated.pageScript.js' ), 'body' );
