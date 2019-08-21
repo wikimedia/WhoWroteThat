@@ -17,17 +17,27 @@ describe( 'Api test', () => {
 	describe( 'getAjaxURL', () => {
 		const cases = [
 			{
-				msg: 'Should get the correct API url',
+				msg: 'Should get the correct API URL',
 				input: 'https://en.wikipedia.org/wiki/Foo',
 				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/Foo/'
 			},
 			{
-				msg: 'Should get the correct API url from url parameter',
+				msg: 'Should get the correct API URL without fragment',
+				input: 'https://en.wikipedia.org/wiki/Foo#section',
+				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/Foo/'
+			},
+			{
+				msg: 'Should get the correct API URL without query string',
+				input: 'https://en.wikipedia.org/wiki/Iñtërnâtiônàlizætiøn_(disambig)?debug=1',
+				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/Iñtërnâtiônàlizætiøn_(disambig)/'
+			},
+			{
+				msg: 'Should get the correct API URL from title parameter',
 				input: 'https://en.wikipedia.org/w/index.php?title=Foo',
 				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/Foo/'
 			},
 			{
-				msg: 'Should get the correct API url with oldid parameter',
+				msg: 'Should get the correct API URL with oldid parameter',
 				input: 'https://ru.wikipedia.org/w/index.php?title=Foo&oldid=123',
 				expected: 'https://wikiwho.example.com/ru/whocolor/v1.0.0-beta/Foo/123/'
 			}

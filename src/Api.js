@@ -68,7 +68,7 @@ class Api {
 			lang = matches[ 1 ];
 		} else {
 			// URL is like: https://en.wikipedia.org/wiki/Foo
-			matches = wikiUrl.match( /:\/\/([a-z]+).wikipedia.org\/wiki\/(.*)/i );
+			matches = wikiUrl.match( /:\/\/([a-z]+).wikipedia.org\/wiki\/([^#?]*)/i );
 			lang = matches[ 1 ];
 			title = matches[ 2 ];
 		}
