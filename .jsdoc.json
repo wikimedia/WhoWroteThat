@@ -27,11 +27,14 @@
       "maintitle": "WhoWroteThat",
       "repository": "https://github.com/wikimedia/WhoWroteThat",
       "linkMap": {
-        "Promise": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+        "@todo": "Some of these can be removed after https://github.com/jsdoc/jsdoc/issues/1585",
         "Array": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
-        "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
         "Error": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
-        "jQuery": "https://api.jquery.com/Types/#jQuery"
+        "HTMLElement": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/HTMLElement",
+        "jQuery": "https://api.jquery.com/Types/#jQuery",
+        "jQuery.Promise": "https://api.jquery.com/Types/#Promise",
+        "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+        "Promise": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
       }
     }
   }

@@ -68,7 +68,8 @@ module.exports = function Gruntfile( grunt ) {
 		jsdoc: {
 			all: {
 				options: {
-					configure: '.jsdoc.json'
+					configure: '.jsdoc.json',
+					pedantic: true
 				}
 			}
 		},

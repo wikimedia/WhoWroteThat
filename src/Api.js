@@ -121,7 +121,7 @@ class Api {
 	/**
 	 * Get user and revision information for a given token.
 	 *
-	 * @param {int} tokenId
+	 * @param {number} tokenId
 	 * @return {{revisionId: *, score: *, userId: *, username: *, revisionTime: *}|boolean} Object
 	 * that represents the token info or false if a token wasn't found.
 	 */
