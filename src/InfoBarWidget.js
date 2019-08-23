@@ -100,10 +100,22 @@ InfoBarWidget.prototype.setState = function ( state ) {
 /**
  * Set an error with a specific label
  *
- * @param {string} message Error label message key
+ * @param {string} errCode Error code as defined by the Api class.
  */
-InfoBarWidget.prototype.setErrorMessage = function ( message = 'ext-whowrotethat-state-error-generic' ) {
-	this.setLabel( mw.msg( 'ext-whowrotethat-state-error', mw.msg( message ) ) );
+InfoBarWidget.prototype.setErrorMessage = function ( errCode = 'refresh' ) {
+	// Messages used here:
+	// ext-whowrotethat-error-refresh
+	// ext-whowrotethat-error-later
+	// ext-whowrotethat-error-contact
+	let errorMessage = mw.msg( 'ext-whowrotethat-error-' + errCode );
+	if ( errCode === 'contact' ) {
+		// The contact error message is the only with with a different signature, so we handle it.
+		const link = document.createElement( 'a' );
+		link.href = 'https://meta.wikimedia.org/wiki/Talk:Community_Tech/Who_Wrote_That_tool';
+		link.text = mw.msg( 'ext-whowrotethat-error-contact-link' );
+		errorMessage = mw.message( 'ext-whowrotethat-error-contact', link ).parse();
+	}
+	this.setLabel( new OO.ui.HtmlSnippet( mw.msg( 'ext-whowrotethat-state-error', errorMessage ) ) );
 };
 
 export default InfoBarWidget;

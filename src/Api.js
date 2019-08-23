@@ -178,13 +178,29 @@ class Api {
 		this.resultsPromise = $.getJSON( this.getAjaxURL( wikiUrl ) )
 			.then( function ( result ) {
 				// Handle error response.
-				if ( !result.success && result.info ) {
+				if ( !result.success ) {
 					// The API gives us an error message, but we don't use it because it's only
-					// in English.
-					return $.Deferred().reject( 'ext-whowrotethat-api-error-wikiwho-generic' );
+					// in English. Some of the error messages are:
+					// * result.info: "Requested data is not currently available in WikiWho
+					//   database. It will be available soon."
+					// * result.error: "The article (x) you are trying to request does not exist in
+					//   english Wikipedia."
+					// We do add the full error details to the console, for easier debugging.
+					const errCode = result.info && result.info.match( /data is not currently available/i ) ?
+						'refresh' : 'contact';
+					window.console.error( 'WhoWroteThat encountered a "' + errCode + '" error:', result );
+					return $.Deferred().reject( errCode );
 				}
 				// Store all results.
 				api.results = result;
+			}, function ( jqXHR ) {
+				// All other errors are likely to be 4xx and 5xx, and the only one that the user
+				// might be able to recover from is 429 Too Many Requests.
+				let errCode = 'contact';
+				if ( jqXHR.status === 429 ) {
+					errCode = 'later';
+				}
+				return $.Deferred().reject( errCode );
 			} );
 		return this.resultsPromise;
 	}
