@@ -51,7 +51,7 @@ module.exports = function Gruntfile( grunt ) {
 					'!temp/**',
 					'!test/**',
 					'test/suite/**',
-					'dist/extension/js/contentScript.js'
+					'build/extension_content_script.js'
 				]
 			}
 		},
