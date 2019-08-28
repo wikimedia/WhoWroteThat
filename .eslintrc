@@ -9,7 +9,8 @@
         "$": false,
         "mw": false,
         "OO": false,
-        "chrome": false
+        "chrome": false,
+        "browser": false
     },
     "parserOptions": {
         "sourceType": "module"

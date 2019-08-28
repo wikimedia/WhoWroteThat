@@ -105,6 +105,13 @@ module.exports = function Gruntfile( grunt ) {
 				options: {
 					transform: [ 'babelify' ]
 				}
+			},
+			browserextensionTour: {
+				src: 'src/outputs/browserextension_tour.js',
+				dest: 'dist/extension/js/generated.welcomeTour.js',
+				options: {
+					transform: [ 'babelify' ]
+				}
 			}
 		},
 		replace: {

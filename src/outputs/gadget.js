@@ -27,5 +27,53 @@ import languageBlob from '../../temp/languages'; // This is generated during the
 			activationInstance.getButton().on( 'click', onActivateButtonClick );
 		};
 
-	$( document ).ready( loadWhoWroteThat );
+	$( document ).ready( () => {
+		var welcomeTourSeen = window.localStorage.getItem( 'WelcomeTourSeen' ),
+			$overlay = $( '<div>' ).addClass( 'ext-wwt-overlay' );
+
+		loadWhoWroteThat();
+
+		if ( welcomeTourSeen ) {
+			// Do not show the tour if it was previously dismissed
+			return;
+		}
+
+		$.when(
+			$.ready,
+			mw.loader.using( [
+				'oojs-ui',
+				'mediawiki.jqueryMsg'
+			] )
+		).then( () => {
+			const WelcomePopupWidget = require( '../WelcomePopupWidget' ),
+				welcome = new WelcomePopupWidget( {
+					$floatableContainer: $( '#t-whowrotethat' ),
+					$overlay: $overlay
+				} );
+
+			welcome.on( 'dismiss', function () {
+				// This is a gadget that may also work for
+				// non logged in users, so we can't trust
+				// the mw.user.options storage.
+				// Store the fact that the tour was
+				// dismissed in localStorage
+				window.localStorage.setItem( 'WelcomeTourSeen', true );
+				// Hide the popup
+				welcome.toggle( false );
+			} );
+
+			// Show the popup
+			$( 'body' ).append( $overlay );
+			$overlay.append( welcome.$element );
+			welcome.toggle( true );
+		} );
+	} );
+
+	// For debugging purposes, export methods to the window global
+	window.wwtDebug = {
+		resetWelcomePopup: () => {
+			window.localStorage.removeItem( 'WelcomeTourSeen' );
+			window.console.log( 'WhoWroteThat Extension: Welcome tour reset. Please refresh.' );
+		}
+	};
 }() );
