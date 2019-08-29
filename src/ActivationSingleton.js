@@ -122,7 +122,9 @@ class ActivationSingleton {
 			mw.loader.using( [ // MediaWiki dependencies
 				'oojs-ui',
 				'oojs-ui.styles.icons-user',
-				'oojs-ui.styles.icons-interactions'
+				'oojs-ui.styles.icons-interactions',
+				'mediawiki.widgets.datetime',
+				'moment'
 			] )
 		);
 	}

@@ -14,5 +14,7 @@
 	"ext-whowrotethat-ready-general": "Instruction label that appears when the system is ready, before any hover or selection was made yet.",
 	"ext-whowrotethat-tour-welcome-title": "The title for the welcome popup that appears when the extension is enabled for the first time, notifying the user it was installed successfully.",
 	"ext-whowrotethat-tour-welcome-description": "The description for the welcome popup that appears when the extension is enabled for the first time, explaining the activation and base usage of the extension.",
-	"ext-whowrotethat-tour-welcome-dismiss": "Button to permanently dismiss the welcome popup that appears when the extension is enabled for the first time."
+	"ext-whowrotethat-tour-welcome-dismiss": "Button to permanently dismiss the welcome popup that appears when the extension is enabled for the first time.",
+	"ext-whowrotethat-revision-added": "Message shown in a popup that indicates who authored the text of an article. $1 is the username along with (talk | contribs) links, and $2 is a link to the diff with the timestamp as the link text.",
+	"ext-whowrotethat-revision-attribution": "Message indicating how much of the page an editor authored. This is shown immediately after the {{wm-msg|ext-whowrotethat-revision-added}} message."
 }
