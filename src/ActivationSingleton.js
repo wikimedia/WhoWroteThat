@@ -34,8 +34,6 @@ class ActivationSingleton {
 	 */
 	isValidPage() {
 		return !!(
-			// Initialization did not already happen
-			!this.initialized &&
 			// Has the needed parser content
 			this.$contentWrapper.length &&
 			// Is in the main namespace
@@ -78,7 +76,7 @@ class ActivationSingleton {
 	initialize( $content, config ) {
 		this.setProperties( $content, config );
 
-		if ( !this.isValidPage() ) {
+		if ( this.initialized || !this.isValidPage() ) {
 			return;
 		}
 

@@ -33,8 +33,9 @@ import languageBlob from '../../temp/languages'; // This is generated during the
 
 		loadWhoWroteThat();
 
-		if ( welcomeTourSeen ) {
+		if ( welcomeTourSeen || !activationInstance.isValidPage() ) {
 			// Do not show the tour if it was previously dismissed
+			// Or if the page is invalid
 			return;
 		}
 
