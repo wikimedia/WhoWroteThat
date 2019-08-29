@@ -34,7 +34,8 @@
         "jQuery": "https://api.jquery.com/Types/#jQuery",
         "jQuery.Promise": "https://api.jquery.com/Types/#Promise",
         "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-        "Promise": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+        "Promise": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+        "OO.ui.PopupWidget": "https://doc.wikimedia.org/oojs-ui/master/js/#!/api/OO.ui.PopupWidget"
       }
     }
   }
