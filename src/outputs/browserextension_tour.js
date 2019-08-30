@@ -7,6 +7,9 @@
 				'mediawiki.jqueryMsg'
 			] )
 		).then( function () {
+			// The check about whether the tour was already seen has already
+			// taken place at this point. This whole file would not be injected
+			// by the contentScript to begin with, if WelcomeTourSeen is true
 			if ( !$( '#t-whowrotethat' ).length ) {
 				return;
 			}
