@@ -10,7 +10,8 @@
         "mw": false,
         "OO": false,
         "chrome": false,
-        "browser": false
+        "browser": false,
+        "moment": false
     },
     "parserOptions": {
         "sourceType": "module"

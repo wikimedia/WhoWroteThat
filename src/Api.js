@@ -7,17 +7,30 @@ class Api {
 	/**
 	* @param {Object} config
 	* @cfg config.url The WikiWho base URL.
+	* @cfg config.mwApi The mw.Api instance.
 	* @constructor
 	*/
 	constructor( config = {} ) {
-		this.url = config.url || '';
+		// Remove trailing slash from URL.
+		this.url = ( config.url || '' ).replace( /\/$/, '' );
 
-		// Remove trailing slash.
-		if ( this.url && this.url.slice( -1 ) === '/' ) {
-			this.url = this.url.slice( 0, -1 );
-		}
-
+		this.mwApi = config.mwApi;
 		this.results = null;
+	}
+
+	/**
+	 * Fetch core messages needed for the revision popup, etc., making them available to mw.msg().
+	 * This is called just after the script is first loaded, and the request completes very quickly,
+	 * so we shouldn't need to bother with promises and such.
+	 */
+	fetchMessages() {
+		this.mwApi.loadMessages( [
+			'parentheses-start',
+			'talkpagelinktext',
+			'pipe-separator',
+			'contribslink',
+			'parentheses-end'
+		] );
 	}
 
 	/**

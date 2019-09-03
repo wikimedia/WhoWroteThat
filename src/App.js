@@ -1,6 +1,7 @@
 import config from './config';
 import Api from './Api';
 import InfoBarWidget from './InfoBarWidget';
+import RevisionPopupWidget from './RevisionPopupWidget';
 import activationInstance from './ActivationSingleton';
 
 /**
@@ -24,6 +25,8 @@ class App {
 			App.instance = this;
 		}
 
+		this.revisionPopup = new RevisionPopupWidget();
+
 		return App.instance;
 	}
 
@@ -37,7 +40,13 @@ class App {
 		}
 
 		this.widget = new InfoBarWidget( { state: 'pending' } );
-		this.api = new Api( { url: config.wikiWhoUrl } );
+		this.api = new Api( {
+			url: config.wikiWhoUrl,
+			mwApi: new mw.Api()
+		} );
+
+		// Pull in necessary core messages.
+		this.api.fetchMessages();
 
 		this.widget.setState( 'pending' );
 		// Attach widget
@@ -49,6 +58,7 @@ class App {
 
 		// Attach events
 		this.widget.on( 'close', this.onWidgetClose.bind( this ) );
+
 		this.initialized = true;
 	}
 
@@ -60,8 +70,6 @@ class App {
 	 * on and off and on again.
 	 */
 	start() {
-		const self = this;
-
 		this.initialize();
 		this.widget.toggle( true );
 
@@ -70,35 +78,63 @@ class App {
 				// Success handler.
 				() => {
 					// Insert modified HTML.
-					$( '.mw-parser-output' ).html( self.api.getReplacementHtml() );
-					// Highlight when hover a user's contributions.
-					// @TODO This is just testing code and should be
-					// replaced by the proper behaviour.
-					$( '.mw-parser-output .editor-token' )
-						.on( 'mouseenter', function () {
-							const ids = self.api.getIdsFromElement( this );
-							// Activate all this user's contribution spans.
-							$( '.token-editor-' + ids.editorId ).addClass( 'active' );
-							// Information for popup.
-							// eslint-disable-next-line no-console
-							console.log( self.api.getTokenInfo( ids.tokenId ) );
-						} )
-						.on( 'mouseleave', function () {
-							// Deactivate all spans.
-							$( '.mw-parser-output .editor-token' ).removeClass( 'active' );
-						} );
-					self.widget.setState( 'ready' );
+					$( '.mw-parser-output' ).html( this.api.getReplacementHtml() );
+					$( 'body' ).append( this.revisionPopup.$element );
+					this.attachContentListeners();
+					this.widget.setState( 'ready' );
 				},
 				// Error handler.
 				errorCode => {
-					self.widget.setState( 'err' );
-					self.widget.setErrorMessage( errorCode );
+					this.widget.setState( 'err' );
+					this.widget.setErrorMessage( errorCode );
 				}
 			);
 	}
 
 	/**
-	 * Repond to the close event that the widget emits.
+	 * Activate all the spans belonging to the given user.
+	 * @param {number} editorId
+	 */
+	activateSpans( editorId ) {
+		$( '.token-editor-' + editorId ).addClass( 'active' );
+	}
+
+	/**
+	 * Deactivate all spans.
+	 */
+	deactivateSpans() {
+		$( '.mw-parser-output .editor-token' ).removeClass( 'active' );
+	}
+
+	/**
+	 * Add listener to highlight attribution and show the RevisionPopupWidget.
+	 */
+	attachContentListeners() {
+		$( '.mw-parser-output .editor-token' )
+			.on( 'mouseenter', e => {
+				if ( this.revisionPopup.isVisible() ) {
+					return;
+				}
+				const ids = this.api.getIdsFromElement( e.target );
+				this.activateSpans( ids.editorId );
+			} )
+			.on( 'mouseleave', () => {
+				if ( this.revisionPopup.isVisible() ) {
+					return;
+				}
+				this.deactivateSpans();
+			} );
+
+		$( '.editor-token' ).on( 'click', e => {
+			const ids = this.api.getIdsFromElement( e.target );
+			this.activateSpans( ids.editorId );
+			this.revisionPopup.show( this.api.getTokenInfo( ids.tokenId ), $( e.target ) );
+			this.revisionPopup.once( 'toggle', this.deactivateSpans );
+		} );
+	}
+
+	/**
+	 * Respond to the close event that the widget emits.
 	 * Toggle the application off, and replace the content
 	 * to the original dom of the original article.
 	 */
