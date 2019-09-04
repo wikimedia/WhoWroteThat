@@ -17,4 +17,4 @@ Installing WhoWroteThat
 
 ## As a browser extension
 
-1. Install it. (Details t.b.c.)
+1. Install it. (Details t.b.c)
