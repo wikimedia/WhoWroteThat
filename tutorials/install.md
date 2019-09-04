@@ -17,4 +17,4 @@ Installing WhoWroteThat
 
 ## As a browser extension
 
-Refer to [the README file](../README.md).
+1. Install it. (Details t.b.c)
