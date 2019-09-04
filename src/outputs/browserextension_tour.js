@@ -35,6 +35,7 @@
 			} );
 
 			// Show the popup
+			$( 'html' ).addClass( 'ext-wwt-popup' );
 			$( 'body' ).append( $overlay );
 			$overlay.append( welcome.$element );
 			welcome.toggle( true );

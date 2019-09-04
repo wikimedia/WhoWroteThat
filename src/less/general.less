@@ -1,3 +1,13 @@
+html.ext-wwt-popup,
+html.ext-wwt-popup body {
+	// HACK: By default, the html and <body> only span
+	// as far down as the viewport, even though the content
+	// is longer. This makes the welcome popup appear in
+	// weird places if the "Tools" menu is beyond the bottom
+	// of the viewport itself.
+	height: unset;
+}
+
 .mw-parser-output .editor-token {
 	cursor: pointer;
 
