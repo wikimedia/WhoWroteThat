@@ -126,10 +126,21 @@ class App {
 			} );
 
 		$( '.editor-token' ).on( 'click', e => {
-			const ids = this.api.getIdsFromElement( e.target );
+			const ids = this.api.getIdsFromElement( e.target ),
+				tokenInfo = this.api.getTokenInfo( ids.tokenId );
 			this.activateSpans( ids.editorId );
-			this.revisionPopup.show( this.api.getTokenInfo( ids.tokenId ), $( e.target ) );
+			this.revisionPopup.show( tokenInfo, $( e.target ) );
 			this.revisionPopup.once( 'toggle', this.deactivateSpans );
+
+			// Fetch edit summary then re-render the popup.
+			this.api.fetchEditSummary( tokenInfo.revisionId ).then( successData => {
+				Object.assign( tokenInfo, successData );
+				this.revisionPopup.show( tokenInfo, $( e.target ) );
+			}, () => {
+				// Silently fail. The revision info provided by WikiWho is still present, which is
+				// the important part, so we'll just show what we have and throw a console warning.
+				mw.log.warn( `WhoWroteThat failed to fetch the summary for revision ${tokenInfo.revisionId}` );
+			} );
 		} );
 	}
 

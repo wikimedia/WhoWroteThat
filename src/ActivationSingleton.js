@@ -121,6 +121,8 @@ class ActivationSingleton {
 				'oojs-ui',
 				'oojs-ui.styles.icons-user',
 				'oojs-ui.styles.icons-interactions',
+				'mediawiki.interface.helpers.styles',
+				'mediawiki.special.changeslist',
 				'mediawiki.widgets.datetime',
 				'moment'
 			] )

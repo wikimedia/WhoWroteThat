@@ -34,6 +34,34 @@ class Api {
 	}
 
 	/**
+	 * Get parsed edit summary for the given revision.
+	 * @param {number} revId
+	 * @return {Promise} Resolving Object with keys 'comment' and 'size'.
+ 	 */
+	fetchEditSummary( revId ) {
+		return this.mwApi.ajax( {
+			action: 'compare',
+			fromrev: revId,
+			torelative: 'prev',
+			prop: 'parsedcomment|size',
+			formatversion: 2
+		} ).then(
+			data => {
+				if ( data.compare ) {
+					return {
+						comment: data.compare.toparsedcomment,
+						size: data.compare.tosize - ( data.compare.fromsize || 0 )
+					};
+				}
+				return $.Deferred().reject();
+			},
+			failData => {
+				return $.Deferred().reject( failData );
+			}
+		);
+	}
+
+	/**
 	 * Get the value of a parameter from the given URL query string.
 	 *
 	 * @protected
