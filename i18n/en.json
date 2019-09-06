@@ -4,6 +4,7 @@
 	},
 	"ext-whowrotethat-activation-link": "Who Wrote That?",
 	"ext-whowrotethat-activation-link-tooltip": "Activate Who Wrote That?",
+	"ext-whowrotethat-deactivation-link": "Close Who Wrote That?",
 	"ext-whowrotethat-state-pending": "<strong><em>Who Wrote That?</em></strong> is loading. This might take a while.",
 	"ext-whowrotethat-state-error": "API Error: $1",
 	"ext-whowrotethat-error-refresh": "Please refresh the page or try again later.",
