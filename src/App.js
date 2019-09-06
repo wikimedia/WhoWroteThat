@@ -141,7 +141,7 @@ class App {
 	onWidgetClose() {
 		// Close button; revert back to the original content
 		activationInstance.getContentWrapper()
-			.replaceWith( activationInstance.getOriginalContent() );
+			.html( activationInstance.getOriginalContent().html() );
 
 		// Hide the widget
 		this.widget.toggle( false );
