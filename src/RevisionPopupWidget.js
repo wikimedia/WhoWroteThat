@@ -19,6 +19,23 @@ const RevisionPopupWidget = function RevisionPopupWidget() {
 /* Setup */
 OO.inheritClass( RevisionPopupWidget, OO.ui.PopupWidget );
 
+function getSizeHtml( size ) {
+	let sizeClass;
+
+	if ( size > 0 ) {
+		sizeClass = 'mw-plusminus-pos';
+	} else if ( size < 0 ) {
+		sizeClass = 'mw-plusminus-neg';
+	} else {
+		sizeClass = 'mw-plusminus-null';
+	}
+
+	return `
+		<span class="${sizeClass} mw-diff-bytes">` +
+			`${size > 0 ? '+' : ''}${mw.language.convertNumber( size )}` +
+		'</span>';
+}
+
 /**
  * Show the revision popup based on the given token data, above the given element.
  * Note that the English namespaces will normalize to the wiki's local namespaces.
@@ -40,8 +57,10 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 		dateStr = moment( data.revisionTime ).locale( mw.config.get( 'wgUserLanguage' ) ).format( 'LLL' ),
 		diffLink = `<a target="_blank" href="${mw.util.getUrl( `Special:Diff/${data.revisionId}` )}">${dateStr}</a>`,
 		addedMsg = mw.message( 'ext-whowrotethat-revision-added', userLinks, diffLink ).parse(),
-		attributionMsg = mw.message( 'ext-whowrotethat-revision-attribution', data.score ).parse(),
-		html = $.parseHTML( `${addedMsg.trim()} ${attributionMsg}` );
+		commentMsg = data.comment ? `<span class="comment comment--without-parentheses ext-wwt-revisionPopupWidget-comment">${data.comment}</span>` : '',
+		sizeMsg = data.size ? getSizeHtml( data.size ) : '',
+		attributionMsg = `<div class="ext-wwt-revisionPopupWidget-attribution">${mw.message( 'ext-whowrotethat-revision-attribution', data.score ).parse()}</div>`,
+		html = $.parseHTML( `${addedMsg.trim()} ${commentMsg}${sizeMsg} ${attributionMsg}` );
 
 	$( '.ext-wwt-revisionPopupWidget-content' ).html( html );
 	this.setFloatableContainer( $target );
