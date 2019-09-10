@@ -35,3 +35,14 @@ The extension and gadget expose a debugging namespace for testing purposes in `w
 Available commands are:
 
 * `wwtDebug.resetWelcomePopup()`: Resets the value of the stored 'shown' state of the popup. This is useful in case the popup was dismissed (which means it will never appear again) and for testing purposes, we want to display it again. After confirmation in the console, the popup will be displayed on subsequent refresh of the page.
+
+## API Proxy
+
+To protect the privacy of our users, this tool routes all requests to the WhoColor API through a
+[proxy](./public_html/wikiWhoProxy.php) that lives on Toolforge. Requests can only be made from
+Wikipedias. Refer to https://api.wikiwho.net/ if you would like to test making requests to the APIs
+directly.
+
+The [.lighttpd.conf](./.lighttpd.conf) file and the [public_html](./public_html) directory are for
+use only on Toolforge. To set up the Toolforge tool, checkout this repo in the home directory and
+create `wikiwho.ini` with the `user` and `password` of the WikiWho account.
