@@ -30,6 +30,7 @@ const InfoBarWidget = function InfoBarWidget( config = {} ) {
 
 	// Set properties
 	this.setState( config.state || 'pending' );
+	this.toggle( false );
 	this.setLabel( $( '<span>' ).append( mw.msg( 'ext-whowrotethat-state-pending' ) ).contents() );
 
 	// Close event
@@ -91,7 +92,6 @@ InfoBarWidget.prototype.setState = function ( state ) {
 
 		this.$pendingAnimation.toggle( state === 'pending' );
 		this.userInfoLabel.toggle( state === 'ready' );
-		this.closeIcon.toggle( state !== 'pending' );
 
 		this.state = state;
 	}

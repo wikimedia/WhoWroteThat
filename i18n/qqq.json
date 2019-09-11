@@ -2,8 +2,9 @@
 	"@metadata": {
 		"authors": []
 	},
-	"ext-whowrotethat-activation-link": "The text for the link that toggles WhoWroteThat mode",
-	"ext-whowrotethat-activation-link-tooltip": "The tooltip for the link that toggles WhoWroteThat mode",
+	"ext-whowrotethat-activation-link": "The text for the link that turns Who Wrote That on",
+	"ext-whowrotethat-activation-link-tooltip": "The tooltip for the link that turns Who Wrote That on",
+	"ext-whowrotethat-deactivation-link": "The text for the link that turns Who Wrote That off",
 	"ext-whowrotethat-state-pending": "Displays in the information bar during loading.",
 	"ext-whowrotethat-state-error": "Prefix for the error display in the information bar in case there were errors while loading.",
 	"ext-whowrotethat-error-refresh": "Error message shown when an error is probably recoverable.",

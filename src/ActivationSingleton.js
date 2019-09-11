@@ -109,6 +109,21 @@ class ActivationSingleton {
 	}
 
 	/**
+	 * Set the link text and tooltip.
+	 * @param {boolean} [active] The state to toggle to.
+	 */
+	toggleLink( active ) {
+		const anchor = this.link.querySelector( 'a' );
+		if ( active ) {
+			anchor.textContent = mw.msg( 'ext-whowrotethat-deactivation-link' );
+			anchor.title = '';
+		} else {
+			anchor.textContent = mw.msg( 'ext-whowrotethat-activation-link' );
+			anchor.title = mw.msg( 'ext-whowrotethat-activation-link-tooltip' );
+		}
+	}
+
+	/**
 	 * Load the required dependencies for the full script
 	 *
 	 * @return {jQuery.Promise} Promise that is resolved when

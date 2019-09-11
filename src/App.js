@@ -71,12 +71,25 @@ class App {
 	 */
 	start() {
 		this.initialize();
+
+		// Close if already open.
+		if ( this.widget.isVisible() ) {
+			this.onWidgetClose();
+			return;
+		}
+
+		// Otherwise, proceed to open and fetch data.
 		this.widget.toggle( true );
+		activationInstance.toggleLink( true );
 
 		this.api.getData( window.location.href )
 			.then(
 				// Success handler.
 				() => {
+					// The widget might have been closed since getData began.
+					if ( !this.widget.isVisible() ) {
+						return;
+					}
 					// Insert modified HTML.
 					$( '.mw-parser-output' ).html( this.api.getReplacementHtml() );
 					$( 'body' ).append( this.revisionPopup.$element );
@@ -154,8 +167,9 @@ class App {
 		activationInstance.getContentWrapper()
 			.html( activationInstance.getOriginalContent().html() );
 
-		// Hide the widget
+		// Hide the widget and update the sidebar link.
 		this.widget.toggle( false );
+		activationInstance.toggleLink( false );
 	}
 }
 
