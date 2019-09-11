@@ -63,6 +63,11 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 		html = $.parseHTML( `${addedMsg.trim()} ${commentMsg}${sizeMsg} ${attributionMsg}` );
 
 	$( '.ext-wwt-revisionPopupWidget-content' ).html( html );
+
+	if ( $target.find( '.thumb' ).length ) {
+		$target = $target.find( '.thumb' );
+	}
+
 	this.setFloatableContainer( $target );
 	this.toggle( true );
 };

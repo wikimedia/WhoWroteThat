@@ -128,7 +128,7 @@ class App {
 				if ( this.revisionPopup.isVisible() ) {
 					return;
 				}
-				const ids = this.api.getIdsFromElement( e.target );
+				const ids = this.api.getIdsFromElement( e.currentTarget );
 				this.activateSpans( ids.editorId );
 			} )
 			.on( 'mouseleave', () => {
@@ -139,10 +139,10 @@ class App {
 			} );
 
 		$( '.editor-token' ).on( 'click', e => {
-			const ids = this.api.getIdsFromElement( e.target ),
+			const ids = this.api.getIdsFromElement( e.currentTarget ),
 				tokenInfo = this.api.getTokenInfo( ids.tokenId );
 			this.activateSpans( ids.editorId );
-			this.revisionPopup.show( tokenInfo, $( e.target ) );
+			this.revisionPopup.show( tokenInfo, $( e.currentTarget ) );
 			this.revisionPopup.once( 'toggle', this.deactivateSpans );
 
 			// Fetch edit summary then re-render the popup.
