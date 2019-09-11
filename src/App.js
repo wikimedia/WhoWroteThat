@@ -102,6 +102,8 @@ class App {
 					this.widget.setErrorMessage( errorCode );
 				}
 			);
+		// Add a class for CSS to style links appropriately. Is removed in this.onWidgetClose().
+		activationInstance.getContentWrapper().addClass( 'ext-wwt-enabled' );
 	}
 
 	/**
@@ -120,7 +122,10 @@ class App {
 	}
 
 	/**
-	 * Add listener to highlight attribution and show the RevisionPopupWidget.
+	 * Add listeners to:
+	 *   - highlight attribution;
+	 *   - show the RevisionPopupWidget; and
+	 *   - scroll to the right place for fragment links.
 	 */
 	attachContentListeners() {
 		$( '.mw-parser-output .editor-token' )
@@ -155,6 +160,26 @@ class App {
 				mw.log.warn( `WhoWroteThat failed to fetch the summary for revision ${tokenInfo.revisionId}` );
 			} );
 		} );
+
+		/*
+		 * Modify fragment link scrolling behaviour to take into account the width of the infobar at
+		 * the top of the screen, to prevent the targeted heading or citation from being hidden.
+		 */
+		$( "a[href^='#']" ).on( 'click', event => {
+			var targetId, linkOffset, infobarHeight;
+			if ( !this.widget.isVisible() ) {
+				// Use the default if WWT is not active.
+				return;
+			}
+			targetId = decodeURIComponent( event.currentTarget.hash ).replace( /^#/, '' );
+			event.preventDefault();
+			// After preventing the default event from doing it, set the URL bar fragment manually.
+			window.location.hash = targetId;
+			// After setting that, manually scroll to the correct place.
+			linkOffset = $( document.getElementById( targetId ) ).offset().top;
+			infobarHeight = this.widget.$element.outerHeight( true );
+			window.scrollTo( 0, linkOffset - infobarHeight );
+		} );
 	}
 
 	/**
@@ -164,8 +189,9 @@ class App {
 	 */
 	onWidgetClose() {
 		// Close button; revert back to the original content
-		activationInstance.getContentWrapper()
-			.html( activationInstance.getOriginalContent().html() );
+		const $contentWrapper = activationInstance.getContentWrapper();
+		$contentWrapper.removeClass( 'ext-wwt-enabled' );
+		$contentWrapper.html( activationInstance.getOriginalContent().html() );
 
 		// Hide the widget and update the sidebar link.
 		this.widget.toggle( false );

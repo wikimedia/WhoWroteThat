@@ -49,24 +49,28 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 		// We typically link to Special:Contribs for IPs.
 		userPageUrl = isIP ? contribsUrl : mw.util.getUrl( `User:${data.username}` ),
 		userLinks = `
-			<a target="_blank" href="${userPageUrl}">${username}</a>
-			${mw.msg( 'parentheses-start' )}<a target="_blank" href="${mw.util.getUrl( `User talk:${username}` )}">${mw.msg( 'talkpagelinktext' )}</a>
+			<a href="${userPageUrl}">${username}</a>
+			${mw.msg( 'parentheses-start' )}<a href="${mw.util.getUrl( `User talk:${username}` )}">${mw.msg( 'talkpagelinktext' )}</a>
 			${mw.msg( 'pipe-separator' )}
-			<a target="_blank" href="${contribsUrl}">${mw.msg( 'contribslink' )}</a>${mw.msg( 'parentheses-end' )}
+			<a href="${contribsUrl}">${mw.msg( 'contribslink' )}</a>${mw.msg( 'parentheses-end' )}
 		`,
 		dateStr = moment( data.revisionTime ).locale( mw.config.get( 'wgUserLanguage' ) ).format( 'LLL' ),
-		diffLink = `<a target="_blank" href="${mw.util.getUrl( `Special:Diff/${data.revisionId}` )}">${dateStr}</a>`,
+		diffLink = `<a href="${mw.util.getUrl( `Special:Diff/${data.revisionId}` )}">${dateStr}</a>`,
 		addedMsg = mw.message( 'ext-whowrotethat-revision-added', userLinks, diffLink ).parse(),
 		commentMsg = data.comment ? `<span class="comment comment--without-parentheses ext-wwt-revisionPopupWidget-comment">${data.comment}</span>` : '',
 		sizeMsg = data.size ? getSizeHtml( data.size ) : '',
 		attributionMsg = `<div class="ext-wwt-revisionPopupWidget-attribution">${mw.message( 'ext-whowrotethat-revision-attribution', data.score ).parse()}</div>`,
+		$popupContent = $( '.ext-wwt-revisionPopupWidget-content' ),
 		html = $.parseHTML( `${addedMsg.trim()} ${commentMsg}${sizeMsg} ${attributionMsg}` );
 
-	$( '.ext-wwt-revisionPopupWidget-content' ).html( html );
+	$popupContent.html( html );
 
 	if ( $target.find( '.thumb' ).length ) {
 		$target = $target.find( '.thumb' );
 	}
+
+	// Make sure all links in the popup (including in the edit summary) open in new tabs.
+	$popupContent.find( 'a' ).attr( 'target', '_blank' );
 
 	this.setFloatableContainer( $target );
 	this.toggle( true );
