@@ -1,3 +1,5 @@
+import Tools from './Tools';
+
 /**
  * @class
  * @param {Object} config Configuration options.
@@ -17,6 +19,7 @@ const InfoBarWidget = function InfoBarWidget( config = {} ) {
 		flags: [ 'invert' ],
 		classes: [ 'ext-wwt-infoBarWidget-close' ]
 	} );
+	this.userInfoUsernameLabel = new OO.ui.LabelWidget();
 	this.userInfoLabel = new OO.ui.LabelWidget( {
 		label: mw.msg( 'ext-whowrotethat-ready-general' ),
 		classes: [ 'ext-wwt-infoBarWidget-info' ]
@@ -43,6 +46,7 @@ const InfoBarWidget = function InfoBarWidget( config = {} ) {
 			this.$pendingAnimation,
 			this.$icon,
 			this.$label,
+			this.userInfoUsernameLabel.$element,
 			this.userInfoLabel.$element,
 			this.closeIcon.$element
 		);
@@ -116,6 +120,20 @@ InfoBarWidget.prototype.setErrorMessage = function ( errCode = 'refresh' ) {
 		errorMessage = mw.message( 'ext-whowrotethat-error-contact', link ).parse();
 	}
 	this.setLabel( new OO.ui.HtmlSnippet( mw.msg( 'ext-whowrotethat-state-error', errorMessage ) ) );
+};
+
+/**
+ * Show the given username information
+ *
+ * @param {string} username
+ */
+InfoBarWidget.prototype.setUsernameInfo = function ( username ) {
+	this.userInfoUsernameLabel.setLabel( $( '<span>' ).append( Tools.bidiIsolate( username ) ).contents() );
+};
+
+// Clear the username information
+InfoBarWidget.prototype.clearUsernameInfo = function () {
+	this.userInfoUsernameLabel.setLabel( '' );
 };
 
 export default InfoBarWidget;

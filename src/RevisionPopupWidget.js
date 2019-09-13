@@ -46,23 +46,21 @@ function getSizeHtml( size ) {
  * @param {jQuery} $target Element the popup should be attached to.
  */
 RevisionPopupWidget.prototype.show = function ( data, $target ) {
-	const isIP = data.username.slice( 0, 2 ) === '0|',
-		username = isIP ? data.username.slice( 2 ) : data.username,
-		contribsUrl = mw.util.getUrl( `Special:Contributions/${username}` ),
+	const contribsUrl = mw.util.getUrl( `Special:Contributions/${data.username}` ),
 		// We typically link to Special:Contribs for IPs.
-		userPageUrl = isIP ? contribsUrl : mw.util.getUrl( `User:${data.username}` ),
+		userPageUrl = data.isIP ? contribsUrl : mw.util.getUrl( `User:${data.username}` ),
 		// Create links using the jQuery objects so they're properly escaped
 		$userLinks = $( [] )
 			.add(
 				$( '<a>' )
 					.attr( 'href', userPageUrl )
-					.append( Tools.bidiIsolate( username ) )
+					.append( Tools.bidiIsolate( data.username ) )
 			)
 			.add( document.createTextNode( ' ' + mw.msg( 'parentheses-start' ) ) )
 			.add(
 				// Talk page
 				$( '<a>' )
-					.attr( 'href', mw.util.getUrl( `User talk:${username}` ) )
+					.attr( 'href', mw.util.getUrl( `User talk:${data.username}` ) )
 					.text( mw.msg( 'talkpagelinktext' ) )
 			)
 			.add( document.createTextNode( ' ' + mw.msg( 'pipe-separator' ) + ' ' ) )

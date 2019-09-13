@@ -135,22 +135,29 @@ class App {
 				if ( this.revisionPopup.isVisible() ) {
 					return;
 				}
-				const ids = this.api.getIdsFromElement( e.currentTarget );
+				const ids = this.api.getIdsFromElement( e.currentTarget ),
+					tokenInfo = this.api.getTokenInfo( ids.tokenId );
 				this.activateSpans( ids.editorId );
+				this.widget.setUsernameInfo( tokenInfo.username );
 			} )
 			.on( 'mouseleave', () => {
 				if ( this.revisionPopup.isVisible() ) {
 					return;
 				}
 				this.deactivateSpans();
+				this.widget.clearUsernameInfo();
 			} );
 
 		$( '.editor-token' ).on( 'click', e => {
 			const ids = this.api.getIdsFromElement( e.currentTarget ),
 				tokenInfo = this.api.getTokenInfo( ids.tokenId );
 			this.activateSpans( ids.editorId );
+			this.widget.setUsernameInfo( tokenInfo.username );
 			this.revisionPopup.show( tokenInfo, $( e.currentTarget ) );
-			this.revisionPopup.once( 'toggle', this.deactivateSpans );
+			this.revisionPopup.once( 'toggle', () => {
+				this.deactivateSpans();
+				this.widget.clearUsernameInfo();
+			} );
 
 			// Fetch edit summary then re-render the popup.
 			this.api.fetchEditSummary( tokenInfo.revisionId ).then( successData => {
