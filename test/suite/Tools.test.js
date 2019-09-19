@@ -18,10 +18,10 @@ describe( 'Tools test', () => {
 				msg: 'String with spaces'
 			},
 			{
-				input: '<a href="http://example.com/something?action=bar">a wrapped link</a>',
+				input: '<a href="http://example.com">wrapped link as raw HTML</a>',
 				raw: true,
-				expected: '<bdi>&lt;a href="http://example.com/something?action=bar"&gt;a wrapped link&lt;/a&gt;</bdi>',
-				msg: 'Raw string gets escaped'
+				expected: '<bdi><a href="http://example.com">wrapped link as raw HTML</a></bdi>',
+				msg: 'Accepts raw HTML.'
 			},
 			{
 				input: $( '<a>' )

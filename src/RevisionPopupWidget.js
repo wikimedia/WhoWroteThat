@@ -22,6 +22,11 @@ const RevisionPopupWidget = function RevisionPopupWidget() {
 /* Setup */
 OO.inheritClass( RevisionPopupWidget, OO.ui.PopupWidget );
 
+/**
+ * Get markup for the diff size.
+ * @param {number} size
+ * @return {string}
+ */
 function getSizeHtml( size ) {
 	let sizeClass;
 
@@ -37,6 +42,31 @@ function getSizeHtml( size ) {
 		<span class="${sizeClass} mw-diff-bytes">` +
 			`${size > 0 ? '+' : ''}${mw.language.convertNumber( size )}` +
 		'</span>';
+}
+
+/**
+ * Get markup for the edit summary.
+ * @param {Object} data As returned by Api.prototype.getTokenInfo().
+ * @return {string}
+ */
+function getCommentHtml( data ) {
+	if ( data.comment === '' ) {
+		// No edit summary.
+		return '';
+	} else if ( data.comment === undefined ) {
+		// Not yet available.
+		return `
+			<div class="ext-wwt-revisionPopupWidget-comment">
+				<div class="ext-wwt-shimmer ext-www-shimmer-animation"></div>
+				<div class="ext-wwt-shimmer ext-www-shimmer-animation"></div>
+			</div>`;
+	}
+
+	return `
+		<div class="ext-wwt-revisionPopupWidget-comment ext-wwt-revisionPopupWidget-comment-transparent">
+			<span class="comment comment--without-parentheses ext-wwt-revisionPopupWidget-comment">${Tools.bidiIsolate( data.comment, true )}</span>
+			${getSizeHtml( data.size )}
+		</div>`;
 }
 
 /**
@@ -83,7 +113,7 @@ function getUserLinksHtml( data ) {
 /**
  * Show the revision popup based on the given token data, above the given element.
  * Note that the English namespaces will normalize to the wiki's local namespaces.
- * @param {Object} data As returned by Api.getTokenInfo().
+ * @param {Object} data As returned by Api.prototype.getTokenInfo().
  * @param {jQuery} $target Element the popup should be attached to.
  */
 RevisionPopupWidget.prototype.show = function ( data, $target ) {
@@ -94,12 +124,12 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 			.attr( 'href', mw.util.getUrl( `Special:Diff/${data.revisionId}` ) )
 			.text( dateStr ),
 		addedMsg = mw.message( 'ext-whowrotethat-revision-added', $userLinks, $diffLink ).parse(),
-		commentMsg = data.comment ?
-			`<span class="comment comment--without-parentheses ext-wwt-revisionPopupWidget-comment">${Tools.bidiIsolate( $.parseHTML( data.comment ), true )}</span>` :
-			'',
-		sizeMsg = data.size ? getSizeHtml( data.size ) : '',
 		attributionMsg = `<div class="ext-wwt-revisionPopupWidget-attribution">${mw.message( 'ext-whowrotethat-revision-attribution', data.score ).parse()}</div>`,
-		html = `${addedMsg.trim()} ${commentMsg}${sizeMsg} ${attributionMsg}`;
+		html = $.parseHTML( `
+			${addedMsg.trim()}
+			${getCommentHtml( data )}
+			${attributionMsg}
+		` );
 
 	this.$popupContent.html( html );
 
@@ -113,6 +143,11 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 
 	this.setFloatableContainer( $target );
 	this.toggle( true );
+
+	// Animate edit summary, if present.
+	if ( data.comment ) {
+		$( '.ext-wwt-revisionPopupWidget-comment' ).removeClass( 'ext-wwt-revisionPopupWidget-comment-transparent' );
+	}
 };
 
 export default RevisionPopupWidget;
