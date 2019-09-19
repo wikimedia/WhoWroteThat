@@ -16,6 +16,7 @@ describe( 'ActivationSingleton test', () => {
 				mainPage: false
 			}
 		);
+		activationInstance.setOriginalContent( $someContent );
 
 		// Change the content
 		$someContent.empty().append(
