@@ -1,8 +1,12 @@
+import Tools from './Tools';
+
 /**
  * @class
  * @constructor
  */
 const RevisionPopupWidget = function RevisionPopupWidget() {
+	this.$popupContent = $( '<div>' )
+		.addClass( 'ext-wwt-revisionPopupWidget-content' );
 	// Parent constructor
 	RevisionPopupWidget.parent.call( this, {
 		padded: true,
@@ -11,8 +15,7 @@ const RevisionPopupWidget = function RevisionPopupWidget() {
 		// FIXME: 'force-left' for RTL languages
 		align: 'force-right',
 		hideWhenOutOfView: false,
-		$content: $( '<div>' )
-			.addClass( 'ext-wwt-revisionPopupWidget-content' )
+		$content: this.$popupContent
 	} );
 };
 
@@ -48,29 +51,49 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 		contribsUrl = mw.util.getUrl( `Special:Contributions/${username}` ),
 		// We typically link to Special:Contribs for IPs.
 		userPageUrl = isIP ? contribsUrl : mw.util.getUrl( `User:${data.username}` ),
-		userLinks = `
-			<a href="${userPageUrl}">${username}</a>
-			${mw.msg( 'parentheses-start' )}<a href="${mw.util.getUrl( `User talk:${username}` )}">${mw.msg( 'talkpagelinktext' )}</a>
-			${mw.msg( 'pipe-separator' )}
-			<a href="${contribsUrl}">${mw.msg( 'contribslink' )}</a>${mw.msg( 'parentheses-end' )}
-		`,
+		// Create links using the jQuery objects so they're properly escaped
+		$userLinks = $( [] )
+			.add(
+				$( '<a>' )
+					.attr( 'href', userPageUrl )
+					.append( Tools.bidiIsolate( username ) )
+			)
+			.add( document.createTextNode( ' ' + mw.msg( 'parentheses-start' ) ) )
+			.add(
+				// Talk page
+				$( '<a>' )
+					.attr( 'href', mw.util.getUrl( `User talk:${username}` ) )
+					.text( mw.msg( 'talkpagelinktext' ) )
+			)
+			.add( document.createTextNode( ' ' + mw.msg( 'pipe-separator' ) + ' ' ) )
+			.add(
+				$( '<a>' )
+					.attr( 'href', contribsUrl )
+					.text( mw.msg( 'contribslink' ) )
+			)
+			.add( document.createTextNode( mw.msg( 'parentheses-end' ) ) ),
 		dateStr = moment( data.revisionTime ).locale( mw.config.get( 'wgUserLanguage' ) ).format( 'LLL' ),
-		diffLink = `<a href="${mw.util.getUrl( `Special:Diff/${data.revisionId}` )}">${dateStr}</a>`,
-		addedMsg = mw.message( 'ext-whowrotethat-revision-added', userLinks, diffLink ).parse(),
-		commentMsg = data.comment ? `<span class="comment comment--without-parentheses ext-wwt-revisionPopupWidget-comment">${data.comment}</span>` : '',
+		// Use jQuery to make sure attributes are properly escaped
+		$diffLink = $( '<a>' )
+			.attr( 'href', mw.util.getUrl( `Special:Diff/${data.revisionId}` ) )
+			.text( dateStr ),
+		addedMsg = mw.message( 'ext-whowrotethat-revision-added', $userLinks, $diffLink ).parse(),
+		commentMsg = data.comment ?
+			`<span class="comment comment--without-parentheses ext-wwt-revisionPopupWidget-comment">${Tools.bidiIsolate( $.parseHTML( data.comment ), true )}</span>` :
+			'',
 		sizeMsg = data.size ? getSizeHtml( data.size ) : '',
 		attributionMsg = `<div class="ext-wwt-revisionPopupWidget-attribution">${mw.message( 'ext-whowrotethat-revision-attribution', data.score ).parse()}</div>`,
-		$popupContent = $( '.ext-wwt-revisionPopupWidget-content' ),
-		html = $.parseHTML( `${addedMsg.trim()} ${commentMsg}${sizeMsg} ${attributionMsg}` );
+		html = `${addedMsg.trim()} ${commentMsg}${sizeMsg} ${attributionMsg}`;
 
-	$popupContent.html( html );
+	this.$popupContent.html( html );
 
 	if ( $target.find( '.thumb' ).length ) {
 		$target = $target.find( '.thumb' );
 	}
 
 	// Make sure all links in the popup (including in the edit summary) open in new tabs.
-	$popupContent.find( 'a' ).attr( 'target', '_blank' );
+	this.$popupContent.find( 'a' )
+		.attr( 'target', '_blank' );
 
 	this.setFloatableContainer( $target );
 	this.toggle( true );
