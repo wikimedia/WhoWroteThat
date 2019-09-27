@@ -91,7 +91,9 @@ class App {
 						return;
 					}
 					// Insert modified HTML.
-					$( '.mw-parser-output' ).html( this.api.getReplacementHtml() );
+					const $contentWrapper = activationInstance.getContentWrapper();
+					activationInstance.setOriginalContent( $contentWrapper );
+					$contentWrapper.html( this.api.getReplacementHtml() );
 					$( 'body' ).append( this.revisionPopup.$element );
 					this.attachContentListeners();
 					this.widget.setState( 'ready' );

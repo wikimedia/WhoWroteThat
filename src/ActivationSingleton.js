@@ -60,7 +60,6 @@ class ActivationSingleton {
 	 */
 	setProperties( $content, config ) {
 		this.$contentWrapper = $content;
-		this.$originalContent = this.$contentWrapper.clone();
 		this.lang = config.lang || 'en';
 		this.namespace = config.namespace || '';
 		this.mainPage = !!config.mainPage;
@@ -160,6 +159,15 @@ class ActivationSingleton {
 	 */
 	getContentWrapper() {
 		return this.$contentWrapper;
+	}
+
+	/**
+	 * Set the original content.
+	 *
+	 * @param {jQuery} $originalContent
+	 */
+	setOriginalContent( $originalContent ) {
+		this.$originalContent = $originalContent.clone( true, true );
 	}
 
 	/**
