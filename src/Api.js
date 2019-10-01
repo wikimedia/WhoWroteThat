@@ -212,37 +212,57 @@ class Api {
 	 * or rejects if there was an error.
 	 */
 	getData( wikiUrl ) {
-		const api = this;
+		let getJsonData,
+			retry = 1,
+			retries = 4;
 		if ( this.resultsPromise ) {
 			return this.resultsPromise;
 		}
-		this.resultsPromise = $.getJSON( this.getAjaxURL( wikiUrl ) )
-			.then( function ( result ) {
-				// Handle error response.
-				if ( !result.success ) {
-					// The API gives us an error message, but we don't use it because it's only
-					// in English. Some of the error messages are:
-					// * result.info: "Requested data is not currently available in WikiWho
-					//   database. It will be available soon."
-					// * result.error: "The article (x) you are trying to request does not exist in
-					//   english Wikipedia."
-					// We do add the full error details to the console, for easier debugging.
-					const errCode = result.info && result.info.match( /data is not currently available/i ) ?
-						'refresh' : 'contact';
-					window.console.error( 'WhoWroteThat encountered a "' + errCode + '" error:', result );
+		getJsonData = () => {
+			return $.getJSON( this.getAjaxURL( wikiUrl ) )
+				.then( result => {
+					// Handle error response.
+					if ( !result.success ) {
+						// The API gives us an error message, but we don't use it because it's only
+						// in English. Some of the error messages are:
+						// * result.info: "Requested data is not currently available in WikiWho
+						//   database. It will be available soon."
+						// * result.error: "The article (x) you are trying to request does not exist
+						//   in english Wikipedia."
+						// We do add the full error details to the console, for easier debugging.
+						const errCode = result.info && result.info.match( /data is not currently available/i ) ?
+							'refresh' : 'contact';
+						window.console.error( 'WhoWroteThat encountered a "' + errCode + '" error:', result );
+						if ( errCode === 'refresh' && retry <= retries ) {
+							// Return an intermediate Promise to handle the wait.
+							// The time to wait gets progressively longer for each retry.
+							return new Promise( resolve => setTimeout( resolve, 1000 * retry ) )
+								.then( () => {
+									// Followed by a (recursive) Promise to do the next request.
+									window.console.log( 'WhoWroteThat Api::getData() retry ' + retry );
+									retry++;
+									return getJsonData();
+								} );
+						}
+						return $.Deferred().reject( errCode );
+					}
+					// Report retry count.
+					if ( retry > 1 ) {
+						window.console.info( 'WhoWroteThat Api::getData() total retries: ' + ( retry - 1 ) );
+					}
+					// Store all results.
+					this.results = result;
+				}, jqXHR => {
+					// All other errors are likely to be 4xx and 5xx, and the only one that the user
+					// might be able to recover from is 429 Too Many Requests.
+					let errCode = 'contact';
+					if ( jqXHR.status === 429 ) {
+						errCode = 'later';
+					}
 					return $.Deferred().reject( errCode );
-				}
-				// Store all results.
-				api.results = result;
-			}, function ( jqXHR ) {
-				// All other errors are likely to be 4xx and 5xx, and the only one that the user
-				// might be able to recover from is 429 Too Many Requests.
-				let errCode = 'contact';
-				if ( jqXHR.status === 429 ) {
-					errCode = 'later';
-				}
-				return $.Deferred().reject( errCode );
-			} );
+				} );
+		};
+		this.resultsPromise = getJsonData();
 		return this.resultsPromise;
 	}
 }
