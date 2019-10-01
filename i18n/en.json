@@ -17,5 +17,6 @@
 	"ext-whowrotethat-tour-welcome-description": "Activate the the tool from the sidebar. Hover over the text to see the author and their other contributions to this page. Click to get more details.",
 	"ext-whowrotethat-tour-welcome-dismiss": "Got it!",
 	"ext-whowrotethat-revision-added": "$1 added this on $2.",
-	"ext-whowrotethat-revision-attribution": "They have written <strong>$1%</strong> of the page."
+	"ext-whowrotethat-revision-attribution": "They have written <strong>$1%</strong> of the page.",
+	"ext-whowrotethat-revision-deleted-username": "(username or IP removed)"
 }
