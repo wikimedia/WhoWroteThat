@@ -96,6 +96,7 @@ class App {
 					$contentWrapper.html( this.api.getReplacementHtml() );
 					$( 'body' ).append( this.revisionPopup.$element );
 					this.attachContentListeners();
+					this.scrollDown();
 					this.widget.setState( 'ready' );
 				},
 				// Error handler.
@@ -106,6 +107,23 @@ class App {
 			);
 		// Add a class for CSS to style links appropriately. Is removed in this.onWidgetClose().
 		activationInstance.getContentWrapper().addClass( 'ext-wwt-enabled' );
+	}
+
+	/**
+	 * Scroll down to the content on a diff page
+	 * if it is below or in the lower third of the viewport.
+	 */
+	scrollDown() {
+		const viewBottom = window.scrollY + ( window.innerHeight * ( 2 / 3 ) ),
+			$diffHead = $( 'h2.diff-currentversion-title' );
+		if ( $diffHead.length === 1 ) {
+			const contentTop = $diffHead.offset().top,
+				infobarHeight = this.widget.$element.outerHeight( true );
+			if ( contentTop > viewBottom ) {
+				// Scroll to below the WWT info bar. Redundant selector is for Safari.
+				$( 'html, body' ).animate( { scrollTop: contentTop - infobarHeight } );
+			}
+		}
 	}
 
 	/**
