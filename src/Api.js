@@ -167,7 +167,7 @@ class Api {
 	 * that represents the token info or false if a token wasn't found.
 	 */
 	getTokenInfo( tokenId ) {
-		let revId, revision, username, score;
+		let revId, revision, username, isIP, score;
 
 		// Get the token information. results.tokens structure:
 		// [ [ conflict_score, str, o_rev_id, in, out, editor/class_name, age ], ... ]
@@ -194,10 +194,16 @@ class Api {
 			}
 		}
 
+		// The API returns an IP that starts with '0|' when the user account is an IP
+		isIP = username.slice( 0, 2 ) === '0|';
+		// Clean up username by removing the first 2 chars if username is IP
+		username = isIP ? username.slice( 2 ) : username;
+
 		// Put it all together.
 		return {
 			username: username,
 			userId: token[ 5 ],
+			isIP: isIP,
 			revisionId: revId,
 			revisionTime: new Date( revision[ 0 ] ),
 			score: score
