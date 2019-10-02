@@ -1,4 +1,7 @@
 ( function () {
+	/**
+	 * Load the welcome tour popup.
+	 */
 	function loadWhoWroteThatWelcomeTour() {
 		$.when(
 			$.ready,

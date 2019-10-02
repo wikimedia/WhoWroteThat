@@ -184,6 +184,10 @@ class Api {
 		revision = this.results.revisions[ revId ];
 		username = revision[ 3 ];
 
+		// WikiWho prefixes IP addresses with '0|'.
+		isIP = username.slice( 0, 2 ) === '0|';
+		username = isIP ? username.slice( 2 ) : username;
+
 		// Get the user's edit score (percentage of content edited).
 		// results.present_editors structure:
 		// [ [ username, user_id, score ], ... ]
@@ -193,11 +197,6 @@ class Api {
 				break;
 			}
 		}
-
-		// The API returns an IP that starts with '0|' when the user account is an IP
-		isIP = username.slice( 0, 2 ) === '0|';
-		// Clean up username by removing the first 2 chars if username is IP
-		username = isIP ? username.slice( 2 ) : username;
 
 		// Put it all together.
 		return {

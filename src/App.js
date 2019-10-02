@@ -159,10 +159,17 @@ class App {
 				this.widget.clearUsernameInfo();
 			} );
 
+			// eslint-disable-next-line one-var
+			const reqStartTime = Date.now();
+
 			// Fetch edit summary then re-render the popup.
 			this.api.fetchEditSummary( tokenInfo.revisionId ).then( successData => {
+				const delayTime = Date.now() - reqStartTime < 250 ? 250 : 0;
 				Object.assign( tokenInfo, successData );
-				this.revisionPopup.show( tokenInfo, $( e.target ) );
+
+				setTimeout( () => {
+					this.revisionPopup.show( tokenInfo, $( e.target ) );
+				}, delayTime );
 			}, () => {
 				// Silently fail. The revision info provided by WikiWho is still present, which is
 				// the important part, so we'll just show what we have and throw a console warning.

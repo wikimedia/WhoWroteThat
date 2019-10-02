@@ -17,6 +17,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "arrow-parens": [ "error", "as-needed" ]
+        "arrow-parens": [ "error", "as-needed" ],
+        "require-jsdoc": [ "error" ]
     }
 }
