@@ -40,36 +40,54 @@ function getSizeHtml( size ) {
 }
 
 /**
+ * Get jQuery objects for the user links.
+ * @param {Object} data As returned by Api.prototype.getTokenInfo().
+ * @return {jQuery}
+ */
+function getUserLinksHtml( data ) {
+	const contribsUrl = mw.util.getUrl( `Special:Contributions/${data.username}` ),
+		// We typically link to Special:Contribs for IPs.
+		userPageUrl = data.isIP ? contribsUrl : mw.util.getUrl( `User:${data.username}` );
+
+	if ( !data.username ) {
+		// Username was apparently suppressed.
+		return $( '<span>' )
+			.addClass( 'history-deleted' )
+			// Note we can't use the native MediaWiki 'rev-deleted-user'
+			// message because it can include parser functions.
+			.text( mw.msg( 'ext-whowrotethat-revision-deleted-username' ) );
+	}
+
+	return $( [] )
+		.add(
+			$( '<a>' )
+				.attr( 'href', userPageUrl )
+				.append( Tools.bidiIsolate( data.username ) )
+		)
+		.add( document.createTextNode( ' ' + mw.msg( 'parentheses-start' ) ) )
+		.add(
+			// Talk page
+			$( '<a>' )
+				.attr( 'href', mw.util.getUrl( `User talk:${data.username}` ) )
+				.text( mw.msg( 'talkpagelinktext' ) )
+		)
+		.add( document.createTextNode( ' ' + mw.msg( 'pipe-separator' ) + ' ' ) )
+		.add(
+			$( '<a>' )
+				.attr( 'href', contribsUrl )
+				.text( mw.msg( 'contribslink' ) )
+		)
+		.add( document.createTextNode( mw.msg( 'parentheses-end' ) ) );
+}
+
+/**
  * Show the revision popup based on the given token data, above the given element.
  * Note that the English namespaces will normalize to the wiki's local namespaces.
  * @param {Object} data As returned by Api.getTokenInfo().
  * @param {jQuery} $target Element the popup should be attached to.
  */
 RevisionPopupWidget.prototype.show = function ( data, $target ) {
-	const contribsUrl = mw.util.getUrl( `Special:Contributions/${data.username}` ),
-		// We typically link to Special:Contribs for IPs.
-		userPageUrl = data.isIP ? contribsUrl : mw.util.getUrl( `User:${data.username}` ),
-		// Create links using the jQuery objects so they're properly escaped
-		$userLinks = $( [] )
-			.add(
-				$( '<a>' )
-					.attr( 'href', userPageUrl )
-					.append( Tools.bidiIsolate( data.username ) )
-			)
-			.add( document.createTextNode( ' ' + mw.msg( 'parentheses-start' ) ) )
-			.add(
-				// Talk page
-				$( '<a>' )
-					.attr( 'href', mw.util.getUrl( `User talk:${data.username}` ) )
-					.text( mw.msg( 'talkpagelinktext' ) )
-			)
-			.add( document.createTextNode( ' ' + mw.msg( 'pipe-separator' ) + ' ' ) )
-			.add(
-				$( '<a>' )
-					.attr( 'href', contribsUrl )
-					.text( mw.msg( 'contribslink' ) )
-			)
-			.add( document.createTextNode( mw.msg( 'parentheses-end' ) ) ),
+	const $userLinks = getUserLinksHtml( data ),
 		dateStr = moment( data.revisionTime ).locale( mw.config.get( 'wgUserLanguage' ) ).format( 'LLL' ),
 		// Use jQuery to make sure attributes are properly escaped
 		$diffLink = $( '<a>' )
