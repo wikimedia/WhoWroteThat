@@ -18,5 +18,6 @@
 	"ext-whowrotethat-tour-welcome-dismiss": "Got it!",
 	"ext-whowrotethat-revision-added": "$1 added this on $2.",
 	"ext-whowrotethat-revision-attribution": "They have written <strong>$1%</strong> of the page.",
+	"ext-whowrotethat-revision-attribution-lessthan": "They have written <strong>less than 1%</strong> of the page.",
 	"ext-whowrotethat-revision-deleted-username": "(username or IP removed)"
 }
