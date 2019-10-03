@@ -136,7 +136,10 @@ module.exports = function Gruntfile( grunt ) {
 			browserextension: {
 				files: [
 					{ src: 'build/extension_manifest.json', dest: 'dist/extension/manifest.json' },
-					{ src: 'build/extension_content_script.js', dest: 'dist/extension/js/contentScript.js' }
+					{ src: 'build/extension_content_script.js', dest: 'dist/extension/js/contentScript.js' },
+					{ src: 'build/logo/icon-48.png', dest: 'dist/extension/icons/icon-48.png' },
+					{ src: 'build/logo/icon-128.png', dest: 'dist/extension/icons/icon-128.png' },
+					{ src: 'build/logo/icon-128@2x.png', dest: 'dist/extension/icons/icon-128@2x.png' }
 				]
 			}
 		},
