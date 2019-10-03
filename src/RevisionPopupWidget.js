@@ -124,7 +124,8 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 			.attr( 'href', mw.util.getUrl( `Special:Diff/${data.revisionId}` ) )
 			.text( dateStr ),
 		addedMsg = mw.message( 'ext-whowrotethat-revision-added', $userLinks, $diffLink ).parse(),
-		attributionMsg = `<div class="ext-wwt-revisionPopupWidget-attribution">${mw.message( 'ext-whowrotethat-revision-attribution', data.score ).parse()}</div>`,
+		scoreMsgKey = Number( data.score ) >= 1 ? 'ext-whowrotethat-revision-attribution' : 'ext-whowrotethat-revision-attribution-lessthan',
+		attributionMsg = `<div class="ext-wwt-revisionPopupWidget-attribution">${mw.message( scoreMsgKey, data.score ).parse()}</div>`,
 		html = $.parseHTML( `
 			${addedMsg.trim()}
 			${getCommentHtml( data )}
