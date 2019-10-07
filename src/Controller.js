@@ -91,7 +91,8 @@ class Controller {
 		if ( window.mw ) {
 			this.api = new Api( {
 				url: config.wikiWhoUrl,
-				mwApi: new mw.Api()
+				mwApi: new mw.Api(),
+				mwConfig: mw.config
 			} );
 			this.api.fetchMessages();
 
