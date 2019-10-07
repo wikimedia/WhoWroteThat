@@ -132,26 +132,6 @@ class Api {
 	}
 
 	/**
-	 * Extract token and editor IDs from a WikiWho span element with `id='token-X'` and
-	 * `class='token-editor-Y'` attributes.
-	 *
-	 * @param {HTMLElement} element
-	 * @return {Object} An object with two parameters: tokenId and editorId (string).
-	 */
-	getIdsFromElement( element ) {
-		const out = { tokenId: false, editorId: false },
-			tokenMatches = element.id.match( /token-(\d+)/ ),
-			editorMatches = element.className.match( /token-editor-([^\s]+)/ );
-		if ( tokenMatches && tokenMatches[ 1 ] ) {
-			out.tokenId = parseInt( tokenMatches[ 1 ] );
-		}
-		if ( editorMatches && editorMatches[ 1 ] ) {
-			out.editorId = editorMatches[ 1 ];
-		}
-		return out;
-	}
-
-	/**
 	 * Get the WikiWho replacement for `.mw-parser-output` HTML.
 	 * @return {string}
 	 */

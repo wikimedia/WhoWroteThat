@@ -1,9 +1,9 @@
 import Tools from './Tools';
+import wwtController from './Controller';
 
 /**
  * @class
  * @param {Object} config Configuration options.
- * @param {string} config.state The state of the infobar; see {@link InfoBarWidget#setState}.
  * @constructor
  */
 const InfoBarWidget = function InfoBarWidget( config = {} ) {
@@ -32,12 +32,15 @@ const InfoBarWidget = function InfoBarWidget( config = {} ) {
 		);
 
 	// Set properties
-	this.setState( config.state || 'pending' );
-	this.toggle( false );
-	this.setLabel( $( '<span>' ).append( mw.msg( 'whowrotethat-state-pending' ) ).contents() );
+	this.setState( wwtController.getModel().getState() );
+	this.toggle( wwtController.getModel().isActive() );
 
-	// Close event
-	this.closeIcon.$element.on( 'click', () => this.emit( 'close' ) );
+	// Events
+	this.closeIcon.$element.on( 'click', wwtController.dismiss.bind( wwtController ) );
+	wwtController.getModel()
+		.on( 'state', this.setState.bind( this ) );
+	wwtController.getModel()
+		.on( 'active', this.toggle.bind( this ) );
 
 	// Initialize
 	this.$element
@@ -71,8 +74,9 @@ InfoBarWidget.static.legalFlags = [ 'pending', 'ready', 'err' ];
  * Change the state of the widget
  *
  * @param {string} state Widget state; 'pending', 'ready' or 'error'
+ * @param {string} [errorCode] Error code, if applicable
  */
-InfoBarWidget.prototype.setState = function ( state ) {
+InfoBarWidget.prototype.setState = function ( state, errorCode = '' ) {
 	const flags = {};
 
 	if ( this.state !== state ) {
@@ -84,14 +88,27 @@ InfoBarWidget.prototype.setState = function ( state ) {
 		this.setFlags( flags );
 
 		if ( state === 'ready' ) {
-			this.setLabel( $( '<span>' ).append( mw.msg( 'whowrotethat-ready-title' ) ).contents() );
-			this.userInfoLabel.setLabel( $( '<span>' ).append( mw.msg( 'whowrotethat-ready-general' ) ).contents() );
 			this.setIcon( 'userAvatar' );
+			this.setLabel(
+				$( '<span>' ).append(
+					mw.msg( 'whowrotethat-ready-title' )
+				).contents()
+			);
+			this.userInfoLabel.setLabel(
+				$( '<span>' ).append(
+					mw.msg( 'whowrotethat-ready-general' )
+				).contents()
+			);
 		} else if ( state === 'pending' ) {
 			this.setIcon( '' );
+			this.setLabel(
+				$( '<span>' ).append(
+					mw.msg( 'whowrotethat-state-pending' )
+				).contents()
+			);
 		} else {
 			this.setIcon( 'error' );
-			this.setErrorMessage();
+			this.setErrorMessage( errorCode );
 		}
 
 		this.$pendingAnimation.toggle( state === 'pending' );

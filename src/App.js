@@ -1,12 +1,10 @@
-import config from './config';
-import Api from './Api';
 import InfoBarWidget from './InfoBarWidget';
 import RevisionPopupWidget from './RevisionPopupWidget';
-import activationInstance from './ActivationSingleton';
+import wwtController from './Controller';
 
 /**
- * Application class, responsible for running, activating,
- * and toggling the entire application.
+ * Application class, responsible for managing the WWT ui
+ * and the actions on the DOM returned by the API
  *
  * @class
  */
@@ -21,34 +19,14 @@ class App {
 	constructor() {
 		// Instantiate only once
 		if ( !App.instance ) {
-			this.initialized = false;
 			App.instance = this;
 		}
 
+		this.model = wwtController.getModel();
+
 		this.revisionPopup = new RevisionPopupWidget();
+		this.widget = new InfoBarWidget();
 
-		return App.instance;
-	}
-
-	/**
-	 * Initialize the application
-	 */
-	initialize() {
-		// Only initialize once
-		if ( this.initialized ) {
-			return;
-		}
-
-		this.widget = new InfoBarWidget( { state: 'pending' } );
-		this.api = new Api( {
-			url: config.wikiWhoUrl,
-			mwApi: new mw.Api()
-		} );
-
-		// Pull in necessary core messages.
-		this.api.fetchMessages();
-
-		this.widget.setState( 'pending' );
 		// Attach widget
 		if ( $( 'body' ).hasClass( 'skin-timeless' ) ) {
 			$( '#mw-content-wrapper' ).prepend( this.widget.$element );
@@ -56,57 +34,28 @@ class App {
 			$( '#content' ).prepend( this.widget.$element );
 		}
 
+		// Attach popup
+		$( 'body' ).append( this.revisionPopup.$element );
+
 		// Attach events
-		this.widget.on( 'close', this.onWidgetClose.bind( this ) );
+		this.model.on( 'state', state => {
+			if ( state === 'ready' ) {
+				// TODO: We need to sort something out here where either
+				// we detach those events on 'dismiss' or we make sure
+				// that we do not reattach events if they were previously
+				// already attached.
+				// This problem existed before the MVC refactoring, but is
+				// more visible now, and may have more potential challenges
+				// when we allow for VE to be dismissed without save (in which
+				// case no need to reattach events to the DOM we're launching)
+				// vs redoing the operation after a VE save without reload (in
+				// which case we need to re-attach those events).
+				this.attachContentListeners( this.model.getContentWrapper() );
+				this.scrollDown();
+			}
+		} );
 
-		this.initialized = true;
-	}
-
-	/**
-	 * Run the application.
-	 * This performs the initialization for the first time
-	 * and then can do the toggling when and if the activation
-	 * button is clicked multiple times, toggling the state
-	 * on and off and on again.
-	 */
-	start() {
-		this.initialize();
-
-		// Close if already open.
-		if ( this.widget.isVisible() ) {
-			this.onWidgetClose();
-			return;
-		}
-
-		// Otherwise, proceed to open and fetch data.
-		this.widget.toggle( true );
-		activationInstance.toggleLink( true );
-
-		this.api.getData( window.location.href )
-			.then(
-				// Success handler.
-				() => {
-					// The widget might have been closed since getData began.
-					if ( !this.widget.isVisible() ) {
-						return;
-					}
-					// Insert modified HTML.
-					const $contentWrapper = activationInstance.getContentWrapper();
-					activationInstance.setOriginalContent( $contentWrapper );
-					$contentWrapper.html( this.api.getReplacementHtml() );
-					$( 'body' ).append( this.revisionPopup.$element );
-					this.attachContentListeners();
-					this.scrollDown();
-					this.widget.setState( 'ready' );
-				},
-				// Error handler.
-				errorCode => {
-					this.widget.setState( 'err' );
-					this.widget.setErrorMessage( errorCode );
-				}
-			);
-		// Add a class for CSS to style links appropriately. Is removed in this.onWidgetClose().
-		activationInstance.getContentWrapper().addClass( 'wwt-enabled' );
+		return App.instance;
 	}
 
 	/**
@@ -128,17 +77,41 @@ class App {
 
 	/**
 	 * Activate all the spans belonging to the given user.
+	 *
+	 * @param {jQuery} $content The content to apply events on
 	 * @param {number} editorId
 	 */
-	activateSpans( editorId ) {
-		$( '.token-editor-' + editorId ).addClass( 'active' );
+	activateSpans( $content, editorId ) {
+		$content.find( '.token-editor-' + editorId ).addClass( 'active' );
 	}
 
 	/**
 	 * Deactivate all spans.
+	 *
+	 * @param {jQuery} $content The content to apply events on
 	 */
-	deactivateSpans() {
-		$( '.mw-parser-output .editor-token' ).removeClass( 'active' );
+	deactivateSpans( $content ) {
+		$content.find( '.mw-parser-output .editor-token' ).removeClass( 'active' );
+	}
+
+	/**
+	 * Extract token and editor IDs from a WikiWho span element with `id='token-X'` and
+	 * `class='token-editor-Y'` attributes.
+	 *
+	 * @param {HTMLElement} element
+	 * @return {Object} An object with two parameters: tokenId and editorId (string).
+	 */
+	getIdsFromElement( element ) {
+		const out = { tokenId: false, editorId: false },
+			tokenMatches = element.id.match( /token-(\d+)/ ),
+			editorMatches = element.className.match( /token-editor-([^\s]+)/ );
+		if ( tokenMatches && tokenMatches[ 1 ] ) {
+			out.tokenId = parseInt( tokenMatches[ 1 ] );
+		}
+		if ( editorMatches && editorMatches[ 1 ] ) {
+			out.editorId = editorMatches[ 1 ];
+		}
+		return out;
 	}
 
 	/**
@@ -146,34 +119,36 @@ class App {
 	 *   - highlight attribution;
 	 *   - show the RevisionPopupWidget; and
 	 *   - scroll to the right place for fragment links.
+	 *
+	 * @param {jQuery} $content The content to apply events on
 	 */
-	attachContentListeners() {
-		$( '.mw-parser-output .editor-token' )
+	attachContentListeners( $content ) {
+		$content.find( '.mw-parser-output .editor-token' )
 			.on( 'mouseenter', e => {
 				if ( this.revisionPopup.isVisible() ) {
 					return;
 				}
-				const ids = this.api.getIdsFromElement( e.currentTarget ),
-					tokenInfo = this.api.getTokenInfo( ids.tokenId );
-				this.activateSpans( ids.editorId );
+				const ids = this.getIdsFromElement( e.currentTarget ),
+					tokenInfo = wwtController.getApi().getTokenInfo( ids.tokenId );
+				this.activateSpans( $content, ids.editorId );
 				this.widget.setUsernameInfo( tokenInfo.username );
 			} )
 			.on( 'mouseleave', () => {
 				if ( this.revisionPopup.isVisible() ) {
 					return;
 				}
-				this.deactivateSpans();
+				this.deactivateSpans( $content );
 				this.widget.clearUsernameInfo();
 			} );
 
-		$( '.editor-token' ).on( 'click', e => {
-			const ids = this.api.getIdsFromElement( e.currentTarget ),
-				tokenInfo = this.api.getTokenInfo( ids.tokenId );
-			this.activateSpans( ids.editorId );
+		$content.find( '.editor-token' ).on( 'click', e => {
+			const ids = this.getIdsFromElement( e.currentTarget ),
+				tokenInfo = wwtController.getApi().getTokenInfo( ids.tokenId );
+			this.activateSpans( $content, ids.editorId );
 			this.widget.setUsernameInfo( tokenInfo.username );
 			this.revisionPopup.show( tokenInfo, $( e.currentTarget ) );
 			this.revisionPopup.once( 'toggle', () => {
-				this.deactivateSpans();
+				this.deactivateSpans( $content );
 				this.widget.clearUsernameInfo();
 			} );
 
@@ -181,7 +156,7 @@ class App {
 			const reqStartTime = Date.now();
 
 			// Fetch edit summary then re-render the popup.
-			this.api.fetchEditSummary( tokenInfo.revisionId ).then( successData => {
+			wwtController.getApi().fetchEditSummary( tokenInfo.revisionId ).then( successData => {
 				const delayTime = Date.now() - reqStartTime < 250 ? 250 : 0;
 				Object.assign( tokenInfo, successData );
 
@@ -199,7 +174,7 @@ class App {
 		 * Modify fragment link scrolling behaviour to take into account the width of the infobar at
 		 * the top of the screen, to prevent the targeted heading or citation from being hidden.
 		 */
-		$( "a[href^='#']" ).on( 'click', event => {
+		$content.find( "a[href^='#']" ).on( 'click', event => {
 			var targetId, linkOffset, infobarHeight;
 			if ( !this.widget.isVisible() ) {
 				// Use the default if WWT is not active.
@@ -215,24 +190,8 @@ class App {
 			window.scrollTo( 0, linkOffset - infobarHeight );
 		} );
 	}
-
-	/**
-	 * Respond to the close event that the widget emits.
-	 * Toggle the application off, and replace the content
-	 * to the original dom of the original article.
-	 */
-	onWidgetClose() {
-		// Close button; revert back to the original content
-		const $contentWrapper = activationInstance.getContentWrapper();
-		$contentWrapper.removeClass( 'wwt-enabled' );
-		$contentWrapper.html( activationInstance.getOriginalContent().html() );
-
-		// Hide the widget and update the sidebar link.
-		this.widget.toggle( false );
-		activationInstance.toggleLink( false );
-	}
 }
 
+export default App;
 // This should be able to load with 'require'
 module.exports = App;
-export default App;
