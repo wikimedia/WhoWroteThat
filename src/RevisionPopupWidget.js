@@ -6,7 +6,7 @@ import Tools from './Tools';
  */
 const RevisionPopupWidget = function RevisionPopupWidget() {
 	this.$popupContent = $( '<div>' )
-		.addClass( 'ext-wwt-revisionPopupWidget-content' );
+		.addClass( 'wwt-revisionPopupWidget-content' );
 	// Parent constructor
 	RevisionPopupWidget.parent.call( this, {
 		padded: true,
@@ -56,15 +56,15 @@ function getCommentHtml( data ) {
 	} else if ( data.comment === undefined ) {
 		// Not yet available.
 		return `
-			<div class="ext-wwt-revisionPopupWidget-comment">
-				<div class="ext-wwt-shimmer ext-www-shimmer-animation"></div>
-				<div class="ext-wwt-shimmer ext-www-shimmer-animation"></div>
+			<div class="wwt-revisionPopupWidget-comment">
+				<div class="wwt-shimmer www-shimmer-animation"></div>
+				<div class="wwt-shimmer www-shimmer-animation"></div>
 			</div>`;
 	}
 
 	return `
-		<div class="ext-wwt-revisionPopupWidget-comment ext-wwt-revisionPopupWidget-comment-transparent">
-			<span class="comment comment--without-parentheses ext-wwt-revisionPopupWidget-comment">${Tools.bidiIsolate( data.comment, true )}</span>
+		<div class="wwt-revisionPopupWidget-comment wwt-revisionPopupWidget-comment-transparent">
+			<span class="comment comment--without-parentheses wwt-revisionPopupWidget-comment">${Tools.bidiIsolate( data.comment, true )}</span>
 			${getSizeHtml( data.size )}
 		</div>`;
 }
@@ -85,7 +85,7 @@ function getUserLinksHtml( data ) {
 			.addClass( 'history-deleted' )
 			// Note we can't use the native MediaWiki 'rev-deleted-user'
 			// message because it can include parser functions.
-			.text( mw.msg( 'ext-whowrotethat-revision-deleted-username' ) );
+			.text( mw.msg( 'whowrotethat-revision-deleted-username' ) );
 	}
 
 	return $( [] )
@@ -123,9 +123,9 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 		$diffLink = $( '<a>' )
 			.attr( 'href', mw.util.getUrl( `Special:Diff/${data.revisionId}` ) )
 			.text( dateStr ),
-		addedMsg = mw.message( 'ext-whowrotethat-revision-added', $userLinks, $diffLink ).parse(),
-		scoreMsgKey = Number( data.score ) >= 1 ? 'ext-whowrotethat-revision-attribution' : 'ext-whowrotethat-revision-attribution-lessthan',
-		attributionMsg = `<div class="ext-wwt-revisionPopupWidget-attribution">${mw.message( scoreMsgKey, data.score ).parse()}</div>`,
+		addedMsg = mw.message( 'whowrotethat-revision-added', $userLinks, $diffLink ).parse(),
+		scoreMsgKey = Number( data.score ) >= 1 ? 'whowrotethat-revision-attribution' : 'whowrotethat-revision-attribution-lessthan',
+		attributionMsg = `<div class="wwt-revisionPopupWidget-attribution">${mw.message( scoreMsgKey, data.score ).parse()}</div>`,
 		html = $.parseHTML( `
 			${addedMsg.trim()}
 			${getCommentHtml( data )}
@@ -147,7 +147,7 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 
 	// Animate edit summary, if present.
 	if ( data.comment ) {
-		$( '.ext-wwt-revisionPopupWidget-comment' ).removeClass( 'ext-wwt-revisionPopupWidget-comment-transparent' );
+		$( '.wwt-revisionPopupWidget-comment' ).removeClass( 'wwt-revisionPopupWidget-comment-transparent' );
 	}
 };
 

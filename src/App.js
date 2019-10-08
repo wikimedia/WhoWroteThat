@@ -106,7 +106,7 @@ class App {
 				}
 			);
 		// Add a class for CSS to style links appropriately. Is removed in this.onWidgetClose().
-		activationInstance.getContentWrapper().addClass( 'ext-wwt-enabled' );
+		activationInstance.getContentWrapper().addClass( 'wwt-enabled' );
 	}
 
 	/**
@@ -224,7 +224,7 @@ class App {
 	onWidgetClose() {
 		// Close button; revert back to the original content
 		const $contentWrapper = activationInstance.getContentWrapper();
-		$contentWrapper.removeClass( 'ext-wwt-enabled' );
+		$contentWrapper.removeClass( 'wwt-enabled' );
 		$contentWrapper.html( activationInstance.getOriginalContent().html() );
 
 		// Hide the widget and update the sidebar link.

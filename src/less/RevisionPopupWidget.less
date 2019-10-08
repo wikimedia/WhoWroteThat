@@ -2,34 +2,34 @@
 	font-style: italic;
 }
 
-.ext-wwt-shimmer {
+.wwt-shimmer {
 	height: 18px;
 	margin-bottom: 9px;
 	width: 100%;
 }
 
 /* Prevent 1-pixel jumping of when shimmer disappears and a 2-line summary appears. */
-.ext-wwt-shimmer:last-of-type {
+.wwt-shimmer:last-of-type {
 	margin-bottom: 8px;
 }
 
-.ext-wwt-revisionPopupWidget-comment,
-.ext-wwt-revisionPopupWidget-attribution {
+.wwt-revisionPopupWidget-comment,
+.wwt-revisionPopupWidget-attribution {
 	margin-top: 8px;
 }
 
-.ext-wwt-revisionPopupWidget-comment {
+.wwt-revisionPopupWidget-comment {
 	transition: opacity 1s;
 	opacity: 1;
 }
 
-.ext-wwt-revisionPopupWidget-comment-transparent {
+.wwt-revisionPopupWidget-comment-transparent {
 	opacity: 0;
 }
 
 /* Adapted from http://cloudcannon.com/deconstructions/2014/11/15/facebook-content-placeholder-deconstruction.html */
 
-@keyframes ext-wwt-placeHolderShimmer {
+@keyframes wwt-placeHolderShimmer {
 	0% {
 		background-position: -468px 0;
 	}
@@ -39,9 +39,9 @@
 	}
 }
 
-.ext-www-shimmer-animation {
+.www-shimmer-animation {
 	/* @keyframes duration | timing-function | delay | iteration-count | fill-mode | name */
-	animation: 1s linear 0s infinite forwards ext-wwt-placeHolderShimmer;
+	animation: 1s linear 0s infinite forwards wwt-placeHolderShimmer;
 	background: #f6f7f8;
 	background: linear-gradient( to right, #eee 8%, #ddd 18%, #eee 33% );
 	background-size: 800px 104px;

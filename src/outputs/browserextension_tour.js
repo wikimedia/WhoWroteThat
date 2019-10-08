@@ -18,7 +18,7 @@
 			}
 
 			// Only load after dependencies are loaded
-			const $overlay = $( '<div>' ).addClass( 'ext-wwt-overlay' ),
+			const $overlay = $( '<div>' ).addClass( 'wwt-overlay' ),
 				WelcomePopupWidget = require( '../WelcomePopupWidget' ),
 				welcome = new WelcomePopupWidget( {
 					$floatableContainer: $( '#t-whowrotethat' ),
@@ -38,7 +38,7 @@
 			} );
 
 			// Show the popup
-			$( 'html' ).addClass( 'ext-wwt-popup' );
+			$( 'html' ).addClass( 'wwt-popup' );
 			$( 'body' ).append( $overlay );
 			$overlay.append( welcome.$element );
 			welcome.toggle( true );

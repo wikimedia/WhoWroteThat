@@ -29,7 +29,7 @@ import languageBlob from '../../temp/languages'; // This is generated during the
 
 	$( document ).ready( () => {
 		var welcomeTourSeen = window.localStorage.getItem( 'WelcomeTourSeen' ),
-			$overlay = $( '<div>' ).addClass( 'ext-wwt-overlay' );
+			$overlay = $( '<div>' ).addClass( 'wwt-overlay' );
 
 		loadWhoWroteThat();
 
@@ -64,7 +64,7 @@ import languageBlob from '../../temp/languages'; // This is generated during the
 			} );
 
 			// Show the popup
-			$( 'html' ).addClass( 'ext-wwt-popup' );
+			$( 'html' ).addClass( 'wwt-popup' );
 			$( 'body' ).append( $overlay );
 			$overlay.append( welcome.$element );
 			welcome.toggle( true );
