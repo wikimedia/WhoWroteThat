@@ -1,5 +1,5 @@
-html.ext-wwt-popup,
-html.ext-wwt-popup body {
+html.wwt-popup,
+html.wwt-popup body {
 	// HACK: By default, the html and <body> only span
 	// as far down as the viewport, even though the content
 	// is longer. This makes the welcome popup appear in
@@ -9,7 +9,7 @@ html.ext-wwt-popup body {
 }
 
 // Disable all links in the content area, other than in-page (fragment) links.
-.mw-parser-output.ext-wwt-enabled a {
+.mw-parser-output.wwt-enabled a {
 	pointer-events: none;
 
 	// Re-enable those with a href that start with a hash/pound/octothorpe.
@@ -26,7 +26,7 @@ html.ext-wwt-popup body {
 	}
 }
 
-.ext-wwt-overlay {
+.wwt-overlay {
 	position: absolute;
 	top: 0;
 	left: 0;

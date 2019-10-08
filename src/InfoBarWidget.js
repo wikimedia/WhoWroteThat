@@ -17,31 +17,31 @@ const InfoBarWidget = function InfoBarWidget( config = {} ) {
 	this.closeIcon = new OO.ui.IconWidget( {
 		icon: 'clear',
 		flags: [ 'invert' ],
-		classes: [ 'ext-wwt-infoBarWidget-close' ]
+		classes: [ 'wwt-infoBarWidget-close' ]
 	} );
 	this.userInfoUsernameLabel = new OO.ui.LabelWidget();
 	this.userInfoLabel = new OO.ui.LabelWidget( {
-		label: mw.msg( 'ext-whowrotethat-ready-general' ),
-		classes: [ 'ext-wwt-infoBarWidget-info' ]
+		label: mw.msg( 'whowrotethat-ready-general' ),
+		classes: [ 'wwt-infoBarWidget-info' ]
 	} );
 	this.$pendingAnimation = $( '<div>' )
-		.addClass( 'ext-wwt-infoBarWidget-spinner' )
+		.addClass( 'wwt-infoBarWidget-spinner' )
 		.append(
 			$( '<div>' )
-				.addClass( 'ext-wwt-infoBarWidget-spinner-bounce' )
+				.addClass( 'wwt-infoBarWidget-spinner-bounce' )
 		);
 
 	// Set properties
 	this.setState( config.state || 'pending' );
 	this.toggle( false );
-	this.setLabel( $( '<span>' ).append( mw.msg( 'ext-whowrotethat-state-pending' ) ).contents() );
+	this.setLabel( $( '<span>' ).append( mw.msg( 'whowrotethat-state-pending' ) ).contents() );
 
 	// Close event
 	this.closeIcon.$element.on( 'click', () => this.emit( 'close' ) );
 
 	// Initialize
 	this.$element
-		.addClass( 'ext-wwt-infoBarWidget' )
+		.addClass( 'wwt-infoBarWidget' )
 		.append(
 			this.$pendingAnimation,
 			this.$icon,
@@ -84,8 +84,8 @@ InfoBarWidget.prototype.setState = function ( state ) {
 		this.setFlags( flags );
 
 		if ( state === 'ready' ) {
-			this.setLabel( $( '<span>' ).append( mw.msg( 'ext-whowrotethat-ready-title' ) ).contents() );
-			this.userInfoLabel.setLabel( $( '<span>' ).append( mw.msg( 'ext-whowrotethat-ready-general' ) ).contents() );
+			this.setLabel( $( '<span>' ).append( mw.msg( 'whowrotethat-ready-title' ) ).contents() );
+			this.userInfoLabel.setLabel( $( '<span>' ).append( mw.msg( 'whowrotethat-ready-general' ) ).contents() );
 			this.setIcon( 'userAvatar' );
 		} else if ( state === 'pending' ) {
 			this.setIcon( '' );
@@ -108,18 +108,18 @@ InfoBarWidget.prototype.setState = function ( state ) {
  */
 InfoBarWidget.prototype.setErrorMessage = function ( errCode = 'refresh' ) {
 	// Messages used here:
-	// ext-whowrotethat-error-refresh
-	// ext-whowrotethat-error-later
-	// ext-whowrotethat-error-contact
-	let errorMessage = mw.msg( 'ext-whowrotethat-error-' + errCode );
+	// whowrotethat-error-refresh
+	// whowrotethat-error-later
+	// whowrotethat-error-contact
+	let errorMessage = mw.msg( 'whowrotethat-error-' + errCode );
 	if ( errCode === 'contact' ) {
 		// The contact error message is the only with with a different signature, so we handle it.
 		const link = document.createElement( 'a' );
 		link.href = 'https://meta.wikimedia.org/wiki/Talk:Community_Tech/Who_Wrote_That_tool';
-		link.text = mw.msg( 'ext-whowrotethat-error-contact-link' );
-		errorMessage = mw.message( 'ext-whowrotethat-error-contact', link ).parse();
+		link.text = mw.msg( 'whowrotethat-error-contact-link' );
+		errorMessage = mw.message( 'whowrotethat-error-contact', link ).parse();
 	}
-	this.setLabel( new OO.ui.HtmlSnippet( mw.msg( 'ext-whowrotethat-state-error', errorMessage ) ) );
+	this.setLabel( new OO.ui.HtmlSnippet( mw.msg( 'whowrotethat-state-error', errorMessage ) ) );
 };
 
 /**

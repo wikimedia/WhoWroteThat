@@ -98,9 +98,9 @@ class ActivationSingleton {
 			this.link = mw.util.addPortletLink(
 				'p-tb',
 				'#',
-				mw.msg( 'ext-whowrotethat-activation-link' ),
+				mw.msg( 'whowrotethat-activation-link' ),
 				't-whowrotethat',
-				mw.msg( 'ext-whowrotethat-activation-link-tooltip' )
+				mw.msg( 'whowrotethat-activation-link-tooltip' )
 			);
 
 			this.initialized = true;
@@ -114,11 +114,11 @@ class ActivationSingleton {
 	toggleLink( active ) {
 		const anchor = this.link.querySelector( 'a' );
 		if ( active ) {
-			anchor.textContent = mw.msg( 'ext-whowrotethat-deactivation-link' );
+			anchor.textContent = mw.msg( 'whowrotethat-deactivation-link' );
 			anchor.title = '';
 		} else {
-			anchor.textContent = mw.msg( 'ext-whowrotethat-activation-link' );
-			anchor.title = mw.msg( 'ext-whowrotethat-activation-link-tooltip' );
+			anchor.textContent = mw.msg( 'whowrotethat-activation-link' );
+			anchor.title = mw.msg( 'whowrotethat-activation-link-tooltip' );
 		}
 	}
 
