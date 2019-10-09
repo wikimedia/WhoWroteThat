@@ -1,5 +1,6 @@
 import Api from './Api';
 import Model from './Model';
+import Tools from './Tools';
 
 /**
  * An activation singleton, responsible for activating and attaching the
@@ -139,7 +140,7 @@ class Controller {
 	 */
 	launch() {
 		if ( !this.model.isEnabled() ) {
-			window.console.log( 'Who Wrote That: Could not launch. System is disabled.' );
+			Tools.log( 'Could not launch. System is disabled.' );
 			return $.Deferred().reject();
 		}
 
@@ -200,7 +201,7 @@ class Controller {
 	 */
 	dismiss() {
 		if ( !this.model.isActive() ) {
-			window.console.log( 'Who Wrote That: Could not dismiss. System is not active.' );
+			Tools.log( 'Could not dismiss. System is not active.' );
 			return;
 		}
 		this.model.toggleActive( false );

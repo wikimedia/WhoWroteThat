@@ -1,3 +1,5 @@
+import Tools from './Tools';
+
 /**
  * Interface to the [WikiWho](https://www.wikiwho.net/) WhoColor API.
  *
@@ -178,14 +180,14 @@ class Api {
 						// We do add the full error details to the console, for easier debugging.
 						const errCode = result.info && result.info.match( /data is not currently available/i ) ?
 							'refresh' : 'contact';
-						window.console.error( 'WhoWroteThat encountered a "' + errCode + '" error:', result );
+						Tools.log( 'Encountered a "' + errCode + '" error:', 'error', result );
 						if ( errCode === 'refresh' && retry <= retries ) {
 							// Return an intermediate Promise to handle the wait.
 							// The time to wait gets progressively longer for each retry.
 							return new Promise( resolve => setTimeout( resolve, 1000 * retry ) )
 								.then( () => {
 									// Followed by a (recursive) Promise to do the next request.
-									window.console.log( 'WhoWroteThat Api::getData() retry ' + retry );
+									Tools.log( 'Api::getData() retry ' + retry );
 									retry++;
 									return getJsonData();
 								} );
@@ -194,7 +196,7 @@ class Api {
 					}
 					// Report retry count.
 					if ( retry > 1 ) {
-						window.console.info( 'WhoWroteThat Api::getData() total retries: ' + ( retry - 1 ) );
+						Tools.log( 'Api::getData() total retries: ' + ( retry - 1 ) );
 					}
 					// Store all results.
 					this.results = result;

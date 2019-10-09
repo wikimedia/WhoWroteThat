@@ -1,4 +1,14 @@
 var theBrowser = chrome || browser;
+
+/**
+ * Unify the way we output console.info
+ * We have this tool in Tools.log but that code is not yet loaded when this file runs.
+ *
+ * @param {string} str String to output
+ */
+function log( str ) {
+	window.console.info( 'Who Wrote That? (Browser extension): ' + str );
+}
 /**
  * injectScript - Inject internal script to available access to the `window`
  *
@@ -23,13 +33,13 @@ function injectScript( filePath, tag ) {
  */
 function activateWelcomeTour() {
 	theBrowser.storage.sync.get( [ 'WelcomeTourSeen' ], function ( result ) {
-		window.console.log( 'WhoWroteThat extension: Checking WelcomeTourSeen (' + result.WelcomeTourSeen + ')' );
+		log( 'Checking WelcomeTourSeen (' + result.WelcomeTourSeen + ')' );
 		if ( result.WelcomeTourSeen ) {
 			return;
 		}
 
 		// Inject the welcome tour script
-		window.console.log( 'WhoWroteThat extension: Injecting welcome tour' );
+		log( 'Injecting welcome tour' );
 		injectScript( theBrowser.extension.getURL( 'js/generated.welcomeTour.js' ), 'body' );
 	} );
 }
@@ -51,14 +61,14 @@ window.addEventListener( 'message', function ( event ) {
 				// For 'dismiss', set true; for 'reset', set false
 				WelcomeTourSeen: event.data.action === 'dismiss'
 			}, function () {
-				window.console.log( 'WhoWroteThat Extension: Welcome tour dismissed.' );
+				log( 'Welcome tour dismissed.' );
 			} );
 		}
 	}
 }, false );
 
 // Write to console, for later debugging and bug filtering process for the extension
-window.console.info( 'WhoWroteThat Extension: Loaded on page.' );
+log( 'Loaded on page.' );
 
 // Inject page script into the DOM
 injectScript( theBrowser.extension.getURL( 'js/generated.pageScript.js' ), 'body' );
