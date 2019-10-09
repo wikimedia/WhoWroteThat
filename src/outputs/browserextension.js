@@ -1,30 +1,25 @@
-import activationInstance from '../ActivationSingleton';
+import config from '../config';
+import wwtController from '../Controller';
 import languageBlob from '../../temp/languages'; // This is generated during the build process
 
 ( function () {
 	const onActivateButtonClick = e => {
-			activationInstance.loadDependencies()
-				.then( () => {
-					// Only load after dependencies are loaded
-					const App = require( '../App' ),
-						a = new App();
-					a.start();
-				} );
-
+			wwtController.toggle();
 			e.preventDefault();
 			return false;
 		},
 		loadWhoWroteThat = () => {
-			activationInstance.initialize(
+			wwtController.initialize(
 				$( '.mw-parser-output' ),
 				{
 					lang: $( 'html' ).attr( 'lang' ),
 					translations: languageBlob,
 					namespace: mw.config.get( 'wgCanonicalNamespace' ),
-					mainPage: mw.config.get( 'wgIsMainPage' )
+					mainPage: mw.config.get( 'wgIsMainPage' ),
+					wikiWhoUrl: config.wikiWhoUrl
 				}
 			);
-			activationInstance.getButton().on( 'click', onActivateButtonClick );
+			wwtController.getButton().on( 'click', onActivateButtonClick );
 		};
 
 	var q = window.RLQ || ( window.RLQ = [] );
@@ -39,6 +34,8 @@ import languageBlob from '../../temp/languages'; // This is generated during the
 				type: 'tour-welcome',
 				action: 'reset'
 			}, '*' );
-		}
+		},
+		launch: wwtController.launch.bind( wwtController ),
+		dismiss: wwtController.dismiss.bind( wwtController )
 	};
 }() );
