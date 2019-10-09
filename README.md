@@ -18,15 +18,39 @@ The extension works only on Wikipedias supported by WhoColor API:
 
 ## Testing the Browser Extension
 
-There's a Grunt job to output the code into a working browser extension. To test it:
+There's a Grunt job to output the code into both a working browser extension and gadget.
 
-1. Clone the repo
+1. Clone the repo: `git clone https://github.com/wikimedia/whowrotethat.git`
+2. Go into its directory: `cd whowrotethat`
 2. Run `npm install`
-3. Run `npm run build`
-4. Testing in Chrome: Go to `chrome://extensions/`, click on 'Load unpacked', and choose the `WhoWroteThat/dist/extension` directory. Enable the extension, and go to any article on en.wikipedia.org.
-5. Testing in Firefox: [Follow the official instructions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) to load `WhoWroteThat/dist/extension` directory as an unpacked addon. Enable, and go to any article on en.wikipedia.org. 
+3.
+   * **Firefox:**
+      1. Run `grunt run`
+      2. This will open Firefox to a random page on English Wikipedia,
+         and you should have the 'Who Wrote That?' link in the sidebar.
+         See the [web-ext 'run' docs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference#web-ext_run)
+         for details of how to customize this command with environment variables.
+      3. If you want to [load the extension manually](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox),
+         go to `about:debugging` and select the manifest file in `dist/extension/`.
+   * **Chrome:**
+      1. Run `grunt build`
+      2. Go to `chrome://extensions/` in Chrome
+      3. Click on 'Load unpacked', and choose the `WhoWroteThat/dist/extension` directory
+      4. Enable the extension, and go to any article on en.wikipedia.org.
+   * **Wikipedia gadget or userscript:**
+      1. Run `grunt build`
+      2. Refer to [the install.md file](./tutorials/install.md).
 
-To install as a gadget, follow step 1-3 then refer to [the install.md file](./tutorials/install.md).
+## Releasing the browser extension
+
+After updating the version number in `package.json`
+and tagging the release in Git,
+run `grunt` (the default task only) to create
+a zip file such as `dist/whowrotethat_for_wikipedia-0.2.0.0.zip`.
+This can be uploaded to the Firefox and Chrome browser stores.
+
+A second zip file is also produced, containing the source code.
+This is required for submission to the Firefox add-ons store.
 
 ## Debugging
 

@@ -27,8 +27,9 @@ module.exports = function Gruntfile( grunt ) {
 		};
 
 	grunt.loadNpmTasks( 'grunt-browserify' );
-	grunt.loadNpmTasks( 'grunt-run' );
+	grunt.loadNpmTasks( 'grunt-shell' );
 	grunt.loadNpmTasks( 'grunt-eslint' );
+	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-replace' );
@@ -130,12 +131,25 @@ module.exports = function Gruntfile( grunt ) {
 						dest: 'temp/languages.js'
 					}
 				]
+			},
+			manifest: {
+				options: {
+					patterns: [
+						{ match: 'description', replacement: pkg.description },
+						{ match: 'version', replacement: pkg.version + '.0' }
+					]
+				},
+				files: [
+					{
+						src: 'build/extension_manifest.json',
+						dest: 'dist/extension/manifest.json'
+					}
+				]
 			}
 		},
 		copy: {
 			browserextension: {
 				files: [
-					{ src: 'build/extension_manifest.json', dest: 'dist/extension/manifest.json' },
 					{ src: 'build/extension_content_script.js', dest: 'dist/extension/js/contentScript.js' },
 					{ src: 'build/logo/icon-48.png', dest: 'dist/extension/icons/icon-48.png' },
 					{ src: 'build/logo/icon-128.png', dest: 'dist/extension/icons/icon-128.png' },
@@ -144,20 +158,31 @@ module.exports = function Gruntfile( grunt ) {
 			}
 		},
 		clean: [ 'dist/', 'temp/' ],
-		run: {
-			options: {},
-			tests: {
-				cmd: 'npm',
-				args: [
-					'run',
-					'mocha'
+		shell: {
+			mocha: 'mocha --require @babel/register test/testHelper.js --recursive test/suite  --colors',
+			webextBuild: 'web-ext build',
+			webextLint: 'web-ext lint',
+			webextRun: 'web-ext run --start-url https://en.wikipedia.org/wiki/Special:Random --no-reload'
+		},
+		compress: {
+			webextSource: {
+				options: {
+					archive: './dist/whowrotethat_for_wikipedia-' + pkg.version + '.0_source.zip',
+					mode: 'zip'
+				},
+				files: [
+					{ src: [
+						'{build,i18n,src,test,tutorials}/**',
+						'*.js*', '.*.js*', '*.md', '.{babelrc,eslintrc,nvmrc}'
+					] }
 				]
 			}
 		}
 	} );
 
 	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana', 'jsdoc' ] );
-	grunt.registerTask( 'test', [ 'lint', 'run:tests' ] );
-	grunt.registerTask( 'build', [ 'clean', 'less', 'replace:language', 'browserify', 'copy' ] );
-	grunt.registerTask( 'default', [ 'test', 'build' ] );
+	grunt.registerTask( 'test', [ 'lint', 'shell:mocha' ] );
+	grunt.registerTask( 'build', [ 'clean', 'less', 'replace', 'browserify', 'copy', 'shell:webextLint' ] );
+	grunt.registerTask( 'run', [ 'build', 'shell:webextRun' ] );
+	grunt.registerTask( 'default', [ 'test', 'build', 'shell:webextBuild', 'compress:webextSource' ] );
 };

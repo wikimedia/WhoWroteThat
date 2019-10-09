@@ -1,14 +1,18 @@
 {
    "name": "WhoWroteThat",
-   "description": "A browser extension of WhoColor for Wikipedia",
+   "description": "Explore authorship and revision information visually and directly in Wikipedia articles. Powered by WikiWho.",
    "repository": "https://github.com/wikimedia/WhoWroteThat",
-   "version": "0.1.0",
+   "version": "0.2.0",
    "license": "MIT",
-   "scripts": {
-      "lint": "eslint .",
-      "test": "grunt test",
-      "mocha": "./node_modules/.bin/mocha --require @babel/register test/testHelper.js --recursive test/suite  --colors",
-      "build": "grunt build"
+   "webExt": {
+      "sourceDir": "dist/extension/",
+      "artifactsDir": "dist",
+      "build": {
+         "overwriteDest": true
+      },
+      "lint": {
+         "warningsAsErrors": false
+      }
    },
    "dependencies": {
       "@babel/polyfill": "^7.0.0"
@@ -28,6 +32,7 @@
       "grunt-banana-checker": "^0.7.1",
       "grunt-browserify": "^5.3.0",
       "grunt-contrib-clean": "^2.0.0",
+      "grunt-contrib-compress": "^1.5.0",
       "grunt-contrib-concat": "^1.0.1",
       "grunt-contrib-copy": "^1.0.0",
       "grunt-contrib-less": "^2.0.0",
@@ -35,13 +40,14 @@
       "grunt-eslint": "20.1.0",
       "grunt-jsdoc": "^2.4.0",
       "grunt-replace": "^1.0.1",
-      "grunt-run": "~0.8.1",
+      "grunt-shell": "^3.0.1",
       "grunt-stylelint": "^0.11.0",
+      "jquery": "~3.4.1",
       "jsdoc-wmf-theme": "^0.0.3",
       "jsdom": "~15.1.1",
       "mocha": "^6.2.0",
-      "jquery": "~3.4.1",
       "stylelint": "^10.1.0",
-      "stylelint-config-wikimedia": "0.6.0"
+      "stylelint-config-wikimedia": "0.6.0",
+      "web-ext": "^3.2.0"
    }
 }
