@@ -114,6 +114,18 @@ class Controller {
 				mw.msg( 'whowrotethat-activation-link-tooltip' )
 			);
 
+			// Add hooks for VisualEditor
+			mw.hook( 've.activationComplete' ).add( () => {
+				window.console.log( 'Who Wrote That: VisualEditor activated, disabling system.' );
+
+				this.dismiss();
+				this.model.toggleEnabled( false );
+			} );
+			mw.hook( 've.deactivationComplete' ).add( () => {
+				window.console.log( 'Who Wrote That: VisualEditor deactivated, enabling system.' );
+				this.model.toggleEnabled( true );
+			} );
+
 			this.initialized = true;
 		}
 	}
