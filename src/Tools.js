@@ -1,5 +1,3 @@
-const $ = window.$ || require( 'jquery' );
-
 /**
  * Class to hold some global helper tools
  */

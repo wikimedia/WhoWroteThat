@@ -1,6 +1,5 @@
 import { expect } from 'chai';
 import wwtController from '../../src/Controller';
-const $ = require( 'jquery' );
 
 describe( 'wwtController test', () => {
 	const $someContent = $( '<div>' )
