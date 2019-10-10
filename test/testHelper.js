@@ -10,6 +10,7 @@ function copyProps(src, target) {
 }
 
 global.window = window;
+global.$ = require( 'jquery' );
 global.document = window.document;
 global.navigator = {
 	userAgent: 'node.js',

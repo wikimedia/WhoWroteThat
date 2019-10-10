@@ -1,6 +1,5 @@
 import { expect } from 'chai';
 import Tools from '../../src/Tools';
-const $ = require( 'jquery' );
 
 describe( 'Tools test', () => {
 	describe( 'Tools.bidiIsolate', () => {
