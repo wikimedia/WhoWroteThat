@@ -97,21 +97,24 @@ module.exports = function Gruntfile( grunt ) {
 				src: 'src/outputs/gadget.js',
 				dest: 'dist/gadget/generated.whowrotethat.js',
 				options: {
-					transform: [ 'babelify' ]
+					transform: [ 'babelify' ],
+					exclude: [ 'jquery' ]
 				}
 			},
 			browserextension: {
 				src: 'src/outputs/browserextension.js',
 				dest: 'dist/extension/js/generated.pageScript.js',
 				options: {
-					transform: [ 'babelify' ]
+					transform: [ 'babelify' ],
+					exclude: [ 'jquery' ]
 				}
 			},
 			browserextensionTour: {
 				src: 'src/outputs/browserextension_tour.js',
 				dest: 'dist/extension/js/generated.welcomeTour.js',
 				options: {
-					transform: [ 'babelify' ]
+					transform: [ 'babelify' ],
+					exclude: [ 'jquery' ]
 				}
 			}
 		},
