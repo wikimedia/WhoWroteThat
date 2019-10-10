@@ -1,6 +1,7 @@
 import Api from './Api';
 import Model from './Model';
-const $ = require( 'jquery' );
+const $ = window.$ || require( 'jquery' );
+
 /**
  * An activation singleton, responsible for activating and attaching the
  * button that activates the system when it is applicable.

@@ -11,7 +11,7 @@
          "overwriteDest": true
       },
       "lint": {
-         "warningsAsErrors": false
+         "warningsAsErrors": true
       }
    },
    "dependencies": {
