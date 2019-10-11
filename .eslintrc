@@ -18,6 +18,14 @@
     },
     "rules": {
         "arrow-parens": [ "error", "as-needed" ],
-        "require-jsdoc": [ "error" ]
+        "require-jsdoc": [ "error", {
+            "require": {
+                "FunctionDeclaration": true,
+                "MethodDefinition": true,
+                "ClassDeclaration": true,
+                "ArrowFunctionExpression": true,
+                "FunctionExpression": true
+            }
+        } ]
     }
 }
