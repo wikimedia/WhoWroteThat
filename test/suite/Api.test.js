@@ -40,6 +40,12 @@ describe( 'Api test', () => {
 			// Dummy version of mw.Map to use as config.
 			const config = {
 					data: testCase.config,
+					/**
+					 * Mock an mw.Map getter for use in the config
+					 *
+					 * @param  {string} key Name of the key to fetch
+					 * @return {string|number} Value
+					 */
 					get: function ( key ) {
 						return this.data[ key ];
 					}

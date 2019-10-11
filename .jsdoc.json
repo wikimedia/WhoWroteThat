@@ -33,6 +33,7 @@
         "HTMLElement": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/HTMLElement",
         "jQuery": "https://api.jquery.com/Types/#jQuery",
         "jQuery.Promise": "https://api.jquery.com/Types/#Promise",
+        "jQuery.Event": "https://api.jquery.com/category/events/event-object/",
         "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
         "Promise": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
         "EventEmitter": "https://nodejs.org/api/events.html",
