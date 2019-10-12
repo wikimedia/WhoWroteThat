@@ -38,24 +38,42 @@ class App {
 		$( 'body' ).append( this.revisionPopup.$element );
 
 		// Attach events
+		this.$content = null;
 		this.model.on( 'state', state => {
 			if ( state === 'ready' ) {
-				// TODO: We need to sort something out here where either
-				// we detach those events on 'dismiss' or we make sure
-				// that we do not reattach events if they were previously
-				// already attached.
-				// This problem existed before the MVC refactoring, but is
-				// more visible now, and may have more potential challenges
-				// when we allow for VE to be dismissed without save (in which
-				// case no need to reattach events to the DOM we're launching)
-				// vs redoing the operation after a VE save without reload (in
-				// which case we need to re-attach those events).
-				this.attachContentListeners( this.model.getContentWrapper() );
 				this.scrollDown();
 			}
 		} );
 
 		return App.instance;
+	}
+
+	/**
+	 * Reset the content and prepare it for interactive actions.
+	 * This is happening either at first request from WikiWho or at
+	 * any subsequent times we need to refresh this content, like
+	 * when an edit action happened without refresh, with VisualEditor.
+	 * Storing the interactive content means we can attach events
+	 * to it once and not repeatedly have to reset those.
+	 *
+	 * @param {string} html HTML of the new content
+	 */
+	resetContentFromHTML( html ) {
+		// We're getting the div.mw-parser-output but we want
+		// only what's actually inside it
+		this.$content = $( $.parseHTML( html ) ).contents();
+		this.attachContentListeners( this.$content );
+	}
+
+	/**
+	 * Get the interactive content of this article, based on the content
+	 * received from the WikiWho API that was then augmented with event
+	 * handlers.
+	 *
+	 * @return {jQuery} jQuery element representing the interactive content
+	 */
+	getInteractiveContent() {
+		return this.$content;
 	}
 
 	/**
@@ -91,7 +109,7 @@ class App {
 	 * @param {jQuery} $content The content to apply events on
 	 */
 	deactivateSpans( $content ) {
-		$content.find( '.mw-parser-output .editor-token' ).removeClass( 'active' );
+		$content.find( '.editor-token' ).removeClass( 'active' );
 	}
 
 	/**
@@ -123,7 +141,7 @@ class App {
 	 * @param {jQuery} $content The content to apply events on
 	 */
 	attachContentListeners( $content ) {
-		$content.find( '.mw-parser-output .editor-token' )
+		$content.find( '.editor-token' )
 			.on( 'mouseenter', e => {
 				if ( this.revisionPopup.isVisible() ) {
 					return;
@@ -139,36 +157,38 @@ class App {
 				}
 				this.deactivateSpans( $content );
 				this.widget.clearUsernameInfo();
+			} )
+			.on( 'click', e => {
+				const ids = this.getIdsFromElement( e.currentTarget ),
+					tokenInfo = wwtController.getApi().getTokenInfo( ids.tokenId );
+				this.activateSpans( $content, ids.editorId );
+				this.widget.setUsernameInfo( tokenInfo.username );
+				this.revisionPopup.show( tokenInfo, $( e.currentTarget ) );
+				this.revisionPopup.once( 'toggle', () => {
+					this.deactivateSpans( $content );
+					this.widget.clearUsernameInfo();
+				} );
+
+				// eslint-disable-next-line one-var
+				const reqStartTime = Date.now();
+
+				// Fetch edit summary then re-render the popup.
+				wwtController.getApi().fetchEditSummary( tokenInfo.revisionId )
+					.then( successData => {
+						const delayTime = Date.now() - reqStartTime < 250 ? 250 : 0;
+						Object.assign( tokenInfo, successData );
+
+						setTimeout( () => {
+							this.revisionPopup.show( tokenInfo, $( e.target ) );
+						}, delayTime );
+					}, () => {
+						// Silently fail. The revision info provided by WikiWho
+						// is still present, which is the important part,
+						// so we'll just show what we have and throw a console
+						// warning.
+						mw.log.warn( `WhoWroteThat failed to fetch the summary for revision ${tokenInfo.revisionId}` );
+					} );
 			} );
-
-		$content.find( '.editor-token' ).on( 'click', e => {
-			const ids = this.getIdsFromElement( e.currentTarget ),
-				tokenInfo = wwtController.getApi().getTokenInfo( ids.tokenId );
-			this.activateSpans( $content, ids.editorId );
-			this.widget.setUsernameInfo( tokenInfo.username );
-			this.revisionPopup.show( tokenInfo, $( e.currentTarget ) );
-			this.revisionPopup.once( 'toggle', () => {
-				this.deactivateSpans( $content );
-				this.widget.clearUsernameInfo();
-			} );
-
-			// eslint-disable-next-line one-var
-			const reqStartTime = Date.now();
-
-			// Fetch edit summary then re-render the popup.
-			wwtController.getApi().fetchEditSummary( tokenInfo.revisionId ).then( successData => {
-				const delayTime = Date.now() - reqStartTime < 250 ? 250 : 0;
-				Object.assign( tokenInfo, successData );
-
-				setTimeout( () => {
-					this.revisionPopup.show( tokenInfo, $( e.target ) );
-				}, delayTime );
-			}, () => {
-				// Silently fail. The revision info provided by WikiWho is still present, which is
-				// the important part, so we'll just show what we have and throw a console warning.
-				mw.log.warn( `WhoWroteThat failed to fetch the summary for revision ${tokenInfo.revisionId}` );
-			} );
-		} );
 
 		/*
 		 * Modify fragment link scrolling behaviour to take into account the width of the infobar at

@@ -9,19 +9,19 @@ describe( 'Api test', () => {
 				msg: 'Should get the correct API URL',
 				config: {
 					wgServerName: 'en.wikipedia.org',
+					wgRevisionId: 234,
 					wgPageName: 'Iñtërnâtiônàlizætiøn_(disambig)'
 				},
-				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/Iñtërnâtiônàlizætiøn_(disambig)/'
+				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/Iñtërnâtiônàlizætiøn_(disambig)/234/'
 			},
 			{
 				msg: 'Should only append a revision ID if it is not the current one',
 				config: {
 					wgServerName: 'cbk-zam.wikipedia.org',
 					wgPageName: 'Foo',
-					wgRevisionId: 123,
-					wgCurRevisionId: 123
+					wgRevisionId: 123
 				},
-				expected: 'https://wikiwho.example.com/cbk-zam/whocolor/v1.0.0-beta/Foo/'
+				expected: 'https://wikiwho.example.com/cbk-zam/whocolor/v1.0.0-beta/Foo/123/'
 			},
 			{
 				msg: 'Should get the correct API URL with an old revision ID',

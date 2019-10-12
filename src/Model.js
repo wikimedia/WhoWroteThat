@@ -56,14 +56,13 @@ class Model extends EventEmitter {
 	/**
 	 * Cache the original content we are about to replace
 	 *
-	 * @param {jQuery} [$content=this.$contentWrapper] A jQuery
+	 * @param {jQuery} [$content=this.$contentWrapper.contents()] A jQuery
 	 *  object to cache. If not given the $contentWrapper will
 	 *  be cached. In most cases this should remain empty,
 	 *  as $contentWrapper contains the original content before
 	 *  it is replaced.
 	 */
-	cacheOriginal( $content = this.$contentWrapper ) {
-		$content = $content || this.$contentWrapper;
+	cacheOriginal( $content = this.$contentWrapper.contents() ) {
 		this.$originalContent = $content.clone( true, true );
 	}
 

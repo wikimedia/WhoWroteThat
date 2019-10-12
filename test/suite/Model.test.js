@@ -118,7 +118,9 @@ describe( 'Model test', () => {
 				.to.equal( '<a>A link instead</a>' );
 		} );
 		it( 'getOriginalContent returns original content', () => {
-			expect( m.getOriginalContent().html() )
+			expect(
+				m.getOriginalContent()[ 0 ].outerHTML
+			)
 				.to.equal( '<span>This is the original DOM structure</span>' );
 		} );
 
