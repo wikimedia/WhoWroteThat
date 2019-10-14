@@ -1,6 +1,7 @@
 import config from '../config';
 import wwtController from '../Controller';
 import languageBlob from '../../temp/languages'; // This is generated during the build process
+config.outputEnvironment = 'Gadget';
 
 ( function () {
 	/**
