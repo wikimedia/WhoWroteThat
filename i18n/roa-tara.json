@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"whowrotethat-activation-link": "Ce ave scritte quidde?",
+	"whowrotethat-activation-link-tooltip": "Abbilite Ce ave scritte quidde?",
+	"whowrotethat-deactivation-link": "Achiude Ce ave scritte quidde?",
+	"whowrotethat-state-pending": "<strong><em>Ce ave scritte quidde?</em></strong> ste careche. Quiste porte 'nu picche de tiembe.",
+	"whowrotethat-state-error": "Errore de l'API: $1",
+	"whowrotethat-error-refresh": "Pe piacere aggiorne 'a pàgene o pruève arrete cchiù tarde.",
+	"whowrotethat-error-later": "Pe piacere pruève arrete cchiù tarde.",
+	"whowrotethat-error-contact": "Pe piacere $1 sus a stu probbleme.",
+	"whowrotethat-error-contact-link": "Condattace",
+	"whowrotethat-ready-title": "Ce ave scritte quidde?",
+	"whowrotethat-ready-general": "Passe sus pe 'ndrucà le condrebbute d'u stesse autore. Cazze pe cchiù dettaglie.",
+	"whowrotethat-tour-welcome-title": "<strong><em>Ce ave scritte quidde?</em></strong> jè abbilitate!",
+	"whowrotethat-tour-welcome-description": "Abbilite 'u strumende da 'a barre laterale. Passe sus a 'u teste pe 'ndrucà l'autore e le otre condrebbute sue sus a sta pàgene. Cazze pe avè cchiù dettaglie.",
+	"whowrotethat-tour-welcome-dismiss": "Pigghiale!",
+	"whowrotethat-revision-added": "$1 ave aggiunde quiste sus a $2.",
+	"whowrotethat-revision-attribution": "Lore onne scritte 'u <strong>$1%</strong> d'a pàgene.",
+	"whowrotethat-revision-attribution-lessthan": "Lore onne scritte <strong>mene de l'1%</strong> d'a pàgene.",
+	"whowrotethat-revision-deleted-username": "(nome utende o IP luate)"
+}
