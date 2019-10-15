@@ -39,25 +39,13 @@ class Tools {
 	 * within a bidi isolation block.
 	 *
 	 * @param {jQuery|string} $content Content to isolate
-	 * @param {boolean} [returnRawHtml] Force the return value to
-	 *  be raw html. If set to false, will return the encompassed
-	 *  jQuery object.
-	 * @return {jQuery|string} BiDi isolated jQuery object or HTML
+	 * @return {jQuery} BiDi isolated jQuery object
 	 */
-	static bidiIsolate( $content, returnRawHtml = false ) {
-		const $result = $( '<bdi>' );
-
-		if ( typeof $content === 'string' ) {
-			$content = $( $.parseHTML( $content ) );
-		}
-
-		$result.append( $content );
-
-		if ( returnRawHtml ) {
-			// `html()` sends the inner HTML, so we wrap the node
-			// and send the result to include the new <bdi> wrap
-			return $( '<div>' ).append( $result ).html();
-		}
+	static bidiIsolate( $content ) {
+		const $result = $( '<bdi>' ),
+			// Append objects, but insert strings as text.
+			appendMethod = typeof $content === 'string' ? 'text' : 'append';
+		$result[ appendMethod ]( $content );
 		return $result;
 	}
 }
