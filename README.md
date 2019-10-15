@@ -52,11 +52,11 @@ There's a Grunt job to output the code into both a working browser extension and
 After updating the version number in `package.json`
 and tagging the release in Git,
 run `grunt` (the default task only) to create
-a zip file such as `dist/whowrotethat_for_wikipedia-0.2.0.0.zip`.
+a zip file such as `dist/extension_firefox/whowrotethat_for_wikipedia-0.2.0.0.zip`.
 This can be uploaded to the Firefox and Chrome browser stores.
 
 A second zip file is also produced, containing the source code.
-This is required for submission to the Firefox add-ons store.
+This is required for submission to the Firefox add-ons store (but not for Chrome).
 
 ## Debugging
 

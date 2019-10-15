@@ -4,7 +4,6 @@
    "license": "MIT",
    "webExt": {
       "sourceDir": "dist/extension/",
-      "artifactsDir": "dist",
       "build": {
          "overwriteDest": true
       },

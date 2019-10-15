@@ -11,6 +11,11 @@
 		"128": "icons/icon-128.png",
 		"256": "icons/icon-128@2x.png"
 	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "whowrotethat@wikimedia"
+		}
+	},
 	"content_scripts": [ {
 		"matches": [
 			"*://en.wikipedia.org/*",

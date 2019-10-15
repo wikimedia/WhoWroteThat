@@ -164,20 +164,35 @@ module.exports = function Gruntfile( grunt ) {
 		clean: [ 'dist/', 'temp/' ],
 		shell: {
 			mocha: 'mocha --require @babel/register test/testHelper.js --recursive test/suite  --colors',
-			webextBuild: 'web-ext build',
+			// Build two extension zip files for uploading to the browser stores.
+			// Note that the manifest.json in the Chrome zip file is actually from
+			// manifest_chrome.json in the dist directory.
+			webextBuild: [
+				// Build for Firefox.
+				'web-ext build --artifacts-dir dist/extension_firefox',
+				// Swap manifests, and build for Chrome. The manifest_chrome.json has already been
+				// built by the time this task runs (see the 'chromeManifest' task).
+				'mv dist/extension/manifest.json dist/extension/manifest_firefox.json',
+				'mv dist/extension/manifest_chrome.json dist/extension/manifest.json',
+				'web-ext build --artifacts-dir dist/extension_chrome',
+				// Swap manifests back to their original state.
+				'mv dist/extension/manifest.json dist/extension/manifest_chrome.json',
+				'mv dist/extension/manifest_firefox.json dist/extension/manifest.json'
+			].join( '&&' ),
 			webextLint: 'web-ext lint',
 			webextRun: 'web-ext run --start-url https://en.wikipedia.org/wiki/Special:Random --no-reload --verbose --browser-console'
 		},
 		compress: {
+			// Compress source code for upload to Firefox web store. Chrome doesn't require this.
 			webextSource: {
 				options: {
 					archive: () => {
 						// Default source archive, if no other zip file exists.
-						let out = './dist/whowrotethat_source.zip';
+						let out = './dist/extension_firefox/who_wrote_that_source.zip';
 						// Get the existing zip file name and strip '.zip' from end.
 						// The trailing 0 (which we use to identify the non-source zip)
 						// is set above in the replace.manifest Grunt task.
-						const existingZip = grunt.file.expand( './dist/*0.zip' );
+						const existingZip = grunt.file.expand( './dist/extension_firefox/*0.zip' );
 						if ( existingZip.length >= 1 ) {
 							const basename = existingZip[ 0 ];
 							out = basename.substr( 0, basename.length - 4 ) + '_source.zip';
@@ -231,12 +246,21 @@ module.exports = function Gruntfile( grunt ) {
 		} );
 	} );
 
+	grunt.registerTask( 'chromeManifest', () => {
+		// Here we make the required changes for Chrome's extension manifest and locale files.
+		const manifest = grunt.file.readJSON( 'dist/extension/manifest.json' );
+		// Remove non-Chrome key.
+		// https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
+		delete manifest.browser_specific_settings;
+		grunt.file.write( 'dist/extension/manifest_chrome.json', JSON.stringify( manifest, null, 4 ) );
+	} );
+
 	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana', 'jsdoc' ] );
 	grunt.registerTask( 'test', [ 'lint', 'shell:mocha' ] );
 	grunt.registerTask( 'build', 'Create web extension files in dist/extension/', [ 'clean', 'less', 'replace', 'browserify', 'copy' ] );
 	grunt.registerTask( 'run', [ 'build', 'shell:webextRun' ] );
 	grunt.registerTask( 'webext', 'Build zip files for upload to the browser stores', [
-		'build',
+		'build', 'chromeManifest',
 		// Create beta zip files.
 		'extLocales:beta', 'shell:webextBuild', 'shell:webextLint', 'compress:webextSource',
 		// Create prod zip files.
