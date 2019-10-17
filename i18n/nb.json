@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"whowrotethat-activation-link": "Hvem skrev det?",
+	"whowrotethat-activation-link-tooltip": "Aktivere «Hvem skrev det»?",
+	"whowrotethat-deactivation-link": "Lukke «Hvem skrev det»?",
+	"whowrotethat-state-pending": "<strong><em>Hvem skrev det?</em></strong> laster. Dette kan ta en stund.",
+	"whowrotethat-state-error": "API-feil: $1",
+	"whowrotethat-error-refresh": "Oppdater siden eller prøv igjen seinere.",
+	"whowrotethat-error-later": "Prøv igjen seinere.",
+	"whowrotethat-error-contact": "$1 om dette problemet.",
+	"whowrotethat-error-contact-link": "Kontakt oss",
+	"whowrotethat-ready-title": "Hvem skrev det?",
+	"whowrotethat-ready-general": "Hold over for å se bidrag av samme forfatter. Klikk for flere detaljer.",
+	"whowrotethat-tour-welcome-title": "<strong><em>Hvem skrev det?</em></strong> er slått på.",
+	"whowrotethat-tour-welcome-description": "Slå på verktøyet fra verktøyboksen. Hold over tekst for å se hvem som skrev noe, og hva annet de har skrevet på siden. Klikk for flere detaljer.",
+	"whowrotethat-tour-welcome-dismiss": "Skjønner!",
+	"whowrotethat-revision-added": "$1 la til dette $2.",
+	"whowrotethat-revision-attribution": "Vedkommende har skrevet <strong>$1 %</strong> av siden.",
+	"whowrotethat-revision-attribution-lessthan": "Vedkommende har skrevet <strong>mindre enn 1 %</strong> av siden.",
+	"whowrotethat-revision-deleted-username": "(brukernavn eller IP-adresse fjernet)"
+}

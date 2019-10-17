@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"whowrotethat-activation-link": "Chi l'ha scritto?",
+	"whowrotethat-activation-link-tooltip": "Attivare chi l'ha scritto?",
+	"whowrotethat-deactivation-link": "Chiudi chi l'ha scritto?",
+	"whowrotethat-state-error": "Errore API: $1",
+	"whowrotethat-error-refresh": "Aggiorna la pagina o riprova più tardi.",
+	"whowrotethat-error-later": "Per favore, riprova più tardi.",
+	"whowrotethat-error-contact-link": "contattaci",
+	"whowrotethat-ready-title": "Chi l'ha scritto?",
+	"whowrotethat-tour-welcome-title": "<strong><em>Chi l'ha scritto?</em></strong> è attivo!",
+	"whowrotethat-tour-welcome-dismiss": "Capito!",
+	"whowrotethat-revision-added": "$1 lo ha aggiunto il $2.",
+	"whowrotethat-revision-deleted-username": "(nome utente o IP rimosso)"
+}

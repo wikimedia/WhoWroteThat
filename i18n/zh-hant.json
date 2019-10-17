@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"whowrotethat-activation-link": "Who Wrote That?",
+	"whowrotethat-activation-link-tooltip": "啟動 Who Wrote That?",
+	"whowrotethat-deactivation-link": "關閉 Who Wrote That?",
+	"whowrotethat-state-pending": "<strong><em>Who Wrote That?</em></strong> 正在載入中，這會用掉一些時間。",
+	"whowrotethat-state-error": "API 錯誤：$1",
+	"whowrotethat-error-refresh": "請重新整理頁面或稍後再試。",
+	"whowrotethat-error-later": "請稍後再試。",
+	"whowrotethat-error-contact": "請$1關於此問題。",
+	"whowrotethat-error-contact-link": "聯絡我們",
+	"whowrotethat-ready-title": "Who Wrote That?",
+	"whowrotethat-ready-general": "懸停在上面能查看同一作者的貢獻，點擊則能取得更多詳細內容。",
+	"whowrotethat-tour-welcome-title": "<strong><em>Who Wrote That?</em></strong> 已啟用！",
+	"whowrotethat-tour-welcome-description": "從側邊欄來啓動工具。懸停在文字上能查看作者以及他們對於此頁面的其它貢獻，點擊則能取得更多詳細內容。",
+	"whowrotethat-tour-welcome-dismiss": "了解！",
+	"whowrotethat-revision-added": "$1於$2添加此。",
+	"whowrotethat-revision-attribution": "他們寫了該頁面的 <strong>$1%</strong> 內容。",
+	"whowrotethat-revision-attribution-lessthan": "他們寫了該頁面的<strong>小於 1%</strong> 內容。",
+	"whowrotethat-revision-deleted-username": " (已移除使用者名稱或 IP)"
+}

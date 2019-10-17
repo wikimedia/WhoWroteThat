@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nike"
+			"Nike",
+			"Spude"
 		]
 	},
 	"whowrotethat-activation-link": "Kenen kirjoittama?",
@@ -21,5 +22,5 @@
 	"whowrotethat-revision-added": "$1 lisäsi tämän $2.",
 	"whowrotethat-revision-attribution": "Hän on kirjoittanut <strong>$1 %</strong> sivusta.",
 	"whowrotethat-revision-attribution-lessthan": "Hän on kirjoittanut <strong>alle 1%</strong> sivusta.",
-	"whowrotethat-revision-deleted-username": "(käyttäjätunnus tai IP poistettu)"
+	"whowrotethat-revision-deleted-username": "(käyttäjätunnus tai IP-osoite poistettu)"
 }

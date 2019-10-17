@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"whowrotethat-activation-link": "Кој го има напишано?",
+	"whowrotethat-activation-link-tooltip": "Да го вклучам „Кој го има напишано“?",
+	"whowrotethat-deactivation-link": "Да го затворам „Кој го има напишано“?",
+	"whowrotethat-state-pending": "<strong><em>Кој го има напишано?</em></strong> се вчитува. Ова може да потрае.",
+	"whowrotethat-state-error": "Грешка во извршникот: $1",
+	"whowrotethat-error-refresh": "Превчитајте ја страницата или обидете се подоцна.",
+	"whowrotethat-error-later": "Обидете се подоцна.",
+	"whowrotethat-error-contact": "$1 во врска со проблемов.",
+	"whowrotethat-error-contact-link": "Контактирајте нè",
+	"whowrotethat-ready-title": "Кој го има напишано?",
+	"whowrotethat-ready-general": "Одете со стрелката врз него за да видите придонеси на истиот автор. Стиснете за поподробно.",
+	"whowrotethat-tour-welcome-title": "<strong><em>Кој го има напишано?</em></strong> е вклучено!",
+	"whowrotethat-tour-welcome-description": "Вклучете ја алатката од страничникот. Одете со стрелката над текст за да видите неговиот автор и другите придонеси кон страницата. Стиснете за поподробно.",
+	"whowrotethat-tour-welcome-dismiss": "Јасно!",
+	"whowrotethat-revision-added": "$1 го додаде ова на $2.",
+	"whowrotethat-revision-attribution": "Има напишано <strong>$1&nbsp;%</strong> од страницата.",
+	"whowrotethat-revision-attribution-lessthan": "Има напишано <strong>помалку од 1&nbsp;%</strong> од страницата.",
+	"whowrotethat-revision-deleted-username": "(отстрането корисничко име или IP)"
+}

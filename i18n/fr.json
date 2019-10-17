@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Verdy p"
+		]
+	},
+	"whowrotethat-activation-link": "Qui a écrit ceci ?",
+	"whowrotethat-activation-link-tooltip": "Activer ''Qui a écrit ceci ?''",
+	"whowrotethat-deactivation-link": "Fermer ''Qui a écrit ceci ?''",
+	"whowrotethat-state-pending": "Chargement de <strong><em>Qui a écrit ceci ?</em></strong>. Cela peut prendre du temps.",
+	"whowrotethat-state-error": "Erreur de l’API : $1",
+	"whowrotethat-error-refresh": "Veuillez rafraîchir la page ou essayer à nouveau.",
+	"whowrotethat-error-later": "Veuillez essayer à nouveau plus tard.",
+	"whowrotethat-error-contact": "Veuillez $1 au sujet de ce problème.",
+	"whowrotethat-error-contact-link": "nous contacter",
+	"whowrotethat-ready-title": "Qui a écrit ceci ?",
+	"whowrotethat-ready-general": "Survolez à la souris pour voir les contributions du même auteur. Cliquez pour plus de détails.",
+	"whowrotethat-tour-welcome-title": "<strong><em>Qui a écrit ceci ?</em></strong> est activé !",
+	"whowrotethat-tour-welcome-description": "Activer l’outil depuis la barre latérale. Survolez le texte à la souris pour voir l’auteur et ses autres contributions sur cette page. Cliquez pour obtenir plus de détails.",
+	"whowrotethat-tour-welcome-dismiss": "C’est bon !",
+	"whowrotethat-revision-added": "$1 a ajouté ceci le $2.",
+	"whowrotethat-revision-attribution": "L’auteur a écrit <strong>$1 %</strong> de la page.",
+	"whowrotethat-revision-attribution-lessthan": "L’auteur a écrit <strong>moins de 1 %</strong> de la page.",
+	"whowrotethat-revision-deleted-username": "(nom d’utilisateur ou IP retiré)"
+}

@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"whowrotethat-activation-link": "Vem skrev detta?",
+	"whowrotethat-activation-link-tooltip": "Aktivera Vem skrev detta?",
+	"whowrotethat-deactivation-link": "Stäng Vem skrev detta?",
+	"whowrotethat-state-pending": "<strong><em>Vem skrev detta?</em></strong> läser in. Detta kan ta en stund.",
+	"whowrotethat-state-error": "API-fel: $1",
+	"whowrotethat-error-refresh": "Uppdatera sidan eller försök igen senare.",
+	"whowrotethat-error-later": "Försök igen senare.",
+	"whowrotethat-error-contact": "Var god $1 om detta problem.",
+	"whowrotethat-error-contact-link": "kontakta oss",
+	"whowrotethat-ready-title": "Vem skrev detta?",
+	"whowrotethat-ready-general": "Vila muspekaren för att se bidrag av samma författare. Klicka för mer information.",
+	"whowrotethat-tour-welcome-title": "<strong><em>Vem skrev detta?</em></strong> är aktiverat!",
+	"whowrotethat-tour-welcome-description": "Aktivera verktyget från sidofältet. Vila muspekaren över texten för att se författaren och deras andra bidrag på denna sida. Klicka för mer information.",
+	"whowrotethat-tour-welcome-dismiss": "Uppfattat!",
+	"whowrotethat-revision-added": "$1 lade till detta på $2.",
+	"whowrotethat-revision-attribution": "Personen skrev <strong>$1 %</strong> av sidan.",
+	"whowrotethat-revision-attribution-lessthan": "Personen skrev <strong>mindre än 1 %</strong> av sidan.",
+	"whowrotethat-revision-deleted-username": "(användarnamn eller IP-adress togs bort)"
+}

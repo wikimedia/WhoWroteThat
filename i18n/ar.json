@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"whowrotethat-activation-link": "من كتب ذلك؟",
+	"whowrotethat-activation-link-tooltip": "تفعيل من كتب هذا؟",
+	"whowrotethat-deactivation-link": "إغلاق من كتب ذلك؟",
+	"whowrotethat-state-pending": "<strong><em>من كتب ذلك؟</em></strong> يجري تحميلها، وهذا قد يستغرق بعض الوقت.",
+	"whowrotethat-state-error": "خطأ في API: $1",
+	"whowrotethat-error-refresh": "يُرجَى تحديث الصفحة أو إعادة المحاولة لاحقا.",
+	"whowrotethat-error-later": "الرجاء معاودة المحاولة في وقت لاحق.",
+	"whowrotethat-error-contact": "الرجاء $1 حول هذه المشكلة.",
+	"whowrotethat-error-contact-link": "اتصل بنا",
+	"whowrotethat-ready-title": "من كتب ذلك؟",
+	"whowrotethat-ready-general": "لتحم لرؤية مساهمات المؤلف نفسه، انقر للحصول على مزيد من التفاصيل.",
+	"whowrotethat-tour-welcome-title": "<strong><em>من كتب ذلك؟</em></strong> مفعلة!",
+	"whowrotethat-tour-welcome-description": "قم بتنشيط الأداة من الشريط الجانبي، مرر الفأرة فوق النص لرؤية المؤلف ومساهماته الأخرى في هذه الصفحة، انقر للحصول على مزيد من التفاصيل.",
+	"whowrotethat-tour-welcome-dismiss": "حسنا!",
+	"whowrotethat-revision-added": "$1 أضاف هذا على $2.",
+	"whowrotethat-revision-attribution": "لقد كتبوا <strong>$1%</strong> من الصفحة.",
+	"whowrotethat-revision-attribution-lessthan": "لقد كتبوا <strong>أقل من 1%</strong> من الصفحة.",
+	"whowrotethat-revision-deleted-username": "(تمت إزالة اسم المستخدم أو الآيبي)"
+}

@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK",
+			"Grkn gll"
+		]
+	},
+	"whowrotethat-activation-link": "Bunu Kim Yazdı?",
+	"whowrotethat-activation-link-tooltip": "Aktif Bunu Kim Yazdı?",
+	"whowrotethat-deactivation-link": "Kapat Bunu Kim Yazdı?",
+	"whowrotethat-state-pending": "<strong><em>Bunu kim Yazdı?</em></strong> yükleniyor. Bu biraz zaman alabilir.",
+	"whowrotethat-state-error": "API Hatası: $1",
+	"whowrotethat-error-refresh": "Lütfen sayfayı yenileyin veya daha sonra tekrar deneyin.",
+	"whowrotethat-error-later": "Lütfen daha sonra tekrar deneyin.",
+	"whowrotethat-error-contact": "Lütfen bu konuda $1 bakın.",
+	"whowrotethat-error-contact-link": "bize ulaşın",
+	"whowrotethat-ready-title": "Bunu Kim Yazdı?",
+	"whowrotethat-ready-general": "Aynı yazarın katkılarını görmek için üzerine gelin. Daha fazla bilgi için tıklayın.",
+	"whowrotethat-tour-welcome-title": "<strong><em>Bunu Kim Yazdı?</em></strong> etkinleştirildi!",
+	"whowrotethat-tour-welcome-description": "Aracı kenar çubuğundan etkinleştirin. Yazarı ve bu sayfaya diğer katkılarını görmek için metnin üzerine gelin. Daha fazla bilgi almak için tıklayın.",
+	"whowrotethat-tour-welcome-dismiss": "Anladım!",
+	"whowrotethat-revision-added": "$1 bunu $2 ekledi.",
+	"whowrotethat-revision-attribution": "Sayfanın <strong>$1%</strong> yazmışlar.",
+	"whowrotethat-revision-attribution-lessthan": "Sayfanın <strong>%1'inden azını</strong> yazmışlar.",
+	"whowrotethat-revision-deleted-username": "(kullanıcı adı veya IP kaldırıldı)"
+}

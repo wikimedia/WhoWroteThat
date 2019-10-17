@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo Addad de Oliveira"
+		]
+	},
+	"whowrotethat-activation-link": "Quem escreveu isso?",
+	"whowrotethat-state-error": "Erro de API: $1",
+	"whowrotethat-error-contact-link": "fale conosco",
+	"whowrotethat-ready-title": "Quem escreveu isso?",
+	"whowrotethat-ready-general": "Passe o mouse para ver as contribuições do mesmo autor. Clique para mais detalhes.",
+	"whowrotethat-tour-welcome-description": "Ative a ferramenta na barra lateral. Passe o mouse sobre o texto para ver o autor e suas outras contribuições para esta página. Clique para obter mais detalhes.",
+	"whowrotethat-tour-welcome-dismiss": "Entendido!"
+}

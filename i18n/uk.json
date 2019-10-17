@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ата"
+		]
+	},
+	"whowrotethat-activation-link": "Хто це написав?",
+	"whowrotethat-activation-link-tooltip": "Активувати «Хто це написав?»",
+	"whowrotethat-deactivation-link": "Закрити «Хто це написав?»",
+	"whowrotethat-state-pending": "<strong><em>Хто це написав?</em></strong> завантажується. Це може зайняти якийсь час.",
+	"whowrotethat-state-error": "Помилка API: $1",
+	"whowrotethat-error-refresh": "Будь ласка, оновіть сторінку або спробуйте пізніше.",
+	"whowrotethat-error-later": "Будь ласка, спробуйте пізніше",
+	"whowrotethat-error-contact": "Будь ласка, $1 про цю проблему.",
+	"whowrotethat-error-contact-link": "зв'язатися з нами",
+	"whowrotethat-ready-title": "Хто це написав?",
+	"whowrotethat-ready-general": "Наведіть вказівник миші, щоб побачити внесок цього ж автора. Натисніть, щоб дізнатися більше.",
+	"whowrotethat-tour-welcome-title": "<strong><em>Хто це написав?</em></strong> увімкнено!",
+	"whowrotethat-tour-welcome-description": "Активуйте інструмент на бічній панелі. Наведіть на текст, щоб побачити автора та інший його внесок на цій сторінці. Натисніть, щоб отримати більше деталей.",
+	"whowrotethat-tour-welcome-dismiss": "Зрозуміло!",
+	"whowrotethat-revision-added": "$1 {{GENDER:$1|написав|написала}} це $2.",
+	"whowrotethat-revision-attribution": "Створено <strong>$1%</strong> сторінки.",
+	"whowrotethat-revision-attribution-lessthan": "Створено <strong>менше ніж 1%</strong> сторінки.",
+	"whowrotethat-revision-deleted-username": "(ім'я автора чи IP стерто)"
+}

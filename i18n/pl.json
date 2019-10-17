@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rail"
+		]
+	},
+	"whowrotethat-activation-link": "Kto to napisał?",
+	"whowrotethat-activation-link-tooltip": "Aktywuj „Kto to napisał?”",
+	"whowrotethat-deactivation-link": "Zamknij „Kto to napisał?”",
+	"whowrotethat-state-pending": "Ładowanie „<strong><em>Kto to napisał?</em></strong>”. To może chwilę potrwać.",
+	"whowrotethat-state-error": "Błąd API: $1",
+	"whowrotethat-error-refresh": "Odśwież stronę lub spróbuj ponownie później.",
+	"whowrotethat-error-later": "Spróbuj ponownie później",
+	"whowrotethat-error-contact": "$1 w związku z tym błędem.",
+	"whowrotethat-error-contact-link": "Skontaktuj się z nami",
+	"whowrotethat-ready-title": "Kto to napisał?",
+	"whowrotethat-tour-welcome-title": "„<strong><em>Kto to napisał?</em></strong>” jest włączone!",
+	"whowrotethat-tour-welcome-dismiss": "Wszystko jasne!",
+	"whowrotethat-revision-deleted-username": "(nazwa użytkownika lub IP usunięte)"
+}
