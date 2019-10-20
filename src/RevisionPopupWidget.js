@@ -128,9 +128,13 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 			.text( dateStr ),
 		addedMsg = mw.message( 'whowrotethat-revision-added', $userLinks, $diffLink ).parse(),
 		scoreMsgKey = Number( data.score ) >= 1 ? 'whowrotethat-revision-attribution' : 'whowrotethat-revision-attribution-lessthan',
+		// i18n message keys for the bolded percentages are:
+		//  - whowrotethat-revision-attribution-percent
+		//  - whowrotethat-revision-attribution-lessthan-percent
+		$scorePercent = $( '<strong>' ).text( mw.msg( scoreMsgKey + '-percent', data.score ) ),
 		$attributionMsg = $( '<div>' )
 			.addClass( 'wwt-revisionPopupWidget-attribution' )
-			.html( mw.message( scoreMsgKey, data.score ).parse() ),
+			.html( Tools.i18nHtml( scoreMsgKey, $scorePercent ) ),
 		$html = $( '<div>' )
 			.append( addedMsg, getCommentHtml( data ), $attributionMsg );
 	this.$popupContent.empty().append( $html );

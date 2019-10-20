@@ -1,3 +1,5 @@
+import Tools from './Tools';
+
 /**
  * A popup meant to display as a welcome message after the
  * extension is installed for the first time.
@@ -9,7 +11,10 @@
  */
 const WelcomePopupWidget = function WelcomePopupWidget( config = {} ) {
 	const $content = $( '<div>' )
-		.addClass( 'wwt-welcomePopupWidget-content' );
+			.addClass( 'wwt-welcomePopupWidget-content' ),
+		$title = $( '<strong>' )
+			.text( mw.msg( 'whowrotethat-tour-welcome-title-name' ) )
+			.wrapInner( '<em>' );
 
 	// Parent constructor
 	WelcomePopupWidget.parent.call( this, Object.assign(
@@ -31,7 +36,7 @@ const WelcomePopupWidget = function WelcomePopupWidget( config = {} ) {
 	$content.append(
 		$( '<div>' )
 			.addClass( 'wwt-welcomePopupWidget-title' )
-			.append( mw.msg( 'whowrotethat-tour-welcome-title' ) ),
+			.append( Tools.i18nHtml( 'whowrotethat-tour-welcome-title', $title ) ),
 		$( '<div>' )
 			.addClass( 'wwt-welcomePopupWidget-description' )
 			.append( mw.msg( 'whowrotethat-tour-welcome-description' ) ),

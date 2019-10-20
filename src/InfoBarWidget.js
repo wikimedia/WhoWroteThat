@@ -101,11 +101,8 @@ InfoBarWidget.prototype.setState = function ( state, errorCode = '' ) {
 			);
 		} else if ( state === 'pending' ) {
 			this.setIcon( '' );
-			this.setLabel(
-				$( '<span>' ).append(
-					mw.msg( 'whowrotethat-state-pending' )
-				).contents()
-			);
+			const $pendingTitle = $( '<strong>' ).text( mw.msg( 'whowrotethat-state-pending-name' ) ).wrapInner( '<em>' );
+			this.setLabel( new OO.ui.HtmlSnippet( Tools.i18nHtml( 'whowrotethat-state-pending', $pendingTitle ) ) );
 		} else {
 			this.setIcon( 'error' );
 			this.setErrorMessage( errorCode );
@@ -131,10 +128,10 @@ InfoBarWidget.prototype.setErrorMessage = function ( errCode = 'refresh' ) {
 	let errorMessage = mw.msg( 'whowrotethat-error-' + errCode );
 	if ( errCode === 'contact' ) {
 		// The contact error message is the only with with a different signature, so we handle it.
-		const link = document.createElement( 'a' );
-		link.href = 'https://meta.wikimedia.org/wiki/Talk:Community_Tech/Who_Wrote_That_tool';
-		link.text = mw.msg( 'whowrotethat-error-contact-link' );
-		errorMessage = mw.message( 'whowrotethat-error-contact', link ).parse();
+		const $link = $( '<a>' )
+			.attr( 'href', 'https://meta.wikimedia.org/wiki/Talk:Community_Tech/Who_Wrote_That_tool' )
+			.text( mw.msg( 'whowrotethat-error-contact-link' ) );
+		errorMessage = Tools.i18nHtml( 'whowrotethat-error-contact', $link );
 	}
 	this.setLabel( new OO.ui.HtmlSnippet( mw.msg( 'whowrotethat-state-error', errorMessage ) ) );
 };
