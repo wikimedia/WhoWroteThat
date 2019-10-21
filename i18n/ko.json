@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"whowrotethat-state-error": "API 오류: $1",
+	"whowrotethat-error-refresh": "페이지를 새로 고친 다음 나중에 다시 시도해 주십시오.",
+	"whowrotethat-error-later": "나중에 다시 시도해 주십시오.",
+	"whowrotethat-error-contact": "이 문제에 대해 $1해 주십시오.",
+	"whowrotethat-error-contact-link": "문의하기",
+	"whowrotethat-tour-welcome-dismiss": "알겠습니다!",
+	"whowrotethat-revision-deleted-username": "(사용자 이름 또는 IP 삭제됨)"
+}

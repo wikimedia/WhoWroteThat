@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Verdy p"
+			"Verdy p",
+			"Wladek92"
 		]
 	},
 	"whowrotethat-activation-link": "Qui a écrit ceci ?",
@@ -16,7 +17,7 @@
 	"whowrotethat-ready-title": "Qui a écrit ceci ?",
 	"whowrotethat-ready-general": "Survolez à la souris pour voir les contributions du même auteur. Cliquez pour plus de détails.",
 	"whowrotethat-tour-welcome-title": "<strong><em>Qui a écrit ceci ?</em></strong> est activé !",
-	"whowrotethat-tour-welcome-description": "Activer l’outil depuis la barre latérale. Survolez le texte à la souris pour voir l’auteur et ses autres contributions sur cette page. Cliquez pour obtenir plus de détails.",
+	"whowrotethat-tour-welcome-description": "Activez l’outil depuis la barre latérale. Survolez le texte à la souris pour voir les auteurs et les autres contributions sur cette page. Cliquez pour obtenir plus de détails.",
 	"whowrotethat-tour-welcome-dismiss": "C’est bon !",
 	"whowrotethat-revision-added": "$1 a ajouté ceci le $2.",
 	"whowrotethat-revision-attribution": "L’auteur a écrit <strong>$1 %</strong> de la page.",
