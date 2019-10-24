@@ -5,10 +5,21 @@
 		]
 	},
 	"whowrotethat-activation-link": "Quem escreveu isso?",
+	"whowrotethat-activation-link-tooltip": "Ativar quem escreveu isso?",
+	"whowrotethat-deactivation-link": "Fechar Quem escreveu isso?",
+	"whowrotethat-state-pending": "<strong><em>Quem escreveu isso?</em></strong> está carregando. Isso pode demorar um pouco.",
 	"whowrotethat-state-error": "Erro de API: $1",
+	"whowrotethat-error-refresh": "Por favor, atualize a página ou tente novamente mais tarde.",
+	"whowrotethat-error-later": "Por favor, tente novamente mais tarde.",
+	"whowrotethat-error-contact": "Por favor, $1 sobre este problema.",
 	"whowrotethat-error-contact-link": "fale conosco",
 	"whowrotethat-ready-title": "Quem escreveu isso?",
 	"whowrotethat-ready-general": "Passe o mouse para ver as contribuições do mesmo autor. Clique para mais detalhes.",
+	"whowrotethat-tour-welcome-title": "<strong><em>Quem escreveu isso?</em></strong> está ativado!",
 	"whowrotethat-tour-welcome-description": "Ative a ferramenta na barra lateral. Passe o mouse sobre o texto para ver o autor e suas outras contribuições para esta página. Clique para obter mais detalhes.",
-	"whowrotethat-tour-welcome-dismiss": "Entendido!"
+	"whowrotethat-tour-welcome-dismiss": "Entendido!",
+	"whowrotethat-revision-added": "$1 adicionou isso em $2.",
+	"whowrotethat-revision-attribution": "Eles escreveram <strong>$1%</strong> da página.",
+	"whowrotethat-revision-attribution-lessthan": "Eles escreveram <strong>menor que 1%</strong> na página.",
+	"whowrotethat-revision-deleted-username": "(nome de usuário ou IP removido)"
 }
