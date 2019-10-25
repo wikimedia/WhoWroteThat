@@ -19,7 +19,10 @@ class Api {
 
 		this.mwApi = config.mwApi;
 		this.mwConfig = config.mwConfig;
-		this.results = null;
+		this.promiseCache = { data: {}, summaries: {} };
+		this.tokenMap = {};
+		this.maxRetries = 4;
+		this.retry = 1;
 	}
 
 	/**
@@ -39,84 +42,131 @@ class Api {
 
 	/**
 	 * Get parsed edit summary for the given revision.
+	 *
 	 * @param {number} revId
-	 * @return {Promise} Resolving Object with keys 'comment' and 'size'.
+	 * @return {jQuery.Promise} Resolving Object with keys 'comment' and 'size'.
  	 */
 	fetchEditSummary( revId ) {
-		return this.mwApi.ajax( {
-			action: 'compare',
-			fromrev: revId,
-			torelative: 'prev',
-			prop: 'parsedcomment|size',
-			formatversion: 2
-		} ).then(
-			data => {
-				if ( data.compare ) {
-					return {
-						comment: data.compare.toparsedcomment,
-						size: data.compare.tosize - ( data.compare.fromsize || 0 )
-					};
+		/**
+		 * Fetch the edit summary for the given revision from the MediaWiki API
+		 *
+		 * @return {jQuery.Promise} Promise that is resolved with the summary
+		 *  information as an object with the comment and size, or is rejected
+		 *  if the summary could not have been fetched.
+		 */
+		const fetchSummaryPromise = () => {
+			return this.mwApi.ajax( {
+				action: 'compare',
+				fromrev: revId,
+				torelative: 'prev',
+				prop: 'parsedcomment|size',
+				formatversion: 2
+			} ).then(
+				data => {
+					if ( data.compare ) {
+						return {
+							comment: data.compare.toparsedcomment,
+							size: data.compare.tosize - ( data.compare.fromsize || 0 )
+						};
+					}
+					return $.Deferred().reject();
+				},
+				failData => {
+					return $.Deferred().reject( failData );
 				}
-				return $.Deferred().reject();
-			},
-			failData => {
-				return $.Deferred().reject( failData );
-			}
-		);
+			);
+		};
+
+		// If the promise isn't cached yet, fetch it
+		if ( !this.promiseCache.summaries[ revId ] ) {
+			this.promiseCache.summaries[ revId ] = fetchSummaryPromise();
+		}
+
+		return this.promiseCache.summaries[ revId ];
 	}
 
 	/**
 	 * Get a WhoColor API URL based on a given wiki URL.
 	 *
+	 * @private
 	 * @return {string} Ajax URL for the data from WhoColor.
 	 */
 	getAjaxURL() {
-		let revId, curRevId,
-			// Get the subdomain, or fallback on the language code (unlikely).
-			domainParts = this.mwConfig.get( 'wgServerName' ).match( /^([^.]*)\./ ),
-			subdomain = domainParts[ 1 ] !== undefined ? domainParts[ 1 ] : this.mwConfig.get( 'wgContentLanguage' ),
-			parts = [
-				this.url,
-				subdomain,
-				'whocolor/v1.0.0-beta',
-				this.mwConfig.get( 'wgPageName' )
-			];
-
-		// If the displayed revision is not the latest, append its ID to the URL.
-		// This is better than using the 'oldid' URL parameter directly, because it takes into
-		// account the 'direction' URL parameter.
-		revId = this.mwConfig.get( 'wgRevisionId' );
-		curRevId = this.mwConfig.get( 'wgCurRevisionId' );
-		if ( revId !== curRevId ) {
-			parts.push( revId );
-		}
+		// Get the subdomain, or fallback on the language code (unlikely).
+		let domainParts = this.mwConfig.get( 'wgServerName' ).match( /^([^.]*)\./ ),
+			subdomain = domainParts[ 1 ] !== undefined ? domainParts[ 1 ] : this.mwConfig.get( 'wgContentLanguage' );
 
 		// Compile the full URL.
-		return parts.join( '/' ) + '/';
+		return [
+			this.url,
+			subdomain,
+			'whocolor/v1.0.0-beta',
+			this.mwConfig.get( 'wgPageName' ),
+			// Always include the revision ID, to make sure we are always asking for
+			// the correct revision, whether the page was just edited, or, whether the
+			// page was edited by someone else while we were looking at the current page
+			this.mwConfig.get( 'wgRevisionId' )
+		].join( '/' ) + '/';
 	}
 
 	/**
-	 * Get the WikiWho replacement for `.mw-parser-output` HTML.
-	 * @return {string}
+	 * Get the revision ID of the current content.
+	 *
+	 * This serves as a pointer to the current content, and the needed promise
+	 * requested from the API.
+	 * The promise is unique if the revision ID is the same, and should
+	 * change (and hence force a refetch) if the revision ID changed, like
+	 * in the case of looking at the page after a VE save (without refresh)
+	 *
+	 * @return {string} Revision ID for the current content
 	 */
-	getReplacementHtml() {
-		return this.results.extended_html;
+	getRevisionId() {
+		return this.mwConfig.get( 'wgRevisionId' );
 	}
 
 	/**
 	 * Get user and revision information for a given token.
 	 *
-	 * @param {number} tokenId
+	 * @param {number} tokenId Token ID
 	 * @return {{revisionId: *, score: *, userId: *, username: *, revisionTime: *}|boolean} Object
 	 * that represents the token info or false if a token wasn't found.
 	 */
 	getTokenInfo( tokenId ) {
+		return this.tokenMap[ tokenId ];
+	}
+
+	/**
+	 * Create a map of token IDs and the data needed for the UI
+	 *
+	 * @private
+	 * @param  {Object} results API results
+	 */
+	createTokenMap( results ) {
+		// Reset
+		this.tokenMap = {};
+
+		// Map tokens to the new data
+		for ( let tokenId in results.tokens ) {
+			this.tokenMap[ tokenId ] = this.parseTokenInfo( results, tokenId );
+		}
+	}
+
+	/**
+	 * Parse token information from the API result
+	 *
+	 * @private
+	 * @param {Object} results Api results
+	 * @param {number} tokenId Token ID
+	 * @return {{revisionId: *, score: *, userId: *, username: *, revisionTime: *}|boolean} Object
+	 * that represents the token info or false if a token wasn't found.
+	 */
+	parseTokenInfo( results, tokenId ) {
 		let revId, revision, username, isIP, score;
 
 		// Get the token information. results.tokens structure:
 		// [ [ conflict_score, str, o_rev_id, in, out, editor/class_name, age ], ... ]
 		// e.g. Array(7) [ 0, "indicate", 769691068, [], [], "18201938", 76652371.587203 ]
-		const token = this.results.tokens[ tokenId ];
+		const token = results.tokens[ tokenId ];
 		if ( !token ) {
 			return false;
 		}
@@ -125,7 +175,7 @@ class Api {
 		// { rev_id: [ timestamp, parent_rev_id, user_id, editor_name ], ... }
 		// e.g. Array(4) [ "2017-03-11T02:12:47Z", 769315355, "18201938", "Biogeographist" ]
 		revId = token[ 2 ];
-		revision = this.results.revisions[ revId ];
+		revision = results.revisions[ revId ];
 		username = revision[ 3 ];
 
 		// WikiWho prefixes IP addresses with '0|'.
@@ -135,9 +185,9 @@ class Api {
 		// Get the user's edit score (percentage of content edited).
 		// results.present_editors structure:
 		// [ [ username, user_id, score ], ... ]
-		for ( let i = 0; i < this.results.present_editors.length; i++ ) {
-			if ( this.results.present_editors[ i ][ 0 ] === username ) {
-				score = parseFloat( this.results.present_editors[ i ][ 2 ] ).toFixed( 1 );
+		for ( let i = 0; i < results.present_editors.length; i++ ) {
+			if ( results.present_editors[ i ][ 0 ] === username ) {
+				score = parseFloat( results.present_editors[ i ][ 2 ] ).toFixed( 1 );
 				break;
 			}
 		}
@@ -154,64 +204,79 @@ class Api {
 	}
 
 	/**
+	 * Get the data from the WhoColor API
+	 *
+	 * @private
+	 * @return {jQuery.Promise} A promise that is resolved when the
+	 *  data from the WhoColor API is available, or when the attempt
+	 *  failed for some error.
+	 */
+	getJsonData() {
+		return $.getJSON( this.getAjaxURL() )
+			.then( result => {
+				// Handle error response.
+				if ( !result.success ) {
+					// The API gives us an error message, but we don't use it because it's only
+					// in English. Some of the error messages are:
+					// * result.info: "Requested data is not currently available in WikiWho
+					//   database. It will be available soon."
+					// * result.error: "The article (x) you are trying to request does not exist
+					//   in english Wikipedia."
+					// We do add the full error details to the console, for easier debugging.
+					const errCode = result.info && result.info.match( /data is not currently available/i ) ?
+						'refresh' : 'contact';
+					Tools.log( 'WhoWroteThat encountered a "' + errCode + '" error:', 'error', result );
+					if ( errCode === 'refresh' && this.retry <= this.maxRetries ) {
+						// Return an intermediate Promise to handle the wait.
+						// The time to wait gets progressively longer for each retry.
+						return new Promise( resolve => setTimeout( resolve, 1000 * this.retry ) )
+							.then( () => {
+								// Followed by a (recursive) Promise to do the next request.
+								Tools.log( 'WhoWroteThat Api::getData() retry ' + this.retry );
+								this.retry++;
+								// Recurse
+								return this.getJsonData();
+							} );
+					}
+					return $.Deferred().reject( errCode );
+				}
+				// Report retry count.
+				if ( this.retry > 1 ) {
+					Tools.log( 'WhoWroteThat Api::getData() total retries: ' + ( this.retry - 1 ) );
+				}
+
+				// Create the token map
+				this.createTokenMap( result );
+
+				// Return result
+				return result;
+			}, jqXHR => {
+				// All other errors are likely to be 4xx and 5xx, and the only one that the user
+				// might be able to recover from is 429 Too Many Requests.
+				let errCode = 'contact';
+				if ( jqXHR.status === 429 ) {
+					errCode = 'later';
+				}
+				return $.Deferred().reject( errCode );
+			} );
+	}
+
+	/**
 	 * Get the WikiWho data for a given wiki page.
 	 *
 	 * @return {Promise} A promise that resolves when the data is ready,
 	 * or rejects if there was an error.
 	 */
 	getData() {
-		let getJsonData,
-			retry = 1,
-			retries = 4;
-		if ( this.resultsPromise ) {
-			return this.resultsPromise;
+		let promiseIdentifier = this.getRevisionId();
+
+		// If this promise doesn't exist yet, fetch it
+		if ( !this.promiseCache.data[ promiseIdentifier ] ) {
+			this.promiseCache.data[ promiseIdentifier ] = this.getJsonData();
 		}
-		getJsonData = () => {
-			return $.getJSON( this.getAjaxURL() )
-				.then( result => {
-					// Handle error response.
-					if ( !result.success ) {
-						// The API gives us an error message, but we don't use it because it's only
-						// in English. Some of the error messages are:
-						// * result.info: "Requested data is not currently available in WikiWho
-						//   database. It will be available soon."
-						// * result.error: "The article (x) you are trying to request does not exist
-						//   in english Wikipedia."
-						// We do add the full error details to the console, for easier debugging.
-						const errCode = result.info && result.info.match( /data is not currently available/i ) ?
-							'refresh' : 'contact';
-						Tools.log( 'Encountered a "' + errCode + '" error:', 'error', result );
-						if ( errCode === 'refresh' && retry <= retries ) {
-							// Return an intermediate Promise to handle the wait.
-							// The time to wait gets progressively longer for each retry.
-							return new Promise( resolve => setTimeout( resolve, 1000 * retry ) )
-								.then( () => {
-									// Followed by a (recursive) Promise to do the next request.
-									Tools.log( 'Api::getData() retry ' + retry );
-									retry++;
-									return getJsonData();
-								} );
-						}
-						return $.Deferred().reject( errCode );
-					}
-					// Report retry count.
-					if ( retry > 1 ) {
-						Tools.log( 'Api::getData() total retries: ' + ( retry - 1 ) );
-					}
-					// Store all results.
-					this.results = result;
-				}, jqXHR => {
-					// All other errors are likely to be 4xx and 5xx, and the only one that the user
-					// might be able to recover from is 429 Too Many Requests.
-					let errCode = 'contact';
-					if ( jqXHR.status === 429 ) {
-						errCode = 'later';
-					}
-					return $.Deferred().reject( errCode );
-				} );
-		};
-		this.resultsPromise = getJsonData();
-		return this.resultsPromise;
+
+		// Return the promise
+		return this.promiseCache.data[ promiseIdentifier ];
 	}
 }
 
