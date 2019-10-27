@@ -1,8 +1,9 @@
 {
 	"manifest_version": 2,
-	"name": "WhoWroteThat for Wikipedia",
+	"name": "__MSG_name__",
+	"description": "__MSG_description",
+	"default_locale": "en",
 	"author": "Wikimedia Foundation",
-	"description": "@@description",
 	"homepage_url": "https://meta.wikimedia.org/wiki/Community_Tech/Who_Wrote_That_tool",
 	"version": "@@version",
 	"icons": {

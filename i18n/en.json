@@ -2,6 +2,8 @@
 	"@metadata": {
 		"authors": []
 	},
+	"whowrotethat-ext-name": "Who Wrote That?",
+	"whowrotethat-ext-desc": "Explore authorship and revision information visually and directly in Wikipedia articles. Powered by WikiWho.",
 	"whowrotethat-activation-link": "Who Wrote That?",
 	"whowrotethat-activation-link-tooltip": "Activate Who Wrote That?",
 	"whowrotethat-deactivation-link": "Close Who Wrote That?",

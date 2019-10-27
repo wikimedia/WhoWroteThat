@@ -1,6 +1,4 @@
 {
-   "name": "WhoWroteThat",
-   "description": "Explore authorship and revision information visually and directly in Wikipedia articles. Powered by WikiWho.",
    "repository": "https://github.com/wikimedia/WhoWroteThat",
    "version": "0.5.0",
    "license": "MIT",

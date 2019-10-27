@@ -5,6 +5,8 @@
 			"Verdy p"
 		]
 	},
+	"whowrotethat-ext-name": "The name of the browser extension (used on the Firefox and Chrome stores).",
+	"whowrotethat-ext-desc": "A description of the browser extension (used on the Firefox and Chrome stores).",
 	"whowrotethat-activation-link": "The text for the link that turns Who Wrote That on",
 	"whowrotethat-activation-link-tooltip": "The tooltip for the link that turns Who Wrote That on",
 	"whowrotethat-deactivation-link": "The text for the link that turns Who Wrote That off",

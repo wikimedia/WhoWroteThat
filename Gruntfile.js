@@ -138,7 +138,6 @@ module.exports = function Gruntfile( grunt ) {
 			manifest: {
 				options: {
 					patterns: [
-						{ match: 'description', replacement: pkg.description },
 						{ match: 'version', replacement: pkg.version + '.0' }
 					]
 				},
@@ -183,9 +182,34 @@ module.exports = function Gruntfile( grunt ) {
 		}
 	} );
 
+	grunt.registerTask( 'extLocales', () => {
+		const langBlob = generateLangBlob(),
+			qqq = grunt.file.readJSON( 'i18n/qqq.json' );
+		Object.keys( langBlob ).forEach( function ( lang ) {
+			const locale = {};
+			if ( langBlob[ lang ][ 'whowrotethat-ext-name' ] ) {
+				locale.name = {
+					message: langBlob[ lang ][ 'whowrotethat-ext-name' ],
+					description: qqq[ 'whowrotethat-ext-name' ]
+				};
+			}
+			if ( langBlob[ lang ][ 'whowrotethat-ext-desc' ] ) {
+				locale.description = {
+					message: langBlob[ lang ][ 'whowrotethat-ext-desc' ],
+					description: qqq[ 'whowrotethat-ext-desc' ]
+				};
+			}
+			if ( locale.name || locale.description ) {
+				const localeFile = 'dist/extension/_locales/' + lang + '/messages.json';
+				grunt.log.ok( 'Writing ' + localeFile );
+				grunt.file.write( localeFile, JSON.stringify( locale, null, 4 ) );
+			}
+		} );
+	} );
+
 	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana', 'jsdoc' ] );
 	grunt.registerTask( 'test', [ 'lint', 'shell:mocha' ] );
-	grunt.registerTask( 'build', [ 'clean', 'less', 'replace', 'browserify', 'copy', 'shell:webextLint' ] );
+	grunt.registerTask( 'build', [ 'clean', 'less', 'replace', 'browserify', 'copy', 'extLocales', 'shell:webextLint' ] );
 	grunt.registerTask( 'run', [ 'build', 'shell:webextRun' ] );
 	grunt.registerTask( 'default', [ 'test', 'build', 'shell:webextBuild', 'compress:webextSource' ] );
 };
