@@ -1,20 +1,26 @@
-# WhoWroteThat for Wikipedia browser extension
+Who Wrote That? for Wikipedia
+=============================
 
-A browser extension (Chrome and Firefox) based on the https://github.com/wikiwho/WhoColor greasemonkey user script.
+Explore authorship and revision information visually and directly in Wikipedia articles.
+Powered by [WikiWho](https://f-squared.org/wikiwho/).
 
-** UNDER CONSTRUCTION **
+WhoWroteThat is available as a browser extension (for Firefox and Chrome)
+and a wiki gadget.
 
-[![CircleCI](https://circleci.com/gh/wikimedia/WhoWroteThat.svg?style=svg)](https://circleci.com/gh/wikimedia/WhoWroteThat)
+* [Project page](https://meta.wikimedia.org/wiki/Community_Tech/Who_Wrote_That_tool)
+* [User interface translation](https://translatewiki.net/wiki/Translating:WhoWroteThat%3F)
 
-## Wikipedias
+[![License: MIT](https://img.shields.io/github/license/wikimedia/WhoWroteThat)](https://github.com/wikimedia/WhoWroteThat/blob/master/MIT-LICENSE)
+[![CircleCI build status](https://img.shields.io/circleci/build/github/wikimedia/WhoWroteThat)](https://circleci.com/gh/wikimedia/WhoWroteThat)
 
-The extension works only on Wikipedias supported by WhoColor API:
+## Supported Wikipedias
 
-* English Wikipedia: `*://en.wikipedia.org/*`
-* German Wikipedia: `*://de.wikipedia.org/*`
-* Basque Wikipedia: `*://eu.wikipedia.org/*`
-* Turkish Wikipedia: `*://tr.wikipedia.org/*`
-* Spanish Wikipedia: `*://es.wikipedia.org/*`
+The tool works on Wikipedias supported by the WhoColor API:
+[English](https://en.wikipedia.org/),
+[German](https://de.wikipedia.org/),
+[Basque](https://eu.wikipedia.org/),
+[Turkish](https://tr.wikipedia.org/), and
+[Spanish](https://es.wikipedia.org/).
 
 ## Testing the Browser Extension
 
