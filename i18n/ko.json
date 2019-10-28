@@ -10,5 +10,6 @@
 	"whowrotethat-error-contact": "이 문제에 대해 $1해 주십시오.",
 	"whowrotethat-error-contact-link": "문의하기",
 	"whowrotethat-tour-welcome-dismiss": "알겠습니다!",
+	"whowrotethat-revision-added": "$1님이 $2에 이 텍스트를 추가했습니다.",
 	"whowrotethat-revision-deleted-username": "(사용자 이름 또는 IP 삭제됨)"
 }

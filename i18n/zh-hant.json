@@ -4,6 +4,8 @@
 			"Kly"
 		]
 	},
+	"whowrotethat-ext-name": "Who Wrote That?",
+	"whowrotethat-ext-desc": "在維基百科條目裡直接瀏覽觀看作者與修訂資訊。由 WikiWho 提供技術支援。",
 	"whowrotethat-activation-link": "Who Wrote That?",
 	"whowrotethat-activation-link-tooltip": "啟動 Who Wrote That?",
 	"whowrotethat-deactivation-link": "關閉 Who Wrote That?",

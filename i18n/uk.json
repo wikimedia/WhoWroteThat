@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ата"
+			"Ата",
+			"Movses"
 		]
 	},
+	"whowrotethat-ext-name": "Хто це написав?",
+	"whowrotethat-ext-desc": "Дозволяє досліджувати та візуалізувати авторство та версії статей Вікіпедії. Розроблено у WikiWho.",
 	"whowrotethat-activation-link": "Хто це написав?",
 	"whowrotethat-activation-link-tooltip": "Активувати «Хто це написав?»",
 	"whowrotethat-deactivation-link": "Закрити «Хто це написав?»",
@@ -18,7 +21,7 @@
 	"whowrotethat-tour-welcome-title": "<strong><em>Хто це написав?</em></strong> увімкнено!",
 	"whowrotethat-tour-welcome-description": "Активуйте інструмент на бічній панелі. Наведіть на текст, щоб побачити автора та інший його внесок на цій сторінці. Натисніть, щоб отримати більше деталей.",
 	"whowrotethat-tour-welcome-dismiss": "Зрозуміло!",
-	"whowrotethat-revision-added": "$1 {{GENDER:$1|написав|написала}} це $2.",
+	"whowrotethat-revision-added": "Додано $1 до $2.",
 	"whowrotethat-revision-attribution": "Створено <strong>$1%</strong> сторінки.",
 	"whowrotethat-revision-attribution-lessthan": "Створено <strong>менше ніж 1%</strong> сторінки.",
 	"whowrotethat-revision-deleted-username": "(ім'я автора чи IP стерто)"

@@ -4,6 +4,8 @@
 			"Jon Harald Søby"
 		]
 	},
+	"whowrotethat-ext-name": "Hvem skrev det?",
+	"whowrotethat-ext-desc": "Utforsk forfatterskap og revisjonsinformasjon visuelt og direkte i Wikipedia-artikler. Drives med WikiWho.",
 	"whowrotethat-activation-link": "Hvem skrev det?",
 	"whowrotethat-activation-link-tooltip": "Aktivere «Hvem skrev det»?",
 	"whowrotethat-deactivation-link": "Lukke «Hvem skrev det»?",
