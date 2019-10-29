@@ -88,6 +88,9 @@ class Controller {
 	 *  of the wiki. Falls back to reading directly from mw.config
 	 */
 	initialize( $content, config ) {
+		let uri,
+			veLoading = false;
+
 		if ( this.model.isInitialized() ) {
 			return;
 		}
@@ -103,6 +106,8 @@ class Controller {
 		// whether messages are set properly, since that
 		// has its own tests in the mw.messsages bundle
 		if ( window.mw ) {
+			uri = new mw.Uri();
+
 			this.api = new Api( {
 				url: config.wikiWhoUrl,
 				mwApi: new mw.Api(),
@@ -142,6 +147,21 @@ class Controller {
 			} );
 
 			this.initialized = true;
+
+			// Mark as enabled after initialization, only if ve is not activated
+			// This is specifically for the case where we load the page with VE
+			// in the process of loading. In that case, if we leave VE after it
+			// loaded, the events above will trigger a change in the enabled state
+			veLoading = $( 'html' ).hasClass( 've-activated' ) ||
+				(
+					uri &&
+						(
+							uri.query.veaction === 'edit' ||
+							uri.query.action === 'edit'
+						)
+				);
+
+			this.model.toggleEnabled( !veLoading );
 		}
 	}
 

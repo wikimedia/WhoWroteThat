@@ -13,7 +13,7 @@ class Model extends EventEmitter {
 		super();
 
 		this.initialized = false;
-		this.enabled = true;
+		this.enabled = false;
 		this.active = false;
 		this.state = 'pending';
 

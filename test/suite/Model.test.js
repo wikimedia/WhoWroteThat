@@ -10,7 +10,6 @@ describe( 'Model test', () => {
 				'state:ready|',
 				'active:true',
 				'active:false',
-				'enabled:false',
 				'enabled:true',
 				'state:err|refresh'
 			];
@@ -27,8 +26,8 @@ describe( 'Model test', () => {
 		m.setState( 'ready' );
 		m.toggleActive( true );
 		m.toggleActive();
-		m.toggleEnabled( true ); // No event; this is the initial state
-		m.toggleEnabled( false );
+		m.toggleEnabled( false ); // No event; this is the initial state
+		m.toggleEnabled( true );
 		m.toggleEnabled();
 		m.setState( 'err', 'refresh' );
 
@@ -114,13 +113,14 @@ describe( 'Model test', () => {
 		);
 
 		it( 'getContentWrapper returns changed/updated content', () => {
-			expect( m.getContentWrapper().html() )
-				.to.equal( '<a>A link instead</a>' );
+			// Content wrapper includes the entire wrapper + content
+			expect( m.getContentWrapper()[ 0 ].outerHTML )
+				.to.equal( '<div><a>A link instead</a></div>' );
 		} );
 		it( 'getOriginalContent returns original content', () => {
-			expect(
-				m.getOriginalContent()[ 0 ].outerHTML
-			)
+			// Original content includes only the content that was originally
+			// there inside the wrapper
+			expect( m.getOriginalContent()[ 0 ].outerHTML )
 				.to.equal( '<span>This is the original DOM structure</span>' );
 		} );
 
