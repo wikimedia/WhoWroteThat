@@ -25,11 +25,13 @@ OO.inheritClass( RevisionPopupWidget, OO.ui.PopupWidget );
 /**
  * Get markup for the diff size.
  * @param {number} size
- * @return {string}
+ * @return {jQuery}
  */
 function getSizeHtml( size ) {
-	let sizeClass;
+	const $diffBytes = $( '<span>' );
+	$diffBytes.addClass( 'mw-diff-bytes' );
 
+	let sizeClass;
 	if ( size > 0 ) {
 		sizeClass = 'mw-plusminus-pos';
 	} else if ( size < 0 ) {
@@ -37,36 +39,37 @@ function getSizeHtml( size ) {
 	} else {
 		sizeClass = 'mw-plusminus-null';
 	}
-
-	return `
-		<span class="${sizeClass} mw-diff-bytes">` +
-			`${size > 0 ? '+' : ''}${mw.language.convertNumber( size )}` +
-		'</span>';
+	return $diffBytes
+		.addClass( sizeClass )
+		.text( `${size > 0 ? '+' : ''}${mw.language.convertNumber( size )}` );
 }
 
 /**
  * Get markup for the edit summary.
  * @param {Object} data As returned by Api.prototype.getTokenInfo().
- * @return {string}
+ * @return {jQuery|null}
  */
 function getCommentHtml( data ) {
+	const $revCommentDiv = $( '<div>' )
+		.addClass( 'wwt-revisionPopupWidget-comment' );
+
 	if ( data.comment === '' ) {
 		// No edit summary.
-		return '';
+		return null;
 	} else if ( data.comment === undefined ) {
 		// Not yet available.
-		return `
-			<div class="wwt-revisionPopupWidget-comment">
-				<div class="wwt-shimmer www-shimmer-animation"></div>
-				<div class="wwt-shimmer www-shimmer-animation"></div>
-			</div>`;
+		const $shimmerDiv = $( '<div>' )
+			.addClass( 'wwt-shimmer www-shimmer-animation' );
+		$revCommentDiv.append( $shimmerDiv, $shimmerDiv );
+	} else {
+		const $commentSpan = $( '<span>' )
+			.addClass( 'comment comment--without-parentheses wwt-revisionPopupWidget-comment' )
+			.append( Tools.bidiIsolate( $.parseHTML( data.comment ) ) );
+		$revCommentDiv
+			.addClass( 'wwt-revisionPopupWidget-comment-transparent' )
+			.append( $commentSpan, getSizeHtml( data.size ) );
 	}
-
-	return `
-		<div class="wwt-revisionPopupWidget-comment wwt-revisionPopupWidget-comment-transparent">
-			<span class="comment comment--without-parentheses wwt-revisionPopupWidget-comment">${Tools.bidiIsolate( data.comment, true )}</span>
-			${getSizeHtml( data.size )}
-		</div>`;
+	return $revCommentDiv;
 }
 
 /**
@@ -125,14 +128,12 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 			.text( dateStr ),
 		addedMsg = mw.message( 'whowrotethat-revision-added', $userLinks, $diffLink ).parse(),
 		scoreMsgKey = Number( data.score ) >= 1 ? 'whowrotethat-revision-attribution' : 'whowrotethat-revision-attribution-lessthan',
-		attributionMsg = `<div class="wwt-revisionPopupWidget-attribution">${mw.message( scoreMsgKey, data.score ).parse()}</div>`,
-		html = $.parseHTML( `
-			${addedMsg.trim()}
-			${getCommentHtml( data )}
-			${attributionMsg}
-		` );
-
-	this.$popupContent.html( html );
+		$attributionMsg = $( '<div>' )
+			.addClass( 'wwt-revisionPopupWidget-attribution' )
+			.html( mw.message( scoreMsgKey, data.score ).parse() ),
+		$html = $( '<div>' )
+			.append( addedMsg, getCommentHtml( data ), $attributionMsg );
+	this.$popupContent.empty().append( $html );
 
 	if ( $target.find( '.thumb' ).length ) {
 		$target = $target.find( '.thumb' );

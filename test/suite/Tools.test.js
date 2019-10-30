@@ -6,27 +6,23 @@ describe( 'Tools test', () => {
 		const cases = [
 			{
 				input: 'foo',
-				raw: true,
 				expected: '<bdi>foo</bdi>',
 				msg: 'Simple string'
 			},
 			{
 				input: 'foo with some spaces',
-				raw: true,
 				expected: '<bdi>foo with some spaces</bdi>',
 				msg: 'String with spaces'
 			},
 			{
-				input: '<a href="http://example.com">wrapped link as raw HTML</a>',
-				raw: true,
+				input: $.parseHTML( '<a href="http://example.com">wrapped link as raw HTML</a>' ),
 				expected: '<bdi><a href="http://example.com">wrapped link as raw HTML</a></bdi>',
-				msg: 'Accepts raw HTML.'
+				msg: 'Accepts parsed HTML.'
 			},
 			{
 				input: $( '<a>' )
 					.prop( 'href', 'http://example.com' )
 					.text( 'foo bar baz' ),
-				raw: true,
 				expected: '<bdi><a href="http://example.com">foo bar baz</a></bdi>',
 				msg: 'jQuery element'
 			}
@@ -34,7 +30,7 @@ describe( 'Tools test', () => {
 
 		cases.forEach( testCase => {
 			it( testCase.msg, () => {
-				expect( Tools.bidiIsolate( testCase.input, testCase.raw ) )
+				expect( Tools.bidiIsolate( testCase.input )[ 0 ].outerHTML )
 					.to.equal( testCase.expected );
 			} );
 		} );
