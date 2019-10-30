@@ -164,7 +164,7 @@ module.exports = function Gruntfile( grunt ) {
 			mocha: 'mocha --require @babel/register test/testHelper.js --recursive test/suite  --colors',
 			webextBuild: 'web-ext build',
 			webextLint: 'web-ext lint',
-			webextRun: 'web-ext run --start-url https://en.wikipedia.org/wiki/Special:Random --no-reload'
+			webextRun: 'web-ext run --start-url https://en.wikipedia.org/wiki/Special:Random --no-reload --verbose --browser-console'
 		},
 		compress: {
 			webextSource: {
