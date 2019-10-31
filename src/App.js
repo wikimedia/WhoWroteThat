@@ -1,3 +1,4 @@
+import config from './config';
 import InfoBarWidget from './InfoBarWidget';
 import RevisionPopupWidget from './RevisionPopupWidget';
 import wwtController from './Controller';
@@ -63,6 +64,7 @@ class App {
 		// only what's actually inside it
 		this.$content = $( $.parseHTML( html ) ).contents();
 		this.attachContentListeners( this.$content );
+		this.grayOutUntokenizedElements( this.$content );
 	}
 
 	/**
@@ -130,6 +132,28 @@ class App {
 			out.editorId = editorMatches[ 1 ];
 		}
 		return out;
+	}
+
+	/**
+	 * Gray out elements that aren't or do not contain tokens.
+	 * See `untokenizedElements` in config.js for selectors of elements we know aren't tokenized.
+	 * @param {jQuery} $content
+	 */
+	grayOutUntokenizedElements( $content ) {
+		// Disable various elements that may not be picked up by the $.each loop below.
+		// This NOT comprehensive, and is comprised of a manually maintained list in config.js
+		$content.find( config.untokenizedElements.join( ',' ) ).addClass( 'wwt-disabled' );
+
+		// Add the class to immediate children of the parser output
+		// that don't contain tokenized elements.
+		$.each( $content, ( _i, el ) => {
+			if ( !$( el ).hasClass( 'editor-token' ) && !$( el ).find( '.editor-token' ).length ) {
+				$( el ).addClass( 'wwt-disabled' )
+					// Remove .wtt-disabled elements added above to prevent compounding opacity.
+					.find( '.wwt-disabled' )
+					.removeClass( 'wwt-disabled' );
+			}
+		} );
 	}
 
 	/**
