@@ -4,6 +4,8 @@
 			"WikiPhoenix"
 		]
 	},
+	"whowrotethat-ext-name": "Vem skrev detta?",
+	"whowrotethat-ext-desc": "Utforska information om författare och sidversioner visuellt och direkt i Wikipedia-artiklar. Tillhandahålls av WikiWho.",
 	"whowrotethat-activation-link": "Vem skrev detta?",
 	"whowrotethat-activation-link-tooltip": "Aktivera Vem skrev detta?",
 	"whowrotethat-deactivation-link": "Stäng Vem skrev detta?",

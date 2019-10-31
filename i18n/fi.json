@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Nike",
-			"Spude"
+			"Spude",
+			"Pyscowicz"
 		]
 	},
+	"whowrotethat-ext-name": "Kuka kirjoitti tuon?",
 	"whowrotethat-activation-link": "Kenen kirjoittama?",
 	"whowrotethat-activation-link-tooltip": "Aktivoi Kenen kirjoittama?",
 	"whowrotethat-deactivation-link": "Sulje Kenen kirjoittama?",

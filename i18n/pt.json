@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mansil alfalb"
+		]
+	},
+	"whowrotethat-ext-name": "Quem escreveu isso?",
+	"whowrotethat-ext-desc": "Explore a informação de autoria e revisão visualmente e diretamente nos artigos da Wikipedia. Desenvolvido por WikiWho.",
+	"whowrotethat-activation-link": "Quem escreveu isso?",
+	"whowrotethat-activation-link-tooltip": "Ativar quem escreveu isso?",
+	"whowrotethat-deactivation-link": "Fechar quem escreveu isso?",
+	"whowrotethat-state-pending": "<strong><em>Quem escreveu isso?</em></strong> está a carregar. Isto poderá demorar algum tempo.",
+	"whowrotethat-state-error": "Erro de API: $1",
+	"whowrotethat-error-refresh": "Pro favor, recarregue a página ou tente novamente mais tarde.",
+	"whowrotethat-error-later": "Por favor, tente novamente mais tarde.",
+	"whowrotethat-error-contact": "Por favor, $1 sobre este problema.",
+	"whowrotethat-error-contact-link": "Contacte-nos",
+	"whowrotethat-ready-title": "Quem escreveu isso?",
+	"whowrotethat-ready-general": "Passe o rato para ver as contribuições do mesmo autor. Clique para mais detalhes.",
+	"whowrotethat-tour-welcome-title": "<strong><em>Quem escreveu isso?</em></strong> está ativado!",
+	"whowrotethat-tour-welcome-description": "Ative a ferramenta na barra lateral. Passe o rato sobre o texto para ver o autor e as suas outras contribuições para esta página. Clique para obter mais detalhes.",
+	"whowrotethat-tour-welcome-dismiss": "Percebi!",
+	"whowrotethat-revision-added": "$1 adicionou isto em $2.",
+	"whowrotethat-revision-attribution": "Eles escreveram <strong>$1%</strong> da página.",
+	"whowrotethat-revision-attribution-lessthan": "Eles escreveram <strong>menos de 1%</strong> da página.",
+	"whowrotethat-revision-deleted-username": "(nome de utilizador ou IP removido)"
+}
