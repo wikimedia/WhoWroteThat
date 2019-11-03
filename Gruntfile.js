@@ -138,6 +138,8 @@ module.exports = function Gruntfile( grunt ) {
 			manifest: {
 				options: {
 					patterns: [
+						// The trailing '0' here is also used in the compress.webextSource Grunt
+						// task below.
 						{ match: 'version', replacement: pkg.version + '.0' }
 					]
 				},
@@ -169,7 +171,20 @@ module.exports = function Gruntfile( grunt ) {
 		compress: {
 			webextSource: {
 				options: {
-					archive: './dist/whowrotethat_for_wikipedia-' + pkg.version + '.0_source.zip',
+					archive: () => {
+						// Default source archive, if no other zip file exists.
+						let out = './dist/whowrotethat_source.zip';
+						// Get the existing zip file name and strip '.zip' from end.
+						// The trailing 0 (which we use to identify the non-source zip)
+						// is set above in the replace.manifest Grunt task.
+						const existingZip = grunt.file.expand( './dist/*0.zip' );
+						if ( existingZip.length >= 1 ) {
+							const basename = existingZip[ 0 ];
+							out = basename.substr( 0, basename.length - 4 ) + '_source.zip';
+						}
+						grunt.log.ok( 'Compressing source to ' + out );
+						return out;
+					},
 					mode: 'zip'
 				},
 				files: [
@@ -182,26 +197,35 @@ module.exports = function Gruntfile( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'extLocales', () => {
-		const langBlob = generateLangBlob(),
+	grunt.registerTask( 'extLocales', 'Create web extension locale files in dist/extension/_locales/ (call as "extLocales:beta" for beta versions)', beta => {
+		const isBeta = beta === 'beta',
+			langBlob = generateLangBlob(),
 			qqq = grunt.file.readJSON( 'i18n/qqq.json' );
 		Object.keys( langBlob ).forEach( function ( lang ) {
-			const locale = {};
-			if ( langBlob[ lang ][ 'whowrotethat-ext-name' ] ) {
+			const locale = {},
+				nameMsg = isBeta ? 'whowrotethat-ext-name-beta' : 'whowrotethat-ext-name';
+			// Name (may be beta).
+			if ( langBlob[ lang ][ nameMsg ] ) {
 				locale.name = {
-					message: langBlob[ lang ][ 'whowrotethat-ext-name' ],
-					description: qqq[ 'whowrotethat-ext-name' ]
+					message: langBlob[ lang ][ nameMsg ],
+					description: qqq[ nameMsg ]
 				};
 			}
+			// Description (may have beta appended).
 			if ( langBlob[ lang ][ 'whowrotethat-ext-desc' ] ) {
+				let desc = langBlob[ lang ][ 'whowrotethat-ext-desc' ];
+				if ( isBeta && langBlob[ lang ][ 'whowrotethat-ext-desc-beta' ] ) {
+					desc += '\n\n' + langBlob[ lang ][ 'whowrotethat-ext-desc-beta' ];
+				}
 				locale.description = {
-					message: langBlob[ lang ][ 'whowrotethat-ext-desc' ],
+					message: desc,
 					description: qqq[ 'whowrotethat-ext-desc' ]
 				};
 			}
 			if ( locale.name || locale.description ) {
-				const localeFile = 'dist/extension/_locales/' + lang + '/messages.json';
-				grunt.log.ok( 'Writing ' + localeFile );
+				const localeFile = 'dist/extension/_locales/' + lang + '/messages.json',
+					betaLogMsg = isBeta ? 'beta ' : '';
+				grunt.log.ok( 'Writing ' + betaLogMsg + 'messages to ' + localeFile );
 				grunt.file.write( localeFile, JSON.stringify( locale, null, 4 ) );
 			}
 		} );
@@ -209,7 +233,14 @@ module.exports = function Gruntfile( grunt ) {
 
 	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana', 'jsdoc' ] );
 	grunt.registerTask( 'test', [ 'lint', 'shell:mocha' ] );
-	grunt.registerTask( 'build', [ 'clean', 'less', 'replace', 'browserify', 'copy', 'extLocales', 'shell:webextLint' ] );
+	grunt.registerTask( 'build', 'Create web extension files in dist/extension/', [ 'clean', 'less', 'replace', 'browserify', 'copy' ] );
 	grunt.registerTask( 'run', [ 'build', 'shell:webextRun' ] );
-	grunt.registerTask( 'default', [ 'test', 'build', 'shell:webextBuild', 'compress:webextSource' ] );
+	grunt.registerTask( 'webext', 'Build zip files for upload to the browser stores', [
+		'build',
+		// Create beta zip files.
+		'extLocales:beta', 'shell:webextBuild', 'shell:webextLint', 'compress:webextSource',
+		// Create prod zip files.
+		'extLocales', 'shell:webextBuild', 'shell:webextLint', 'compress:webextSource'
+	] );
+	grunt.registerTask( 'default', [ 'test', 'build', 'webext' ] );
 };

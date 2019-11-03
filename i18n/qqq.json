@@ -6,7 +6,9 @@
 		]
 	},
 	"whowrotethat-ext-name": "The name of the browser extension (used on the Firefox and Chrome stores).",
+	"whowrotethat-ext-name-beta": "The name of the beta version of the browser extension (used on the Firefox and Chrome stores).",
 	"whowrotethat-ext-desc": "A description of the browser extension (used on the Firefox and Chrome stores).",
+	"whowrotethat-ext-desc-beta": "Text added to the description of the browser extension, after {{msg-mw|whowrotethat-ext-desc}} (used on the Firefox and Chrome stores).",
 	"whowrotethat-activation-link": "The text for the link that turns Who Wrote That on",
 	"whowrotethat-activation-link-tooltip": "The tooltip for the link that turns Who Wrote That on",
 	"whowrotethat-deactivation-link": "The text for the link that turns Who Wrote That off",
