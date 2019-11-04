@@ -5,7 +5,9 @@
 		]
 	},
 	"whowrotethat-ext-name": "Who Wrote That?",
+	"whowrotethat-ext-name-beta": "Who Wrote That?（BETA）",
 	"whowrotethat-ext-desc": "在維基百科條目裡直接瀏覽觀看作者與修訂資訊。由 WikiWho 提供技術支援。",
+	"whowrotethat-ext-desc-beta": "此為僅用於測試，並且可能含有程式錯誤的 BETA 版本。若您發現任何問題，請在我們的 Phabricator 面板上回報。",
 	"whowrotethat-activation-link": "Who Wrote That?",
 	"whowrotethat-activation-link-tooltip": "啟動 Who Wrote That?",
 	"whowrotethat-deactivation-link": "關閉 Who Wrote That?",

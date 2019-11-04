@@ -5,7 +5,9 @@
 		]
 	},
 	"whowrotethat-ext-name": "Ce ave scritte quidde?",
+	"whowrotethat-ext-name-beta": "Ce ave scritte quiste? (BETA)",
 	"whowrotethat-ext-desc": "Esplore 'mbormaziune sus a l'autore e 'a revisione visualmende e direttamende sus a le vôsce. Fatte da WikiWho.",
+	"whowrotethat-ext-desc-beta": "Queste jè 'na versione BETA, fatte sulamende pu test e pò essere ca tène bug. Ce iacchie probbleme, pe piacere segnalele a 'u nostre conziglie Phabricator.",
 	"whowrotethat-activation-link": "Ce ave scritte quidde?",
 	"whowrotethat-activation-link-tooltip": "Abbilite Ce ave scritte quidde?",
 	"whowrotethat-deactivation-link": "Achiude Ce ave scritte quidde?",

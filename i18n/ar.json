@@ -5,7 +5,9 @@
 		]
 	},
 	"whowrotethat-ext-name": "من كتب ذلك؟",
+	"whowrotethat-ext-name-beta": "من كتب ذلك؟ (بيتا)",
 	"whowrotethat-ext-desc": "استكشف معلومات التأليف والمراجعة بشكل مرئي ومباشر في مقالات ويكيبيديا، مدعوم من ويكيهو.",
+	"whowrotethat-ext-desc-beta": "هذا هو الإصدار التجريبي، المخصص للاختبار فقط وربما يحتوي على أخطاء، إذا وجدت أية مشكلة، يُرجَى الإبلاغ عنها على لوحة فبريكاتور لدينا.",
 	"whowrotethat-activation-link": "من كتب ذلك؟",
 	"whowrotethat-activation-link-tooltip": "تفعيل من كتب هذا؟",
 	"whowrotethat-deactivation-link": "إغلاق من كتب ذلك؟",

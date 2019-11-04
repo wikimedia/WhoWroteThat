@@ -6,7 +6,9 @@
 		]
 	},
 	"whowrotethat-ext-name": "Хто це написав?",
+	"whowrotethat-ext-name-beta": "Хто це написав? (бета)",
 	"whowrotethat-ext-desc": "Дозволяє досліджувати та візуалізувати авторство та версії статей Вікіпедії. Розроблено у WikiWho.",
+	"whowrotethat-ext-desc-beta": "Це бета-версія, яка призначена тільки для тестування і можливо має помилки. Якщо ви знайшли помилку будь ласка повідомте про неї на сторінці Фабрикатора.",
 	"whowrotethat-activation-link": "Хто це написав?",
 	"whowrotethat-activation-link-tooltip": "Активувати «Хто це написав?»",
 	"whowrotethat-deactivation-link": "Закрити «Хто це написав?»",

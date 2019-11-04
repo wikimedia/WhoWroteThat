@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"whowrotethat-error-refresh": "Actualitzeu la pàgina o proveu-ho de nou més tard.",
+	"whowrotethat-error-later": "Proveu-ho de nou més tard.",
+	"whowrotethat-error-contact-link": "contacteu-nos",
+	"whowrotethat-tour-welcome-description": "Activeu l’eina a la barra lateral. Poseu el ratolí sobre el text per a mostrar-ne l’autor i les seves altres contribucions a aquesta pàgina. Feu-hi clic per a obtenir més detalls.",
+	"whowrotethat-tour-welcome-dismiss": "Entesos",
+	"whowrotethat-revision-added": "$1 ho ha afegit el $2.",
+	"whowrotethat-revision-attribution": "Ha escrit el <strong>$1%</strong> de la pàgina.",
+	"whowrotethat-revision-attribution-lessthan": "Ha escrit <strong>menys de l’1%</strong> de la pàgina.",
+	"whowrotethat-revision-deleted-username": "(s’ha tret l’usuari o la IP)"
+}

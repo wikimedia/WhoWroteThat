@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Nike",
-			"Verdy p"
+			"Verdy p",
+			"Hamilton Abreu"
 		]
 	},
 	"whowrotethat-ext-name": "The name of the browser extension (used on the Firefox and Chrome stores).",
@@ -16,7 +17,7 @@
 	"whowrotethat-state-error": "Prefix for the error display in the information bar in case there were errors while loading.",
 	"whowrotethat-error-refresh": "Error message shown when an error is probably recoverable.",
 	"whowrotethat-error-later": "Error message shown when an error may be recoverable after some time has passed.",
-	"whowrotethat-error-contact": "Error message shown if an error is unlikely to be recoverable, with a link to the Who Wrote That contact page.\n* $1 is the HTML link to the contact page, with the text specified in {{msg-wm|whowrotethat-state-error-contact-link}}",
+	"whowrotethat-error-contact": "Error message shown if an error is unlikely to be recoverable, with a link to the Who Wrote That contact page.\n* $1 is the HTML link to the contact page, with the text specified in {{msg-wm|whowrotethat-error-contact-link}}",
 	"whowrotethat-error-contact-link": "The text of the link to the contact page shown in {{wm-msg|whowrotethat-state-error-contact}}.",
 	"whowrotethat-ready-title": "Title of the extension that appears when the system is loaded and displays information about the selection.",
 	"whowrotethat-ready-general": "Instruction label that appears when the system is ready, before any hover or selection was made yet.",
