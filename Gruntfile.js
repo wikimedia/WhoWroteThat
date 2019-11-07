@@ -258,7 +258,7 @@ module.exports = function Gruntfile( grunt ) {
 	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana', 'jsdoc' ] );
 	grunt.registerTask( 'test', [ 'lint', 'shell:mocha' ] );
 	grunt.registerTask( 'build', 'Create web extension files in dist/extension/', [ 'clean', 'less', 'replace', 'browserify', 'copy' ] );
-	grunt.registerTask( 'run', [ 'build', 'shell:webextRun' ] );
+	grunt.registerTask( 'run', [ 'build', 'webext', 'shell:webextRun' ] );
 	grunt.registerTask( 'webext', 'Build zip files for upload to the browser stores', [
 		'build', 'chromeManifest',
 		// Create beta zip files.
