@@ -35,4 +35,54 @@ describe( 'Tools test', () => {
 			} );
 		} );
 	} );
+
+	describe( 'Tools.bidiIsolate', () => {
+		const cases = [
+			{
+				testName: 'No parameters.',
+				msg: 'test-msg1',
+				msgVal: 'Test message.',
+				params: [],
+				out: 'Test message.'
+			},
+			{
+				testName: 'One parameter.',
+				msg: 'test-msg2',
+				msgVal: 'Test $1 message.',
+				params: [ $( '<span>' ).text( 'HTML' ) ],
+				out: 'Test <span>HTML</span> message.'
+			},
+			{
+				testName: 'Two parameters.',
+				msg: 'test-msg3',
+				msgVal: 'Test $1 message $2.',
+				params: [
+					$( '<span>' ).text( 'HTML' ),
+					$( '<span>' ).attr( 'id', 'second' ).text( 'second' )
+				],
+				out: 'Test <span>HTML</span> message <span id="second">second</span>.'
+			},
+			{
+				testName: 'Parameters of different types, with HTML in the string.',
+				msg: 'test-msg4',
+				msgVal: 'String $1 jQuery $2',
+				params: [ 'lorem <script>bad</script>', $( '<span>' ).text( 'ipsum' ) ],
+				out: 'String lorem &lt;script&gt;bad&lt;/script&gt; jQuery <span>ipsum</span>'
+			}
+		];
+		cases.forEach( testCase => {
+			// Stub for MediaWiki's msg function.
+			global.mw = {
+				msg: ( msg, ...params ) => {
+					let out = testCase.msgVal;
+					params.forEach( function ( param, idx ) {
+						out = out.replace( '$' + ( idx + 1 ), param );
+					} );
+					return out;
+				}
+			};
+			expect( Tools.i18nHtml.apply( null, [ testCase.msg ].concat( testCase.params ) ) )
+				.to.equal( testCase.out );
+		} );
+	} );
 } );
