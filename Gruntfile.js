@@ -82,25 +82,9 @@ module.exports = function Gruntfile( grunt ) {
 				files: {
 					'dist/extension/generated.whowrotethat.css': 'src/less/index.less'
 				}
-			},
-			gadget: {
-				options: {
-					banner: grunt.file.read( 'build/header.gadget.txt' )
-				},
-				files: {
-					'dist/gadget/generated.whowrotethat.css': 'src/less/index.less'
-				}
 			}
 		},
 		browserify: {
-			gadget: {
-				src: 'src/outputs/gadget.js',
-				dest: 'dist/gadget/generated.whowrotethat.js',
-				options: {
-					transform: [ 'babelify' ],
-					exclude: [ 'jquery' ]
-				}
-			},
 			browserextension: {
 				src: 'src/outputs/browserextension.js',
 				dest: 'dist/extension/js/generated.pageScript.js',
