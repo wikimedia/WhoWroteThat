@@ -6,6 +6,8 @@
 		]
 	},
 	"whowrotethat-ext-name": "מי כתב את זה?",
+	"whowrotethat-ext-name-beta": "מי כתב את זה? (בטא)",
+	"whowrotethat-ext-desc-beta": "זו גרסת בטא, מיועדת לבדיקות בלבד ועשויה לסבול מתקלות. אם נתקלת בכאלה, נא לדווח עליהן בלוח ה־Phabricator שלנו.",
 	"whowrotethat-activation-link": "מי כתב את זה?",
 	"whowrotethat-activation-link-tooltip": "הפעלת מי כתב את זה?",
 	"whowrotethat-deactivation-link": "סגירת מי כתב את זה?",
@@ -18,6 +20,10 @@
 	"whowrotethat-ready-title": "מי כתב את זה?",
 	"whowrotethat-ready-general": "יש לרחף מעל עם סמן העכבר כדי לצפות בתרומות מאותו העורך. יש ללחוץ לקבלת פרטים נוספים.",
 	"whowrotethat-tour-welcome-title": "<strong><em>מי כתב את זה?</em></strong> פעיל!",
+	"whowrotethat-tour-welcome-description": "ניתן להפעיל את הכלי מסרגל הצד. יש לרחף מעל הטקסט כדי לראות מי כתב ואת התרומות הנוספות של אותו המשתמש. לפרטים נוספים יש ללחוץ.",
 	"whowrotethat-tour-welcome-dismiss": "הבנתי!",
+	"whowrotethat-revision-added": "נוסף על ידי $1 ב־$2.",
+	"whowrotethat-revision-attribution": "<strong>$1%</strong> מהדף נכתב על ידם.",
+	"whowrotethat-revision-attribution-lessthan": " <strong>פחות מ־1%</strong> מהדף נכתב על ידם.",
 	"whowrotethat-revision-deleted-username": "(שם המשתמש או כתובת ה־IP הוסרו)"
 }

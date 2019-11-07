@@ -6,7 +6,9 @@
 		]
 	},
 	"whowrotethat-ext-name": "Bunu Kim Yaptı?",
+	"whowrotethat-ext-name-beta": "Bunu Kim Yazdı? (BETA)",
 	"whowrotethat-ext-desc": "Vikipedi ve doğrudan Vikipedi makalelerinde yazarlık ve revizyon bilgilerini keşfedin. VikiKim tarafından desteklenmektedir.",
+	"whowrotethat-ext-desc-beta": "Bu BETA versiyonudur, sadece test amaçlıdır ve muhtemelen hatalar içerir. Herhangi bir sorun bulursanız, lütfen bunları Phabricator panomuza bildirin.",
 	"whowrotethat-activation-link": "Bunu Kim Yazdı?",
 	"whowrotethat-activation-link-tooltip": "Aktif Bunu Kim Yazdı?",
 	"whowrotethat-deactivation-link": "Kapat Bunu Kim Yazdı?",

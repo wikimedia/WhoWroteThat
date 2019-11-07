@@ -5,7 +5,9 @@
 		]
 	},
 	"whowrotethat-ext-name": "Vem skrev detta?",
+	"whowrotethat-ext-name-beta": "Vem skrev detta? (BETA)",
 	"whowrotethat-ext-desc": "Utforska information om författare och sidversioner visuellt och direkt i Wikipedia-artiklar. Tillhandahålls av WikiWho.",
+	"whowrotethat-ext-desc-beta": "Detta är BETAVERSIONEN, som endast är avsedd för att testas och kan innehålla buggar. Om du hittar några fel, rapportera dem på vår Phabricator-sida.",
 	"whowrotethat-activation-link": "Vem skrev detta?",
 	"whowrotethat-activation-link-tooltip": "Aktivera Vem skrev detta?",
 	"whowrotethat-deactivation-link": "Stäng Vem skrev detta?",
