@@ -92,14 +92,6 @@ module.exports = function Gruntfile( grunt ) {
 					transform: [ 'babelify' ],
 					exclude: [ 'jquery' ]
 				}
-			},
-			browserextensionTour: {
-				src: 'src/outputs/browserextension_tour.js',
-				dest: 'dist/extension/js/generated.welcomeTour.js',
-				options: {
-					transform: [ 'babelify' ],
-					exclude: [ 'jquery' ]
-				}
 			}
 		},
 		replace: {

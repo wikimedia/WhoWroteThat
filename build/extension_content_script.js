@@ -33,14 +33,16 @@ function injectScript( filePath, tag ) {
  */
 function activateWelcomeTour() {
 	theBrowser.storage.sync.get( [ 'WelcomeTourSeen' ], function ( result ) {
-		log( 'Checking WelcomeTourSeen (' + result.WelcomeTourSeen + ')' );
+		log( 'Checking WelcomeTourSeen (' + !!result.WelcomeTourSeen + ')' );
 		if ( result.WelcomeTourSeen ) {
 			return;
 		}
 
-		// Inject the welcome tour script
-		log( 'Injecting welcome tour' );
-		injectScript( theBrowser.extension.getURL( 'js/generated.welcomeTour.js' ), 'body' );
+		// Set a class on the HTML so the script knows taht the welcome tour
+		// should load
+		document.getElementsByTagName( 'html' )[ 0 ]
+			.classList.add( 'wwt-welcome-tour-unseen' );
+		log( 'Tagging welcome tour for activation.' );
 	} );
 }
 
@@ -61,7 +63,11 @@ window.addEventListener( 'message', function ( event ) {
 				// For 'dismiss', set true; for 'reset', set false
 				WelcomeTourSeen: event.data.action === 'dismiss'
 			}, function () {
-				log( 'Welcome tour dismissed.' );
+				if ( event.data.action === 'dismiss' ) {
+					log( 'Welcome tour dismissed.' );
+				} else {
+					log( 'Welcome tour re-enabled.' );
+				}
 			} );
 		}
 	}
