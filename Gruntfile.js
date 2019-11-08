@@ -193,32 +193,41 @@ module.exports = function Gruntfile( grunt ) {
 			langBlob = generateLangBlob(),
 			qqq = grunt.file.readJSON( 'i18n/qqq.json' );
 		Object.keys( langBlob ).forEach( function ( lang ) {
-			const locale = {},
-				nameMsg = isBeta ? 'whowrotethat-ext-name-beta' : 'whowrotethat-ext-name';
-			// Name (may be beta).
+			const localeFile = 'dist/extension/_locales/' + lang + '/messages.json',
+				betaLogMsg = isBeta ? 'beta ' : '',
+				nameMsg = isBeta ? 'whowrotethat-ext-name-beta' : 'whowrotethat-ext-name',
+				descMsg = isBeta ? 'whowrotethat-ext-desc-beta' : 'whowrotethat-ext-desc',
+				// The name and description messages default to English because Chrome doesn't do
+				// its own fallbacks.
+				locale = {
+					name: {
+						message: langBlob.en[ nameMsg ],
+						description: qqq[ nameMsg ]
+					},
+					description: {
+						message: langBlob.en[ descMsg ],
+						description: qqq[ descMsg ]
+					}
+				};
+			// Name (may be for beta). Maximum length 45 characters.
 			if ( langBlob[ lang ][ nameMsg ] ) {
-				locale.name = {
-					message: langBlob[ lang ][ nameMsg ],
-					description: qqq[ nameMsg ]
-				};
-			}
-			// Description (may have beta appended).
-			if ( langBlob[ lang ][ 'whowrotethat-ext-desc' ] ) {
-				let desc = langBlob[ lang ][ 'whowrotethat-ext-desc' ];
-				if ( isBeta && langBlob[ lang ][ 'whowrotethat-ext-desc-beta' ] ) {
-					desc += '\n\n' + langBlob[ lang ][ 'whowrotethat-ext-desc-beta' ];
+				const name = langBlob[ lang ][ nameMsg ];
+				if ( name.length >= 45 ) {
+					grunt.log.error( 'The ' + lang + " '" + nameMsg + "' message must be 45 characters or less. Provided: " + name );
 				}
-				locale.description = {
-					message: desc,
-					description: qqq[ 'whowrotethat-ext-desc' ]
-				};
+				locale.name.message = name.substring( 0, 44 );
 			}
-			if ( locale.name || locale.description ) {
-				const localeFile = 'dist/extension/_locales/' + lang + '/messages.json',
-					betaLogMsg = isBeta ? 'beta ' : '';
-				grunt.log.ok( 'Writing ' + betaLogMsg + 'messages to ' + localeFile );
-				grunt.file.write( localeFile, JSON.stringify( locale, null, 4 ) );
+			// Description (may have beta appended). Maximum 132 characters.
+			if ( langBlob[ lang ][ descMsg ] ) {
+				const desc = langBlob[ lang ][ descMsg ];
+				if ( desc.length >= 132 ) {
+					grunt.log.error( 'The ' + lang + " '" + nameMsg + "' message must be 132 characters or less. Provided: " + desc );
+				}
+				locale.description.message = desc.substring( 0, 131 );
 			}
+			// Write the locale file.
+			grunt.log.ok( 'Writing ' + betaLogMsg + 'messages to ' + localeFile );
+			grunt.file.write( localeFile, JSON.stringify( locale, null, 4 ) );
 		} );
 	} );
 

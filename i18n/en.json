@@ -5,7 +5,7 @@
 	"whowrotethat-ext-name": "Who Wrote That?",
 	"whowrotethat-ext-name-beta": "Who Wrote That? (BETA)",
 	"whowrotethat-ext-desc": "Explore authorship and revision information visually and directly in Wikipedia articles. Powered by WikiWho.",
-	"whowrotethat-ext-desc-beta": "This is the BETA version, intended for testing only and possibly containing bugs. If you find any issues, please report them on our Phabricator board.",
+	"whowrotethat-ext-desc-beta": "Explore Wikipedia authorship information. Powered by WikiWho. This is the BETA version, intended for testing only.",
 	"whowrotethat-activation-link": "Who Wrote That?",
 	"whowrotethat-activation-link-tooltip": "Activate Who Wrote That?",
 	"whowrotethat-deactivation-link": "Close Who Wrote That?",
