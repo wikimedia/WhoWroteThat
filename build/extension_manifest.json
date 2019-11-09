@@ -13,7 +13,7 @@
 	},
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "whowrotethat@wikimedia"
+			"id": "[See the Grunt 'extManifests' task.]"
 		}
 	},
 	"content_scripts": [ {
