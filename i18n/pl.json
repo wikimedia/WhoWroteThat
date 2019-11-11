@@ -4,6 +4,7 @@
 			"Rail"
 		]
 	},
+	"whowrotethat-ext-desc-beta": "Przeglądaj informacje o autorach w Wikipedii. Powered by WikiWho. To jest wersja BETA przeznaczona tylko do testów.",
 	"whowrotethat-activation-link": "Kto to napisał?",
 	"whowrotethat-activation-link-tooltip": "Aktywuj „Kto to napisał?”",
 	"whowrotethat-deactivation-link": "Zamknij „Kto to napisał?”",
@@ -14,7 +15,7 @@
 	"whowrotethat-error-contact": "$1 w związku z tym błędem.",
 	"whowrotethat-error-contact-link": "Skontaktuj się z nami",
 	"whowrotethat-ready-title": "Kto to napisał?",
-	"whowrotethat-tour-welcome-title": "„<strong><em>Kto to napisał?</em></strong>” jest włączone!",
+	"whowrotethat-tour-welcome-title": "$1 jest włączone!",
 	"whowrotethat-tour-welcome-dismiss": "Wszystko jasne!",
 	"whowrotethat-revision-attribution-lessthan-percent": "mniej niż 1%",
 	"whowrotethat-revision-deleted-username": "(nazwa użytkownika lub IP usunięte)"

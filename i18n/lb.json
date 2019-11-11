@@ -8,7 +8,8 @@
 	"whowrotethat-activation-link": "Wien huet dat geschriwwen?",
 	"whowrotethat-activation-link-tooltip": "'Wien huet dat geschriwwen?' aktivéieren",
 	"whowrotethat-deactivation-link": "'Wien huet dat geschriwwen?' zoumaachen",
-	"whowrotethat-state-pending": "<strong><em>Wien huet dat geschriwwen?</em></strong> gëtt gelueden. Dat kann eng Zäit daueren.",
+	"whowrotethat-state-pending": "$1 gëtt gelueden. Dat kann eng Zäit daueren.",
+	"whowrotethat-state-pending-name": "Wien huet dat geschriwwen?",
 	"whowrotethat-state-error": "API-Feeler: $1",
 	"whowrotethat-error-refresh": "Aktualiséiert d'Säit oder probéiert méi spéit nach eng Kéier.",
 	"whowrotethat-error-later": "Probéiert w.e.g. méi spéit nach eng Kéier.",
@@ -17,9 +18,12 @@
 	"whowrotethat-ready-title": "Wien huet dat geschriwwen?",
 	"whowrotethat-ready-general": "Fuert mat der Maus driwwer fir Ännerunge vum selwechten Auteur ze gesinn. Klickt fir méi Detailer.",
 	"whowrotethat-tour-welcome-title": "<strong><em>Wien huet dat geschriwwen?</em></strong> ass aktivéiert!",
+	"whowrotethat-tour-welcome-title-name": "Wien huet dat geschriwwen?",
 	"whowrotethat-tour-welcome-dismiss": "Verstan!",
 	"whowrotethat-revision-added": "$1 huet dëst de(n) $2 derbäigesat.",
 	"whowrotethat-revision-attribution": "Si hunn <strong>$1%</strong> vun der Säit geschriwwen.",
+	"whowrotethat-revision-attribution-percent": "$1 %",
 	"whowrotethat-revision-attribution-lessthan": "Si hu <strong>manner wéi 1%</strong> vun der Säit geschriwwen.",
+	"whowrotethat-revision-attribution-lessthan-percent": "manner wéi 1%",
 	"whowrotethat-revision-deleted-username": "(Benotzernumm oder IP ewechgeholl)"
 }

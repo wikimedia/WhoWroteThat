@@ -12,8 +12,10 @@
 	"whowrotethat-error-later": "Per favore, riprova più tardi.",
 	"whowrotethat-error-contact-link": "contattaci",
 	"whowrotethat-ready-title": "Chi l'ha scritto?",
-	"whowrotethat-tour-welcome-title": "<strong><em>Chi l'ha scritto?</em></strong> è attivo!",
+	"whowrotethat-tour-welcome-title": "$1 è attivo!",
 	"whowrotethat-tour-welcome-dismiss": "Capito!",
 	"whowrotethat-revision-added": "$1 lo ha aggiunto il $2.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan-percent": "meno di 1%",
 	"whowrotethat-revision-deleted-username": "(nome utente o IP rimosso)"
 }
