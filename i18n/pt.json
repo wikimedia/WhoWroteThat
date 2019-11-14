@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mansil alfalb",
-			"Hamilton Abreu"
+			"Hamilton Abreu",
+			"Fitoschido"
 		]
 	},
 	"whowrotethat-ext-name": "Quem escreveu isso?",
@@ -25,6 +26,6 @@
 	"whowrotethat-tour-welcome-dismiss": "Percebi!",
 	"whowrotethat-revision-added": "$1 adicionou isto em $2.",
 	"whowrotethat-revision-attribution": "O autor escreveu <strong>$1%</strong> da página.",
-	"whowrotethat-revision-attribution-lessthan": "O autor escreveu <strong>menos de 1%</strong> da página.",
+	"whowrotethat-revision-attribution-lessthan": "O autor escreveu $1 da página.",
 	"whowrotethat-revision-deleted-username": "(nome de utilizador ou IP removido)"
 }

@@ -28,7 +28,7 @@
 	"whowrotethat-revision-added": "$1 adicionou isso em $2.",
 	"whowrotethat-revision-attribution": "Eles escreveram $1 da página.",
 	"whowrotethat-revision-attribution-percent": "$1%",
-	"whowrotethat-revision-attribution-lessthan": "Eles escreveram $1 da página.",
+	"whowrotethat-revision-attribution-lessthan": "Ele/a escreveu $1 da página.",
 	"whowrotethat-revision-attribution-lessthan-percent": "menor que 1%",
 	"whowrotethat-revision-deleted-username": "(nome de usuário ou IP removido)"
 }

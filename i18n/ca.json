@@ -4,6 +4,7 @@
 			"Fitoschido"
 		]
 	},
+	"whowrotethat-state-pending": "S’està carregant el $1. Això pot trigar una estona.",
 	"whowrotethat-error-refresh": "Actualitzeu la pàgina o proveu-ho de nou més tard.",
 	"whowrotethat-error-later": "Proveu-ho de nou més tard.",
 	"whowrotethat-error-contact-link": "contacteu-nos",
@@ -11,6 +12,7 @@
 	"whowrotethat-tour-welcome-dismiss": "Entesos",
 	"whowrotethat-revision-added": "$1 ho ha afegit el $2.",
 	"whowrotethat-revision-attribution": "Ha escrit el <strong>$1%</strong> de la pàgina.",
-	"whowrotethat-revision-attribution-lessthan": "Ha escrit <strong>menys de l’1%</strong> de la pàgina.",
+	"whowrotethat-revision-attribution-lessthan": "Ha escrit $1 de la pàgina.",
+	"whowrotethat-revision-attribution-lessthan-percent": "menys de l’1%",
 	"whowrotethat-revision-deleted-username": "(s’ha tret l’usuari o la IP)"
 }
