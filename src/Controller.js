@@ -133,6 +133,8 @@ class Controller {
 				't-whowrotethat',
 				mw.msg( 'whowrotethat-activation-link-tooltip' )
 			);
+			// Initial state
+			this.getButton().toggle( this.model.isEnabled() );
 
 			// Add hooks for VisualEditor
 			mw.hook( 've.activationComplete' ).add( () => {
