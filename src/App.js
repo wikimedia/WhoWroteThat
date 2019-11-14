@@ -184,10 +184,12 @@ class App {
 			} )
 			.on( 'click', e => {
 				const ids = this.getIdsFromElement( e.currentTarget ),
-					tokenInfo = wwtController.getApi().getTokenInfo( ids.tokenId );
+					tokenInfo = wwtController.getApi().getTokenInfo( ids.tokenId ),
+					isCached = wwtController.getApi().isCached( tokenInfo.revisionId );
+
 				this.activateSpans( $content, ids.editorId );
 				this.widget.setUsernameInfo( tokenInfo.username );
-				this.revisionPopup.show( tokenInfo, $( e.currentTarget ) );
+				this.revisionPopup.show( tokenInfo, $( e.currentTarget ), isCached );
 				this.revisionPopup.once( 'toggle', () => {
 					this.deactivateSpans( $content );
 					this.widget.clearUsernameInfo();
@@ -195,11 +197,14 @@ class App {
 
 				// eslint-disable-next-line one-var
 				const reqStartTime = Date.now();
-
 				// Fetch edit summary then re-render the popup.
 				wwtController.getApi().fetchEditSummary( tokenInfo.revisionId )
 					.then( successData => {
-						const delayTime = Date.now() - reqStartTime < 250 ? 250 : 0;
+						const delayTime = (
+							!isCached &&
+							Date.now() - reqStartTime < 250
+						) ? 250 : 0;
+
 						Object.assign( tokenInfo, successData );
 
 						setTimeout( () => {
