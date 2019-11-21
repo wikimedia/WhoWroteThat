@@ -192,10 +192,6 @@ class Api {
 		revision = results.revisions[ revId ];
 		username = revision[ 3 ];
 
-		// WikiWho prefixes IP addresses with '0|'.
-		isIP = username.slice( 0, 2 ) === '0|';
-		username = isIP ? username.slice( 2 ) : username;
-
 		// Get the user's edit score (percentage of content edited).
 		// results.present_editors structure:
 		// [ [ username, user_id, score ], ... ]
@@ -205,6 +201,12 @@ class Api {
 				break;
 			}
 		}
+
+		// WikiWho prefixes IP addresses with '0|'.
+		isIP = username.slice( 0, 2 ) === '0|';
+		// Clean up username if it is an IP for displaying after
+		// the user's score edit has been calculated
+		username = isIP ? username.slice( 2 ) : username;
 
 		// Put it all together.
 		return {
