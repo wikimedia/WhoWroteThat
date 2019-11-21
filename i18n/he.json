@@ -11,7 +11,7 @@
 	"whowrotethat-activation-link": "מי כתב את זה?",
 	"whowrotethat-activation-link-tooltip": "הפעלת מי כתב את זה?",
 	"whowrotethat-deactivation-link": "סגירת מי כתב את זה?",
-	"whowrotethat-state-pending": "<strong><em>מי כתב את זה?</em></strong> בטעינה. פעולה זו יכולה לארוך זמן מה.",
+	"whowrotethat-state-pending": "$1 בטעינה. פעולה זו יכולה לארוך זמן מה.",
 	"whowrotethat-state-pending-name": "מי כתב את זה?",
 	"whowrotethat-state-error": "שגיאת API:‏ $1",
 	"whowrotethat-error-refresh": "נא לרענן את העמוד או לנסות שוב מאוחר יותר.",
@@ -27,7 +27,7 @@
 	"whowrotethat-revision-added": "נוסף על ידי $1 ב־$2.",
 	"whowrotethat-revision-attribution": "$1% מהדף נכתב על ידם.",
 	"whowrotethat-revision-attribution-percent": "$1%",
-	"whowrotethat-revision-attribution-lessthan": "פחות מ־1% מהדף נכתב על ידם.",
+	"whowrotethat-revision-attribution-lessthan": "פחות מ־$1 מהדף נכתב על ידם.",
 	"whowrotethat-revision-attribution-lessthan-percent": "פחות מ־1%",
 	"whowrotethat-revision-deleted-username": "(שם המשתמש או כתובת ה־IP הוסרו)"
 }

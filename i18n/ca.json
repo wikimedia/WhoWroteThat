@@ -11,7 +11,7 @@
 	"whowrotethat-tour-welcome-description": "Activeu l’eina a la barra lateral. Poseu el ratolí sobre el text per a mostrar-ne l’autor i les seves altres contribucions a aquesta pàgina. Feu-hi clic per a obtenir més detalls.",
 	"whowrotethat-tour-welcome-dismiss": "Entesos",
 	"whowrotethat-revision-added": "$1 ho ha afegit el $2.",
-	"whowrotethat-revision-attribution": "Ha escrit el <strong>$1%</strong> de la pàgina.",
+	"whowrotethat-revision-attribution": "Ha escrit $1 de la pàgina.",
 	"whowrotethat-revision-attribution-lessthan": "Ha escrit $1 de la pàgina.",
 	"whowrotethat-revision-attribution-lessthan-percent": "menys de l’1%",
 	"whowrotethat-revision-deleted-username": "(s’ha tret l’usuari o la IP)"

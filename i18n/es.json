@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"whowrotethat-ext-name": "¿Quién lo escribió?",
+	"whowrotethat-ext-desc": "Exploración visual directa de la autoría de artículos de Wikipedia. Funciona con WikiWho.",
+	"whowrotethat-state-pending": "$1 está cargándose; esto puede tardar un rato.",
+	"whowrotethat-revision-attribution": "Ha escrito el $1 de la página.",
+	"whowrotethat-revision-attribution-percent": "$1 %",
+	"whowrotethat-revision-attribution-lessthan": "Ha escrito $1 de la página.",
+	"whowrotethat-revision-attribution-lessthan-percent": "menos del 1 %"
+}
