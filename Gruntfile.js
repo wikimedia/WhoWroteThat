@@ -221,7 +221,7 @@ module.exports = function Gruntfile( grunt ) {
 			if ( langBlob[ lang ][ descMsg ] ) {
 				const desc = langBlob[ lang ][ descMsg ];
 				if ( desc.length >= 132 ) {
-					grunt.log.error( 'The ' + lang + " '" + nameMsg + "' message must be 132 characters or less. Provided: " + desc );
+					grunt.log.error( 'The ' + lang + " '" + descMsg + "' message must be 132 characters or less. Provided: " + desc );
 				}
 				locale.description.message = desc.substring( 0, 131 );
 			}
