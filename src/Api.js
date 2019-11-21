@@ -26,6 +26,20 @@ class Api {
 	}
 
 	/**
+	 * Check whether a revision ID promise is cached
+	 *
+	 * @param  {string} revId Revision ID
+	 * @param  {string} [type='summaries'] Promise data type
+	 *  'summaries' or 'data'
+	 * @return {boolean} The promise is cached
+	 */
+	isCached( revId, type = 'summaries' ) {
+		return !!(
+			this.promiseCache[ type ] &&
+			this.promiseCache[ type ][ revId ]
+		);
+	}
+	/**
 	 * Fetch core messages needed for the revision popup, etc., making them available to mw.msg().
 	 * This is called just after the script is first loaded, and the request completes very quickly,
 	 * so we shouldn't need to bother with promises and such.

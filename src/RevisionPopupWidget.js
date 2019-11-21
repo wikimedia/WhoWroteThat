@@ -47,27 +47,38 @@ function getSizeHtml( size ) {
 /**
  * Get markup for the edit summary.
  * @param {Object} data As returned by Api.prototype.getTokenInfo().
+ * @param {boolean} [isCached] Comment promise is cached
  * @return {jQuery|null}
  */
-function getCommentHtml( data ) {
+function getCommentHtml( data, isCached ) {
 	const $revCommentDiv = $( '<div>' )
 		.addClass( 'wwt-revisionPopupWidget-comment' );
 
 	if ( data.comment === '' ) {
 		// No edit summary.
 		return null;
-	} else if ( data.comment === undefined ) {
+	} else if ( data.comment === undefined && !isCached ) {
 		// Not yet available.
 		const $shimmerDiv = $( '<div>' )
 			.addClass( 'wwt-shimmer www-shimmer-animation' );
 		$revCommentDiv.append( $shimmerDiv, $shimmerDiv );
 	} else {
 		const $commentSpan = $( '<span>' )
-			.addClass( 'comment comment--without-parentheses wwt-revisionPopupWidget-comment' )
+			.addClass( 'comment comment--without-parentheses' )
 			.append( Tools.bidiIsolate( $.parseHTML( data.comment ) ) );
 		$revCommentDiv
-			.addClass( 'wwt-revisionPopupWidget-comment-transparent' )
-			.append( $commentSpan, getSizeHtml( data.size ) );
+			.append(
+				$commentSpan,
+				$( '<span>' ).text( ' ' ),
+				getSizeHtml( data.size )
+			);
+
+		if ( !isCached ) {
+			$commentSpan
+				.addClass( 'wwt-revisionPopupWidget-comment-animated' );
+			$revCommentDiv
+				.addClass( 'wwt-revisionPopupWidget-comment-transparent' );
+		}
 	}
 	return $revCommentDiv;
 }
@@ -118,8 +129,9 @@ function getUserLinksHtml( data ) {
  * Note that the English namespaces will normalize to the wiki's local namespaces.
  * @param {Object} data As returned by Api.prototype.getTokenInfo().
  * @param {jQuery} $target Element the popup should be attached to.
+ * @param {boolean} [isCached] Whether the comment promise is available, cached.
  */
-RevisionPopupWidget.prototype.show = function ( data, $target ) {
+RevisionPopupWidget.prototype.show = function ( data, $target, isCached ) {
 	const $userLinks = getUserLinksHtml( data ),
 		dateStr = moment( data.revisionTime ).locale( mw.config.get( 'wgUserLanguage' ) ).format( 'LLL' ),
 		// Use jQuery to make sure attributes are properly escaped
@@ -136,7 +148,7 @@ RevisionPopupWidget.prototype.show = function ( data, $target ) {
 			.addClass( 'wwt-revisionPopupWidget-attribution' )
 			.html( Tools.i18nHtml( scoreMsgKey, $scorePercent ) ),
 		$html = $( '<div>' )
-			.append( addedMsg, getCommentHtml( data ), $attributionMsg );
+			.append( addedMsg, getCommentHtml( data, isCached ), $attributionMsg );
 	this.$popupContent.empty().append( $html );
 
 	if ( $target.find( '.thumb' ).length ) {
