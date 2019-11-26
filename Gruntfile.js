@@ -193,8 +193,7 @@ module.exports = function Gruntfile( grunt ) {
 			langBlob = generateLangBlob(),
 			qqq = grunt.file.readJSON( 'i18n/qqq.json' );
 		Object.keys( langBlob ).forEach( function ( lang ) {
-			const localeFile = 'dist/extension/_locales/' + lang + '/messages.json',
-				betaLogMsg = isBeta ? 'beta ' : '',
+			const betaLogMsg = isBeta ? 'beta ' : '',
 				nameMsg = isBeta ? 'whowrotethat-ext-name-beta' : 'whowrotethat-ext-name',
 				descMsg = isBeta ? 'whowrotethat-ext-desc-beta' : 'whowrotethat-ext-desc',
 				// The name and description messages default to English because Chrome doesn't do
@@ -225,7 +224,19 @@ module.exports = function Gruntfile( grunt ) {
 				}
 				locale.description.message = desc.substring( 0, 131 );
 			}
-			// Write the locale file.
+			// Write the locale file. The directory name must use underscores, not hyphens.
+			let localeFile,
+				langDirname = lang,
+				langParts = lang.split( '-', 2 );
+			if ( langParts.length > 1 ) {
+				// Use underscore, and uppercase the latter parts.
+				langDirname = langParts[ 0 ] + '_' + langParts[ 1 ].toUpperCase();
+			}
+			if ( lang === 'pt' ) {
+				// Handle one-off code difference between TranslateWiki and browser stores.
+				langDirname = 'pt_PT';
+			}
+			localeFile = 'dist/extension/_locales/' + langDirname + '/messages.json';
 			grunt.log.ok( 'Writing ' + betaLogMsg + 'messages to ' + localeFile );
 			grunt.file.write( localeFile, JSON.stringify( locale, null, 4 ) );
 		} );
