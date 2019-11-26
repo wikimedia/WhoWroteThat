@@ -1,6 +1,5 @@
 <?php
 
-header( 'Content-Type: application/json' );
 header( 'Access-Control-Allow-Origin: *' );
 
 // Restrict access to Wikipedias.
@@ -20,11 +19,27 @@ if ( !$cnf || !$cnf[ 'user' ] || !$cnf[ 'password' ] ) {
 // Strip out /wikiwho for the Toolforge location.
 $endpoint = preg_replace( '/^\/wikiwho/', '', $_SERVER['REQUEST_URI'] );
 $redirectUrl = "https://api.wikiwho.net$endpoint";
-$context = stream_context_create( [
-    'http' => [
-        'method' => 'GET',
-        'header' => 'Authorization: Basic ' . base64_encode( $cnf[ 'user' ] . ':' . $cnf[ 'password' ] ),
-    ],
-] );
 
-echo file_get_contents( $redirectUrl, false, $context );
+// Setup cURL handler and make the request.
+$ch = curl_init( $redirectUrl );
+curl_setopt( $ch, CURLOPT_HTTPHEADER, [ 'Content-Type: application/json' ] );
+curl_setopt( $ch, CURLOPT_USERPWD, $cnf[ 'user' ] . ':' . $cnf[ 'password' ] );
+curl_setopt( $ch, CURLOPT_TIMEOUT, 180);
+curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, true );
+$content = curl_exec( $ch );
+$response = curl_getinfo( $ch );
+
+// Throw exception if there was an error.
+if ( $content === false ) {
+    http_response_code( 500 );
+    throw new Exception( curl_error( $ch ), curl_errno( $ch ) );
+}
+
+curl_close( $ch );
+
+// Ensure our response code and content type are the same as WikiWho's.
+http_response_code( $response[ 'http_code' ] );
+header( 'Content-Type: ' . $response[ 'content_type' ] );
+
+echo $content;
