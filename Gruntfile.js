@@ -231,10 +231,23 @@ module.exports = function Gruntfile( grunt ) {
 		} );
 	} );
 
-	grunt.registerTask( 'chromeManifest', () => {
-		// Here we make the required changes for Chrome's extension manifest and locale files.
-		const manifest = grunt.file.readJSON( 'dist/extension/manifest.json' );
-		// Remove non-Chrome key.
+	/**
+	 * This task configures the manifest.json files for Chrome and Firefox.
+	 * It might look like it'd be better to make the contents of build/extension_manifest.json
+	 * match what we need for Chrome, and then this would only need to add the Gecko ID. We don't do
+	 * that because we want to be able to run the extension locally in Firefox (we do get a warning
+	 * in Chrome with this setup, but that's preferable to storage.sync not working at all, which is
+	 * what happens in Firefox if no ID is set).
+	 */
+	grunt.registerTask( 'extManifests', beta => {
+		const isBeta = beta === 'beta',
+			manifest = grunt.file.readJSON( 'dist/extension/manifest.json' );
+
+		// Firefox: set extension ID.
+		manifest.browser_specific_settings.gecko.id = isBeta ? '{7c53a467-2542-497a-86fb-59c2904a56d1}' : 'whowrotethat@wikimedia';
+		grunt.file.write( 'dist/extension/manifest.json', JSON.stringify( manifest, null, 4 ) );
+
+		// Chrome: remove non-Chrome key.
 		// https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 		delete manifest.browser_specific_settings;
 		grunt.file.write( 'dist/extension/manifest_chrome.json', JSON.stringify( manifest, null, 4 ) );
@@ -245,11 +258,11 @@ module.exports = function Gruntfile( grunt ) {
 	grunt.registerTask( 'build', 'Create web extension files in dist/extension/', [ 'clean', 'less', 'replace', 'browserify', 'copy', 'extLocales' ] );
 	grunt.registerTask( 'run', [ 'build', 'webext', 'shell:webextRun' ] );
 	grunt.registerTask( 'webext', 'Build zip files for upload to the browser stores', [
-		'build', 'chromeManifest',
+		'build',
 		// Create beta zip files.
-		'extLocales:beta', 'shell:webextBuild', 'shell:webextLint', 'compress:webextSource',
+		'extManifests:beta', 'extLocales:beta', 'shell:webextBuild', 'shell:webextLint', 'compress:webextSource',
 		// Create prod zip files.
-		'extLocales', 'shell:webextBuild', 'shell:webextLint', 'compress:webextSource'
+		'extManifests', 'extLocales', 'shell:webextBuild', 'shell:webextLint', 'compress:webextSource'
 	] );
 	grunt.registerTask( 'default', [ 'test', 'build', 'webext' ] );
 };
