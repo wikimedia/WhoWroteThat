@@ -3,7 +3,8 @@
 		"authors": [
 			"Jaeminlovetaejoon",
 			"SawJaemin",
-			"Soepaw"
+			"Soepaw",
+			"Khing"
 		]
 	},
 	"whowrotethat-ext-name": "မတၤဂၤကွဲးလဲၣ်?",
@@ -11,19 +12,19 @@
 	"whowrotethat-activation-link": "မတၤဂၤကွဲးလဲၣ်?",
 	"whowrotethat-activation-link-tooltip": "မၤဟူးဂဲၤထီၣ်မတၤဂၤကွဲးလဲၣ်?",
 	"whowrotethat-deactivation-link": "ပ့ၤက့ၤမတၤဂၤကွဲးလဲၣ်?",
-	"whowrotethat-state-pending-name": "မတၤဂၤကွဲးလဲၣ်?",
+	"whowrotethat-state-pending-name": "မတဂၤကွဲးလဲၣ်?",
 	"whowrotethat-state-error": "API တၢ်ကမၣ်: $1",
 	"whowrotethat-error-later": "ဝံသးစူၤမၤကွၢ်လၢသီတဘျီဒီးလၢခံ",
-	"whowrotethat-error-contact": "ဝံသးစူၤ $1 ဘၣ်ဃးဒီးတၢ်တၢ်ဂ့ၢ်တခါအံၤ",
+	"whowrotethat-error-contact": "ဝံသးစူၤ $1 ဘၣ်ဃးဒီးတၢ်ဂ့ၢ်တခါအံၤ",
 	"whowrotethat-error-contact-link": "ဆဲးကျိးပှၤ",
 	"whowrotethat-ready-title": "မတၤဂၤကွဲးလဲၣ်?",
 	"whowrotethat-tour-welcome-title": "$1 မၤဝဲသ့န့ၢ်လံ",
 	"whowrotethat-tour-welcome-title-name": "မတၤဂၤကွဲးလဲၣ်?",
 	"whowrotethat-tour-welcome-dismiss": "န့ၢ်လံ!",
-	"whowrotethat-revision-added": "$1 ပၤဖိၣ်ထီၣ်သးဒီး $2",
-	"whowrotethat-revision-attribution": "အသုကွဲးဝံၤ $1",
+	"whowrotethat-revision-added": "$1 ပာ်ဖှိၣ်ထီၣ်သးဒီ $2",
+	"whowrotethat-revision-attribution": "အသုကွဲးဝံၤ $1 လၢကဘျံးပၤ",
 	"whowrotethat-revision-attribution-percent": "$1%",
-	"whowrotethat-revision-attribution-lessthan": "အသုကွဲးဝံၤ $1",
-	"whowrotethat-revision-attribution-lessthan-percent": "ဆၤန့ၢ်ဒံး ၁%",
+	"whowrotethat-revision-attribution-lessthan": "အသုကွဲးဝံၤ $1 လၢကဘျံးပၤ",
+	"whowrotethat-revision-attribution-lessthan-percent": "စှၤန့ၢ်ဒံး ၁%",
 	"whowrotethat-revision-deleted-username": "(သုးကွံာ် ပှၤသူတၢ်ဖိမံၤ မ့ၢ်တမ့ၢ် ID ဝံၤလံ)"
 }
