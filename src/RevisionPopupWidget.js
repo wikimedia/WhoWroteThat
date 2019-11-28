@@ -31,6 +31,11 @@ function getSizeHtml( size ) {
 	const $diffBytes = $( '<span>' );
 	$diffBytes.addClass( 'mw-diff-bytes' );
 
+	// Guard against no size being specified.
+	if ( size === undefined ) {
+		return;
+	}
+
 	let sizeClass;
 	if ( size > 0 ) {
 		sizeClass = 'mw-plusminus-pos';
@@ -45,42 +50,37 @@ function getSizeHtml( size ) {
 }
 
 /**
- * Get markup for the edit summary.
+ * Get inline markup for the edit summary and size difference. If there is an edit summary, the
+ * returned HTML will start with a <br>; if there is no summary, it wont (so it can be appended to
+ * the revision author information).
  * @param {Object} data As returned by Api.prototype.getTokenInfo().
  * @param {boolean} [isCached] Comment promise is cached
- * @return {jQuery|null}
+ * @return {jQuery}
  */
 function getCommentHtml( data, isCached ) {
-	const $revCommentDiv = $( '<div>' )
-		.addClass( 'wwt-revisionPopupWidget-comment' );
+	const $revCommentSpan = $( '<span>' )
+		.addClass( 'wwt-revisionPopupWidget-comment' )
+		.append( $( '<span>' ).text( ' ' ), getSizeHtml( data.size ) );
 
-	if ( data.comment === '' ) {
-		// No edit summary.
-		return null;
-	} else if ( data.comment === undefined && !isCached ) {
+	if ( data.comment === undefined && !isCached ) {
 		// Not yet available.
-		const $shimmerDiv = $( '<div>' )
+		const $shimmerSpan = $( '<div>' )
 			.addClass( 'wwt-shimmer www-shimmer-animation' );
-		$revCommentDiv.append( $shimmerDiv, $shimmerDiv );
-	} else {
+		$revCommentSpan.append( $shimmerSpan, $shimmerSpan );
+	} else if ( data.comment !== '' ) {
 		const $commentSpan = $( '<span>' )
 			.addClass( 'comment comment--without-parentheses' )
 			.append( Tools.bidiIsolate( $.parseHTML( data.comment ) ) );
-		$revCommentDiv
-			.append(
-				$commentSpan,
-				$( '<span>' ).text( ' ' ),
-				getSizeHtml( data.size )
-			);
+		$revCommentSpan.prepend( $( '<br>' ), $commentSpan );
 
 		if ( !isCached ) {
 			$commentSpan
 				.addClass( 'wwt-revisionPopupWidget-comment-animated' );
-			$revCommentDiv
+			$revCommentSpan
 				.addClass( 'wwt-revisionPopupWidget-comment-transparent' );
 		}
 	}
-	return $revCommentDiv;
+	return $revCommentSpan;
 }
 
 /**
