@@ -76,3 +76,7 @@ directly.
 The [.lighttpd.conf](./.lighttpd.conf) file and the [public_html](./public_html) directory are for
 use only on Toolforge. To set up the Toolforge tool, checkout this repo in the home directory and
 create `wikiwho.ini` with the `user` and `password` of the WikiWho account.
+
+## Changelog
+
+Please see [CHANGELOG.md](CHANGELOG.md) for an updated status and changes between releases.
