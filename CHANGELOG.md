@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - Build: Provide valid Gecko-ID for local development
+- Prevent the extension script from loading more than once on a Wikipedia page
 
 ### Changed
 - Translation updates

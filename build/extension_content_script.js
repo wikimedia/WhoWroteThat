@@ -10,18 +10,25 @@ function log( str ) {
 	window.console.info( 'Who Wrote That? (Browser extension): ' + str );
 }
 /**
- * injectScript - Inject internal script to available access to the `window`
+ * Inject the extension's content script to the DOM, so that it's got access to the `window` object.
  *
  * @param  {string} filePath Local path of the internal script.
  * @param  {string} tag The tag as string, where the script will be append (default: 'body').
  * @see    {@link http://stackoverflow.com/questions/20499994/access-window-variable-from-content-script}
  */
 function injectScript( filePath, tag ) {
-	var node = document.getElementsByTagName( tag )[ 0 ],
-		script = document.createElement( 'script' );
-
-	script.setAttribute( 'type', 'text/javascript' );
-	script.setAttribute( 'src', filePath );
+	const wwtScriptId = 'wwt-content-script',
+		existingScript = document.getElementById( wwtScriptId );
+	if ( existingScript ) {
+		// Already injected.
+		return;
+	}
+	// Otherwise, inject a new script element.
+	let script = document.createElement( 'script' ),
+		node = document.getElementsByTagName( tag )[ 0 ];
+	script.id = wwtScriptId;
+	script.type = 'text/javascript';
+	script.src = filePath;
 	node.appendChild( script );
 }
 
@@ -38,7 +45,7 @@ function activateWelcomeTour() {
 			return;
 		}
 
-		// Set a class on the HTML so the script knows taht the welcome tour
+		// Set a class on the HTML so the script knows that the welcome tour
 		// should load
 		document.getElementsByTagName( 'html' )[ 0 ]
 			.classList.add( 'wwt-welcome-tour-unseen' );

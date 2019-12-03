@@ -36,7 +36,6 @@
 			"*://tr.wikipedia.org/*title=Özel:*",
 			"*://es.wikipedia.org/*title=Especial:*"
 		],
-		"all_frames": true,
 		"js": [ "js/contentScript.js" ],
 		"css": [ "generated.whowrotethat.css" ],
 		"run_at": "document_end"
