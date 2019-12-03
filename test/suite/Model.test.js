@@ -43,7 +43,8 @@ describe( 'Model test', () => {
 				$content: $( '<div>' ).text( 'foobar' ),
 				config: {
 					namespace: '',
-					mainPage: false
+					mainPage: false,
+					revisionId: 1234
 				},
 				expected: true
 			},
