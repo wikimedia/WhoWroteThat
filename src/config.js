@@ -6,8 +6,7 @@ const config = {
 	untokenizedElements: [
 		'.citation',
 		'.IPA',
-		'.mw-editsection',
-		'table'
+		'.mw-editsection'
 	]
 };
 
