@@ -22,6 +22,7 @@ class Model extends EventEmitter {
 		this.lang = 'en';
 		this.namespace = '';
 		this.mainPage = false;
+		this.revisionId = 0;
 	}
 
 	/**
@@ -33,8 +34,8 @@ class Model extends EventEmitter {
 	 * @param {Object} config Configuration object
 	 * @param {string} [config.lang='en'] Interface language used
 	 * @param {string} [config.namespace] Namespace of the current article
-	 * @param {boolean} [config.mainPage] Whether the current page is the
-	 *  wiki's main page
+	 * @param {boolean} [config.mainPage] Whether the current page is the wiki's main page
+	 * @param {number} [config.revisionId] The current page's revision ID
 	 * @fires Model#initialized
 	 */
 	initialize( $content, config ) {
@@ -42,6 +43,7 @@ class Model extends EventEmitter {
 		this.lang = config.lang || 'en';
 		this.namespace = config.namespace || '';
 		this.mainPage = !!config.mainPage;
+		this.revisionId = config.revisionId || 0;
 
 		this.initialized = true;
 
@@ -97,7 +99,9 @@ class Model extends EventEmitter {
 			// Is in the main namespace
 			this.namespace === '' &&
 			// Is not main page
-			!this.mainPage
+			!this.mainPage &&
+			// Has a revision ID
+			this.revisionId > 0
 		);
 	}
 

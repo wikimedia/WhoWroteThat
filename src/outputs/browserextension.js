@@ -92,6 +92,7 @@ config.outputEnvironment = 'Browser extension';
 					translations: languageBlob,
 					namespace: mw.config.get( 'wgCanonicalNamespace' ),
 					mainPage: mw.config.get( 'wgIsMainPage' ),
+					revisionId: mw.config.get( 'wgRevisionId' ),
 					wikiWhoUrl: config.wikiWhoUrl
 				}
 			);
