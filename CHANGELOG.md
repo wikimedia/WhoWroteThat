@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Prevent the extension script from loading more than once on a Wikipedia page
 - Don't gray out tables as they can contain tokenized elements
 - Use our standard debug log format (for VE activation/deactivation messages)
+- Correctly re-initialize WWT after VE deactivation
 
 ### Changed
 - Translation updates
