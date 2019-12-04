@@ -193,7 +193,7 @@ class Controller {
 
 			this.model.toggleActive( true );
 			this.model.setState( 'pending' );
-			return this.api.getData( window.location.href )
+			return this.api.getData()
 				.then(
 					// Success handler.
 					result => {
