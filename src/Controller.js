@@ -138,13 +138,13 @@ class Controller {
 
 			// Add hooks for VisualEditor
 			mw.hook( 've.activationComplete' ).add( () => {
-				window.console.log( 'Who Wrote That: VisualEditor activated, disabling system.' );
+				Tools.log( 'VisualEditor activated, disabling system.' );
 
 				this.dismiss();
 				this.model.toggleEnabled( false );
 			} );
 			mw.hook( 've.deactivationComplete' ).add( () => {
-				window.console.log( 'Who Wrote That: VisualEditor deactivated, enabling system.' );
+				Tools.log( 'VisualEditor deactivated, enabling system.' );
 				this.model.toggleEnabled( true );
 			} );
 
