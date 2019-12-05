@@ -26,9 +26,10 @@ class Model extends EventEmitter {
 	}
 
 	/**
-	 * Initialize the model with the given content and configuration
-	 * This is done after the class is instantiated, when we are certain
-	 * that the DOM loaded with all gadgets ready.
+	 * Initialize the model with the given content and configuration.
+	 * This is done after the class is instantiated, when we are certain that the DOM loaded with
+	 * all gadgets ready. It is also done when VE is deactivated, to inject the newly-created
+	 * $content object.
 	 *
 	 * @param {jQuery} $content jQuery object representing the content
 	 * @param {Object} config Configuration object

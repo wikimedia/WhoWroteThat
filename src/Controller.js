@@ -145,6 +145,11 @@ class Controller {
 			} );
 			mw.hook( 've.deactivationComplete' ).add( () => {
 				Tools.log( 'VisualEditor deactivated, enabling system.' );
+
+				// Re-initialize the model, repeating what's done in browserextension.js
+				// This is due to VE replacing the content element,
+				// rather than inserting new contents into it.
+				this.model.initialize( $( '.mw-parser-output' ), config );
 				this.model.toggleEnabled( true );
 			} );
 
