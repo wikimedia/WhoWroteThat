@@ -16,7 +16,8 @@ class Controller {
 	constructor() {
 		if ( !Controller.instance ) {
 			this.initialized = false;
-			this.link = null;
+			this.$button = null;
+			this.$link = null;
 			this.namespace = null;
 			this.mainPage = false;
 			this.translations = {};
@@ -125,14 +126,6 @@ class Controller {
 				)
 			);
 
-			// Add a portlet link to 'tools'
-			this.link = mw.util.addPortletLink(
-				'p-tb',
-				'#',
-				mw.msg( 'whowrotethat-activation-link' ),
-				't-whowrotethat',
-				mw.msg( 'whowrotethat-activation-link-tooltip' )
-			);
 			// Initial state
 			this.getButton().toggle( this.model.isEnabled() );
 
@@ -273,13 +266,13 @@ class Controller {
 	 * @param {boolean} [active] The state to toggle to.
 	 */
 	toggleLinkActiveState( active ) {
-		const anchor = this.link.querySelector( 'a' );
+		const $link = this.getLink();
 		if ( active ) {
-			anchor.textContent = mw.msg( 'whowrotethat-deactivation-link' );
-			anchor.title = '';
+			$link.text( mw.msg( 'whowrotethat-deactivation-link' ) );
+			$link.removeAttr( 'title' );
 		} else {
-			anchor.textContent = mw.msg( 'whowrotethat-activation-link' );
-			anchor.title = mw.msg( 'whowrotethat-activation-link-tooltip' );
+			$link.text( mw.msg( 'whowrotethat-activation-link' ) );
+			$link.attr( 'title', mw.msg( 'whowrotethat-activation-link-tooltip' ) );
 		}
 	}
 
@@ -311,12 +304,38 @@ class Controller {
 	}
 
 	/**
-	 * Get the jQuery object representing the activation button
+	 * Get the activation button (which contains the activation link).
+	 * Will add it if it doesn't already exist in the DOM.
 	 *
-	 * @return {jQuery} Activation button
+	 * @return {jQuery} Activation button.
 	 */
 	getButton() {
-		return $( this.link );
+		// If it's already been added to the DOM, return it.
+		if ( this.$button instanceof $ ) {
+			return this.$button;
+		}
+		// Otherwise, add a portlet link to the 'toolbox' portlet.
+		this.$button = $( mw.util.addPortletLink(
+			'p-tb',
+			'#',
+			mw.msg( 'whowrotethat-activation-link' ),
+			't-whowrotethat',
+			mw.msg( 'whowrotethat-activation-link-tooltip' )
+		) );
+		return this.$button;
+	}
+
+	/**
+	 * Get the activation link, from inside the activation button.
+	 *
+	 * @return {jQuery} Activation link.
+	 */
+	getLink() {
+		if ( this.$link instanceof $ ) {
+			return this.$link;
+		}
+		this.$link = this.getButton().find( 'a' );
+		return this.$link;
 	}
 }
 

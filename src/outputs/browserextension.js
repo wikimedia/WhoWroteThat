@@ -5,12 +5,12 @@ config.outputEnvironment = 'Browser extension';
 
 ( function () {
 	/**
-	 * A method responding to click on the activation button
+	 * A method responding to click on the activation link.
 	 *
 	 * @param  {jQuery.Event} e Event data
 	 * @return {boolean} false
 	 */
-	const onActivateButtonClick = e => {
+	const onActivationLinkClick = e => {
 			wwtController.toggle();
 			e.preventDefault();
 			return false;
@@ -96,7 +96,7 @@ config.outputEnvironment = 'Browser extension';
 					wikiWhoUrl: config.wikiWhoUrl
 				}
 			);
-			wwtController.getButton().on( 'click', onActivateButtonClick );
+			wwtController.getLink().on( 'click', onActivationLinkClick );
 
 			// Check whether to load the tour
 			if (
