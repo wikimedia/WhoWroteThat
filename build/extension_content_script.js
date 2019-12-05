@@ -9,28 +9,6 @@ var theBrowser = chrome || browser;
 function log( str ) {
 	window.console.info( 'Who Wrote That? (Browser extension): ' + str );
 }
-/**
- * Inject the extension's content script to the DOM, so that it's got access to the `window` object.
- *
- * @param  {string} filePath Local path of the internal script.
- * @param  {string} tag The tag as string, where the script will be append (default: 'body').
- * @see    {@link http://stackoverflow.com/questions/20499994/access-window-variable-from-content-script}
- */
-function injectScript( filePath, tag ) {
-	const wwtScriptId = 'wwt-content-script',
-		existingScript = document.getElementById( wwtScriptId );
-	if ( existingScript ) {
-		// Already injected.
-		return;
-	}
-	// Otherwise, inject a new script element.
-	let script = document.createElement( 'script' ),
-		node = document.getElementsByTagName( tag )[ 0 ];
-	script.id = wwtScriptId;
-	script.type = 'text/javascript';
-	script.src = filePath;
-	node.appendChild( script );
-}
 
 /**
  * Consider whether to activate the initial welcome tour
@@ -53,8 +31,12 @@ function activateWelcomeTour() {
 	} );
 }
 
-// Add a listener for the DOM operations
-window.addEventListener( 'message', function ( event ) {
+/**
+ * Event handler for the 'message' event on the window.
+ *
+ * @param {MessageEvent} event
+ */
+function messageListener( event ) {
 	if ( event.source !== window ) {
 		return;
 	}
@@ -78,13 +60,34 @@ window.addEventListener( 'message', function ( event ) {
 			} );
 		}
 	}
-}, false );
+}
 
-// Write to console, for later debugging and bug filtering process for the extension
-log( 'Loaded on page.' );
+/**
+ * The main browser extension entry point.
+ */
+function main() {
+	const contentScriptId = 'wwt-content-script';
+	// If the script has already been injected, exit.
+	if ( document.getElementById( contentScriptId ) ) {
+		log( 'Already injected; aborting.' );
+		return;
+	}
+	// Add a listener for the DOM operations
+	window.addEventListener( 'message', messageListener );
 
-// Inject page script into the DOM
-injectScript( theBrowser.extension.getURL( 'js/generated.pageScript.js' ), 'body' );
+	// Inject page script into the DOM
+	let script = document.createElement( 'script' ),
+		node = document.getElementsByTagName( 'body' )[ 0 ];
+	script.id = contentScriptId;
+	script.type = 'text/javascript';
+	script.src = theBrowser.extension.getURL( 'js/generated.pageScript.js' );
+	node.appendChild( script );
 
-// Activate welcome tour
-activateWelcomeTour();
+	// Write to console, for later debugging and bug filtering process for the extension
+	log( 'Loaded on page.' );
+
+	// Activate welcome tour
+	activateWelcomeTour();
+}
+
+main();
