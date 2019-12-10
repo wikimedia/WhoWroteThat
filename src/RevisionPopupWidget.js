@@ -65,7 +65,7 @@ function getCommentHtml( data, isCached ) {
 	if ( data.comment === undefined && !isCached ) {
 		// Not yet available.
 		const $shimmerSpan = $( '<div>' )
-			.addClass( 'wwt-shimmer www-shimmer-animation' );
+			.addClass( 'wwt-shimmer wwt-shimmer-animation' );
 		$revCommentSpan.append( $shimmerSpan, $shimmerSpan );
 	} else if ( data.comment !== '' ) {
 		const $commentSpan = $( '<span>' )
