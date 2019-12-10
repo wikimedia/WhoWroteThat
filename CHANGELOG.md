@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Correctly re-initialize WWT after VE deactivation
 
 ### Changed
+- Use WMF-hosted proxy to WikiWho API.
 - Translation updates
 
 ## [0.10.0] - 2019-11-27
