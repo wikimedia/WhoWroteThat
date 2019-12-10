@@ -147,8 +147,12 @@ class App {
 		// Add the class to immediate children of the parser output
 		// that don't contain tokenized elements.
 		$.each( $content, ( _i, el ) => {
-			if ( !$( el ).hasClass( 'editor-token' ) && !$( el ).find( '.editor-token' ).length ) {
-				$( el ).addClass( 'wwt-disabled' )
+			const $el = $( el );
+			if ( !$el.hasClass( 'editor-token' ) && !$el.find( '.editor-token' ).length &&
+				// Don't gray out nodes with no visible content. See T235130#5725001.
+				!!$el.text().trim() && !$el.is( ':visible' )
+			) {
+				$el.addClass( 'wwt-disabled' )
 					// Remove .wtt-disabled elements added above to prevent compounding opacity.
 					.find( '.wwt-disabled' )
 					.removeClass( 'wwt-disabled' );
