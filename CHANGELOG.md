@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Don't gray out empty elements.
 - Use our standard debug log format (for VE activation/deactivation messages)
 - Correctly re-initialize WWT after VE deactivation
+- Return to showing two 'shimmer' lines while loading the edit summary in a revision popup
 
 ### Changed
 - Translation updates
