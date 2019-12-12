@@ -19,7 +19,6 @@ const InfoBarWidget = function InfoBarWidget( config = {} ) {
 		flags: [ 'invert' ],
 		classes: [ 'wwt-infoBarWidget-close' ]
 	} );
-	this.userInfoUsernameLabel = new OO.ui.LabelWidget();
 	this.userInfoLabel = new OO.ui.LabelWidget( {
 		label: mw.msg( 'whowrotethat-ready-general' ),
 		classes: [ 'wwt-infoBarWidget-info' ]
@@ -49,7 +48,6 @@ const InfoBarWidget = function InfoBarWidget( config = {} ) {
 			this.$pendingAnimation,
 			this.$icon,
 			this.$label,
-			this.userInfoUsernameLabel.$element,
 			this.userInfoLabel.$element,
 			this.closeIcon.$element
 		);
@@ -101,7 +99,7 @@ InfoBarWidget.prototype.setState = function ( state, errorCode = '' ) {
 			);
 		} else if ( state === 'pending' ) {
 			this.setIcon( '' );
-			const $pendingTitle = $( '<strong>' ).text( mw.msg( 'whowrotethat-state-pending-name' ) ).wrapInner( '<em>' );
+			const $pendingTitle = $( '<strong>' ).text( mw.msg( 'whowrotethat-state-pending-name' ) );
 			this.setLabel( new OO.ui.HtmlSnippet( Tools.i18nHtml( 'whowrotethat-state-pending', $pendingTitle ) ) );
 		} else {
 			this.setIcon( 'error' );

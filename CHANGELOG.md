@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Fetch username from the MediaWiki API, and fade-in all content in the revision popup.
+- UX improvements for infobar.
 
 ## [0.11.0] - 2019-12-13
 ### Added
