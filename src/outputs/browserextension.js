@@ -106,10 +106,21 @@ config.outputEnvironment = 'Browser extension';
 				loadWhoWroteThatWelcomeTour();
 			}
 
+		},
+		/**
+		 * Load dependency modules and then WWT,
+		 * waiting (if required) for the startup module to finish loading.
+		 */
+		loadDependencies = () => {
+			if ( mw.loader.using === undefined ) {
+				setTimeout( loadDependencies, 100 );
+				return;
+			}
+			mw.loader.using( [ 'jquery', 'mediawiki.base', 'mediawiki.api', 'mediawiki.util', 'mediawiki.jqueryMsg' ], loadWhoWroteThat );
 		};
 
 	var q = window.RLQ || ( window.RLQ = [] );
-	q.push( [ [ 'jquery', 'mediawiki.base', 'mediawiki.util', 'mediawiki.jqueryMsg' ], loadWhoWroteThat ] );
+	q.push( loadDependencies );
 
 	// For debugging purposes, export methods to the window global
 	window.wwtDebug = {
