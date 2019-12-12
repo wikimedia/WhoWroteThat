@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Translation updates
+- UX Improvements for the 'Guided Tour' popup
 
 ## [0.10.0] - 2019-11-27
 ### Changed

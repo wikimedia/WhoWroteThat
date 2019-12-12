@@ -13,8 +13,7 @@ const WelcomePopupWidget = function WelcomePopupWidget( config = {} ) {
 	const $content = $( '<div>' )
 			.addClass( 'wwt-welcomePopupWidget-content' ),
 		$title = $( '<strong>' )
-			.text( mw.msg( 'whowrotethat-tour-welcome-title-name' ) )
-			.wrapInner( '<em>' );
+			.text( mw.msg( 'whowrotethat-tour-welcome-title-name' ) );
 
 	// Parent constructor
 	WelcomePopupWidget.parent.call( this, Object.assign(
