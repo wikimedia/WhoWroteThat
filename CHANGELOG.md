@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Correctly re-initialize WWT after VE deactivation
 - Return to showing two 'shimmer' lines while loading the edit summary in a revision popup
 - Show infobar on top of page status indicators.
+- Show revision detials popup for image thumbnails.
 
 ### Changed
 - Translation updates

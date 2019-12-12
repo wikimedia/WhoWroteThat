@@ -170,6 +170,7 @@ class App {
 	 */
 	attachContentListeners( $content ) {
 		$content.find( '.editor-token' )
+			.addBack( '.editor-token' )
 			.on( 'mouseenter', e => {
 				if ( this.revisionPopup.isVisible() ) {
 					return;
