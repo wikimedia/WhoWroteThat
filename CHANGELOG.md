@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Show revision detials popup for image thumbnails.
 
 ### Changed
+- Use WMF-hosted proxy to WikiWho API.
 - Translation updates
 
 ## [0.10.0] - 2019-11-27

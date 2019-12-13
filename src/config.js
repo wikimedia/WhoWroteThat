@@ -1,5 +1,5 @@
 const config = {
-	wikiWhoUrl: 'https://www.wikiwho.net/',
+	wikiWhoUrl: 'https://wikiwho.wmflabs.org/',
 	// Set the output type between the extension and the gadget
 	outputEnvironment: '',
 	// Elements that we know for sure are never tokenized and should be grayed out.
