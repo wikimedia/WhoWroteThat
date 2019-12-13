@@ -3,20 +3,24 @@ import Tools from './Tools';
 /**
  * @class
  * @constructor
+ * @param {Object} [config={}] Configuration options
  */
-const RevisionPopupWidget = function RevisionPopupWidget() {
+const RevisionPopupWidget = function RevisionPopupWidget( config = {} ) {
 	this.$popupContent = $( '<div>' )
 		.addClass( 'wwt-revisionPopupWidget-content' );
 	// Parent constructor
-	RevisionPopupWidget.parent.call( this, {
-		padded: true,
-		autoClose: true,
-		position: 'above',
-		// FIXME: 'force-left' for RTL languages
-		align: 'force-right',
-		hideWhenOutOfView: false,
-		$content: this.$popupContent
-	} );
+	RevisionPopupWidget.parent.call( this, Object.assign(
+		{
+			padded: true,
+			autoClose: true,
+			position: 'above',
+			// FIXME: 'force-left' for RTL languages
+			align: 'force-right',
+			hideWhenOutOfView: false,
+			$content: this.$popupContent
+		},
+		config
+	) );
 };
 
 /* Setup */
