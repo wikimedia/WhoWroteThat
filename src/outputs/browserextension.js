@@ -96,13 +96,16 @@ config.outputEnvironment = 'Browser extension';
 					wikiWhoUrl: config.wikiWhoUrl
 				}
 			);
+
+			if ( !wwtController.getModel().isValidPage() ) {
+				// Only continue if we're in a valid page
+				return;
+			}
+
 			wwtController.getLink().on( 'click', onActivationLinkClick );
 
 			// Check whether to load the tour
-			if (
-				$( 'html' ).hasClass( 'wwt-welcome-tour-unseen' ) &&
-				wwtController.getModel().isValidPage()
-			) {
+			if ( $( 'html' ).hasClass( 'wwt-welcome-tour-unseen' ) ) {
 				loadWhoWroteThatWelcomeTour();
 			}
 
