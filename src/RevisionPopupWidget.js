@@ -74,10 +74,11 @@ function getCommentHtml( data, isCached ) {
 		$revCommentSpan.prepend( $( '<br>' ), $commentSpan );
 
 		if ( !isCached ) {
-			$commentSpan
-				.addClass( 'wwt-revisionPopupWidget-comment-animated' );
+			// Hide the newly-added comment and diff size, to be shown later
+			// (in show() below, after it's been added to the DOM).
 			$revCommentSpan
-				.addClass( 'wwt-revisionPopupWidget-comment-transparent' );
+				.addClass( 'wwt-revisionPopupWidget-comment-needs-fadein' )
+				.hide();
 		}
 	}
 	return $revCommentSpan;
@@ -162,10 +163,8 @@ RevisionPopupWidget.prototype.show = function ( data, $target, isCached ) {
 	this.setFloatableContainer( $target );
 	this.toggle( true );
 
-	// Animate edit summary, if present.
-	if ( data.comment ) {
-		$( '.wwt-revisionPopupWidget-comment' ).removeClass( 'wwt-revisionPopupWidget-comment-transparent' );
-	}
+	// Animate edit summary, if needed. This class was added above in getCommentHtml().
+	$( '.wwt-revisionPopupWidget-comment-needs-fadein' ).fadeIn( 1000 );
 };
 
 export default RevisionPopupWidget;
