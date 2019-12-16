@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Rail"
+			"Rail",
+			"WaldiSt"
 		]
 	},
+	"whowrotethat-ext-name": "Kto to napisał?",
 	"whowrotethat-ext-desc-beta": "Przeglądaj informacje o autorach w Wikipedii. Powered by WikiWho. To jest wersja BETA przeznaczona tylko do testów.",
 	"whowrotethat-activation-link": "Kto to napisał?",
 	"whowrotethat-activation-link-tooltip": "Aktywuj „Kto to napisał?”",
