@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Use WMF-hosted proxy to WikiWho API.
 - Translation updates
+- UX Improvements for the 'Guided Tour' popup
 - Minor CSS class name improvement
 - Minor out-of-date code removed or updated
 - Change the sidebar link so it only works when clicked directly
