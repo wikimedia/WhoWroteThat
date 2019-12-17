@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Prevent the WhoWroteThat button from appearing on the main page.
 
+### Changed
+- Fetch username from the MediaWiki API, and fade-in all content in the revision popup.
+
 ## [0.11.0] - 2019-12-13
 ### Added
 - This change log.

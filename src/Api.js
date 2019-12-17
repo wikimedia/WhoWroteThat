@@ -19,7 +19,7 @@ class Api {
 
 		this.mwApi = config.mwApi;
 		this.mwConfig = config.mwConfig;
-		this.promiseCache = { data: {}, summaries: {} };
+		this.promiseCache = { data: {}, revisions: {} };
 		this.tokenMap = {};
 		this.maxRetries = 4;
 		this.retry = 1;
@@ -29,11 +29,11 @@ class Api {
 	 * Check whether a revision ID promise is cached
 	 *
 	 * @param  {string} revId Revision ID
-	 * @param  {string} [type='summaries'] Promise data type
-	 *  'summaries' or 'data'
+	 * @param  {string} [type='revision'] Promise data type
+	 *  'revisions' or 'data'
 	 * @return {boolean} The promise is cached
 	 */
-	isCached( revId, type = 'summaries' ) {
+	isCached( revId, type = 'revisions' ) {
 		return !!(
 			this.promiseCache[ type ] &&
 			this.promiseCache[ type ][ revId ]
@@ -58,27 +58,28 @@ class Api {
 	 * Get parsed edit summary for the given revision.
 	 *
 	 * @param {number} revId
-	 * @return {jQuery.Promise} Resolving Object with keys 'comment' and 'size'.
+	 * @return {jQuery.Promise} Resolving Object with keys 'username', 'comment' and 'size'.
  	 */
-	fetchEditSummary( revId ) {
+	fetchRevisionData( revId ) {
 		/**
 		 * Fetch the edit summary for the given revision from the MediaWiki API
 		 *
-		 * @return {jQuery.Promise} Promise that is resolved with the summary
-		 *  information as an object with the comment and size, or is rejected
-		 *  if the summary could not have been fetched.
+		 * @return {jQuery.Promise} Promise that is resolved with the revision
+		 *  information as an object with keys 'username', 'comment' and 'size',
+		 *  or it's rejected if revision data could not be fetched.
 		 */
-		const fetchSummaryPromise = () => {
+		const fetchRevisionPromise = () => {
 			return this.mwApi.ajax( {
 				action: 'compare',
 				fromrev: revId,
 				torelative: 'prev',
-				prop: 'parsedcomment|size',
+				prop: 'parsedcomment|size|user',
 				formatversion: 2
 			} ).then(
 				data => {
 					if ( data.compare ) {
 						return {
+							username: data.compare.touser,
 							comment: data.compare.toparsedcomment,
 							size: data.compare.tosize - ( data.compare.fromsize || 0 )
 						};
@@ -92,11 +93,11 @@ class Api {
 		};
 
 		// If the promise isn't cached yet, fetch it
-		if ( !this.promiseCache.summaries[ revId ] ) {
-			this.promiseCache.summaries[ revId ] = fetchSummaryPromise();
+		if ( !this.promiseCache.revisions[ revId ] ) {
+			this.promiseCache.revisions[ revId ] = fetchRevisionPromise();
 		}
 
-		return this.promiseCache.summaries[ revId ];
+		return this.promiseCache.revisions[ revId ];
 	}
 
 	/**
