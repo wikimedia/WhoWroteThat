@@ -136,18 +136,4 @@ InfoBarWidget.prototype.setErrorMessage = function ( errCode = 'refresh' ) {
 	this.setLabel( new OO.ui.HtmlSnippet( mw.msg( 'whowrotethat-state-error', errorMessage ) ) );
 };
 
-/**
- * Show the given username information
- *
- * @param {string} username
- */
-InfoBarWidget.prototype.setUsernameInfo = function ( username ) {
-	this.userInfoUsernameLabel.setLabel( $( '<span>' ).append( Tools.bidiIsolate( username ) ).contents() );
-};
-
-// Clear the username information
-InfoBarWidget.prototype.clearUsernameInfo = function () {
-	this.userInfoUsernameLabel.setLabel( '' );
-};
-
 export default InfoBarWidget;

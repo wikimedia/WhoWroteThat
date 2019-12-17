@@ -175,17 +175,14 @@ class App {
 				if ( this.revisionPopup.isVisible() ) {
 					return;
 				}
-				const ids = this.getIdsFromElement( e.currentTarget ),
-					tokenInfo = wwtController.getApi().getTokenInfo( ids.tokenId );
+				const ids = this.getIdsFromElement( e.currentTarget );
 				this.activateSpans( $content, ids.editorId );
-				this.widget.setUsernameInfo( tokenInfo.username );
 			} )
 			.on( 'mouseleave', () => {
 				if ( this.revisionPopup.isVisible() ) {
 					return;
 				}
 				this.deactivateSpans( $content );
-				this.widget.clearUsernameInfo();
 			} )
 			.on( 'click', e => {
 				const ids = this.getIdsFromElement( e.currentTarget ),
@@ -193,17 +190,15 @@ class App {
 					isCached = wwtController.getApi().isCached( tokenInfo.revisionId );
 
 				this.activateSpans( $content, ids.editorId );
-				this.widget.setUsernameInfo( tokenInfo.username );
 				this.revisionPopup.show( tokenInfo, $( e.currentTarget ), isCached );
 				this.revisionPopup.once( 'toggle', () => {
 					this.deactivateSpans( $content );
-					this.widget.clearUsernameInfo();
 				} );
 
 				// eslint-disable-next-line one-var
 				const reqStartTime = Date.now();
-				// Fetch edit summary then re-render the popup.
-				wwtController.getApi().fetchEditSummary( tokenInfo.revisionId )
+				// Fetch revision data then re-render the popup.
+				wwtController.getApi().fetchRevisionData( tokenInfo.revisionId )
 					.then( successData => {
 						const delayTime = (
 							!isCached &&
@@ -213,14 +208,14 @@ class App {
 						Object.assign( tokenInfo, successData );
 
 						setTimeout( () => {
-							this.revisionPopup.show( tokenInfo, $( e.target ) );
+							this.revisionPopup.show( tokenInfo, $( e.target ), isCached );
 						}, delayTime );
 					}, () => {
 						// Silently fail. The revision info provided by WikiWho
 						// is still present, which is the important part,
 						// so we'll just show what we have and throw a console
 						// warning.
-						mw.log.warn( `WhoWroteThat failed to fetch the summary for revision ${tokenInfo.revisionId}` );
+						mw.log.warn( `WhoWroteThat failed to fetch data for revision with ID ${tokenInfo.revisionId}` );
 					} );
 			} );
 

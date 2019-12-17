@@ -1,3 +1,14 @@
+@line-break-height: 8px;
+
+.wwt-revisionPopupWidget-animate {
+	transition: opacity 1s;
+	opacity: 0;
+}
+
+.wwt-revisionPopupWidget-animate-visible {
+	opacity: 1;
+}
+
 .mw-diff-bytes {
 	font-style: italic;
 }
@@ -11,21 +22,13 @@
 
 /* Prevent 1-pixel jumping of when shimmer disappears and a 2-line summary appears. */
 .wwt-shimmer:last-of-type {
-	margin-bottom: 8px;
+	margin-bottom: @line-break-height;
+	margin-top: @line-break-height * 2;
 }
 
 .wwt-revisionPopupWidget-comment,
 .wwt-revisionPopupWidget-attribution {
-	margin-top: 8px;
-}
-
-.wwt-revisionPopupWidget-comment-animated {
-	transition: opacity 1s;
-	opacity: 1;
-}
-
-.wwt-revisionPopupWidget-comment-animated-transparent {
-	opacity: 0;
+	margin-top: @line-break-height;
 }
 
 /* Adapted from http://cloudcannon.com/deconstructions/2014/11/15/facebook-content-placeholder-deconstruction.html */
