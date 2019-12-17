@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Fixed
+- Prevent the WhoWroteThat button from appearing on the main page.
+
+## [0.11.0] - 2019-12-13
+### Added
+- This change log.
+
+### Fixed
 - Build: Provide valid Gecko-ID for local development
 - Prevent the extension script from loading more than once on a Wikipedia page
 - Don't gray out tables as they can contain tokenized elements
@@ -16,10 +23,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Return to showing two 'shimmer' lines while loading the edit summary in a revision popup
 - Show infobar on top of page status indicators.
 - Show revision detials popup for image thumbnails.
+- More thorough checks for revision IDs
 
 ### Changed
+- Use WMF-hosted proxy to WikiWho API.
 - Translation updates
 - UX Improvements for the 'Guided Tour' popup
+- Minor CSS class name improvement
+- Minor out-of-date code removed or updated
+- Change the sidebar link so it only works when clicked directly
+  (and not when the empty space next to it is clicked)
+- Show revision size in popup even when there's no revision comment
 
 ## [0.10.0] - 2019-11-27
 ### Changed
@@ -62,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.10.0...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.11.0...HEAD
+[0.11.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.10.0...0.11.0
 [0.10.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.9.0...0.10.0
 [0.9.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.8.0...0.9.0
 [0.8.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.7.0...0.8.0
