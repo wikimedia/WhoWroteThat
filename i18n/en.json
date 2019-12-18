@@ -11,7 +11,7 @@
 	"whowrotethat-deactivation-link": "Close Who Wrote That?",
 	"whowrotethat-state-pending": "$1 is loading. This might take a while.",
 	"whowrotethat-state-pending-name": "Who Wrote That?",
-	"whowrotethat-state-error": "API Error: $1",
+	"whowrotethat-state-error": "Error: $1",
 	"whowrotethat-error-refresh": "Please refresh the page or try again later.",
 	"whowrotethat-error-later": "Please try again later.",
 	"whowrotethat-error-contact": "Please $1 about this issue.",
