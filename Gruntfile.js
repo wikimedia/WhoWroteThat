@@ -5,13 +5,16 @@ module.exports = function Gruntfile( grunt ) {
 		langFiles = grunt.file
 			.expand( { filter: 'isFile', cwd: 'i18n' }, [ '*' ] )
 			.filter( f => f !== 'qqq.json' ),
+		langBlob = {},
 		/**
 		 * Generate a language JSON blob from the i18n translation files
 		 *
 		 * @return {Object} JSON object of all translations, keyed by language code
 		 */
 		generateLangBlob = () => {
-			const langBlob = {};
+			if ( langBlob.en !== undefined ) {
+				return langBlob;
+			}
 
 			langFiles.forEach( function ( filename ) {
 				const lang = filename.substring( 0, filename.indexOf( '.json' ) ),
@@ -240,6 +243,59 @@ module.exports = function Gruntfile( grunt ) {
 			grunt.log.ok( 'Writing ' + betaLogMsg + 'messages to ' + localeFile );
 			grunt.file.write( localeFile, JSON.stringify( locale, null, 4 ) );
 		} );
+	} );
+
+	/**
+	 * Check the names and descriptions used on the Firefox Addons store.
+	 * Non-matching ones need to be updated manually, as there is no write API for these.
+	 * The addons API documentation is at https://addons-server.readthedocs.io/
+	 */
+	grunt.registerTask( 'checkListings', function ( beta ) {
+		const isBeta = beta === 'beta',
+			nameMsg = isBeta ? 'whowrotethat-ext-name-beta' : 'whowrotethat-ext-name',
+			descMsg = isBeta ? 'whowrotethat-ext-desc-beta' : 'whowrotethat-ext-desc',
+			fetch = require( 'node-fetch' ),
+			addonName = 'whowrotethat' + ( isBeta ? '-beta' : '' ),
+			url = 'https://addons.mozilla.org/api/v4/addons/addon/' + addonName,
+			langBlob = generateLangBlob();
+		var done = this.async();
+		fetch( url )
+			.then( res => res.json() )
+			.then( json => {
+				if ( json.detail === 'Not found.' ) {
+					grunt.log.error( 'Unable to retrieve Addon information for ' + addonName );
+					return;
+				}
+				// Check each available language to see if it's the same as in the remote listing.
+				Object.keys( langBlob ).forEach( function ( lang ) {
+					// Handle language code differences between Translatewiki and Firefox Addons.
+					let listingLang = lang;
+					if ( lang === 'en' ) {
+						listingLang = 'en-US';
+					} else if ( lang === 'pt' ) {
+						listingLang = 'pt-PT';
+					} else if ( lang === 'pt-br' ) {
+						listingLang = 'pt-BR';
+					} else if ( lang === 'sv' ) {
+						listingLang = 'sv-SE';
+					} else if ( lang === 'nb' ) {
+						listingLang = 'nb-NO';
+					}
+					if ( langBlob[ lang ][ nameMsg ] !== undefined &&
+						json.name[ listingLang ] !== langBlob[ lang ][ nameMsg ]
+					) {
+						grunt.log.error( 'Name does not match for ' + lang + '. Correct value:' );
+						grunt.log.writeln( langBlob[ lang ][ nameMsg ] );
+					}
+					if ( langBlob[ lang ][ descMsg ] !== undefined &&
+						json.summary[ listingLang ] !== langBlob[ lang ][ descMsg ]
+					) {
+						grunt.log.error( 'Summary does not match for ' + lang + '. Correct value:' );
+						grunt.log.writeln( langBlob[ lang ][ descMsg ] );
+					}
+				} );
+				done();
+			} );
 	} );
 
 	/**

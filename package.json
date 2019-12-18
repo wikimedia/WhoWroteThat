@@ -43,6 +43,7 @@
       "jsdoc-wmf-theme": "^0.0.3",
       "jsdom": "~15.1.1",
       "mocha": "^6.2.0",
+      "node-fetch": "^2.6.0",
       "stylelint": "^10.1.0",
       "stylelint-config-wikimedia": "0.6.0",
       "web-ext": "^3.2.0"
