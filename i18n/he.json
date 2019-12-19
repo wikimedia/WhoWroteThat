@@ -3,7 +3,8 @@
 		"authors": [
 			"YaronSh",
 			"דגש חזק",
-			"Amire80"
+			"Amire80",
+			"Ghsuvr"
 		]
 	},
 	"whowrotethat-ext-name": "מי כתב את זה?",
@@ -15,7 +16,7 @@
 	"whowrotethat-deactivation-link": "לסגור את מי כתב את זה?",
 	"whowrotethat-state-pending": "$1 בטעינה. פעולה זו יכולה לארוך זמן־מה.",
 	"whowrotethat-state-pending-name": "מי כתב את זה?",
-	"whowrotethat-state-error": "שגיאת API:‏ $1",
+	"whowrotethat-state-error": "שגיאה:‏ $1",
 	"whowrotethat-error-refresh": "נא לרענן את הדף או לנסות שוב מאוחר יותר.",
 	"whowrotethat-error-later": "נא לנסות שוב מאוחר יותר.",
 	"whowrotethat-error-contact": "נא $1 על הנושא הזה.",

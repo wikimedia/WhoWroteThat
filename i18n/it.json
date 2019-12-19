@@ -7,7 +7,7 @@
 	"whowrotethat-activation-link": "Chi l'ha scritto?",
 	"whowrotethat-activation-link-tooltip": "Attivare chi l'ha scritto?",
 	"whowrotethat-deactivation-link": "Chiudi chi l'ha scritto?",
-	"whowrotethat-state-error": "Errore API: $1",
+	"whowrotethat-state-error": "Errore: $1",
 	"whowrotethat-error-refresh": "Aggiorna la pagina o riprova più tardi.",
 	"whowrotethat-error-later": "Per favore, riprova più tardi.",
 	"whowrotethat-error-contact-link": "contattaci",

@@ -14,7 +14,7 @@
 	"whowrotethat-deactivation-link": "Fechar Quem escreveu isso?",
 	"whowrotethat-state-pending": "$1 está sendo carregado. Isso pode demorar um pouco.",
 	"whowrotethat-state-pending-name": "Quem escreveu isso?",
-	"whowrotethat-state-error": "Erro de API: $1",
+	"whowrotethat-state-error": "Erro: $1",
 	"whowrotethat-error-refresh": "Por favor, atualize a página ou tente novamente mais tarde.",
 	"whowrotethat-error-later": "Por favor, tente novamente mais tarde.",
 	"whowrotethat-error-contact": "Por favor, $1 sobre este problema.",

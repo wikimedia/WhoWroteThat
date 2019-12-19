@@ -13,7 +13,7 @@
 	"whowrotethat-deactivation-link": "Stäng Vem skrev detta?",
 	"whowrotethat-state-pending": "$1 läser in. Detta kan ta en stund.",
 	"whowrotethat-state-pending-name": "Vem skrev detta?",
-	"whowrotethat-state-error": "API-fel: $1",
+	"whowrotethat-state-error": "Fel: $1",
 	"whowrotethat-error-refresh": "Uppdatera sidan eller försök igen senare.",
 	"whowrotethat-error-later": "Försök igen senare.",
 	"whowrotethat-error-contact": "Var god $1 om detta problem.",
