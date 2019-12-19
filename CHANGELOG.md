@@ -6,12 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.12.0] - 2019-12-19
 ### Fixed
 - Prevent the WhoWroteThat button from appearing on the main page.
 
 ### Changed
 - Fetch username from the MediaWiki API, and fade-in all content in the revision popup.
-- UX improvements for infobar.
+- UX improvements for infobar and guided-tour popup.
+- Translation updates.
 
 ## [0.11.0] - 2019-12-13
 ### Added
@@ -80,7 +83,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.11.0...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.12.0...HEAD
+[0.12.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.11.0...0.12.0
 [0.11.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.10.0...0.11.0
 [0.10.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.9.0...0.10.0
 [0.9.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.8.0...0.9.0
