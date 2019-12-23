@@ -13,7 +13,7 @@
 	"whowrotethat-deactivation-link": "Who Wrote That을 닫으시겠습니까?",
 	"whowrotethat-state-pending": "$1을 로딩하고 있습니다. 시간이 조금 걸릴 수도 있습니다.",
 	"whowrotethat-state-pending-name": "누가 그것을 작성했는가?",
-	"whowrotethat-state-error": "API 오류: $1",
+	"whowrotethat-state-error": "오류: $1",
 	"whowrotethat-error-refresh": "페이지를 새로 고친 다음 나중에 다시 시도해 주십시오.",
 	"whowrotethat-error-later": "나중에 다시 시도해 주십시오.",
 	"whowrotethat-error-contact": "이 문제에 대해 $1해 주십시오.",

@@ -3,7 +3,8 @@
 		"authors": [
 			"Verdy p",
 			"Wladek92",
-			"Gomoko"
+			"Gomoko",
+			"Thibaut120094"
 		]
 	},
 	"whowrotethat-ext-name": "Qui a écrit cela ?",
@@ -15,7 +16,7 @@
 	"whowrotethat-deactivation-link": "Fermer ''Qui a écrit cela ?''",
 	"whowrotethat-state-pending": "$1 est en cours de chargement. Cela peut prendre du temps.",
 	"whowrotethat-state-pending-name": "Qui a écrit cela ?",
-	"whowrotethat-state-error": "Erreur de l’API : $1",
+	"whowrotethat-state-error": "Erreur : $1",
 	"whowrotethat-error-refresh": "Veuillez rafraîchir la page ou essayer à nouveau.",
 	"whowrotethat-error-later": "Veuillez essayer à nouveau plus tard.",
 	"whowrotethat-error-contact": "Veuillez $1 au sujet de ce problème.",

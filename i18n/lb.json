@@ -10,7 +10,7 @@
 	"whowrotethat-deactivation-link": "'Wien huet dat geschriwwen?' zoumaachen",
 	"whowrotethat-state-pending": "$1 gëtt gelueden. Dat kann eng Zäit daueren.",
 	"whowrotethat-state-pending-name": "Wien huet dat geschriwwen?",
-	"whowrotethat-state-error": "API-Feeler: $1",
+	"whowrotethat-state-error": "Feeler: $1",
 	"whowrotethat-error-refresh": "Aktualiséiert d'Säit oder probéiert méi spéit nach eng Kéier.",
 	"whowrotethat-error-later": "Probéiert w.e.g. méi spéit nach eng Kéier.",
 	"whowrotethat-error-contact": "W.e. g. $1 zu dëser Fro.",
