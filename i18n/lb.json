@@ -17,13 +17,13 @@
 	"whowrotethat-error-contact-link": "kontaktéiert eis",
 	"whowrotethat-ready-title": "Wien huet dat geschriwwen?",
 	"whowrotethat-ready-general": "Fuert mat der Maus driwwer fir Ännerunge vum selwechten Auteur ze gesinn. Klickt fir méi Detailer.",
-	"whowrotethat-tour-welcome-title": "<strong><em>Wien huet dat geschriwwen?</em></strong> ass aktivéiert!",
+	"whowrotethat-tour-welcome-title": "$1 ass aktivéiert!",
 	"whowrotethat-tour-welcome-title-name": "Wien huet dat geschriwwen?",
 	"whowrotethat-tour-welcome-dismiss": "Verstan!",
 	"whowrotethat-revision-added": "$1 huet dëst de(n) $2 derbäigesat.",
-	"whowrotethat-revision-attribution": "Si hunn <strong>$1%</strong> vun der Säit geschriwwen.",
+	"whowrotethat-revision-attribution": "Si hunn $1 vun der Säit geschriwwen.",
 	"whowrotethat-revision-attribution-percent": "$1 %",
-	"whowrotethat-revision-attribution-lessthan": "Si hu <strong>manner wéi 1%</strong> vun der Säit geschriwwen.",
+	"whowrotethat-revision-attribution-lessthan": "Si hu manner wéi $1 vun der Säit geschriwwen.",
 	"whowrotethat-revision-attribution-lessthan-percent": "manner wéi 1%",
 	"whowrotethat-revision-deleted-username": "(Benotzernumm oder IP ewechgeholl)"
 }
