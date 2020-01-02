@@ -358,6 +358,53 @@ class Controller {
 		$( 'body' ).append( this.$overlay );
 		return this.$overlay;
 	}
+
+	/**
+	 * Set the token that is currently active.
+	 * Fetch the information that relates to the token, and update the model
+	 * accordingly.
+	 *
+	 * @param {string} tokenId [description]
+	 * @param {jQuery} $target [description]
+	 */
+	setActiveToken( tokenId, $target ) {
+		const tokenInfo = this.getApi().getTokenInfo( tokenId ),
+			reqStartTime = Date.now();
+
+		// Ensure the popup is attached to the visible content,
+		// which it otherwise wouldn't be for image thumbnails.
+		if ( $target.find( '.thumb' ).length ) {
+			$target = $target.find( '.thumb' );
+		}
+
+		if ( !this.getApi().isCached( tokenInfo.revisionId ) ) {
+			this.model.setCurrentToken( null, $target, 'pending' );
+		}
+		this.getApi().fetchRevisionData( tokenInfo.revisionId )
+			.then(
+				successData => {
+					const delayTime = (
+						!this.getApi().isCached( tokenInfo.revisionId ) &&
+						Date.now() - reqStartTime < 250
+					) ? 250 : 0;
+
+					Object.assign( tokenInfo, successData );
+
+					setTimeout( () => {
+						this.model.setCurrentToken( tokenInfo, $target, 'success' );
+					}, delayTime );
+				},
+				// Failure
+				() => {
+					// Silently fail. The revision info provided by WikiWho
+					// is still present, which is the important part,
+					// so we'll just show what we have and throw a console
+					// warning.
+					mw.log.warn( `WhoWroteThat failed to fetch data for revision with ID ${tokenInfo.revisionId}` );
+					this.model.setCurrentToken( null, $target, 'failure' );
+				}
+			);
+	}
 }
 
 // Initialize the singleton

@@ -24,7 +24,7 @@ class App {
 
 		this.model = wwtController.getModel();
 
-		this.revisionPopup = new RevisionPopupWidget();
+		this.revisionPopup = new RevisionPopupWidget( this.model );
 		this.widget = new InfoBarWidget();
 
 		// Attach widget
@@ -44,6 +44,18 @@ class App {
 			if ( state === 'ready' ) {
 				this.scrollDown();
 			}
+		} );
+
+		// When the popup loads, the highlights "sticks"; we want
+		// to make sure that at that point, the highlights clear
+		// only once when the popup toggles off.
+		// Listen to 'ready' event (popup ready/open) -> set a one-time
+		// event to deactivate the highlights the next toggle (off)
+		this.revisionPopup.on( 'ready', () => {
+			this.revisionPopup.once( 'toggle', () => {
+				this.deactivateSpans( this.$content );
+			} );
+
 		} );
 
 		return App.instance;
@@ -185,38 +197,14 @@ class App {
 				this.deactivateSpans( $content );
 			} )
 			.on( 'click', e => {
-				const ids = this.getIdsFromElement( e.currentTarget ),
-					tokenInfo = wwtController.getApi().getTokenInfo( ids.tokenId ),
-					isCached = wwtController.getApi().isCached( tokenInfo.revisionId );
+				const ids = this.getIdsFromElement( e.currentTarget );
 
-				this.activateSpans( $content, ids.editorId );
-				this.revisionPopup.show( tokenInfo, $( e.currentTarget ), isCached );
-				this.revisionPopup.once( 'toggle', () => {
-					this.deactivateSpans( $content );
-				} );
+				this.activateSpans( this.$content, ids.editorId );
 
-				// eslint-disable-next-line one-var
-				const reqStartTime = Date.now();
-				// Fetch revision data then re-render the popup.
-				wwtController.getApi().fetchRevisionData( tokenInfo.revisionId )
-					.then( successData => {
-						const delayTime = (
-							!isCached &&
-							Date.now() - reqStartTime < 250
-						) ? 250 : 0;
-
-						Object.assign( tokenInfo, successData );
-
-						setTimeout( () => {
-							this.revisionPopup.show( tokenInfo, $( e.target ), isCached );
-						}, delayTime );
-					}, () => {
-						// Silently fail. The revision info provided by WikiWho
-						// is still present, which is the important part,
-						// so we'll just show what we have and throw a console
-						// warning.
-						mw.log.warn( `WhoWroteThat failed to fetch data for revision with ID ${tokenInfo.revisionId}` );
-					} );
+				wwtController.setActiveToken(
+					ids.tokenId,
+					$( e.currentTarget )
+				);
 			} );
 
 		/*

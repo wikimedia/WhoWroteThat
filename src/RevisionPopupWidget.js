@@ -3,11 +3,22 @@ import Tools from './Tools';
 /**
  * @class
  * @constructor
+ * @param {Model} model WhoWroteThat model
  * @param {Object} [config={}] Configuration options
  */
-const RevisionPopupWidget = function RevisionPopupWidget( config = {} ) {
-	this.$popupContent = $( '<div>' )
+const RevisionPopupWidget = function RevisionPopupWidget( model, config = {} ) {
+	const $shimmerSpan = $( '<span>' )
+		.addClass( 'wwt-shimmer wwt-shimmer-animation' );
+
+	this.model = model;
+	this.$content = $( '<div>' )
 		.addClass( 'wwt-revisionPopupWidget-content' );
+	this.$loading = $( '<div>' )
+		.append( $shimmerSpan, $shimmerSpan.clone(), $shimmerSpan.clone() );
+
+	// Mixin constructors
+	OO.ui.mixin.PendingElement.call( this );
+
 	// Parent constructor
 	RevisionPopupWidget.parent.call( this, Object.assign(
 		{
@@ -17,69 +28,25 @@ const RevisionPopupWidget = function RevisionPopupWidget( config = {} ) {
 			// FIXME: 'force-left' for RTL languages
 			align: 'force-right',
 			hideWhenOutOfView: false,
-			$content: this.$popupContent
+			$content: this.$content
 		},
 		config
 	) );
+
+	this.initialize();
+	this.model.on( 'setToken', this.onModelSetToken.bind( this ) );
 };
 
 /* Setup */
 OO.inheritClass( RevisionPopupWidget, OO.ui.PopupWidget );
-
-/**
- * Get markup for the diff size.
- * @param {number} size
- * @return {jQuery}
- */
-function getSizeContent( size ) {
-	const $diffBytes = $( '<span>' );
-	$diffBytes.addClass( 'mw-diff-bytes' );
-
-	// Guard against no size being specified.
-	if ( size === undefined ) {
-		return;
-	}
-
-	let sizeClass;
-	if ( size > 0 ) {
-		sizeClass = 'mw-plusminus-pos';
-	} else if ( size < 0 ) {
-		sizeClass = 'mw-plusminus-neg';
-	} else {
-		sizeClass = 'mw-plusminus-null';
-	}
-	return $diffBytes
-		.addClass( sizeClass )
-		.append( Tools.bidiIsolate( `${size > 0 ? '+' : ''}${mw.language.convertNumber( size )}` ) );
-}
-
-/**
- * Get inline markup for the edit summary and size difference. If there is an edit summary, the
- * returned HTML will start with a <br>; if there is no summary, it wont (so it can be appended to
- * the revision author information).
- * @param {Object} data As returned by Api.prototype.getTokenInfo().
- * @return {jQuery}
- */
-function getCommentContent( data ) {
-	const $revCommentSpan = $( '<span>' )
-		.addClass( 'wwt-revisionPopupWidget-comment' )
-		.append( $( '<span>' ).text( ' ' ), getSizeContent( data.size ) );
-
-	if ( data.comment !== '' ) {
-		const $commentSpan = $( '<span>' )
-			.addClass( 'comment comment--without-parentheses' )
-			.append( Tools.bidiIsolate( $.parseHTML( data.comment ) ) );
-		$revCommentSpan.prepend( $( '<br>' ), $commentSpan );
-	}
-	return $revCommentSpan;
-}
+OO.mixinClass( RevisionPopupWidget, OO.ui.mixin.PendingElement );
 
 /**
  * Get jQuery objects for the user links.
  * @param {Object} data As returned by Api.prototype.getTokenInfo().
  * @return {jQuery}
  */
-function getUserLinksContent( data ) {
+function getUserLinks( data ) {
 	const contribsUrl = mw.util.getUrl( `Special:Contributions/${data.username}` ),
 		// We typically link to Special:Contribs for IPs.
 		userPageUrl = data.isIP ? contribsUrl : mw.util.getUrl( `User:${data.username}` );
@@ -116,81 +83,120 @@ function getUserLinksContent( data ) {
 }
 
 /**
- * Get content for the loading state.
- * @return {jQuery}
+ * Initialize the widget by building the content structure.
  */
-function getLoadingStateContent() {
-	const $shimmerSpan = $( '<span>' )
-		.addClass( 'wwt-shimmer wwt-shimmer-animation' );
-	return $( '<div>' )
-		.append( $shimmerSpan, $shimmerSpan.clone(), $shimmerSpan.clone() );
-}
+RevisionPopupWidget.prototype.initialize = function () {
+	this.diffSizeLabel = new OO.ui.LabelWidget( {
+		classes: [ 'mw-diff-bytes' ]
+	} );
+
+	this.commentLabel = new OO.ui.LabelWidget();
+
+	this.revisionAddedLabel = new OO.ui.LabelWidget( {
+	} );
+
+	this.scoreLabel = new OO.ui.LabelWidget( {
+		classes: [ 'wwt-revisionPopupWidget-attribution' ]
+	} );
+
+	this.$animated = $( '<div>' )
+		.append(
+			this.revisionAddedLabel.$element,
+			this.commentLabel.$element,
+			this.diffSizeLabel.$element,
+			this.scoreLabel.$element
+		);
+	this.$wrapper = $( '<div>' )
+		.addClass( 'wwt-revisionPopupWidget-animate' )
+		.append( this.$animated );
+
+	// Build structure
+	this.$content
+		.append(
+			this.$loading,
+			this.$wrapper
+		);
+};
 
 /**
- * Get content for the popup, called once data has been retrieved from the API.
- * @param {Object} data
- * @return {jQuery}
+ * Respond to setToken event from the model.
+ * Update the data, set the proper location for the popup and show the popup.
+ *
+ * @param  {string} state Loading state; 'pending', 'success', or 'failure'
+ * @param  {jQuery} $target The jQuery element representing the token in the DOM
+ * @param  {Object} [data={}] Revision data for the current token
  */
-function getContent( data ) {
-	const $userLinks = getUserLinksContent( data ),
-		dateStr = moment( data.revisionTime ).locale( mw.config.get( 'wgUserLanguage' ) ).format( 'LLL' ),
-		// Use jQuery to make sure attributes are properly escaped
+RevisionPopupWidget.prototype.onModelSetToken = function ( state, $target, data = {} ) {
+	this.$wrapper.toggleClass(
+		'wwt-revisionPopupWidget-animate-visible',
+		state !== 'pending'
+	);
+	this.$loading.toggle( state === 'pending' );
+	this.$animated.toggle( state !== 'pending' );
+
+	this.updateData( data || {} );
+	this.setFloatableContainer( $target );
+	this.toggle( true );
+};
+
+/**
+ * Update popup data
+ *
+ * @param  {Object} [data={}] Data object
+ */
+RevisionPopupWidget.prototype.updateData = function ( data = {} ) {
+	const dateStr = moment( data.revisionTime ).locale(
+			mw.config.get( 'wgUserLanguage' )
+		).format( 'LLL' ),
 		$diffLink = $( '<a>' )
 			.attr( 'href', mw.util.getUrl( `Special:Diff/${data.revisionId}` ) )
 			.text( dateStr ),
-		addedMsg = mw.message( 'whowrotethat-revision-added', $userLinks, $diffLink ).parse(),
-		scoreMsgKey = Number( data.score ) >= 1 ? 'whowrotethat-revision-attribution' : 'whowrotethat-revision-attribution-lessthan',
+		scoreMsgKey = Number( data.score ) >= 1 ?
+			'whowrotethat-revision-attribution' :
+			'whowrotethat-revision-attribution-lessthan',
 		// i18n message keys for the bolded percentages are:
 		//  - whowrotethat-revision-attribution-percent
 		//  - whowrotethat-revision-attribution-lessthan-percent
-		$scorePercent = $( '<strong>' ).text( mw.msg( scoreMsgKey + '-percent', data.score ) ),
-		$attributionMsg = $( '<div>' )
-			.addClass( 'wwt-revisionPopupWidget-attribution' )
-			.html( Tools.i18nHtml( scoreMsgKey, $scorePercent ) );
+		$scorePercent = $( '<strong>' ).text( mw.msg( scoreMsgKey + '-percent', data.score ) );
 
-	return $( '<div>' )
-		.append( addedMsg, getCommentContent( data ), $attributionMsg );
-}
+	// Comment content
+	this.commentLabel.setLabel(
+		new OO.ui.HtmlSnippet(
+			Tools.bidiIsolate( $.parseHTML( data.comment ) )
+		)
+	);
 
-/**
- * Show the revision popup based on the given token data, above the given element.
- * Note that the English namespaces will normalize to the wiki's local namespaces.
- * @param {Object} data As returned by Api.prototype.getTokenInfo().
- * @param {jQuery} $target Element the popup should be attached to.
- * @param {boolean} [isCached] Whether the comment promise is available, cached.
- */
-RevisionPopupWidget.prototype.show = function ( data, $target, isCached ) {
-	let $content;
+	this.commentLabel.$element
+		.toggleClass( 'comment', !!data.comment )
+		.toggleClass( 'comment--without-parentheses', !!data.comment );
 
-	// If data.comment is undefined, we are in the loading state.
-	if ( data.comment === undefined ) {
-		$content = getLoadingStateContent();
-	} else {
-		$content = getContent( data );
+	// Diff size
+	this.diffSizeLabel.$element
+		.toggleClass( 'mw-plusminus-pos', data.size > 0 )
+		.toggleClass( 'mw-plusminus-neg', data.size < 0 )
+		.toggleClass( 'mw-plusminus-null', data.size === 0 );
+	this.diffSizeLabel.setLabel(
+		data.size === undefined ? '' :
+			new OO.ui.HtmlSnippet(
+				Tools.bidiIsolate( `${data.size > 0 ? '+' : ''}${mw.language.convertNumber( data.size )}` )
+			)
+	);
 
-		if ( !isCached ) {
-			$content.addClass( 'wwt-revisionPopupWidget-animate' );
-		}
-	}
+	this.revisionAddedLabel.setLabel(
+		new OO.ui.HtmlSnippet( mw.message(
+			'whowrotethat-revision-added',
+			getUserLinks( data ),
+			$diffLink
+		).parse() )
+	);
 
-	this.$popupContent.empty().append( $content );
-
-	// Ensure the popup is attached to the visible content,
-	// which it otherwise wouldn't be for image thumbnails.
-	if ( $target.find( '.thumb' ).length ) {
-		$target = $target.find( '.thumb' );
-	}
+	this.scoreLabel.setLabel(
+		new OO.ui.HtmlSnippet( Tools.i18nHtml( scoreMsgKey, $scorePercent ) )
+	);
 
 	// Make sure all links in the popup (including in the edit summary) open in new tabs.
-	this.$popupContent.find( 'a' )
+	this.$content.find( 'a' )
 		.attr( 'target', '_blank' );
-
-	this.setFloatableContainer( $target );
-	this.toggle( true );
-
-	// Animate content once loaded.
-	$( '.wwt-revisionPopupWidget-animate' )
-		.addClass( 'wwt-revisionPopupWidget-animate-visible' );
 };
 
 export default RevisionPopupWidget;
