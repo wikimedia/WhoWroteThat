@@ -18,6 +18,7 @@ class Controller {
 			this.initialized = false;
 			this.$button = null;
 			this.$link = null;
+			this.$overlay = null;
 			this.namespace = null;
 			this.mainPage = false;
 			this.translations = {};
@@ -341,6 +342,21 @@ class Controller {
 		}
 		this.$link = this.getButton().find( 'a' );
 		return this.$link;
+	}
+
+	/**
+	 * Get the overlay div with the class wwt-overlay
+	 * Will add it if it doesn't already exist in the DOM.
+	 *
+	 * @return {jQuery} Overlay div
+	 */
+	getOverlay() {
+		if ( this.$overlay instanceof $ ) {
+			return this.$overlay;
+		}
+		this.$overlay = $( '<div>' ).addClass( 'wwt-overlay' );
+		$( 'body' ).append( this.$overlay );
+		return this.$overlay;
 	}
 }
 

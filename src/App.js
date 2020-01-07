@@ -25,7 +25,10 @@ class App {
 
 		this.model = wwtController.getModel();
 
-		this.revisionPopup = new RevisionPopupWidget();
+		const $overlay = wwtController.getOverlay();
+		this.revisionPopup = new RevisionPopupWidget( {
+			$overlay
+		} );
 		this.widget = new InfoBarWidget();
 
 		// Attach widget
@@ -36,7 +39,8 @@ class App {
 		}
 
 		// Attach popup
-		$( 'body' ).append( this.revisionPopup.$element );
+		$( 'html' ).addClass( 'wwt-popup' );
+		$overlay.append( this.revisionPopup.$element );
 
 		// Attach events
 		this.$content = null;

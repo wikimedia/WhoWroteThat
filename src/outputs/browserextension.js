@@ -33,7 +33,7 @@ config.outputEnvironment = 'Browser extension';
 				}
 
 				// Only load after dependencies are loaded
-				const $overlay = $( '<div>' ).addClass( 'wwt-overlay' ),
+				const $overlay = wwtController.getOverlay(),
 					WelcomePopupWidget = require( '../WelcomePopupWidget' ),
 					welcome = new WelcomePopupWidget( {
 						$floatableContainer: $( '#t-whowrotethat' ),
@@ -54,7 +54,6 @@ config.outputEnvironment = 'Browser extension';
 				} );
 
 				$( 'html' ).addClass( 'wwt-popup' );
-				$( 'body' ).append( $overlay );
 				$overlay.append( welcome.$element );
 
 				// Show the popup if the model is enabled and the popup wasn't
