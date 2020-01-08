@@ -15,7 +15,6 @@ class App {
 	 * even if this is called on multiple clicks/calls
 	 *
 	 * @constructor
-	 * @param {App} A class instance
 	 */
 	constructor() {
 		// Instantiate only once
@@ -25,10 +24,7 @@ class App {
 
 		this.model = wwtController.getModel();
 
-		const $overlay = wwtController.getOverlay();
-		this.revisionPopup = new RevisionPopupWidget( {
-			$overlay
-		} );
+		this.revisionPopup = new RevisionPopupWidget();
 		this.widget = new InfoBarWidget();
 
 		// Attach widget
@@ -40,7 +36,7 @@ class App {
 
 		// Attach popup
 		$( 'html' ).addClass( 'wwt-popup' );
-		$overlay.append( this.revisionPopup.$element );
+		wwtController.getOverlay().append( this.revisionPopup.$element );
 
 		// Attach events
 		this.$content = null;
