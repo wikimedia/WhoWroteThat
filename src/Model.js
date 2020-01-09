@@ -41,7 +41,7 @@ class Model extends EventEmitter {
 	 */
 	initialize( $content, config ) {
 		this.$contentWrapper = $content;
-		this.lang = config.lang || 'en';
+		this.lang = config.lang ? config.lang.toLowerCase() : 'en';
 		this.namespace = config.namespace || '';
 		this.mainPage = !!config.mainPage;
 		this.revisionId = config.revisionId || 0;
