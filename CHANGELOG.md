@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - Show revision details popup on top of infobar.
+- Correct the byte difference sign for RTL languages in the revision details popup.
 
 ## [0.12.0] - 2019-12-19
 ### Fixed
