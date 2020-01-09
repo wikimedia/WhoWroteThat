@@ -50,7 +50,7 @@ function getSizeContent( size ) {
 	}
 	return $diffBytes
 		.addClass( sizeClass )
-		.text( `${size > 0 ? '+' : ''}${mw.language.convertNumber( size )}` );
+		.append( Tools.bidiIsolate( `${size > 0 ? '+' : ''}${mw.language.convertNumber( size )}` ) );
 }
 
 /**
