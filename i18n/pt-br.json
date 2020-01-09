@@ -23,7 +23,7 @@
 	"whowrotethat-ready-general": "Passe o mouse para ver as contribuições do mesmo autor. Clique para mais detalhes.",
 	"whowrotethat-tour-welcome-title": "$1 está ativado!",
 	"whowrotethat-tour-welcome-title-name": "Quem escreveu isso?",
-	"whowrotethat-tour-welcome-description": "Ative a ferramenta na barra lateral. Passe o mouse sobre o texto para ver o autor e suas outras contribuições para esta página. Clique para obter mais detalhes.",
+	"whowrotethat-tour-welcome-description": "Ative a ferramenta na barra lateral. Passe o mouse sobre o texto para destacar as contribuições do mesmo autor. Clique para ver o autor e os detalhes da revisão.",
 	"whowrotethat-tour-welcome-dismiss": "Entendido!",
 	"whowrotethat-revision-added": "$1 adicionou isso em $2.",
 	"whowrotethat-revision-attribution": "Eles escreveram $1 da página.",

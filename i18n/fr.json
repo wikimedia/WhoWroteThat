@@ -4,7 +4,8 @@
 			"Verdy p",
 			"Wladek92",
 			"Gomoko",
-			"Thibaut120094"
+			"Thibaut120094",
+			"Pols12"
 		]
 	},
 	"whowrotethat-ext-name": "Qui a écrit cela ?",
@@ -25,7 +26,7 @@
 	"whowrotethat-ready-general": "Survolez à la souris pour voir les contributions du même auteur. Cliquez pour plus de détails.",
 	"whowrotethat-tour-welcome-title": "$1 est activé !",
 	"whowrotethat-tour-welcome-title-name": "Qui a écrit cela ?",
-	"whowrotethat-tour-welcome-description": "Activez l’outil depuis la barre latérale. Survolez le texte à la souris pour voir les auteurs et les autres contributions sur cette page. Cliquez pour obtenir plus de détails.",
+	"whowrotethat-tour-welcome-description": "Activez l’outil depuis la barre latérale. Survolez du texte avec la souris pour surligner les contributions du même auteur. Cliquez pour voir l’auteur et les détails de la révision.",
 	"whowrotethat-tour-welcome-dismiss": "C’est bon !",
 	"whowrotethat-revision-added": "$1 a ajouté ceci le $2.",
 	"whowrotethat-revision-attribution": "L’auteur a écrit $1 % de la page.",
