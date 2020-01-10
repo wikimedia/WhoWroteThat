@@ -7,6 +7,7 @@ Powered by [WikiWho](https://f-squared.org/wikiwho/).
 WhoWroteThat is available as a browser extension (for Firefox and Chrome)
 and a wiki gadget.
 
+* [Homepage](https://www.mediawiki.org/wiki/WWT)
 * [Project page](https://meta.wikimedia.org/wiki/Community_Tech/Who_Wrote_That_tool)
 * [User interface translation](https://translatewiki.net/wiki/Translating:WhoWroteThat%3F)
 
