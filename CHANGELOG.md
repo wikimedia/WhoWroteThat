@@ -6,9 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.13.0] - 2020-01-10
+### Added
+- Utility to check that Firefox browser store descriptions are up to date with Translatewiki.
+
 ### Fixed
 - Show revision details popup on top of infobar.
 - Correct the byte difference sign for RTL languages in the revision details popup.
+- Correctly load translations for languages with a variant code (e.g. `pt-br`).
+- Fix to prevent loading on Turkish Wikipedia special pages.
+
+### Changed
+- Change wiki templates' opacity appearance on hover.
+- MVC and other general refactoring.
+- Translation updates, including fixing typos in message descriptions (qqq).
+- Modified welcome tour language.
 
 ## [0.12.0] - 2019-12-19
 ### Fixed

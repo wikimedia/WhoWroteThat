@@ -4,7 +4,7 @@
 	"description": "__MSG_description__",
 	"default_locale": "en",
 	"author": "Wikimedia Foundation",
-	"homepage_url": "https://meta.wikimedia.org/wiki/Community_Tech/Who_Wrote_That_tool",
+	"homepage_url": "https://www.mediawiki.org/wiki/WWT",
 	"version": "@@version",
 	"icons": {
 		"48": "icons/icon-48.png",
