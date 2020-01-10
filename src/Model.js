@@ -225,6 +225,32 @@ class Model extends EventEmitter {
 			this.emit( 'state', this.state, errorCode );
 		}
 	}
+
+	/**
+	 * Set the token that is currently active.
+	 * Emit an event so widgets can update themselves,
+	 * based on the loading state and data.
+	 *
+	 * @param {Object} tokenData Token data
+	 * @param {jQuery} $target jQuery element for the clicked token
+	 * @param {string} state Loading state: 'pending', 'success' or 'failure'
+	 */
+	setCurrentToken( tokenData, $target, state ) {
+		/**
+		 * Token has been set as active
+		 *
+		 * @event Model#setToken
+		 * @param {string} state Loading state
+		 * @param {jQuery} jQuery element representing the clicked token
+		 * @param {Object} tokenData Token data
+		 */
+		this.emit(
+			'setToken',
+			state,
+			$target,
+			tokenData
+		);
+	}
 }
 
 export default Model;
