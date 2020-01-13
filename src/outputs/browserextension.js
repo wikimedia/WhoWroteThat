@@ -87,7 +87,7 @@ config.outputEnvironment = 'Browser extension';
 			wwtController.initialize(
 				$( '.mw-parser-output' ),
 				{
-					lang: $( 'html' ).attr( 'lang' ),
+					lang: mw.config.get( 'wgUserLanguage' ),
 					translations: languageBlob,
 					namespace: mw.config.get( 'wgCanonicalNamespace' ),
 					mainPage: mw.config.get( 'wgIsMainPage' ),
