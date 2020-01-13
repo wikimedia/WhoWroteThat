@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirzali",
+			"Orbot707"
+		]
+	},
+	"whowrotethat-ext-name": "Kami No Nusna ?",
+	"whowrotethat-ext-name-beta": "Kami No Nusna ? (BETA)",
+	"whowrotethat-ext-desc": "Nuskaran u versiyonanê Wikipedi u direkt meqaleyanê Wikipediya keşıf bıkerê. Terefê WikiKam'i ra pheşti deyeno.",
+	"whowrotethat-ext-desc-beta": "Zanıtışanê nuskaranê Wikipedia keşf bıkerê. Terefê WikiKam'i ra pheşti deyeno. No tenya meqsedê cerbnayış versiyonê BETA yo.",
+	"whowrotethat-activation-link": "Kami No Nusna ?",
+	"whowrotethat-activation-link-tooltip": "Aktif Kami No Nusna ?",
+	"whowrotethat-deactivation-link": "Racınen Kami No Nusna?",
+	"whowrotethat-state-pending": "$1 beno bar. No tay zeman gêreno.",
+	"whowrotethat-state-pending-name": "Kami No Nusna ?",
+	"whowrotethat-state-error": "Xeta: $1",
+	"whowrotethat-error-refresh": "Pelê newe kerên ya zi dıme reyna bıcerrebnê.",
+	"whowrotethat-error-later": "Kerem ke, badêna reyna bıcerrebne.",
+	"whowrotethat-error-contact": "Seba na mewzu bıewni rê $1",
+	"whowrotethat-error-contact-link": "irtıbat kewê",
+	"whowrotethat-ready-title": "Kami No Nusna ?",
+	"whowrotethat-ready-general": "İştirakanê eyni karberi vırnayışi rê şırê ser. Zêde melumati rê bıtıknê.",
+	"whowrotethat-tour-welcome-title": "$1 biyo aktiv!",
+	"whowrotethat-tour-welcome-title-name": "Kami No Nusna ?",
+	"whowrotethat-tour-welcome-description": "Çıwey kenarê hacet aktiv kerê. Eyni iştirakê karberi nışan kerdışi rê şırê metini ser. Nuştekari u detayanê vurnayışi rê direkt bıtıknê.",
+	"whowrotethat-tour-welcome-dismiss": "Mı fehm kerd!",
+	"whowrotethat-revision-added": "$1 no $2 kerdo cı",
+	"whowrotethat-revision-attribution": "Pela $1 nusenê",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Pela $1 nusenê.",
+	"whowrotethat-revision-attribution-lessthan-percent": "%1 ra tayn",
+	"whowrotethat-revision-deleted-username": "(Namey karberi ya zi IP wedariyê)"
+}
