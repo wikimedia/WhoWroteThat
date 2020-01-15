@@ -213,19 +213,21 @@ module.exports = function Gruntfile( grunt ) {
 				};
 			// Name (may be for beta). Maximum length 45 characters.
 			if ( langBlob[ lang ][ nameMsg ] ) {
-				const name = langBlob[ lang ][ nameMsg ];
-				if ( name.length >= 45 ) {
-					grunt.log.error( 'The ' + lang + " '" + nameMsg + "' message must be 45 characters or less. Provided: " + name );
+				const name = langBlob[ lang ][ nameMsg ],
+					nameLengthMax = 45;
+				if ( name.length > nameLengthMax ) {
+					grunt.log.error( 'The ' + lang + " '" + nameMsg + "' message must be " + nameLengthMax + ' characters or less. Provided: ' + name );
 				}
-				locale.name.message = name.substring( 0, 44 );
+				locale.name.message = name.substring( 0, nameLengthMax );
 			}
 			// Description (may have beta appended). Maximum 132 characters.
 			if ( langBlob[ lang ][ descMsg ] ) {
-				const desc = langBlob[ lang ][ descMsg ];
-				if ( desc.length >= 132 ) {
-					grunt.log.error( 'The ' + lang + " '" + descMsg + "' message must be 132 characters or less. Provided: " + desc );
+				const desc = langBlob[ lang ][ descMsg ],
+					descLengthMax = 132;
+				if ( desc.length > descLengthMax ) {
+					grunt.log.error( 'The ' + lang + " '" + descMsg + "' message must be " + descLengthMax + ' characters or less. Provided: ' + desc );
 				}
-				locale.description.message = desc.substring( 0, 131 );
+				locale.description.message = desc.substring( 0, descLengthMax );
 			}
 			// Write the locale file. The directory name must use underscores, not hyphens.
 			let localeFile,
