@@ -108,7 +108,7 @@ class Api {
 	 */
 	getAjaxURL() {
 		// Get the subdomain, or fallback on the language code (unlikely).
-		let domainParts = this.mwConfig.get( 'wgServerName' ).match( /^([^.]*)\./ ),
+		const domainParts = this.mwConfig.get( 'wgServerName' ).match( /^([^.]*)\./ ),
 			subdomain = domainParts[ 1 ] !== undefined ? domainParts[ 1 ] : this.mwConfig.get( 'wgContentLanguage' );
 
 		// Compile the full URL.
@@ -161,7 +161,7 @@ class Api {
 		this.tokenMap = {};
 
 		// Map tokens to the new data
-		for ( let tokenId in results.tokens ) {
+		for ( const tokenId in results.tokens ) {
 			this.tokenMap[ tokenId ] = this.parseTokenInfo( results, tokenId );
 		}
 	}
@@ -176,7 +176,7 @@ class Api {
 	 * that represents the token info or false if a token wasn't found.
 	 */
 	parseTokenInfo( results, tokenId ) {
-		let revId, revision, username, isIP, score;
+		let username, score;
 
 		// Get the token information. results.tokens structure:
 		// [ [ conflict_score, str, o_rev_id, in, out, editor/class_name, age ], ... ]
@@ -189,8 +189,8 @@ class Api {
 		// Get revision information. results.revisions structure:
 		// { rev_id: [ timestamp, parent_rev_id, user_id, editor_name ], ... }
 		// e.g. Array(4) [ "2017-03-11T02:12:47Z", 769315355, "18201938", "Biogeographist" ]
-		revId = token[ 2 ];
-		revision = results.revisions[ revId ];
+		const revId = token[ 2 ];
+		const revision = results.revisions[ revId ];
 		username = revision[ 3 ];
 
 		// Get the user's edit score (percentage of content edited).
@@ -204,7 +204,7 @@ class Api {
 		}
 
 		// WikiWho prefixes IP addresses with '0|'.
-		isIP = username.slice( 0, 2 ) === '0|';
+		const isIP = username.slice( 0, 2 ) === '0|';
 		// Clean up username if it is an IP for displaying after
 		// the user's score edit has been calculated
 		username = isIP ? username.slice( 2 ) : username;
@@ -285,7 +285,7 @@ class Api {
 	 * or rejects if there was an error.
 	 */
 	getData() {
-		let promiseIdentifier = this.getRevisionId();
+		const promiseIdentifier = this.getRevisionId();
 
 		// If this promise doesn't exist yet, fetch it
 		if ( !this.promiseCache.data[ promiseIdentifier ] ) {

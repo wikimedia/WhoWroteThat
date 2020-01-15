@@ -28,6 +28,7 @@ config.outputEnvironment = 'Browser extension';
 			).then( function () {
 				// Verify we are only loading the tour if the button is available,
 				// this is more of a sanity check.
+				// eslint-disable-next-line no-jquery/no-global-selector
 				if ( !$( '#t-whowrotethat' ).length ) {
 					return;
 				}
@@ -36,6 +37,7 @@ config.outputEnvironment = 'Browser extension';
 				const $overlay = wwtController.getOverlay(),
 					WelcomePopupWidget = require( '../WelcomePopupWidget' ),
 					welcome = new WelcomePopupWidget( {
+						// eslint-disable-next-line no-jquery/no-global-selector
 						$floatableContainer: $( '#t-whowrotethat' ),
 						$overlay
 					} );
@@ -53,7 +55,7 @@ config.outputEnvironment = 'Browser extension';
 					welcome.toggle( false );
 				} );
 
-				$( 'html' ).addClass( 'wwt-popup' );
+				$( document.documentElement ).addClass( 'wwt-popup' );
 				$overlay.append( welcome.$element );
 
 				// Show the popup if the model is enabled and the popup wasn't
@@ -85,6 +87,7 @@ config.outputEnvironment = 'Browser extension';
 		 */
 		loadWhoWroteThat = () => {
 			wwtController.initialize(
+				// eslint-disable-next-line no-jquery/no-global-selector
 				$( '.mw-parser-output' ),
 				{
 					lang: mw.config.get( 'wgUserLanguage' ),
@@ -104,7 +107,8 @@ config.outputEnvironment = 'Browser extension';
 			wwtController.getLink().on( 'click', onActivationLinkClick );
 
 			// Check whether to load the tour
-			if ( $( 'html' ).hasClass( 'wwt-welcome-tour-unseen' ) ) {
+			// eslint-disable-next-line no-jquery/no-class-state
+			if ( $( document.documentElement ).hasClass( 'wwt-welcome-tour-unseen' ) ) {
 				loadWhoWroteThatWelcomeTour();
 			}
 
