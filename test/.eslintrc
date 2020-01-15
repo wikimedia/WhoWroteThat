@@ -3,5 +3,8 @@
    "globals": {
       "describe": false,
       "it": false
+   },
+   "rules": {
+      "no-jquery/no-parse-html-literal": "off"
    }
 }

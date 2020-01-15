@@ -143,6 +143,7 @@ class Controller {
 				// Re-initialize the model, repeating what's done in browserextension.js
 				// This is due to VE replacing the content element,
 				// rather than inserting new contents into it.
+				// eslint-disable-next-line no-jquery/no-global-selector
 				this.model.initialize( $( '.mw-parser-output' ), config );
 				this.model.toggleEnabled( true );
 			} );
@@ -153,7 +154,8 @@ class Controller {
 			// This is specifically for the case where we load the page with VE
 			// in the process of loading. In that case, if we leave VE after it
 			// loaded, the events above will trigger a change in the enabled state
-			veLoading = $( 'html' ).hasClass( 've-activated' ) ||
+			// eslint-disable-next-line no-jquery/no-class-state
+			veLoading = $( document.documentElement ).hasClass( 've-activated' ) ||
 				(
 					uri &&
 						(
@@ -355,7 +357,7 @@ class Controller {
 			return this.$overlay;
 		}
 		this.$overlay = $( '<div>' ).addClass( 'wwt-overlay' );
-		$( 'body' ).append( this.$overlay );
+		$( document.body ).append( this.$overlay );
 		return this.$overlay;
 	}
 
@@ -408,7 +410,6 @@ class Controller {
 }
 
 // Initialize the singleton
-// eslint-disable-next-line one-var
 const wwtController = new Controller();
 
 export default wwtController;

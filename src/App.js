@@ -3,6 +3,8 @@ import InfoBarWidget from './InfoBarWidget';
 import RevisionPopupWidget from './RevisionPopupWidget';
 import wwtController from './Controller';
 
+/* eslint-disable no-jquery/no-global-selector */
+
 /**
  * Application class, responsible for managing the WWT ui
  * and the actions on the DOM returned by the API
@@ -28,6 +30,7 @@ class App {
 		this.widget = new InfoBarWidget();
 
 		// Attach widget
+		// eslint-disable-next-line no-jquery/no-class-state
 		if ( $( 'body' ).hasClass( 'skin-timeless' ) ) {
 			$( '#mw-content-wrapper' ).prepend( this.widget.$element );
 		} else {
@@ -158,10 +161,12 @@ class App {
 
 		// Add the class to immediate children of the parser output
 		// that don't contain tokenized elements.
-		$.each( $content, ( _i, el ) => {
+		$content.each( ( _i, el ) => {
 			const $el = $( el );
+			// eslint-disable-next-line no-jquery/no-class-state
 			if ( !$el.hasClass( 'editor-token' ) && !$el.find( '.editor-token' ).length &&
 				// Don't gray out nodes with no visible content. See T235130#5725001.
+				// eslint-disable-next-line no-jquery/no-sizzle
 				!!$el.text().trim() && !$el.is( ':visible' )
 			) {
 				$el.addClass( 'wwt-disabled' )
