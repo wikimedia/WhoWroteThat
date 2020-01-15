@@ -162,7 +162,13 @@ RevisionPopupWidget.prototype.updateData = function ( data = {} ) {
 	// Comment content
 	this.commentLabel.setLabel(
 		new OO.ui.HtmlSnippet(
-			Tools.bidiIsolate( $.parseHTML( data.comment ) )
+			data.comment === undefined ?
+				$( '<span>' )
+					.addClass( 'history-deleted' )
+					// Note we can't use the native MediaWiki 'revdelete-summary-hid'
+					// message because it can include parser functions.
+					.text( mw.msg( 'whowrotethat-revision-edit-summary-hidden' ) ) :
+				Tools.bidiIsolate( $.parseHTML( data.comment ) )
 		)
 	);
 

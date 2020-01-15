@@ -27,5 +27,6 @@
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "They have written $1 of the page.",
 	"whowrotethat-revision-attribution-lessthan-percent": "less than 1%",
-	"whowrotethat-revision-deleted-username": "(username or IP removed)"
+	"whowrotethat-revision-deleted-username": "(username or IP removed)",
+	"whowrotethat-revision-edit-summary-hidden": "(edit summary removed)"
 }

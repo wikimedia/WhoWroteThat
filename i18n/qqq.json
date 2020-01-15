@@ -32,5 +32,7 @@
 	"whowrotethat-revision-attribution-percent": "Emphasised percentage of authorship, to be inserted into {{msg-wm|whowrotethat-revision-attribution}}.",
 	"whowrotethat-revision-attribution-lessthan": "Message indicating that the author has edited less than 1% of the page.\n\n{{Doc-singularthey}}\n\nThis is shown immediately after the {{msg-wm|whowrotethat-revision-added}} message.",
 	"whowrotethat-revision-attribution-lessthan-percent": "Emphasised percentage of authorship, to be inserted into {{msg-wm|whowrotethat-revision-attribution-lessthan}}.",
-	"whowrotethat-revision-deleted-username": "Message shown instead of the username if the username has been removed from public view."
+	"whowrotethat-revision-deleted-username": "Message shown instead of the username if the username has been removed from public view.",
+	"whowrotethat-revision-edit-summary-hidden": "Message shown instead of the revision edit summary if the summary has been removed from the public view.\n\nThis is the same message as {{msg-mw|revdelete-summary-hid}}."
+
 }
