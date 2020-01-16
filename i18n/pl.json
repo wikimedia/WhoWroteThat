@@ -20,5 +20,6 @@
 	"whowrotethat-tour-welcome-title": "$1 jest włączone!",
 	"whowrotethat-tour-welcome-dismiss": "Wszystko jasne!",
 	"whowrotethat-revision-attribution-lessthan-percent": "mniej niż 1%",
-	"whowrotethat-revision-deleted-username": "(nazwa użytkownika lub IP usunięte)"
+	"whowrotethat-revision-deleted-username": "(nazwa użytkownika lub IP usunięte)",
+	"whowrotethat-revision-edit-summary-hidden": "(usunięto opis zmian)"
 }

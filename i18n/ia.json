@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"whowrotethat-ext-desc-beta": "Explora information sur le autores de Wikipedia. Actionate per WikiWho. Iste es le version beta, destinate pro test solmente.",
+	"whowrotethat-state-pending": "$1 es in curso de cargamento. Isto pote prender alcun tempore.",
+	"whowrotethat-state-pending-name": "Qui ha scribite isto?",
+	"whowrotethat-tour-welcome-title": "$1 is activate!",
+	"whowrotethat-tour-welcome-title-name": "Qui ha scribite isto?",
+	"whowrotethat-revision-attribution": "Ha scribite $1 del pagina.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Ha scribite $1 del pagina.",
+	"whowrotethat-revision-attribution-lessthan-percent": "minus de 1%"
+}

@@ -32,5 +32,6 @@
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "הם כתבו $1 מהדף.",
 	"whowrotethat-revision-attribution-lessthan-percent": "פחות מ־1%",
-	"whowrotethat-revision-deleted-username": "(שם המשתמש או כתובת ה־IP הוסרו)"
+	"whowrotethat-revision-deleted-username": "(שם המשתמש או כתובת ה־IP הוסרו)",
+	"whowrotethat-revision-edit-summary-hidden": "(תקציר העריכה הוסתר)"
 }

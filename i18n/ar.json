@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"ديفيد"
+			"ديفيد",
+			"Meno25"
 		]
 	},
 	"whowrotethat-ext-name": "من كتب ذلك؟",
@@ -13,7 +14,7 @@
 	"whowrotethat-deactivation-link": "إغلاق من كتب ذلك؟",
 	"whowrotethat-state-pending": "يجري تحميل $1، وهذا قد يستغرق بعض الوقت.",
 	"whowrotethat-state-pending-name": "من كتب ذلك؟",
-	"whowrotethat-state-error": "خطأ في API: $1",
+	"whowrotethat-state-error": "خطأ: $1",
 	"whowrotethat-error-refresh": "يُرجَى تحديث الصفحة أو إعادة المحاولة لاحقا.",
 	"whowrotethat-error-later": "الرجاء معاودة المحاولة في وقت لاحق.",
 	"whowrotethat-error-contact": "الرجاء $1 حول هذه المشكلة.",
@@ -22,12 +23,13 @@
 	"whowrotethat-ready-general": "لتحم لرؤية مساهمات المؤلف نفسه، انقر للحصول على مزيد من التفاصيل.",
 	"whowrotethat-tour-welcome-title": "$1 مفعلة!",
 	"whowrotethat-tour-welcome-title-name": "من كتب ذلك؟",
-	"whowrotethat-tour-welcome-description": "قم بتنشيط الأداة من الشريط الجانبي، مرر الفأرة فوق النص لرؤية المؤلف ومساهماته الأخرى في هذه الصفحة، انقر للحصول على مزيد من التفاصيل.",
+	"whowrotethat-tour-welcome-description": "قم بتنشيط الأداة من الشريط الجانبي. مرر الفأرة فوق النص لرؤية مساهمات نفس المؤلف. اضغط لرؤية تفاصيل المؤلف والمراجعة.",
 	"whowrotethat-tour-welcome-dismiss": "حسنا!",
 	"whowrotethat-revision-added": "$1 أضاف هذا على $2.",
 	"whowrotethat-revision-attribution": "لقد كتبوا $1 من الصفحة.",
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "لقد كتبوا أقل من $1 من الصفحة.",
 	"whowrotethat-revision-attribution-lessthan-percent": "أقل من 1%",
-	"whowrotethat-revision-deleted-username": "(تمت إزالة اسم المستخدم أو الآيبي)"
+	"whowrotethat-revision-deleted-username": "(تمت إزالة اسم المستخدم أو الآيبي)",
+	"whowrotethat-revision-edit-summary-hidden": "(ملخص التعديل تمت إزالته)"
 }

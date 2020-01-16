@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tacsipacsi"
+		]
+	},
+	"whowrotethat-ext-name": "Wer hat es geschrieben?",
+	"whowrotethat-ext-name-beta": "Wer hat es geschrieben? (BETA)",
+	"whowrotethat-activation-link": "Wer hat es geschrieben?",
+	"whowrotethat-activation-link-tooltip": "„Wer hat es geschrieben?“ aktivieren",
+	"whowrotethat-deactivation-link": "„Wer hat es geschrieben?“ schließen",
+	"whowrotethat-state-pending": "„$1“ wird geladen. Dies kann eine Weile dauern.",
+	"whowrotethat-state-pending-name": "Wer hat es geschrieben?",
+	"whowrotethat-state-error": "Fehler: $1",
+	"whowrotethat-error-refresh": "Bitte lade die Seite neu oder versuche es später erneut.",
+	"whowrotethat-error-later": "Bitte versuche es später erneut.",
+	"whowrotethat-error-contact": "Bitte $1 über dieses Problem.",
+	"whowrotethat-error-contact-link": "kontaktiere uns",
+	"whowrotethat-ready-title": "Wer hat es geschrieben?",
+	"whowrotethat-tour-welcome-title": "„$1“ wird aktiviert!",
+	"whowrotethat-tour-welcome-title-name": "Wer hat es geschrieben?",
+	"whowrotethat-tour-welcome-dismiss": "Verstanden!",
+	"whowrotethat-revision-added": "$1 hat dies am $2 hinzugefügt.",
+	"whowrotethat-revision-deleted-username": "(Benutzername oder IP entfernt)"
+}

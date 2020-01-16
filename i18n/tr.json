@@ -30,5 +30,6 @@
 	"whowrotethat-revision-attribution-percent": "%$1",
 	"whowrotethat-revision-attribution-lessthan": "Sayfanın $1 yazdılar.",
 	"whowrotethat-revision-attribution-lessthan-percent": "%1'den az",
-	"whowrotethat-revision-deleted-username": "(kullanıcı adı veya IP kaldırıldı)"
+	"whowrotethat-revision-deleted-username": "(kullanıcı adı veya IP kaldırıldı)",
+	"whowrotethat-revision-edit-summary-hidden": "(düzenleme özeti silindi)"
 }
