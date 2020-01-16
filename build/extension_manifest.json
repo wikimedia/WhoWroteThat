@@ -41,5 +41,5 @@
 		"run_at": "document_end"
 	} ],
 	"web_accessible_resources": [ "js/generated.pageScript.js", "js/generated.welcomeTour.js" ],
-	"permissions": [ "tabs", "activeTab", "storage" ]
+	"permissions": [ "activeTab", "storage" ]
 }
