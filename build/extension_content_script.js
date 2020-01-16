@@ -76,7 +76,7 @@ function main() {
 	window.addEventListener( 'message', messageListener );
 
 	// Inject page script into the DOM
-	let script = document.createElement( 'script' ),
+	const script = document.createElement( 'script' ),
 		node = document.getElementsByTagName( 'body' )[ 0 ];
 	script.id = contentScriptId;
 	script.type = 'text/javascript';

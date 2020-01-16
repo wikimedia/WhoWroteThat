@@ -1,17 +1,19 @@
 {
-    "extends": "wikimedia",
+    "extends": [
+        "wikimedia/client",
+        "wikimedia/jquery",
+        "wikimedia/mediawiki",
+        "wikimedia/language/es6"
+    ],
     "env": {
-        "node": true,
-        "es6": true,
-        "browser": true
+        "node": true
     },
     "globals": {
-        "$": false,
-        "mw": false,
-        "OO": false,
-        "chrome": false,
-        "browser": false,
-        "moment": false
+        "mw": "readonly",
+        "OO": "readonly",
+        "chrome": "readonly",
+        "browser": "readonly",
+        "moment": "readonly"
     },
     "parserOptions": {
         "sourceType": "module"

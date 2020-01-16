@@ -15,22 +15,24 @@ describe( 'wwtController test', () => {
 		}
 	);
 
-	// TODO: Find a better way to test the system without having to
-	// load all the dependency chains with OOUI, etc.
-	// it( 'Controller launches the system.', done => {
-	// 	wwtController.launch().then( () => {
-	// 		expect( wwtController.getModel().isActive() ).to.be.true;
-	// 		done();
-	// 	} );
-	// } );
-	//
-	// it( 'Controller dismisses the system.', done => {
-	// 	wwtController.launch().then( () => {
-	// 		wwtController.dismiss();
-	// 		expect( wwtController.getModel().isActive() ).to.be.false;
-	// 		done();
-	// 	} );
-	// } );
+	/*
+	TODO: Find a better way to test the system without having to
+	load all the dependency chains with OOUI, etc.
+	it( 'Controller launches the system.', done => {
+		wwtController.launch().then( () => {
+			expect( wwtController.getModel().isActive() ).to.be.true;
+			done();
+		} );
+	} );
+
+	it( 'Controller dismisses the system.', done => {
+		wwtController.launch().then( () => {
+			wwtController.dismiss();
+			expect( wwtController.getModel().isActive() ).to.be.false;
+			done();
+		} );
+	} );
+	*/
 
 	it( 'Controller cannot launch if system is disabled.', done => {
 		wwtController.getModel().toggleEnabled( false );

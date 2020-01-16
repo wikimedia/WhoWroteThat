@@ -228,9 +228,8 @@ module.exports = function Gruntfile( grunt ) {
 				locale.description.message = desc.substring( 0, 131 );
 			}
 			// Write the locale file. The directory name must use underscores, not hyphens.
-			let localeFile,
-				langDirname = lang,
-				langParts = lang.split( '-', 2 );
+			let langDirname = lang;
+			const langParts = lang.split( '-', 2 );
 			if ( langParts.length > 1 ) {
 				// Use underscore, and uppercase the latter parts.
 				langDirname = langParts[ 0 ] + '_' + langParts[ 1 ].toUpperCase();
@@ -239,7 +238,7 @@ module.exports = function Gruntfile( grunt ) {
 				// Handle one-off code difference between TranslateWiki and browser stores.
 				langDirname = 'pt_PT';
 			}
-			localeFile = 'dist/extension/_locales/' + langDirname + '/messages.json';
+			const localeFile = 'dist/extension/_locales/' + langDirname + '/messages.json';
 			grunt.log.ok( 'Writing ' + betaLogMsg + 'messages to ' + localeFile );
 			grunt.file.write( localeFile, JSON.stringify( locale, null, 4 ) );
 		} );

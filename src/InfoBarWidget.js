@@ -120,9 +120,9 @@ InfoBarWidget.prototype.setState = function ( state, errorCode = '' ) {
  */
 InfoBarWidget.prototype.setErrorMessage = function ( errCode = 'refresh' ) {
 	// Messages used here:
-	// whowrotethat-error-refresh
-	// whowrotethat-error-later
-	// whowrotethat-error-contact
+	// * whowrotethat-error-refresh
+	// * whowrotethat-error-later
+	// * whowrotethat-error-contact
 	let errorMessage = mw.msg( 'whowrotethat-error-' + errCode );
 	if ( errCode === 'contact' ) {
 		// The contact error message is the only with with a different signature, so we handle it.
