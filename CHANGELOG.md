@@ -6,8 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.14.0] - 2020-01-16
+### Added
+- Show "edit summary removed" message in the revision details pop-up when an edit summary has been hidden.
+
 ### Fixed
 - Add the `mediawiki.api` module to the initial dependencies. Fixes a bug in the loading of WWT in some cases with the welcome popup.
+- Correctly determine the interface language in all sitations (to match MediaWiki).
+
+### Changed
+- Updated code linting rulesets.
+- Translation updates.
 
 ## [0.13.0] - 2020-01-10
 ### Added
@@ -101,7 +111,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.12.0...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.14.0...HEAD
+[0.14.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.13.0...0.14.0
+[0.13.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.12.0...0.13.0
 [0.12.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.11.0...0.12.0
 [0.11.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.10.0...0.11.0
 [0.10.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.9.0...0.10.0
