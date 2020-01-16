@@ -115,7 +115,7 @@ config.outputEnvironment = 'Browser extension';
 		};
 
 	var q = window.RLQ || ( window.RLQ = [] );
-	q.push( [ [ 'jquery', 'mediawiki.base', 'mediawiki.util', 'mediawiki.jqueryMsg' ], loadWhoWroteThat ] );
+	q.push( [ [ 'jquery', 'mediawiki.base', 'mediawiki.util', 'mediawiki.api', 'mediawiki.jqueryMsg' ], loadWhoWroteThat ] );
 
 	// For debugging purposes, export methods to the window global
 	window.wwtDebug = {
