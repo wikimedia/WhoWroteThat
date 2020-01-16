@@ -280,6 +280,8 @@ module.exports = function Gruntfile( grunt ) {
 						listingLang = 'sv-SE';
 					} else if ( lang === 'nb' ) {
 						listingLang = 'nb-NO';
+					} else if ( lang === 'zh-hant' ) {
+						listingLang = 'zh-CN';
 					}
 					if ( langBlob[ lang ][ nameMsg ] !== undefined &&
 						json.name[ listingLang ] !== langBlob[ lang ][ nameMsg ]
