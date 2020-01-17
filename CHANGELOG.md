@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Correctly check for maximum lengths of the extension's names and descriptions (for Chrome store).
 
+### Removed
+- Don't ask for the [tabs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)
+  browser permission because it's not required.
+
 ## [0.14.0] - 2020-01-16
 ### Added
 - Show "edit summary removed" message in the revision details pop-up when an edit summary has been hidden.
