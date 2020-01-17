@@ -6,7 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-## Removed
+### Fixed
+- Correctly check for maximum lengths of the extension's names and descriptions (for Chrome store).
+
+### Removed
 - Don't ask for the [tabs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)
   browser permission because it's not required.
 
