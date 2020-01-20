@@ -18,11 +18,12 @@
 	"whowrotethat-error-contact-link": "Ota yhteyttä",
 	"whowrotethat-ready-title": "Kenen kirjoittama?",
 	"whowrotethat-ready-general": "Näet saman kirjoittajan osuudet viemällä hiiren osoittimen päälle. Saat lisätietoja napsauttamalla.",
-	"whowrotethat-tour-welcome-title": "<strong><em>Kenen kirjoittama?</em></strong> on otettu käyttöön!",
+	"whowrotethat-tour-welcome-title": "$1 on otettu käyttöön!",
 	"whowrotethat-tour-welcome-description": "Ota työkalu käyttöön sivupalkista. Näet kirjoittajan ja hänen muut osuutensa viemällä hiiren tekstin päälle. Saat lisätietoja napsauttamalla.",
 	"whowrotethat-tour-welcome-dismiss": "Selvä!",
 	"whowrotethat-revision-added": "$1 lisäsi tämän $2.",
-	"whowrotethat-revision-attribution": "Hän on kirjoittanut <strong>$1 %</strong> sivusta.",
-	"whowrotethat-revision-attribution-lessthan": "Hän on kirjoittanut <strong>alle 1%</strong> sivusta.",
+	"whowrotethat-revision-attribution": "Hän on kirjoittanut $1 sivusta.",
+	"whowrotethat-revision-attribution-lessthan": "Hän on kirjoittanut sivusta.",
+	"whowrotethat-revision-attribution-lessthan-percent": "alle 1%",
 	"whowrotethat-revision-deleted-username": "(käyttäjätunnus tai IP-osoite poistettu)"
 }

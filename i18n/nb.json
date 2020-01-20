@@ -26,8 +26,8 @@
 	"whowrotethat-tour-welcome-dismiss": "Skjønner!",
 	"whowrotethat-revision-added": "$1 la til dette $2.",
 	"whowrotethat-revision-attribution": "Vedkommende har skrevet $1 av siden.",
-	"whowrotethat-revision-attribution-percent": "$1&nbsp;%",
+	"whowrotethat-revision-attribution-percent": "$1 %",
 	"whowrotethat-revision-attribution-lessthan": "Vedkommende har skrevet $1 av siden.",
-	"whowrotethat-revision-attribution-lessthan-percent": "mindre enn 1&nbsp;%",
+	"whowrotethat-revision-attribution-lessthan-percent": "mindre enn 1 %",
 	"whowrotethat-revision-deleted-username": "(brukernavn eller IP-adresse fjernet)"
 }

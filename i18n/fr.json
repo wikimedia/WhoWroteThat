@@ -29,7 +29,7 @@
 	"whowrotethat-tour-welcome-description": "Activez l’outil depuis la barre latérale. Survolez du texte avec la souris pour surligner les contributions du même auteur. Cliquez pour voir l’auteur et les détails de la révision.",
 	"whowrotethat-tour-welcome-dismiss": "C’est bon !",
 	"whowrotethat-revision-added": "$1 a ajouté ceci le $2.",
-	"whowrotethat-revision-attribution": "L’auteur a écrit $1 % de la page.",
+	"whowrotethat-revision-attribution": "L’auteur a écrit $1 de la page.",
 	"whowrotethat-revision-attribution-percent": "$1 %",
 	"whowrotethat-revision-attribution-lessthan": "L’auteur a écrit $1 de la page.",
 	"whowrotethat-revision-attribution-lessthan-percent": "moins de 1 %",

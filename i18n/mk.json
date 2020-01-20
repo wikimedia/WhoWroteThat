@@ -26,9 +26,9 @@
 	"whowrotethat-tour-welcome-dismiss": "Јасно!",
 	"whowrotethat-revision-added": "$1 го додаде ова на $2.",
 	"whowrotethat-revision-attribution": "Има напишано $1 од страницата.",
-	"whowrotethat-revision-attribution-percent": "$1&nbsp;%",
+	"whowrotethat-revision-attribution-percent": "$1 %",
 	"whowrotethat-revision-attribution-lessthan": "Има напишано $1 од страницата.",
-	"whowrotethat-revision-attribution-lessthan-percent": "помалку од 1&nbsp;%",
+	"whowrotethat-revision-attribution-lessthan-percent": "помалку од 1 %",
 	"whowrotethat-revision-deleted-username": "(отстрането корисничко име или IP)",
 	"whowrotethat-revision-edit-summary-hidden": "(избришан опис на промени)"
 }
