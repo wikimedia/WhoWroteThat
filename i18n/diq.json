@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mirzali",
-			"Orbot707"
+			"Orbot707",
+			"1917 Ekim Devrimi"
 		]
 	},
 	"whowrotethat-ext-name": "Kami No Nusna ?",
@@ -30,5 +31,6 @@
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "Pela $1 nusenê.",
 	"whowrotethat-revision-attribution-lessthan-percent": "%1 ra tayn",
-	"whowrotethat-revision-deleted-username": "(Namey karberi ya zi IP wedariyê)"
+	"whowrotethat-revision-deleted-username": "(Namey karberi ya zi IP wedariyê)",
+	"whowrotethat-revision-edit-summary-hidden": "(Timarkerdışe enay hewadeyayo)"
 }

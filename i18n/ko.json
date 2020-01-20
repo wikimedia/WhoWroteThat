@@ -28,5 +28,6 @@
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "그들은 이 페이지에서 $1만큼 작성했습니다.",
 	"whowrotethat-revision-attribution-lessthan-percent": "1%보다 적은",
-	"whowrotethat-revision-deleted-username": "(사용자 이름 또는 IP 삭제됨)"
+	"whowrotethat-revision-deleted-username": "(사용자 이름 또는 IP 삭제됨)",
+	"whowrotethat-revision-edit-summary-hidden": "(편집 요약 삭제됨)"
 }

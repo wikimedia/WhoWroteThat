@@ -22,7 +22,7 @@
 	"whowrotethat-ready-general": "同じ執筆者による貢献を見るには名前の上にカーソルを当てます。クリックして詳細をご参照ください。",
 	"whowrotethat-tour-welcome-title": "$1 が有効になりました！",
 	"whowrotethat-tour-welcome-title-name": "Who Wrote That?",
-	"whowrotethat-tour-welcome-description": "サイドバーでツールを有効にします。文にカーソルを当てると執筆者名、このページ上のその他の貢献を閲覧できます。クリックして詳細をご参照ください。",
+	"whowrotethat-tour-welcome-description": "サイドバーでツールを有効にします。文字にカーソルを当てると同一の執筆者による複数の貢献を強調表示します。執筆者と更新の詳細を参照するにはクリックしてください。",
 	"whowrotethat-tour-welcome-dismiss": "了解！",
 	"whowrotethat-revision-added": "$1 がこれを $2 に添加しました。",
 	"whowrotethat-revision-attribution": "ページの $1 を執筆しました。",
