@@ -57,7 +57,14 @@ class Model extends EventEmitter {
 	}
 
 	/**
-	 * Cache the original content we are about to replace
+	 * Cache the original content we are about to replace.
+	 *
+	 * This is done by appending it to the DOM in a hidden div, a slightly hacky workaround to
+	 * accommodate Wikipedia gadgets that do weird things. Normally, deep jQuery-cloning an element
+	 * means it can be re-attached to the DOM later and everything will keep working, but there are
+	 * a few situations (e.g. mis-nested elements; see T231424 for details) where the resulting DOM
+	 * doesn't match what was originally there. To avoid that, we keep the original content attached
+	 * and just hide.
 	 *
 	 * @param {jQuery} [$content=this.$contentWrapper.contents()] A jQuery
 	 *  object to cache. If not given the $contentWrapper will
@@ -66,7 +73,17 @@ class Model extends EventEmitter {
 	 *  it is replaced.
 	 */
 	cacheOriginal( $content = this.$contentWrapper.contents() ) {
-		this.$originalContent = $content.clone( true, true );
+		const cacheClass = 'wwt-cached-original-content';
+		this.$originalContent = $content;
+		let $cache = $( '.' + cacheClass );
+		// If the cache element doesn't already exist, add it.
+		// It will then be re-used for subsequent re-activations of WWT.
+		if ( $cache.length === 0 ) {
+			$cache = $( '<div>' ).addClass( cacheClass );
+			$( 'body' ).append( $cache );
+			$cache.hide();
+		}
+		$cache.append( this.$originalContent );
 	}
 
 	/**
