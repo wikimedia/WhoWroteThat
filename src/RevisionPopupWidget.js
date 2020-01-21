@@ -22,7 +22,6 @@ const RevisionPopupWidget = function RevisionPopupWidget( model, config = {} ) {
 	// Parent constructor
 	RevisionPopupWidget.parent.call( this, Object.assign(
 		{
-			padded: true,
 			autoClose: true,
 			position: 'above',
 			// FIXME: 'force-left' for RTL languages
@@ -35,6 +34,8 @@ const RevisionPopupWidget = function RevisionPopupWidget( model, config = {} ) {
 
 	this.initialize();
 	this.model.on( 'setToken', this.onModelSetToken.bind( this ) );
+	this.$element
+		.addClass( 'wwt-revisionPopupWidget' );
 };
 
 /* Setup */
@@ -93,6 +94,7 @@ RevisionPopupWidget.prototype.initialize = function () {
 	this.commentLabel = new OO.ui.LabelWidget();
 
 	this.revisionAddedLabel = new OO.ui.LabelWidget( {
+		classes: [ 'wwt-revisionPopupWidget-revisionAdded' ]
 	} );
 
 	this.scoreLabel = new OO.ui.LabelWidget( {
@@ -175,6 +177,9 @@ RevisionPopupWidget.prototype.updateData = function ( data = {} ) {
 	this.commentLabel.$element
 		.toggleClass( 'comment', !!data.comment )
 		.toggleClass( 'comment--without-parentheses', !!data.comment );
+	this.$element
+		.toggleClass( 'wwt-revisionPopupWidget-hasComment', !!data.comment )
+		.toggleClass( 'wwt-revisionPopupWidget-noComment', !data.comment );
 
 	// Diff size
 	this.diffSizeLabel.$element

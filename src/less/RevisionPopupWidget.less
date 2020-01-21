@@ -1,38 +1,66 @@
 @line-break-height: 8px;
 
-.wwt-revisionPopupWidget-content {
-	padding: 0.5em;
-}
+.wwt-revisionPopupWidget {
+	&-content {
+		padding: 0.75em 0.5em;
+	}
 
-.wwt-revisionPopupWidget-animate {
-	transition: opacity 1s;
-	opacity: 0;
-}
+	&-animate {
+		transition: opacity 1s;
+		opacity: 0;
 
-.wwt-revisionPopupWidget-animate-visible {
-	opacity: 1;
-}
+		&-visible {
+			opacity: 1;
+		}
+	}
 
-.mw-diff-bytes {
-	font-style: italic;
-}
+	&-revisionAdded.oo-ui-labelWidget {
+		display: inline;
 
-.wwt-shimmer {
-	display: block;
-	height: 18px;
-	margin-bottom: 9px;
-	width: 100%;
-}
+		.wwt-revisionPopupWidget-hasComment & {
+			// If there's a comment, it should go to its own line.
+			// Otherwise, if there's no comment, we want the diff-size
+			// to appear on the same line as the revision-added
+			// details line. This is declared as display:inline;
+			// already, so we just set it to block if a comment
+			// exists.
+			display: block;
+			margin-bottom: @line-break-height;
+		}
+		word-break: break-word;
+	}
 
-/* Prevent 1-pixel jumping of when shimmer disappears and a 2-line summary appears. */
-.wwt-shimmer:last-of-type {
-	margin-bottom: @line-break-height;
-	margin-top: @line-break-height * 2;
-}
+	.comment {
+		display: inline;
+		font-style: italic;
+		word-break: break-word;
+	}
 
-.wwt-revisionPopupWidget-comment,
-.wwt-revisionPopupWidget-attribution {
-	margin-top: @line-break-height;
+	.mw-diff-bytes {
+		display: inline;
+		font-style: italic;
+		margin-left: 0.25em;
+	}
+
+	// Must make the rule more specific to override the rules
+	// of oo.ui.widget which override these otherwise
+	&-attribution.oo-ui-labelWidget {
+		display: block;
+		margin-top: @line-break-height;
+	}
+
+	.wwt-shimmer {
+		display: block;
+		height: 18px;
+		margin-bottom: 9px;
+		width: 100%;
+	}
+
+	/* Prevent 1-pixel jumping of when shimmer disappears and a 2-line summary appears. */
+	.wwt-shimmer:last-of-type {
+		margin-bottom: @line-break-height;
+		margin-top: @line-break-height * 2;
+	}
 }
 
 /* Adapted from http://cloudcannon.com/deconstructions/2014/11/15/facebook-content-placeholder-deconstruction.html */
