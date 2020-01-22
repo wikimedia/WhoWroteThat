@@ -6,8 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.15.0] - 2020-01-22
+### Changed
+- Translation updates.
+
 ### Fixed
 - Correctly check for maximum lengths of the extension's names and descriptions (for Chrome store).
+- Change how the original article HTML is cached, to avoid problems with some gadgets (e.g. wikiminiatlas).
+- Correct display of revision popup content
 
 ### Removed
 - Don't ask for the [tabs](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)
@@ -117,7 +124,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.14.0...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.0...HEAD
+[0.15.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.14.0...0.15.0
 [0.14.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.13.0...0.14.0
 [0.13.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.12.0...0.13.0
 [0.12.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.11.0...0.12.0
