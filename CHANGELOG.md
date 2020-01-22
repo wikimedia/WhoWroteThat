@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.15.1] - 2020-01-22
+### Fixed
+- Gecko ID correction for Firefox, in preparation of the first non-beta release.
+
 ## [0.15.0] - 2020-01-22
 ### Changed
 - Translation updates.
@@ -125,6 +129,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Internationalization improvements
 
 [Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.0...HEAD
+[0.15.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.0...0.15.1
 [0.15.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.14.0...0.15.0
 [0.14.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.13.0...0.14.0
 [0.13.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.12.0...0.13.0
