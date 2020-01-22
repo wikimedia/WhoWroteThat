@@ -12,14 +12,14 @@
       }
    },
    "dependencies": {
-      "@babel/polyfill": "^7.7.0"
+      "@babel/polyfill": "^7.8.3"
    },
    "devDependencies": {
-      "@babel/cli": "^7.7.7",
-      "@babel/core": "^7.7.7",
-      "@babel/node": "^7.7.7",
-      "@babel/preset-env": "^7.7.7",
-      "@babel/register": "^7.7.7",
+      "@babel/cli": "^7.8.3",
+      "@babel/core": "^7.8.3",
+      "@babel/node": "^7.8.3",
+      "@babel/preset-env": "^7.8.3",
+      "@babel/register": "^7.8.3",
       "babelify": "~10.0.0",
       "chai": "^3.4.1",
       "eslint": "^6.8.0",
@@ -35,7 +35,7 @@
       "grunt-contrib-less": "^2.0.0",
       "grunt-contrib-qunit": "^2.0.0",
       "grunt-eslint": "22.0.0",
-      "grunt-jsdoc": "^2.4.0",
+      "grunt-jsdoc": "^2.4.1",
       "grunt-replace": "^1.0.1",
       "grunt-shell": "^3.0.1",
       "grunt-stylelint": "^0.13.0",

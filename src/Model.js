@@ -80,6 +80,7 @@ class Model extends EventEmitter {
 		// It will then be re-used for subsequent re-activations of WWT.
 		if ( $cache.length === 0 ) {
 			$cache = $( '<div>' ).addClass( cacheClass );
+			/* eslint-disable-next-line no-jquery/no-global-selector */
 			$( 'body' ).append( $cache );
 			$cache.hide();
 		}
