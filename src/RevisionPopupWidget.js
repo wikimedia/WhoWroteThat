@@ -159,7 +159,9 @@ RevisionPopupWidget.prototype.updateData = function ( data = {} ) {
 		// i18n message keys for the bolded percentages are:
 		// * whowrotethat-revision-attribution-percent
 		// * whowrotethat-revision-attribution-lessthan-percent
-		$scorePercent = $( '<strong>' ).text( mw.msg( scoreMsgKey + '-percent', data.score ) );
+		$scorePercent = $( '<strong>' )
+			.text( mw.msg( scoreMsgKey + '-percent', data.score ) )
+			.addClass( 'wwt-revisionPopupWidget-attribution-percentage' );
 
 	// Comment content
 	this.commentLabel.setLabel(
