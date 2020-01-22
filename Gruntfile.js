@@ -312,7 +312,7 @@ module.exports = function Gruntfile( grunt ) {
 			manifest = grunt.file.readJSON( 'dist/extension/manifest.json' );
 
 		// Firefox: set extension ID.
-		manifest.browser_specific_settings.gecko.id = isBeta ? '{7c53a467-2542-497a-86fb-59c2904a56d1}' : 'whowrotethat@wikimedia';
+		manifest.browser_specific_settings.gecko.id = isBeta ? 'whowrotethat-beta@wikimedia' : '{7c53a467-2542-497a-86fb-59c2904a56d1}';
 		grunt.file.write( 'dist/extension/manifest.json', JSON.stringify( manifest, null, 4 ) );
 
 		// Chrome: remove non-Chrome key.
