@@ -40,6 +40,6 @@
 		"css": [ "generated.whowrotethat.css" ],
 		"run_at": "document_end"
 	} ],
-	"web_accessible_resources": [ "js/generated.pageScript.js", "js/generated.welcomeTour.js" ],
+	"web_accessible_resources": [ "js/generated.pageScript.js" ],
 	"permissions": [ "activeTab", "storage" ]
 }
