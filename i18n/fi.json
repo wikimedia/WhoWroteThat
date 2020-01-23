@@ -23,7 +23,7 @@
 	"whowrotethat-tour-welcome-dismiss": "Selvä!",
 	"whowrotethat-revision-added": "$1 lisäsi tämän $2.",
 	"whowrotethat-revision-attribution": "Hän on kirjoittanut $1 sivusta.",
-	"whowrotethat-revision-attribution-lessthan": "Hän on kirjoittanut sivusta.",
+	"whowrotethat-revision-attribution-lessthan": "Hän on kirjoittanut $1 sivusta.",
 	"whowrotethat-revision-attribution-lessthan-percent": "alle 1%",
 	"whowrotethat-revision-deleted-username": "(käyttäjätunnus tai IP-osoite poistettu)"
 }
