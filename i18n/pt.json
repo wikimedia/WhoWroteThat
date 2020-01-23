@@ -3,7 +3,8 @@
 		"authors": [
 			"Mansil alfalb",
 			"Hamilton Abreu",
-			"Fitoschido"
+			"Fitoschido",
+			"Mansil"
 		]
 	},
 	"whowrotethat-ext-name": "Quem escreveu isso?",
@@ -31,5 +32,6 @@
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "O autor escreveu $1 da página.",
 	"whowrotethat-revision-attribution-lessthan-percent": "menos de 1%",
-	"whowrotethat-revision-deleted-username": "(nome de utilizador ou IP removido)"
+	"whowrotethat-revision-deleted-username": "(nome de utilizador ou IP removido)",
+	"whowrotethat-revision-edit-summary-hidden": "(resumo de edição removido)"
 }
