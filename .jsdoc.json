@@ -8,7 +8,6 @@
   "opts": {
     "encoding": "utf8",
     "readme": "README.md",
-    "tutorials": "tutorials",
     "recurse": true,
     "template": "node_modules/jsdoc-wmf-theme",
     "package": "package.json",
