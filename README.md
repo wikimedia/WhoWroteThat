@@ -35,7 +35,7 @@ The tool works on Wikipedias supported by the WhoColor API:
 
 1. Navigate to the extension's page for your browser:
    * [Firefox](https://addons.mozilla.org/en-US/firefox/addon/whowrotethat/)
-   * [Chrome](https://chrome.google.com/webstore/detail/who-wrote-that-beta/ekkbnedhfelfaidbpaedaecjiokkionn)
+   * [Chrome](https://chrome.google.com/webstore/detail/who-wrote-that/ekkbnedhfelfaidbpaedaecjiokkionn)
 2. Click 'Add to Firefox' or 'Add to Chrome'.
 3. You will be prompted to grant permission to install the extension. Do so.
 4. After installation, when you go to any applicable Wikipedia article, there will be a new 'Who Wrote That?' link in the sidebar.
@@ -77,8 +77,9 @@ but WWT only uses the first three
 The `*_source.zip` files contain the source code,
 for submission to the Firefox add-ons store (but not for Chrome).
 
-Maintainers can upload releases via:
-* https://addons.mozilla.org/en-US/developers/addon/whowrotethat-beta/edit
+Maintainers (i.e. any members of the [wmf-commtech Google Group](https://groups.google.com/forum/#!forum/wmf-commtech))
+can upload releases via:
+* https://addons.mozilla.org/en-US/developers/addon/whowrotethat/edit
 * https://chrome.google.com/webstore/developer/edit/ekkbnedhfelfaidbpaedaecjiokkionn
 
 ### Firefox store localization
