@@ -11,6 +11,7 @@
 	"whowrotethat-ext-name-beta": "The name of the beta version of the browser extension (used on the Firefox and Chrome stores). Maximum 45 characters.",
 	"whowrotethat-ext-desc": "Description of the browser extension (used on the Firefox and Chrome stores). Maximum 132 characters.",
 	"whowrotethat-ext-desc-beta": "Description of the beta version of the browser extension (used on the Firefox and Chrome stores). Maximum 132 characters.",
+	"whowrotethat-ext-longdesc": "Longer description of the browser extension. May contain paragraphs, but no HTML.",
 	"whowrotethat-activation-link": "The text for the link that turns Who Wrote That on",
 	"whowrotethat-activation-link-tooltip": "The tooltip for the link that turns Who Wrote That on",
 	"whowrotethat-deactivation-link": "The text for the link that turns Who Wrote That off",
