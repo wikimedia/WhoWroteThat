@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Theklan"
+		]
+	},
+	"whowrotethat-ext-name": "Nork idatzi du hori?",
+	"whowrotethat-ext-name-beta": "Nork idatzi du hori? (BETA)",
+	"whowrotethat-ext-desc": "Aztertu testu baten egiletza eta aldaketaren informazioa zuzenean Wikipediako artikulu batean. WikiWho darabil.",
+	"whowrotethat-ext-desc-beta": "Wikipediako artikuluen egiletza informazioa aztertu. WikiWho darabil. Hau BETA bertsioa da, probak egiteko erabiltzen dena.",
+	"whowrotethat-activation-link": "Nork idatzi du hori?",
+	"whowrotethat-activation-link-tooltip": "Nork idatzi du hori aktibatu?",
+	"whowrotethat-deactivation-link": "Nork idatzi du hori itxi?",
+	"whowrotethat-state-pending": "$1 kargatzen ari da. Baliteke tarte bat behar izatea.",
+	"whowrotethat-state-pending-name": "Nork idatzi du hori?",
+	"whowrotethat-state-error": "Akatsa: $1",
+	"whowrotethat-error-refresh": "Mesedez, birkarga ezazu orrialdea edo beranduago saia zaitez.",
+	"whowrotethat-error-later": "Saia zaitez beranduago, mesedez.",
+	"whowrotethat-error-contact": "Mesedez, $1 gai honi buruz",
+	"whowrotethat-error-contact-link": "jarri harremanetan",
+	"whowrotethat-ready-title": "Nork idatzi du hori?",
+	"whowrotethat-ready-general": "Pasa ezazu sagua gainetik lankide berberaren beste ekarpen batzuk ikusiko. Egin klik xehetasun gehiago ikusteko.",
+	"whowrotethat-tour-welcome-title": "$1 gaituta dago!",
+	"whowrotethat-tour-welcome-title-name": "Nork idatzi du hori?",
+	"whowrotethat-tour-welcome-description": "Aktibatu tresna albo-barra erabilita. Testuaren gainean jarri egile berberaren beste ekarpen batzuk ikusteko. Egin klik egilearen aldaketaren detaileak ikusteko.",
+	"whowrotethat-tour-welcome-dismiss": "Ulertu dut!",
+	"whowrotethat-revision-added": "$1(e)k hau gehitu du $2n",
+	"whowrotethat-revision-attribution": "Orrialdearen $1 idatzi du.",
+	"whowrotethat-revision-attribution-percent": "% $1",
+	"whowrotethat-revision-attribution-lessthan": "Orrialdearen $1 idatzi du.",
+	"whowrotethat-revision-attribution-lessthan-percent": "%1 baino gutxiago",
+	"whowrotethat-revision-deleted-username": "(erabiltzailea edo IPa ezabatu da)",
+	"whowrotethat-revision-edit-summary-hidden": "(aldaketa laburpena ezabatu da)"
+}

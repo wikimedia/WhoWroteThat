@@ -1,11 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tacsipacsi"
+			"Tacsipacsi",
+			"Lucas Werkmeister"
 		]
 	},
 	"whowrotethat-ext-name": "Wer hat es geschrieben?",
 	"whowrotethat-ext-name-beta": "Wer hat es geschrieben? (BETA)",
+	"whowrotethat-ext-desc": "Entdecke Informationen zu Autoren und Artikelversionen visuell und direkt in Wikipedia-Artikeln. Basierend auf WikiWho.",
+	"whowrotethat-ext-desc-beta": "Erkunde Informationen zur Autorschaft auf Wikipedia. Basierend auf WikiWho. BETA-Version, nur zum Testen vorgesehen.",
 	"whowrotethat-activation-link": "Wer hat es geschrieben?",
 	"whowrotethat-activation-link-tooltip": "„Wer hat es geschrieben?“ aktivieren",
 	"whowrotethat-deactivation-link": "„Wer hat es geschrieben?“ schließen",
@@ -17,9 +20,16 @@
 	"whowrotethat-error-contact": "Bitte $1 über dieses Problem.",
 	"whowrotethat-error-contact-link": "kontaktiere uns",
 	"whowrotethat-ready-title": "Wer hat es geschrieben?",
+	"whowrotethat-ready-general": "Fahre mit der Maus über Text, um Beiträge der gleichen Urhebenden zu sehen. Klicke für weitere Informationen.",
 	"whowrotethat-tour-welcome-title": "„$1“ wird aktiviert!",
 	"whowrotethat-tour-welcome-title-name": "Wer hat es geschrieben?",
+	"whowrotethat-tour-welcome-description": "Aktiviere das Werkzeug in der Seitenleiste. Fahre mit der Maus über Text, um Beiträge gleicher Urheberschaft hervorzuheben. Klicke, um Urheber*in und Versionsdetails zu sehen.",
 	"whowrotethat-tour-welcome-dismiss": "Verstanden!",
 	"whowrotethat-revision-added": "$1 hat dies am $2 hinzugefügt.",
-	"whowrotethat-revision-deleted-username": "(Benutzername oder IP entfernt)"
+	"whowrotethat-revision-attribution": "Diese Person schrieb $1 der Seite.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Diese Person schrieb $1 der Seite.",
+	"whowrotethat-revision-attribution-lessthan-percent": "weniger als 1%",
+	"whowrotethat-revision-deleted-username": "(Benutzername oder IP entfernt)",
+	"whowrotethat-revision-edit-summary-hidden": "(Zusammenfassung entfernt)"
 }

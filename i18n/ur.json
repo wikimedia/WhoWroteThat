@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Muhammad Shuaib"
+		]
+	},
+	"whowrotethat-ext-desc": "ویکیپیڈیا کے مضامین کے مصنفین و مرتبین کی معلومات حاصل کریں جسے ویکی ہو کی مدد سے انجام دیا جائے گا۔",
+	"whowrotethat-ext-desc-beta": "ویکی نویسوں کی معلومات حاصل کریں۔ یہ تجرباتی نسخہ ہے جس کا مقصد فقط جانچ پڑتال ہے۔",
+	"whowrotethat-state-pending": "$1 لوڈ ہو رہا ہے، اس کے لیے کچھ لمحے درکار ہیں۔",
+	"whowrotethat-state-error": "نقص: $1",
+	"whowrotethat-error-refresh": "براہ کرم صفحہ تازہ کریں یا کچھ دیر بعد دوبارہ کوشش کریں۔",
+	"whowrotethat-error-later": "براہ کرم کچھ دیر بعد دوبارہ کوشش کریں۔",
+	"whowrotethat-error-contact": "براہ کرم اس مسئلہ کے متعلق $1 کریں۔",
+	"whowrotethat-error-contact-link": "ہم سے رابطہ",
+	"whowrotethat-ready-general": "اسی صارف کی مزید شراکتیں دیکھنے کے لیے کرسر لائیں۔ مزید تفصیلات کے لیے کلک کریں۔",
+	"whowrotethat-tour-welcome-title": "$1 کو فعال کر دیا گیا!",
+	"whowrotethat-tour-welcome-dismiss": "ٹھیک!",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "ان صارفین نے پیش نظر صفحہ کا $1 حصہ لکھا ہے۔",
+	"whowrotethat-revision-deleted-username": "(صارف نام یا آئی پی کو ہٹا دیا گیا)",
+	"whowrotethat-revision-edit-summary-hidden": "(خلاصہ ترمیم کو ہٹا دیا گیا)"
+}

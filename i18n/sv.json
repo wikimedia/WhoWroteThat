@@ -22,12 +22,13 @@
 	"whowrotethat-ready-general": "Vila muspekaren för att se bidrag av samma författare. Klicka för mer information.",
 	"whowrotethat-tour-welcome-title": "$1 är aktiverat!",
 	"whowrotethat-tour-welcome-title-name": "Vem skrev detta?",
-	"whowrotethat-tour-welcome-description": "Aktivera verktyget från sidofältet. Vila muspekaren över texten för att se författaren och deras andra bidrag på denna sida. Klicka för mer information.",
+	"whowrotethat-tour-welcome-description": "Aktivera verktyget från sidofältet. Vila muspekaren över texten för att markera bidrag av samma författare. Klicka för att se författaren och versionsdetaljer.",
 	"whowrotethat-tour-welcome-dismiss": "Uppfattat!",
 	"whowrotethat-revision-added": "$1 lade till detta på $2.",
 	"whowrotethat-revision-attribution": "Personen skrev $1 av sidan.",
 	"whowrotethat-revision-attribution-percent": "$1 %",
 	"whowrotethat-revision-attribution-lessthan": "Personen skrev $1 av sidan.",
 	"whowrotethat-revision-attribution-lessthan-percent": "mindre än 1 %",
-	"whowrotethat-revision-deleted-username": "(användarnamn eller IP-adress togs bort)"
+	"whowrotethat-revision-deleted-username": "(användarnamn eller IP-adress togs bort)",
+	"whowrotethat-revision-edit-summary-hidden": "(redigeringssammanfattning togs bort)"
 }

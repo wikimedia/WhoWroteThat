@@ -2,27 +2,28 @@
 	"@metadata": {
 		"authors": [
 			"ديفيد",
-			"Meno25"
+			"Meno25",
+			"علاء"
 		]
 	},
-	"whowrotethat-ext-name": "من كتب ذلك؟",
-	"whowrotethat-ext-name-beta": "من كتب ذلك؟ (بيتا)",
-	"whowrotethat-ext-desc": "استكشف معلومات التأليف والمراجعة بشكل مرئي ومباشر في مقالات ويكيبيديا، مدعوم من ويكيهو.",
-	"whowrotethat-ext-desc-beta": "استكشف معلومات تأليف ويكيبيديا، مدعوم من ويكي هاو، هذه هي النسخة التجريبية، المخصصة للاختبار فقط.",
-	"whowrotethat-activation-link": "من كتب ذلك؟",
+	"whowrotethat-ext-name": "من كتب هذا؟",
+	"whowrotethat-ext-name-beta": "من كتب هذا؟ (بيتا)",
+	"whowrotethat-ext-desc": "استكشف معلومات الكتابة والمراجعة بشكل مرئي ومباشر في مقالات ويكيبيديا، مدعوم من ويكي هاو.",
+	"whowrotethat-ext-desc-beta": "استكشف معلومات كتابة ويكيبيديا. مدعوم من ويكي هاو. هذه هي النسخة التجريبية، المخصصة للاختبار فقط.",
+	"whowrotethat-activation-link": "من كتب هذا؟",
 	"whowrotethat-activation-link-tooltip": "تفعيل من كتب هذا؟",
-	"whowrotethat-deactivation-link": "إغلاق من كتب ذلك؟",
+	"whowrotethat-deactivation-link": "إغلاق من كتب هذا؟",
 	"whowrotethat-state-pending": "يجري تحميل $1، وهذا قد يستغرق بعض الوقت.",
-	"whowrotethat-state-pending-name": "من كتب ذلك؟",
+	"whowrotethat-state-pending-name": "من كتب هذا؟",
 	"whowrotethat-state-error": "خطأ: $1",
-	"whowrotethat-error-refresh": "يُرجَى تحديث الصفحة أو إعادة المحاولة لاحقا.",
-	"whowrotethat-error-later": "الرجاء معاودة المحاولة في وقت لاحق.",
+	"whowrotethat-error-refresh": "يُرجَى تحديث الصفحة أو إعادة المحاولة لاحقًا.",
+	"whowrotethat-error-later": "الرجاء معاودة المحاولة لاحقًا.",
 	"whowrotethat-error-contact": "الرجاء $1 حول هذه المشكلة.",
 	"whowrotethat-error-contact-link": "اتصل بنا",
-	"whowrotethat-ready-title": "من كتب ذلك؟",
-	"whowrotethat-ready-general": "لتحم لرؤية مساهمات المؤلف نفسه، انقر للحصول على مزيد من التفاصيل.",
+	"whowrotethat-ready-title": "من كتب هذا؟",
+	"whowrotethat-ready-general": "لتتجول في مساهمات المؤلف نفسه. انقر للحصول على مزيد من التفاصيل.",
 	"whowrotethat-tour-welcome-title": "$1 مفعلة!",
-	"whowrotethat-tour-welcome-title-name": "من كتب ذلك؟",
+	"whowrotethat-tour-welcome-title-name": "من كتب هذا؟",
 	"whowrotethat-tour-welcome-description": "قم بتنشيط الأداة من الشريط الجانبي. مرر الفأرة فوق النص لرؤية مساهمات نفس المؤلف. اضغط لرؤية تفاصيل المؤلف والمراجعة.",
 	"whowrotethat-tour-welcome-dismiss": "حسنا!",
 	"whowrotethat-revision-added": "$1 أضاف هذا على $2.",
@@ -30,6 +31,6 @@
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "لقد كتبوا أقل من $1 من الصفحة.",
 	"whowrotethat-revision-attribution-lessthan-percent": "أقل من 1%",
-	"whowrotethat-revision-deleted-username": "(تمت إزالة اسم المستخدم أو الآيبي)",
-	"whowrotethat-revision-edit-summary-hidden": "(ملخص التعديل تمت إزالته)"
+	"whowrotethat-revision-deleted-username": "(أُزيل اسم المستخدم أو الآي بي)",
+	"whowrotethat-revision-edit-summary-hidden": "(أُزيل ملخص التعديل)"
 }

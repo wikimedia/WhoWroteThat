@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"আফতাবুজ্জামান"
+		]
+	},
+	"whowrotethat-ext-name": "কে ওটি লিখেছে?",
+	"whowrotethat-ext-name-beta": "কে ওটি লিখেছে? (বিটা)",
+	"whowrotethat-ext-desc": "উইকিপিডিয়ার নিবন্ধগুলিতে দৃশ্যমানভাবে এবং সরাসরি লেখক এবং সংশোধন সম্পর্কিত তথ্য সন্ধান করুন। উইকিহু চালিত।",
+	"whowrotethat-ext-desc-beta": "উইকিপিডিয়ায় লেখক সম্পর্কিত তথ্য অনুসন্ধান করুন। উইকিহু চালিত। এটি কেবলমাত্র পরীক্ষার জন্য বিটা সংস্করণ।",
+	"whowrotethat-activation-link": "কে ওটি লিখেছে?",
+	"whowrotethat-activation-link-tooltip": "কে ওটি লিখেছে সক্রিয় করবেন?",
+	"whowrotethat-deactivation-link": "কে ওটি লিখেছে বন্ধ করবেন?",
+	"whowrotethat-state-pending": "$1 লোড হচ্ছে। এটি কিছুটা সময় নিতে পারে।",
+	"whowrotethat-state-pending-name": "কে ওটি লিখেছে?",
+	"whowrotethat-state-error": "ত্রুটি: $1",
+	"whowrotethat-error-refresh": "পাতাটি পুনঃসতেজ করুন বা পরে আবার চেষ্টা করুন।",
+	"whowrotethat-error-later": "দয়া করে পরে আবার চেষ্টা করুন।",
+	"whowrotethat-error-contact": "দয়া করে এই সমস্যাটি সম্পর্কে আমাদের সাথে $1।",
+	"whowrotethat-error-contact-link": "যোগাযোগ করুন",
+	"whowrotethat-ready-title": "কে ওটি লিখেছে?",
+	"whowrotethat-ready-general": "একই লেখকের অবদান দেখতে মাউস উপরে নিন। বিস্তারিত জানতে ক্লিক করুন।",
+	"whowrotethat-tour-welcome-title": "$1 সক্রিয় করা হয়েছে!",
+	"whowrotethat-tour-welcome-title-name": "কে ওটি লিখেছে?",
+	"whowrotethat-tour-welcome-description": "পার্শ্বদণ্ড থেকে সরঞ্জামটি সক্রিয় করুন। একই লেখকের অবদান আলোকপাত করতে পাঠ্যের উপরে মাউস নিন। লেখক এবং সংশোধন বিবরণ দেখতে ক্লিক করুন।",
+	"whowrotethat-tour-welcome-dismiss": "বুঝেছি!",
+	"whowrotethat-revision-added": "$2 তারিখে $1 এটি যোগ করেছেন।",
+	"whowrotethat-revision-attribution": "তিনি এই পাতার $1 লিখেছেন।",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "তিনি এই পাতার $1 লিখেছেন।",
+	"whowrotethat-revision-attribution-lessthan-percent": "১% এরও কম",
+	"whowrotethat-revision-deleted-username": "(ব্যবহারকারী নাম বা আইপি সরানো হয়েছে)",
+	"whowrotethat-revision-edit-summary-hidden": "(সম্পাদনা সারাংশ সরানো হয়েছে)"
+}

@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Xuacu"
+			"Xuacu",
+			"Fitoschido"
 		]
 	},
 	"whowrotethat-ext-name": "¿Quién lo escribió?",
 	"whowrotethat-ext-name-beta": "¿Quién lo escribió? (BETA)",
 	"whowrotethat-ext-desc": "Esploración visual direuta d'información d'autoría y revisión d'artículos de Wikipedia. Col encontu de WikiWho.",
-	"whowrotethat-ext-desc-beta": "Esplora la información d'autoría de Wikipedia. Col encontu de WikiWho. Esta ye la versión BETA, destinada sñolo a pruebes.",
+	"whowrotethat-ext-desc-beta": "Esplora la información d'autoría de Wikipedia. Col encontu de WikiWho. Esta ye la versión BETA, destinada sólo a pruebes.",
 	"whowrotethat-activation-link": "¿Quién lo escribió?",
 	"whowrotethat-activation-link-tooltip": "Activar ¿Quién lo escribió?",
 	"whowrotethat-deactivation-link": "Zarrar ¿Quién lo escribió?",
