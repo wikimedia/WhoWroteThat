@@ -6,8 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.15.2] - 2020-01-28
 ### Added
 - Firefox l10n documentation.
+- Ensure attribution percentages don't wrap onto a new line.
+
+### Changed
+- Translation and documentation updates.
 
 ### Fixed
 - Minor styling fixes to revision details popup.
@@ -16,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Outdated documentation about the WWT gadget.
 - Unused 'tutorial' documentation (moved to the README).
+- Remove redundant welcomeTour js file call from manifest
 
 ## [0.15.1] - 2020-01-22
 ### Fixed
@@ -138,7 +145,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.0...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.2...HEAD
+[0.15.2]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.1...0.15.2
 [0.15.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.0...0.15.1
 [0.15.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.14.0...0.15.0
 [0.14.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.13.0...0.14.0
