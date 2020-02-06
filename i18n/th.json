@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nitisart Jungtrakungrat",
+			"Patsagorn Y."
+		]
+	},
+	"whowrotethat-ext-name": "ใครเขียนมัน (WWT)",
+	"whowrotethat-ext-name-beta": "ใครเขียนมัน (เบต้า)",
+	"whowrotethat-ext-desc": "ตรวจสอบว่าผู้ใดเขียนคำง่าย ๆ โดยตรงในบทความ ให้การสนับสนุนโดย WikiWho",
+	"whowrotethat-ext-desc-beta": "สำรวจข้อมูลผู้เขียนคำนั้น ๆ ในบทความโดยตรง ให้การสนับสนุนโดย WikiWhoแ แต่นี่ยังเป็นรุ่นเบต้าอยู่ สำหรับใช้ในงานทดสอบเท่านั้น",
+	"whowrotethat-activation-link": "ใครเขียนสิ่งนี้?",
+	"whowrotethat-activation-link-tooltip": "เปิดใช้งานใครเขียนสิ่งนี้ (WWT)",
+	"whowrotethat-deactivation-link": "ปิดใครเขียนสิ่งนี้ (WWT)",
+	"whowrotethat-state-pending": "กำลังโหลด $1 อาจใช้เวลาซักครู่",
+	"whowrotethat-state-pending-name": "ใครเขียนสิ่งนี้?",
+	"whowrotethat-state-error": "ข้อผิดพลาด: $1",
+	"whowrotethat-error-refresh": "รีเฟรชหรือลองอีกครั้งในภายหลัง",
+	"whowrotethat-error-later": "กรุณาลองอีกครั้งในภายหลัง",
+	"whowrotethat-error-contact": "รีเฟรชหรือลองอีกครั้งในภายหลัง $1",
+	"whowrotethat-error-contact-link": "หากยังพบปัญหา ติดต่อเรา",
+	"whowrotethat-ready-title": "ใครเขียนมัน",
+	"whowrotethat-ready-general": "เลื่อนเม้าส์ไว้เหนือข้อความเพื่อดูว่าใครเป็นผู้เขียนข้อความนั้น กดที่ข้อความเพื่อดูข้อมูลเพิ่ม",
+	"whowrotethat-tour-welcome-title": "$1พร้อมใช้งานแล้ว",
+	"whowrotethat-tour-welcome-title-name": "ใครเขียนสิ่งนี้",
+	"whowrotethat-tour-welcome-description": "ใช้งานเครื่องมือจากแถบเครื่องมือด้านซ้าย นำเม้าส์ไว้เหนือคำเพื่อดูว่าใครเขียนข้อความ ข้อความที่เขียนโดยผู้ใช้คนเดียวกันจะถูกเน้น กดที่ข้อความเพื่อดูข้อมูลเพิ่มเติม",
+	"whowrotethat-tour-welcome-dismiss": "เข้าใจแล้ว",
+	"whowrotethat-revision-added": "$1 เพิ่มข้อความนี้เมื่อ $2",
+	"whowrotethat-revision-attribution": "ผู้ใช้คนนี้ได้เขียน $1 ของหน้า",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "ผู้ใช้นี้เขียน$1 ของหน้า",
+	"whowrotethat-revision-attribution-lessthan-percent": "น้อยกว่า 1%",
+	"whowrotethat-revision-deleted-username": "(ไอพีหรือผู้ใช้ถูกลบ)",
+	"whowrotethat-revision-edit-summary-hidden": "(ความย่อการแก้ไขถูกลบ)"
+}

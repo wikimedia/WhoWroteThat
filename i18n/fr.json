@@ -5,7 +5,8 @@
 			"Wladek92",
 			"Gomoko",
 			"Thibaut120094",
-			"Pols12"
+			"Pols12",
+			"Derugon"
 		]
 	},
 	"whowrotethat-ext-name": "Qui a écrit cela ?",
@@ -18,10 +19,10 @@
 	"whowrotethat-state-pending": "$1 est en cours de chargement. Cela peut prendre du temps.",
 	"whowrotethat-state-pending-name": "Qui a écrit cela ?",
 	"whowrotethat-state-error": "Erreur : $1",
-	"whowrotethat-error-refresh": "Veuillez rafraîchir la page ou essayer à nouveau.",
+	"whowrotethat-error-refresh": "Rafraîchissez la page ou réessayez plus tard.",
 	"whowrotethat-error-later": "Veuillez essayer à nouveau plus tard.",
-	"whowrotethat-error-contact": "Veuillez $1 au sujet de ce problème.",
-	"whowrotethat-error-contact-link": "nous contacter",
+	"whowrotethat-error-contact": "Rafraîchissez la page ou réessayez plus tard. $1",
+	"whowrotethat-error-contact-link": "Si le problème persiste, contactez-nous.",
 	"whowrotethat-ready-title": "Qui a écrit cela ?",
 	"whowrotethat-ready-general": "Survolez à la souris pour voir les contributions du même auteur. Cliquez pour plus de détails.",
 	"whowrotethat-tour-welcome-title": "$1 est activé !",

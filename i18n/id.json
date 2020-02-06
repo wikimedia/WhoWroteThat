@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Farras"
+		]
+	},
+	"whowrotethat-ext-name": "Ini Tulisan Siapa?",
+	"whowrotethat-ext-name-beta": "Ini Tulisan Siapa? (BETA)",
+	"whowrotethat-ext-desc": "Dapatkan informasi penulis & revisi secara langsung di halaman artikel Wikipedia. Didukung oleh WikiWho.",
+	"whowrotethat-ext-desc-beta": "Dapatkan informasi penulis Wikipedia. Didukung oleh WikiWho. Versi BETA ini untuk coba-coba saja.",
+	"whowrotethat-activation-link": "Ini Tulisan Siapa?",
+	"whowrotethat-activation-link-tooltip": "Aktifkan Ini Tulisan Siapa?",
+	"whowrotethat-deactivation-link": "Tutup Ini Tulisan Siapa?",
+	"whowrotethat-state-pending": "$1 sedang dimuat. Mohon tunggu sejenak.",
+	"whowrotethat-state-pending-name": "Ini Tulisan Siapa?",
+	"whowrotethat-state-error": "Galat: $1",
+	"whowrotethat-error-refresh": "Muat ulang halaman ini atau coba lagi nanti.",
+	"whowrotethat-error-later": "Silakan coba lagi nanti.",
+	"whowrotethat-error-contact": "$1 tentang masalah ini.",
+	"whowrotethat-error-contact-link": "Beritahu kami",
+	"whowrotethat-ready-title": "Ini Tulisan Siapa?",
+	"whowrotethat-ready-general": "Letakkan kursor untuk melihat kontribusi pengguna yang sama. Klik untuk informasi lebih lanjut.",
+	"whowrotethat-tour-welcome-title": "$1 diaktifkan!",
+	"whowrotethat-tour-welcome-title-name": "Ini Tulisan Siapa?",
+	"whowrotethat-tour-welcome-description": "Anda dapat mengaktifkan alat ini di sebelah kiri. Letakkan kursor di teks untuk melihat kontribusi pengguna yang sama. Klik untuk melihat informasi pengguna dan revisinya.",
+	"whowrotethat-tour-welcome-dismiss": "Paham!",
+	"whowrotethat-revision-added": "$1 menambahkan bagian ini pada $2.",
+	"whowrotethat-revision-attribution": "$1 halaman ini ditambahkan oleh dia.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "$1 halaman ini ditambahkan oleh dia.",
+	"whowrotethat-revision-attribution-lessthan-percent": "<1%",
+	"whowrotethat-revision-deleted-username": "(nama pengguna atau IP dihapus)",
+	"whowrotethat-revision-edit-summary-hidden": "(ringkasan suntingan dihapus)"
+}

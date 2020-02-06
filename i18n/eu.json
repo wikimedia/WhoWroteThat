@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
-			"Theklan"
+			"Theklan",
+			"Xabier Armendaritz"
 		]
 	},
 	"whowrotethat-ext-name": "Nork idatzi du hori?",
@@ -25,7 +26,7 @@
 	"whowrotethat-tour-welcome-title-name": "Nork idatzi du hori?",
 	"whowrotethat-tour-welcome-description": "Aktibatu tresna albo-barra erabilita. Testuaren gainean jarri egile berberaren beste ekarpen batzuk ikusteko. Egin klik egilearen aldaketaren detaileak ikusteko.",
 	"whowrotethat-tour-welcome-dismiss": "Ulertu dut!",
-	"whowrotethat-revision-added": "$1(e)k hau gehitu du $2n",
+	"whowrotethat-revision-added": "$1 wikilariak gehitu du hau. Data (eta gehikuntza): $2",
 	"whowrotethat-revision-attribution": "Orrialdearen $1 idatzi du.",
 	"whowrotethat-revision-attribution-percent": "% $1",
 	"whowrotethat-revision-attribution-lessthan": "Orrialdearen $1 idatzi du.",
