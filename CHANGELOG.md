@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.15.3] - 2020-02-06
+### Changed
+- Translation updates.
+
 ## [0.15.2] - 2020-01-28
 ### Added
 - Firefox l10n documentation.
@@ -145,7 +149,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.2...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.3...HEAD
+[0.15.3]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.2...0.15.3
 [0.15.2]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.1...0.15.2
 [0.15.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.0...0.15.1
 [0.15.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.14.0...0.15.0
