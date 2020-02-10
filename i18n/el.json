@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geraki"
+		]
+	},
+	"whowrotethat-ext-name": "Ποιος Το Έγραψε Αυτό;",
+	"whowrotethat-ext-name-beta": "Ποιος Το Έγραψε Αυτό; (BETA)",
+	"whowrotethat-ext-desc": "Εξερευνήστε οπτικά τις πληροφορίες συντακτών και αναθεωρήσεων και απευθείας στα λήμματα της Wikipedia. Υποστηρίζεται από το WikiWho.",
+	"whowrotethat-ext-desc-beta": "Εξερευνήστε οπτικά τις πληροφορίες συντακτών. Υποστηρίζεται από το WikiWho. Αυτή είναι η έκδοση BETA, μόνο για δοκιμαστικό σκοπό.",
+	"whowrotethat-activation-link": "Ποιος το έγραψε αυτό;",
+	"whowrotethat-activation-link-tooltip": "Να ενεργοποιηθεί το Ποιος Το Έγραψε Αυτό;",
+	"whowrotethat-deactivation-link": "Να κλείσει το Ποιος Το Έγραψε Αυτό;",
+	"whowrotethat-state-pending": "$1 φορτώνει. Μπορεί να πάρει λίγη ώρα.",
+	"whowrotethat-state-pending-name": "Ποιος Το Έγραψε Αυτό;",
+	"whowrotethat-state-error": "Σφάλμα: $1",
+	"whowrotethat-error-refresh": "Ανανεώστε ή δοκιμάστε ξανά αργότερα.",
+	"whowrotethat-error-later": "Παρακαλούμε δοκιμάστε ξανά αργότερα.",
+	"whowrotethat-error-contact": "Ανανεώστε ή δοκιμάστε ξανά αργότερα. $1",
+	"whowrotethat-error-contact-link": "Αν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας.",
+	"whowrotethat-ready-title": "Ποιος Το Έγραψε Αυτό;",
+	"whowrotethat-ready-general": "Κάντε αιώρηση για να δείτε συνεισφορές από τον ίδιο συντάκτη. Κάντε κλικ για περισσότερες λεπτομέρειες.",
+	"whowrotethat-tour-welcome-title": "$1 είναι ενεργοποιημένο!",
+	"whowrotethat-tour-welcome-title-name": "Ποιος Το Έγραψε Αυτό;",
+	"whowrotethat-tour-welcome-description": "Ενεργοποιήστε το εργαλείο από την πλευρική γραμμή. Τοποθετήστε το δείκτη του ποντικιού πάνω από το κείμενο για να επισημάνετε τις συνεισφορές του ίδιου συντάκτη. Κάντε κλικ για να δείτε τις λεπτομέρειες συντάκτη και αναθεώρησης.",
+	"whowrotethat-tour-welcome-dismiss": "Κατάλαβα!",
+	"whowrotethat-revision-added": "Ο $1 πρόσθεσε αυτό στις $2.",
+	"whowrotethat-revision-attribution": "Έχει γράψει $1 της σελίδας.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Έχει γράψει $1 της σελίδας.",
+	"whowrotethat-revision-attribution-lessthan-percent": "λιγότερο από 1%",
+	"whowrotethat-revision-deleted-username": "(όνομα χρήστη ή IP αφαιρέθηκε)",
+	"whowrotethat-revision-edit-summary-hidden": "(η σύνοψη επεξεργασίας αφαιρέθηκε)"
+}

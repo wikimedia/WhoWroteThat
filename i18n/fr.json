@@ -13,6 +13,7 @@
 	"whowrotethat-ext-name-beta": "Qui a écrit cela ? (BÊTA)",
 	"whowrotethat-ext-desc": "Explorer la paternité et les informations de révision visuellement et directement dans les articles de Wikipédia. Fourni par WikiWho.",
 	"whowrotethat-ext-desc-beta": "Voir les informations concernant l’auteur sur Wikipédia. Propulsé par WikiWho. Ceci est la version BÊTA, destinée aux tests uniquement.",
+	"whowrotethat-ext-longdesc": "Survolez pour voir le texte du même auteur. Cliquez pour voir l'auteur et les détails de la révision.",
 	"whowrotethat-activation-link": "Qui a écrit cela ?",
 	"whowrotethat-activation-link-tooltip": "Activer ''Qui a écrit cela ?''",
 	"whowrotethat-deactivation-link": "Fermer ''Qui a écrit cela ?''",
