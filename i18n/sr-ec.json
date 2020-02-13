@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog"
+		]
+	},
+	"whowrotethat-ext-name": "Ко је то написао?",
+	"whowrotethat-ext-name-beta": "Ко је то написао? (БЕТА)",
+	"whowrotethat-ext-desc": "Визуелно истражите информације о ауторству и изменама и непосредно у чланцима на Википедији. Покреће WikiWho.",
+	"whowrotethat-ext-desc-beta": "Истражите информације о ауторству на Википедији. Покреће WikiWho. Ово је БЕТА верзија и сужи само за испробавање.",
+	"whowrotethat-ext-longdesc": "Задржите показивач да бисте видели текст истог аутора. Кликните да бисте сазнали више о аутору и измени.",
+	"whowrotethat-activation-link": "Ко је то написао?",
+	"whowrotethat-activation-link-tooltip": "Активирај алатку „Ко је то написао?”",
+	"whowrotethat-deactivation-link": "Затвори алатку „Ко је то написао?”",
+	"whowrotethat-state-pending": "Алатка „$1” се учитава. Ово може да потраје.",
+	"whowrotethat-state-pending-name": "Ко је то написао?",
+	"whowrotethat-state-error": "Грешка: $1",
+	"whowrotethat-error-refresh": "Освежите страницу или покушајте поново касније.",
+	"whowrotethat-error-later": "Покушајте поново касније.",
+	"whowrotethat-error-contact": "Освежите страницу или покушајте поново касније. $1",
+	"whowrotethat-error-contact-link": "Ако проблем буде наставио да се јавља, обратите нам се.",
+	"whowrotethat-ready-title": "Ко је то написао?",
+	"whowrotethat-ready-general": "Задржите показивач да бисте видели доприносе истог аутора. Кликните да бисте сазнали више.",
+	"whowrotethat-tour-welcome-title": "Алатка „$1” је омогућена.",
+	"whowrotethat-tour-welcome-title-name": "Ко је то написао?",
+	"whowrotethat-tour-welcome-description": "Активирајте алатку са бочне траге. Задржите показивач изнад текста да бисте истакли доприносе истог аутора. Кликните да бисте сазнали више о аутору и измени.",
+	"whowrotethat-tour-welcome-dismiss": "Разумем",
+	"whowrotethat-revision-added": "$1 додаје ово на $2.",
+	"whowrotethat-revision-attribution": "Има написано $1 странице.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Има написано $1 странице.",
+	"whowrotethat-revision-attribution-lessthan-percent": "мање од 1%",
+	"whowrotethat-revision-deleted-username": "(уклоњено корисничко име или IP)",
+	"whowrotethat-revision-edit-summary-hidden": "(уклоњен сажетак измене)"
+}
