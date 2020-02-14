@@ -62,20 +62,25 @@ The tool works on Wikipedias supported by the WhoColor API:
 
 ## Releasing the browser extension
 
-First update the version number in `package.json`
+First create your release branch, update the version number in `package.json`
 and ensure the changelog is up to date,
-then tag the release in Git.
+then tag the release branch in Git with the new version.
 Run `grunt` (the default task only) to create
 six zip files such as `dist/extension_firefox/whowrotethat_for_wikipedia-0.2.0.0.zip`
 (three for beta and three for production; two for Chrome and four for Firefox).
-These can be uploaded to the Firefox and Chrome browser stores.
-
-Note that web extensions use four-digit version numbers,
-but WWT only uses the first three
-(the last is always zero; it's added by the Grunt task).
 
 The `*_source.zip` files contain the source code,
 for submission to the Firefox add-ons store (but not for Chrome).
+
+Steps when uploading a new extension:
+   * Firefox has a multistep process. The `who_wrote_that_-*-*-*-*.zip` needs to be uploaded first,
+   the next step will ask for the `*_source.zip` file, followed by the change log.
+   * Chrome will only ask for the new `who_wrote_that_-*-*-*-*.zip` file.
+
+Note: the web extensions use four-digit version numbers,
+but WWT only uses the first three
+(the last is always zero; it's added by the Grunt task).
+
 
 Maintainers (i.e. any members of the [wmf-commtech Google Group](https://groups.google.com/forum/#!forum/wmf-commtech))
 can upload releases via:
@@ -91,6 +96,12 @@ has the correct translations.
 This is done with the `grunt checkListings` and `grunt checkListings:beta` commands.
 These will report any discrepancies with the published names or descriptions of the extension,
 which will need to be resolved manually (because there's no editing API for the browser store).
+
+To manually update the locales, go to https://addons.mozilla.org/en-US/developers/addon/whowrotethat/edit, 
+select the locale that needs to be updated from the `Localize for:` dropdown, and update the corresponding fields
+mentioned in the `grunt checkListings` report. 
+
+There might be locales in the grunt report that are supported by the extension but not availabe in the locales list at the Firefox add-ons store. 
 
 Localization is not required for Chrome,
 because it reads all names and descriptions from the `_locales/` files.
