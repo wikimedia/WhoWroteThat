@@ -255,6 +255,7 @@ module.exports = function Gruntfile( grunt ) {
 		const isBeta = beta === 'beta',
 			nameMsg = isBeta ? 'whowrotethat-ext-name-beta' : 'whowrotethat-ext-name',
 			descMsg = isBeta ? 'whowrotethat-ext-desc-beta' : 'whowrotethat-ext-desc',
+			longDescMsg = 'whowrotethat-ext-longdesc',
 			fetch = require( 'node-fetch' ),
 			addonName = 'whowrotethat' + ( isBeta ? '-beta' : '' ),
 			url = 'https://addons.mozilla.org/api/v4/addons/addon/' + addonName,
@@ -282,17 +283,26 @@ module.exports = function Gruntfile( grunt ) {
 					} else if ( lang === 'nb' ) {
 						listingLang = 'nb-NO';
 					}
+					// Name.
 					if ( langBlob[ lang ][ nameMsg ] !== undefined &&
 						json.name[ listingLang ] !== langBlob[ lang ][ nameMsg ]
 					) {
 						grunt.log.error( 'Name does not match for ' + lang + '. Correct value:' );
 						grunt.log.writeln( langBlob[ lang ][ nameMsg ] );
 					}
+					// Summary.
 					if ( langBlob[ lang ][ descMsg ] !== undefined &&
 						json.summary[ listingLang ] !== langBlob[ lang ][ descMsg ]
 					) {
 						grunt.log.error( 'Summary does not match for ' + lang + '. Correct value:' );
 						grunt.log.writeln( langBlob[ lang ][ descMsg ] );
+					}
+					// Description.
+					if ( langBlob[ lang ][ longDescMsg ] !== undefined &&
+						json.description[ listingLang ] !== langBlob[ lang ][ longDescMsg ]
+					) {
+						grunt.log.error( 'Description does not match for ' + lang + '. Correct value:' );
+						grunt.log.writeln( langBlob[ lang ][ longDescMsg ] );
 					}
 				} );
 				done();
