@@ -6,7 +6,7 @@
 	"whowrotethat-ext-name-beta": "Who Wrote That? (BETA)",
 	"whowrotethat-ext-desc": "Explore authorship and revision information visually and directly in Wikipedia articles. Powered by WikiWho.",
 	"whowrotethat-ext-desc-beta": "Explore Wikipedia authorship information. Powered by WikiWho. This is the BETA version, intended for testing only.",
-	"whowrotethat-ext-longdesc": "Hover to see text by the same author. Click to see the author and revision details.",
+	"whowrotethat-ext-longdesc": "Who Wrote That? (WWT) is a browser extension, which displays authorship information directly on Wikipedia articles. When you hover over content, the tool highlights all content by the same author. When you click on content, the tool identifies the author of the revision, along with revision details. Overall, WWT allows users to discover the source and background of an edit, without digging through revision history.",
 	"whowrotethat-activation-link": "Who Wrote That?",
 	"whowrotethat-activation-link-tooltip": "Activate Who Wrote That?",
 	"whowrotethat-deactivation-link": "Close Who Wrote That?",
