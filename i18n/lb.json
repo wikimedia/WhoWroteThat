@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Soued031"
 		]
 	},
 	"whowrotethat-ext-name-beta": "Wien huet dat geschriwwen? (BETA)",
@@ -12,7 +13,7 @@
 	"whowrotethat-state-pending-name": "Wien huet dat geschriwwen?",
 	"whowrotethat-state-error": "Feeler: $1",
 	"whowrotethat-error-refresh": "Aktualiséieren oder probéiert méi spéit probéieren.",
-	"whowrotethat-error-later": "Probéiert w.e.g. méi spéit nach eng Kéier.",
+	"whowrotethat-error-later": "Probéiert wgl. méi spéit nach eng Kéier.",
 	"whowrotethat-error-contact": "Aktualiséieren oder méi spéit probéieren. $1.",
 	"whowrotethat-error-contact-link": "Wann de Problem méi laang dauert da kontaktéiert eis.",
 	"whowrotethat-ready-title": "Wien huet dat geschriwwen?",
