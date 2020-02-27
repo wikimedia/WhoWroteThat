@@ -8,7 +8,7 @@
 	"whowrotethat-ext-name-beta": "Vem skrev detta? (BETA)",
 	"whowrotethat-ext-desc": "Utforska information om författare och sidversioner visuellt och direkt i Wikipedia-artiklar. Tillhandahålls av WikiWho.",
 	"whowrotethat-ext-desc-beta": "Utforska författarinformation på Wikipedia. Drivs av WikiWho. Detta är BETAVERSIONEN, som endast är avsedd för att testas.",
-	"whowrotethat-ext-longdesc": "Lägg musen över för att se text av samma författare. Klicka för att se författaren och versionsinformation.",
+	"whowrotethat-ext-longdesc": "Vem skrev detta? är ett webbläsartillägg som visar författarinformation direkt på Wikipediaartiklar. När du lägger musen över innehåll kommer verktyget visa versionens författare och information. Tillägget låter användare upptäcka källan och bakgrunden till en redigering utan att behöva gräva i historiken.",
 	"whowrotethat-activation-link": "Vem skrev detta?",
 	"whowrotethat-activation-link-tooltip": "Aktivera Vem skrev detta?",
 	"whowrotethat-deactivation-link": "Stäng Vem skrev detta?",

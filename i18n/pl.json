@@ -2,23 +2,29 @@
 	"@metadata": {
 		"authors": [
 			"Rail",
-			"WaldiSt"
+			"WaldiSt",
+			"Krzyz23",
+			"Matma Rex"
 		]
 	},
 	"whowrotethat-ext-name": "Kto to napisał?",
+	"whowrotethat-ext-name-beta": "Kto To Napisał? (BETA)",
 	"whowrotethat-ext-desc-beta": "Przeglądaj informacje o autorach w Wikipedii. Powered by WikiWho. To jest wersja BETA przeznaczona tylko do testów.",
 	"whowrotethat-activation-link": "Kto to napisał?",
 	"whowrotethat-activation-link-tooltip": "Aktywuj „Kto to napisał?”",
 	"whowrotethat-deactivation-link": "Zamknij „Kto to napisał?”",
 	"whowrotethat-state-pending": "Ładowanie „<strong><em>Kto to napisał?</em></strong>”. To może chwilę potrwać.",
-	"whowrotethat-state-error": "Błąd API: $1",
+	"whowrotethat-state-pending-name": "Kto To Napisał??",
+	"whowrotethat-state-error": "Błąd:$1",
 	"whowrotethat-error-refresh": "Odśwież stronę lub spróbuj ponownie później.",
 	"whowrotethat-error-later": "Spróbuj ponownie później",
-	"whowrotethat-error-contact": "$1 w związku z tym błędem.",
-	"whowrotethat-error-contact-link": "Skontaktuj się z nami",
+	"whowrotethat-error-contact": "Odśwież stronę lub spróbuj ponownie później. $1",
+	"whowrotethat-error-contact-link": "Jeśli problem nie zniknie, skontaktuj się z nami.",
 	"whowrotethat-ready-title": "Kto to napisał?",
 	"whowrotethat-tour-welcome-title": "$1 jest włączone!",
+	"whowrotethat-tour-welcome-title-name": "Kto To Napisał?",
 	"whowrotethat-tour-welcome-dismiss": "Wszystko jasne!",
+	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan-percent": "mniej niż 1%",
 	"whowrotethat-revision-deleted-username": "(nazwa użytkownika lub IP usunięte)",
 	"whowrotethat-revision-edit-summary-hidden": "(usunięto opis zmian)"

@@ -9,7 +9,7 @@
 	"whowrotethat-ext-name-beta": "Quem escreveu isso? (BETA)",
 	"whowrotethat-ext-desc": "Explore a informação de autoria e revisão visualmente e diretamente nos artigos da Wikipédia. Desenvolvido por WikiWho.",
 	"whowrotethat-ext-desc-beta": "Explore as informações de autoria da Wikipédia. Desenvolvido por WikiWho. Esta é a versão BETA, destinada apenas a testes.",
-	"whowrotethat-ext-longdesc": "Passe o mouse para ver o texto do mesmo autor. Clique para ver o autor e os detalhes da revisão.",
+	"whowrotethat-ext-longdesc": "Quem escreveu isso? (WWT) é uma extensão do navegador, que exibe informações de autoria diretamente nos artigos da Wikipedia. Quando você passa o mouse sobre o conteúdo, a ferramenta destaca todo o conteúdo do mesmo autor. Quando você clica no conteúdo, a ferramenta identifica o autor da revisão, junto com os detalhes da revisão. No geral, o WWT permite que os usuários descubram a origem e o plano de fundo de uma edição, sem procurar no histórico de revisões.",
 	"whowrotethat-activation-link": "Quem escreveu isso?",
 	"whowrotethat-activation-link-tooltip": "Ativar quem escreveu isso?",
 	"whowrotethat-deactivation-link": "Fechar Quem escreveu isso?",

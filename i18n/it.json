@@ -4,18 +4,27 @@
 			"Beta16"
 		]
 	},
+	"whowrotethat-ext-name": "Chi l'ha scritto?",
+	"whowrotethat-ext-name-beta": "Chi l'ha scritto? (BETA)",
 	"whowrotethat-activation-link": "Chi l'ha scritto?",
 	"whowrotethat-activation-link-tooltip": "Attivare chi l'ha scritto?",
 	"whowrotethat-deactivation-link": "Chiudi chi l'ha scritto?",
+	"whowrotethat-state-pending": "$1 si sta caricando. Potrebbe volerci un po'.",
+	"whowrotethat-state-pending-name": "Chi l'ha scritto?",
 	"whowrotethat-state-error": "Errore: $1",
 	"whowrotethat-error-refresh": "Aggiorna o riprova più tardi.",
 	"whowrotethat-error-later": "Per favore, riprova più tardi.",
+	"whowrotethat-error-contact": "Aggiorna o riprova più tardi. $1",
 	"whowrotethat-error-contact-link": "Se il problema persiste, contattaci.",
 	"whowrotethat-ready-title": "Chi l'ha scritto?",
 	"whowrotethat-tour-welcome-title": "$1 è attivo!",
+	"whowrotethat-tour-welcome-title-name": "Chi l'ha scritto?",
 	"whowrotethat-tour-welcome-dismiss": "Capito!",
 	"whowrotethat-revision-added": "$1 lo ha aggiunto il $2.",
+	"whowrotethat-revision-attribution": "Ha scritto il $1 della pagina.",
 	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Ha scritto il $1 della pagina.",
 	"whowrotethat-revision-attribution-lessthan-percent": "meno di 1%",
-	"whowrotethat-revision-deleted-username": "(nome utente o IP rimosso)"
+	"whowrotethat-revision-deleted-username": "(nome utente o IP rimosso)",
+	"whowrotethat-revision-edit-summary-hidden": "(oggetto della modifica nascosto)"
 }
