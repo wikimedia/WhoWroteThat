@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robin van der Vliet"
+		]
+	},
+	"whowrotethat-ext-name": "Kiu skribis tion?",
+	"whowrotethat-ext-name-beta": "Kiu skribis tion? (BETA)",
+	"whowrotethat-activation-link": "Kiu skribis tion?",
+	"whowrotethat-state-pending-name": "Kiu skribis tion?",
+	"whowrotethat-state-error": "Eraro: $1",
+	"whowrotethat-error-later": "Reprovu poste.",
+	"whowrotethat-ready-title": "Kiu skribis tion?",
+	"whowrotethat-tour-welcome-title": "$1 estas ŝaltita!",
+	"whowrotethat-tour-welcome-title-name": "Kiu skribis tion?",
+	"whowrotethat-tour-welcome-dismiss": "Komprenite!",
+	"whowrotethat-revision-added": "$1 aldonis tion je la $2.",
+	"whowrotethat-revision-attribution": "Tiu persono skribis $1 de la paĝo.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Tiu persono skribis $1 de la paĝo.",
+	"whowrotethat-revision-attribution-lessthan-percent": "malpli ol 1%",
+	"whowrotethat-revision-deleted-username": "(uzantnomo aŭ IP-adreso forigita)"
+}

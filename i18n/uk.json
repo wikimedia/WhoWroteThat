@@ -2,33 +2,36 @@
 	"@metadata": {
 		"authors": [
 			"Ата",
-			"Movses"
+			"Movses",
+			"Piramidion"
 		]
 	},
 	"whowrotethat-ext-name": "Хто це написав?",
 	"whowrotethat-ext-name-beta": "Хто це написав? (бета)",
 	"whowrotethat-ext-desc": "Дозволяє досліджувати та візуалізувати авторство та версії статей Вікіпедії. Розроблено у WikiWho.",
 	"whowrotethat-ext-desc-beta": "Для дослідження авторства у Вікіпедії. За підтримки WikiWho. Бета-версія, що призначена тільки для тестування.",
+	"whowrotethat-ext-longdesc": "«Хто це написав?» — це розширення для браузера, яке показує інформацію про авторів безпосередньо в статтях Вікіпедії. Коли проводите вказівником мишки над вмістом сторінки, інструмент виділяє весь контент, доданий одним і тим же автором. Якщо клацнути на такому контенті, інструмент виведе інформацію про автора версії та саму версію сторінки. Загалом, призначення інструмента — надавати користувачам інформацію про джерело й передумови редагування без необхідності копатися в історії редагувань.",
 	"whowrotethat-activation-link": "Хто це написав?",
 	"whowrotethat-activation-link-tooltip": "Активувати «Хто це написав?»",
 	"whowrotethat-deactivation-link": "Закрити «Хто це написав?»",
 	"whowrotethat-state-pending": "$1 завантажується. Це може зайняти певний час.",
 	"whowrotethat-state-pending-name": "Who Wrote That?",
-	"whowrotethat-state-error": "Помилка API: $1",
-	"whowrotethat-error-refresh": "Будь ласка, оновіть сторінку або спробуйте пізніше.",
+	"whowrotethat-state-error": "Помилка: $1",
+	"whowrotethat-error-refresh": "Оновіть або спробуйте пізніше.",
 	"whowrotethat-error-later": "Будь ласка, спробуйте пізніше",
-	"whowrotethat-error-contact": "Будь ласка, $1 про цю проблему.",
-	"whowrotethat-error-contact-link": "зв'язатися з нами",
+	"whowrotethat-error-contact": "Оновіть або спробуйте пізніше. $1",
+	"whowrotethat-error-contact-link": "Якщо проблема не зникатиме, зв'яжіться з нами.",
 	"whowrotethat-ready-title": "Хто це написав?",
 	"whowrotethat-ready-general": "Наведіть вказівник миші, щоб побачити внесок цього ж автора. Натисніть, щоб дізнатися більше.",
 	"whowrotethat-tour-welcome-title": "$1 увімкнено!",
 	"whowrotethat-tour-welcome-title-name": "Who Wrote That?",
-	"whowrotethat-tour-welcome-description": "Активуйте інструмент на бічній панелі. Наведіть на текст, щоб побачити автора та інший його внесок на цій сторінці. Натисніть, щоб отримати більше деталей.",
+	"whowrotethat-tour-welcome-description": "Активуйте інструмент на бічній панелі. Наведіть на текст, щоб виділити внесок того ж автора. Клацніть, щоб переглянути подробиці про автора та версію сторінки.",
 	"whowrotethat-tour-welcome-dismiss": "Зрозуміло!",
 	"whowrotethat-revision-added": "Додано $1 до $2.",
 	"whowrotethat-revision-attribution": "Є автором $1 вмісту цієї сторінки.",
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "Є автором $1 вмісту цієї сторінки.",
 	"whowrotethat-revision-attribution-lessthan-percent": "менше ніж 1%",
-	"whowrotethat-revision-deleted-username": "(ім'я автора чи IP стерто)"
+	"whowrotethat-revision-deleted-username": "(ім'я автора чи IP стерто)",
+	"whowrotethat-revision-edit-summary-hidden": "(опис редагування вилучено)"
 }

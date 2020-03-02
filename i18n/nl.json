@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robin van der Vliet"
+		]
+	},
+	"whowrotethat-ext-name": "Wie schreef dat?",
+	"whowrotethat-ext-name-beta": "Wie schreef dat? (BETA)",
+	"whowrotethat-activation-link": "Wie schreef dat?",
+	"whowrotethat-state-error": "Fout: $1",
+	"whowrotethat-ready-title": "Wie schreef dat?",
+	"whowrotethat-tour-welcome-title": "$1 is ingeschakeld!",
+	"whowrotethat-tour-welcome-title-name": "Wie schreef dat?",
+	"whowrotethat-tour-welcome-dismiss": "Begrepen!",
+	"whowrotethat-revision-added": "$1 voegde dit op $2 toe.",
+	"whowrotethat-revision-attribution": "Deze persoon heeft $1 van de pagina geschreven.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Deze persoon heeft $1 van de pagina geschreven.",
+	"whowrotethat-revision-attribution-lessthan-percent": "minder dan 1%",
+	"whowrotethat-revision-deleted-username": "(gebruikersnaam of IP-adres verwijderd)"
+}
