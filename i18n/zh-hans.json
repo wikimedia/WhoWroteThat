@@ -13,7 +13,7 @@
 	"whowrotethat-ext-name-beta": "谁是作者？（测试版）",
 	"whowrotethat-ext-desc": "可视化探索维基百科条目的作者及修订记录，由 WikiWho 强力驱动。",
 	"whowrotethat-ext-desc-beta": "可视化探索维基百科条目的作者及修订记录，由 WikiWho 强力驱动。此版本为测试版，仅供测试使用。",
-	"whowrotethat-ext-longdesc": "悬停以查看同一作者的文本。点击以查看作者和修订版本的详细信息。",
+	"whowrotethat-ext-longdesc": "谁写的？ （WWT）是一个浏览器扩展程序，可直接在维基百科条目上显示作者信息。当您将鼠标悬停在内容上时，该工具会突出显示同一作者的所有内容。当您单击内容时，该工具会识别修订的作者以及修订的详细信息。总体而言，WWT允许用户发现编辑的来源和背景，而无需深入研究修订历史。",
 	"whowrotethat-activation-link": "谁是作者？",
 	"whowrotethat-activation-link-tooltip": "激活谁是作者？",
 	"whowrotethat-deactivation-link": "关闭谁是作者？",
