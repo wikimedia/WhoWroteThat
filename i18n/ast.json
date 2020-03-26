@@ -14,5 +14,22 @@
 	"whowrotethat-deactivation-link": "Zarrar ¿Quién lo escribió?",
 	"whowrotethat-state-pending": "Ta cargando el $1. Esto podría tardar un momentu.",
 	"whowrotethat-state-pending-name": "¿Quién lo escribió?",
-	"whowrotethat-state-error": "Error de la API: $1"
+	"whowrotethat-state-error": "Error: $1",
+	"whowrotethat-error-refresh": "Enfresca o tenta nuevamente sero.",
+	"whowrotethat-error-later": "Tenta nuevamente sero.",
+	"whowrotethat-error-contact": "Enfresca o tenta nuevamente sero. $1",
+	"whowrotethat-error-contact-link": "Si'l problema siguiera, comunícate con nós.",
+	"whowrotethat-ready-title": "¿Quién lo escribió?",
+	"whowrotethat-ready-general": "Pasa'l mur pa ver les collaboraciones del mesmu autor. Pulsia pa más detalles.",
+	"whowrotethat-tour-welcome-title": "¡$1 ta activáu!",
+	"whowrotethat-tour-welcome-title-name": "¿Quién lo escribió?",
+	"whowrotethat-tour-welcome-description": "Activa la ferramienta dende la barra llateral. Pasa'l punteru pel testu pa destacar les collaboraciones del mesmu autor. Pulsia pa ver los detalles del autor y revisión.",
+	"whowrotethat-tour-welcome-dismiss": "Entendílo",
+	"whowrotethat-revision-added": "$1 añadiólo el $2.",
+	"whowrotethat-revision-attribution": "Escribieron un $1 de la páxina.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Escribieron un $1 de la páxina.",
+	"whowrotethat-revision-attribution-lessthan-percent": "menos del 1%",
+	"whowrotethat-revision-deleted-username": "(nome d'usuariu o IP desaniciáu)",
+	"whowrotethat-revision-edit-summary-hidden": "(resume d'edición desaniciáu)"
 }
