@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fulup"
+		]
+	},
+	"whowrotethat-ext-name": "Gant piv eo bet skrivet an dra-mañ ?",
+	"whowrotethat-ext-name-beta": "Gwant piv eo bet skrivet an dra-mañ (BETA)",
+	"whowrotethat-ext-desc": "Gwelet war-eeun e pennadoù Wikipedia piv en deus graet tra pe dra. Mont a ra en-dro gant WikiWho.",
+	"whowrotethat-ext-desc-beta": "Gwelet war-eeun an tituroù a-zivout an aozer war Wikipedia. Ur stumm BETA eo hemañ, graet evit amprouiñ hepken.",
+	"whowrotethat-ext-longdesc": "Who Wrote that? (Gant piv eo bet skrivet an dra-mañ) ? Un astenn merdeer eo (WWT); diskouez a ra war-eeun e pennadoù Wikipedia titouroù diwar-benn an hini en deus graet tra pe dra. Pa lakait ho logodenn da dremen war-c'horre ur rannbennad e islinenn an ostilh an holl draoù bet skrivet gant un aozer bennak. Pa glikit war an danvez, diskuilhañ a ra an ostilh aozer ar stumm a-gevret gant munudoù ar c'hemmoù. Dre vras e talvez WWT da zizoleiñ mammenn hag istor ur c'hemm hep kaout ezhomm da furchal en istor pep adstumm.",
+	"whowrotethat-activation-link": "Gant piv eo bet skrivet an dra-mañ ?",
+	"whowrotethat-activation-link-tooltip": "Gweredekaat Gant piv eo bet skrivet an dra-mañ ?",
+	"whowrotethat-deactivation-link": "Serriñ Gant piv eo bet slrivet an dra-mañ ?",
+	"whowrotethat-state-pending": "Emañ $1 o kargañ. Un tamm amzer a c'hall mont gant se.",
+	"whowrotethat-state-pending-name": "Gant piv eo bet skrivet an dra-mañ ?",
+	"whowrotethat-state-error": "Fazi : $1",
+	"whowrotethat-error-refresh": "Freskaat pe klask en-dro diwezhatoc'h.",
+	"whowrotethat-error-later": "Klaskit en-dro diwezhatoc'h.",
+	"whowrotethat-error-contact": "Freskaat pe klask en-dro diwezhatoc'h. $1",
+	"whowrotethat-error-contact-link": "Ma talc'h ar gudenn, kit e daremrepd ganeomp.",
+	"whowrotethat-ready-title": "Gant piv eo bet skrivet an dra-mañ ?",
+	"whowrotethat-ready-general": "Lakait al logodenn war-c'horre evit gwelet degasadennoù all an aozer. Klikit evit gouzout hiroc'h.",
+	"whowrotethat-tour-welcome-title": "Gweredekaet eo $1 !",
+	"whowrotethat-tour-welcome-title-name": "Gant piv eo bet skrivet an dra-mañ ?",
+	"whowrotethat-tour-welcome-description": "Gweredekaat an ostilh adalek ar varrenn-gostez. Lakaat al logodenn da dremen war-c'horre evit dreistlinennañ degasadennoù all un aozer bennak. Klikañ evit gwelet an aozer ha munudoù ar c'hemmoù bet graet gantañ.",
+	"whowrotethat-tour-welcome-dismiss": "Mat eo !",
+	"whowrotethat-revision-added": "Ouzhpennet eo bet an dra-se war $2 gant $1.",
+	"whowrotethat-revision-attribution": "Skrivet eo bet $1 ar bajenn ganto.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Skrivet eo bet $1 ar bajenn gant an aozer.",
+	"whowrotethat-revision-attribution-lessthan-percent": "nebeutoc'h eget 1%",
+	"whowrotethat-revision-deleted-username": "(anv implijet pe IP lamet)",
+	"whowrotethat-revision-edit-summary-hidden": "(diverradenn ar c'hemm diverket)"
+}
