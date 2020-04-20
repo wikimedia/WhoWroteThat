@@ -9,6 +9,7 @@
 	"whowrotethat-ext-name-beta": "¿Quién lo escribió? (BETA)",
 	"whowrotethat-ext-desc": "Esploración visual direuta d'información d'autoría y revisión d'artículos de Wikipedia. Col encontu de WikiWho.",
 	"whowrotethat-ext-desc-beta": "Esplora la información d'autoría de Wikipedia. Col encontu de WikiWho. Esta ye la versión BETA, destinada sólo a pruebes.",
+	"whowrotethat-ext-longdesc": "¿Quién lo escribió? (WWT) ye una estensión del navegador, qu'amuesa información d'autoría direutamente nos artículos de Wikipedia. Al pasar el mur pol conteníu, la ferramienta destaca tol conteníu del mesmu autor. Cuando pulsies nel conteníu, la ferramienta identifica l'autor de la revisión, xunto colos detalles de la mesma. En xunto, WWT permite a los usuarios descubrir la fonte y historial d'una edición, ensin restolar pel historial de revisiones.",
 	"whowrotethat-activation-link": "¿Quién lo escribió?",
 	"whowrotethat-activation-link-tooltip": "Activar ¿Quién lo escribió?",
 	"whowrotethat-deactivation-link": "Zarrar ¿Quién lo escribió?",
