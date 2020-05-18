@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alexander Yukal",
+			"Okras"
+		]
+	},
+	"whowrotethat-ext-longdesc": "Who Wrote That? (WWT) это расширение браузера, которое показывает информацию об авторстве непосредственно в статьях Википедии. Когда вы водите курсор по содержанию, инструмент подсвечивает все содержимое, которое принадлежит его автору. Когда вы нажимаете мышкой на содержание, инструмент определяет автора ревизии и её детали. Вцелом, WWT позволяет пользователям обнаруживать источник и фон редактирования, не копаясь в истории изменений.",
+	"whowrotethat-state-error": "Ошибка: $1",
+	"whowrotethat-error-refresh": "Обновите или попробуйте ещё раз попозже.",
+	"whowrotethat-error-later": "Попробуйте ещё раз попозже.",
+	"whowrotethat-error-contact": "Попробуйте ещё раз попозже. $1",
+	"whowrotethat-tour-welcome-dismiss": "Понятно!",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan-percent": "менее 1%",
+	"whowrotethat-revision-deleted-username": "(имя участника или IP-адрес удалены)",
+	"whowrotethat-revision-edit-summary-hidden": "(описание правки удалено)"
+}
