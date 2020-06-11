@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Renessaince"
+		]
+	},
+	"whowrotethat-ext-name": "Хто гэта напісаў?",
+	"whowrotethat-ext-name-beta": "Хто гэта напісаў? (БЭТА)",
+	"whowrotethat-ext-longdesc": "Хто гэта напісаў? (ХГН) — броўзэрнае пашырэньне, якое паказвае аўтарства інфармацыі непасрэдна ў артыкулах Вікіпэдыі. Праводзячы мышкай над зьместам, інструмэнт вылучае ўвесь зьмест аднаго аўтара. Пстрыкаючы на зьмест, прылада выводзіць інфармацыю пра аўтара разам з падрабязнасьцямі вэрсіі. Увогуле ХГН дазваляе карыстальнікам высьвятляць крыніцу і акалічнасьці рэдагаваньня без патрбы корпацца ў гісторыі рэдагаваньняў.",
+	"whowrotethat-activation-link": "Хто гэта напісаў?",
+	"whowrotethat-activation-link-tooltip": "Актываваць «Хто гэта напісаў?»",
+	"whowrotethat-deactivation-link": "Закрыць «Хто гэта напісаў?»",
+	"whowrotethat-state-pending-name": "Хто гэта напісаў?",
+	"whowrotethat-state-error": "Памылка: $1",
+	"whowrotethat-ready-title": "Хто гэта напісаў?",
+	"whowrotethat-tour-welcome-title": "$1 уключанае!",
+	"whowrotethat-tour-welcome-title-name": "Хто гэта напісаў?",
+	"whowrotethat-tour-welcome-dismiss": "Зразумела!",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-deleted-username": "(імя ўдзельніка ці IP выдаленае)",
+	"whowrotethat-revision-edit-summary-hidden": "(апісаньне зьменаў выдаленае)"
+}
