@@ -2,16 +2,35 @@
 	"@metadata": {
 		"authors": [
 			"Alexander Yukal",
-			"Okras"
+			"Okras",
+			"Teretalexev"
 		]
 	},
-	"whowrotethat-ext-longdesc": "Who Wrote That? (WWT) это расширение браузера, которое показывает информацию об авторстве непосредственно в статьях Википедии. Когда вы водите курсор по содержанию, инструмент подсвечивает все содержимое, которое принадлежит его автору. Когда вы нажимаете мышкой на содержание, инструмент определяет автора ревизии и её детали. Вцелом, WWT позволяет пользователям обнаруживать источник и фон редактирования, не копаясь в истории изменений.",
+	"whowrotethat-ext-name": "Who Wrote That?",
+	"whowrotethat-ext-name-beta": "Who Wrote That? (BETA)",
+	"whowrotethat-ext-desc": "Изучайте информацию об авторах и ревизиях в наглядной форме непосредственно в статьях Википедии. Работает на WikiWho.",
+	"whowrotethat-ext-desc-beta": "Изучите информацию об авторстве в Википедии. Работает на WikiWho. Это BETA-версия, предназначенная только для тестирования.",
+	"whowrotethat-ext-longdesc": "Who Wrote That? (WWT) это расширение браузера, которое показывает информацию об авторстве непосредственно в статьях Википедии. Когда вы водите курсор по содержанию, инструмент подсвечивает все содержимое, которое принадлежит его автору. Когда вы нажимаете мышкой на содержание, инструмент определяет автора версии и её детали. В целом, WWT позволяет пользователям обнаруживать источник и причину правки, не копаясь в истории версий.",
+	"whowrotethat-activation-link": "Who Wrote That?",
+	"whowrotethat-activation-link-tooltip": "Активировать Who Wrote That?",
+	"whowrotethat-deactivation-link": "Закрыть Who Wrote That?",
+	"whowrotethat-state-pending": "$1 загружается. Это может занять некоторое время.",
+	"whowrotethat-state-pending-name": "Who Wrote That?",
 	"whowrotethat-state-error": "Ошибка: $1",
 	"whowrotethat-error-refresh": "Обновите или попробуйте ещё раз попозже.",
 	"whowrotethat-error-later": "Попробуйте ещё раз попозже.",
 	"whowrotethat-error-contact": "Попробуйте ещё раз попозже. $1",
+	"whowrotethat-error-contact-link": "Если проблема сохранится, свяжитесь с нами.",
+	"whowrotethat-ready-title": "Who Wrote That?",
+	"whowrotethat-ready-general": "Подведите курсор, чтобы увидеть вклады того же автора. Нажмите для более подробной информации.",
+	"whowrotethat-tour-welcome-title": "$1 включен!",
+	"whowrotethat-tour-welcome-title-name": "Who Wrote That?",
+	"whowrotethat-tour-welcome-description": "Активируйте инструмент с боковой панели. Наведите курсор на текст, чтобы выделить вклад того же автора. Щелкните, чтобы увидеть подробности об авторе и версии.",
 	"whowrotethat-tour-welcome-dismiss": "Понятно!",
+	"whowrotethat-revision-added": "$1 добавил это к $2.",
+	"whowrotethat-revision-attribution": "Участник написал $1 страницы.",
 	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Участник написал $1 страницы.",
 	"whowrotethat-revision-attribution-lessthan-percent": "менее 1%",
 	"whowrotethat-revision-deleted-username": "(имя участника или IP-адрес удалены)",
 	"whowrotethat-revision-edit-summary-hidden": "(описание правки удалено)"
