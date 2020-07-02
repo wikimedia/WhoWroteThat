@@ -31,9 +31,9 @@
 	"whowrotethat-tour-welcome-description": "从侧边栏启用此工具。将鼠标指针悬停在文本上方以高亮同一作者所做出的贡献，点击则可查看作者及修订版本信息。",
 	"whowrotethat-tour-welcome-dismiss": "明白了！",
 	"whowrotethat-revision-added": "$1于$2添加了此内容。",
-	"whowrotethat-revision-attribution": "他/她撰写了本页面内容的 $1。",
+	"whowrotethat-revision-attribution": "该用户撰写了本页面内容的 $1。",
 	"whowrotethat-revision-attribution-percent": "$1%",
-	"whowrotethat-revision-attribution-lessthan": "他/她撰写了本页面内容的 $1。",
+	"whowrotethat-revision-attribution-lessthan": "该用户撰写了本页面内容的 $1。",
 	"whowrotethat-revision-attribution-lessthan-percent": "少于1%",
 	"whowrotethat-revision-deleted-username": "（已移除用户名或IP地址）",
 	"whowrotethat-revision-edit-summary-hidden": "（编辑摘要被隐藏）"

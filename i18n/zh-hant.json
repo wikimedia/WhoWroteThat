@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kly",
-			"Streetdeck"
+			"Streetdeck",
+			"沈澄心"
 		]
 	},
 	"whowrotethat-ext-name": "Who Wrote That?",
@@ -27,9 +28,9 @@
 	"whowrotethat-tour-welcome-description": "從側邊欄來啓動工具。懸停在文字上會突顯出同一作者的貢獻。點擊則能查看作者與修訂詳細內容。",
 	"whowrotethat-tour-welcome-dismiss": "了解！",
 	"whowrotethat-revision-added": "$1於$2添加此。",
-	"whowrotethat-revision-attribution": "他們寫了該頁面的 $1 內容。",
+	"whowrotethat-revision-attribution": "此使用者撰寫了該頁面的 $1 內容。",
 	"whowrotethat-revision-attribution-percent": "$1%",
-	"whowrotethat-revision-attribution-lessthan": "他們寫了該頁面的 $1 內容。",
+	"whowrotethat-revision-attribution-lessthan": "此使用者撰寫了該頁面的 $1 內容。",
 	"whowrotethat-revision-attribution-lessthan-percent": "小於 1%",
 	"whowrotethat-revision-deleted-username": " (已移除使用者名稱或 IP)",
 	"whowrotethat-revision-edit-summary-hidden": "（已移除編輯摘要）"
