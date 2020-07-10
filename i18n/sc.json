@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"L2212"
+		]
+	},
+	"whowrotethat-ext-name": "Chie at iscritu custu?",
+	"whowrotethat-ext-name-beta": "Chie at iscritu custu? (BETA)",
+	"whowrotethat-ext-desc": "Esplora sas informatziones de sos autores e de sas revisiones in manera visuale e diretamente in sos artìculos de Wikipedia. Frunidu dae WikiWho.",
+	"whowrotethat-ext-desc-beta": "Esplora sas informatziones de sos autores de Wikipedia. Frunidu dae WikiWho. Custa est sa versione BETA, pensada pro s'isperimentatzione ebbia.",
+	"whowrotethat-ext-longdesc": "Chie at iscritu custu? (Who Wrote That?-WWT) est un'estensione pro sos navigadores, chi ammustrat sas informatziones in subra de sos autores diretamente in sos artìculos de Wikipedia. Cando colas in subra de unu cuntenutu, s'aina evidentziat totu su cuntenutu de su matessi autore. In generale, WWT permitit a sos impitadores de iscobèrrere sa fonte e su cuntestu de una modìfica, chene andare a isfossare in sa cronologia de sas revisiones.",
+	"whowrotethat-activation-link": "Chie at iscritu custu?",
+	"whowrotethat-activation-link-tooltip": "Ativare Chie at iscritu custu?",
+	"whowrotethat-deactivation-link": "Serrare Chie at iscritu custu?",
+	"whowrotethat-state-pending": "$1 s'est carrighende. Bi diat pòdere chèrrere unu pagu de tempus.",
+	"whowrotethat-state-pending-name": "Chie at iscritu custu?",
+	"whowrotethat-state-error": "Faddina: $1",
+	"whowrotethat-error-refresh": "Annoa o torra a proare prus a tardu.",
+	"whowrotethat-error-later": "Torra a proare prus a tardu.",
+	"whowrotethat-error-contact": "Annoa o torra a proare prus a tardu. $1",
+	"whowrotethat-error-contact-link": "Si su problema sighit a b'èssere, cuntata·nos.",
+	"whowrotethat-ready-title": "Chie at iscritu custu?",
+	"whowrotethat-ready-general": "Cola in subra de su testu pro evidentziare sas contributziones de su matessi autore. Incarca inoghe pro àteros detàllios.",
+	"whowrotethat-tour-welcome-title": "$1 est abilitadu!",
+	"whowrotethat-tour-welcome-title-name": "Chie at iscritu custu?",
+	"whowrotethat-tour-welcome-description": "Ativa s'aina dae sa barra laterale. Cola in subra de su testu pro evidentziare sas contributziones de su matessi autore. Incarca pro pompiare s'autore e sos detàllios de revisione.",
+	"whowrotethat-tour-welcome-dismiss": "AB!",
+	"whowrotethat-revision-added": "$1 l'at annànghidu a $2.",
+	"whowrotethat-revision-attribution": "S'autore at iscritu su $1 de sa pàgina.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "S'autore at iscritu $1 de sa pàgina.",
+	"whowrotethat-revision-attribution-lessthan-percent": "nemmancu s'1%",
+	"whowrotethat-revision-deleted-username": "(nùmene impitadore o IP bogadu)",
+	"whowrotethat-revision-edit-summary-hidden": "(ogetu de sa modìfica bogadu)"
+}
