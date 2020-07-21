@@ -55,6 +55,7 @@ class Controller {
 			} );
 		}
 
+		// eslint-disable-next-line no-constructor-return
 		return Controller.instance;
 	}
 
@@ -271,6 +272,7 @@ class Controller {
 
 	/**
 	 * Set the link text and tooltip.
+	 *
 	 * @param {boolean} [active] The state to toggle to.
 	 */
 	toggleLinkActiveState( active ) {

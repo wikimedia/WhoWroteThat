@@ -7,12 +7,12 @@ import Tools from './Tools';
  */
 class Api {
 	/**
-	* @param {Object} config
-	* @cfg config.url The WikiWho base URL.
-	* @cfg config.mwApi The mw.Api instance.
-	* @cfg config.mwConfig The mw.config data (a mw.Map object).
-	* @constructor
-	*/
+	 * @param {Object} config
+	 * @cfg config.url The WikiWho base URL.
+	 * @cfg config.mwApi The mw.Api instance.
+	 * @cfg config.mwConfig The mw.config data (a mw.Map object).
+	 * @constructor
+	 */
 	constructor( config = {} ) {
 		// Remove trailing slash from URL.
 		this.url = ( config.url || '' ).replace( /\/$/, '' );
@@ -59,7 +59,7 @@ class Api {
 	 *
 	 * @param {number} revId
 	 * @return {jQuery.Promise} Resolving Object with keys 'username', 'comment' and 'size'.
- 	 */
+	 */
 	fetchRevisionData( revId ) {
 		/**
 		 * Fetch the edit summary for the given revision from the MediaWiki API

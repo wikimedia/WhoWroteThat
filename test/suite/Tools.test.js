@@ -36,7 +36,7 @@ describe( 'Tools test', () => {
 		} );
 	} );
 
-	describe( 'Tools.bidiIsolate', () => {
+	describe( 'Tools.i18nHtml', () => {
 		const cases = [
 			{
 				testName: 'No parameters.',

@@ -1,0 +1,31 @@
+{
+	"extends": [
+		"wikimedia/server",
+		"wikimedia/jquery",
+		"wikimedia/mediawiki"
+	],
+	"env": {
+		"browser": true
+	},
+	"globals": {
+		"chrome": "readonly",
+		"browser": "readonly",
+		"moment": "readonly"
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"rules": {
+		"arrow-parens": [ "error", "as-needed" ],
+		"jsdoc/require-jsdoc": [ "error", {
+			"require": {
+				"FunctionDeclaration": true,
+				"MethodDefinition": true,
+				"ClassDeclaration": true,
+				"ArrowFunctionExpression": true,
+				"FunctionExpression": true
+			}
+		} ],
+		"mediawiki/valid-package-file-require": "off"
+	}
+}

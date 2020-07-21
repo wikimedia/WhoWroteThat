@@ -1,4 +1,4 @@
-/* eslint-env node */
+// eslint-disable-next-line jsdoc/require-jsdoc
 module.exports = function Gruntfile( grunt ) {
 	const pkg = grunt.file.readJSON( 'package.json' ),
 		// Get all language files
@@ -259,8 +259,8 @@ module.exports = function Gruntfile( grunt ) {
 			fetch = require( 'node-fetch' ),
 			addonName = 'whowrotethat' + ( isBeta ? '-beta' : '' ),
 			url = 'https://addons.mozilla.org/api/v4/addons/addon/' + addonName,
-			langBlob = generateLangBlob();
-		var done = this.async();
+			langBlob = generateLangBlob(),
+			done = this.async();
 		fetch( url )
 			.then( res => res.json() )
 			.then( json => {
@@ -342,5 +342,5 @@ module.exports = function Gruntfile( grunt ) {
 		// Create prod zip files.
 		'extManifests', 'extLocales', 'shell:webextBuild', 'shell:webextLint', 'compress:webextSource'
 	] );
-	grunt.registerTask( 'default', [ 'test', 'build', 'webext' ] );
+	grunt.registerTask( 'default', [ 'build', 'test', 'webext' ] );
 };
