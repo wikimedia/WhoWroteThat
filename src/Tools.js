@@ -19,7 +19,7 @@ class Tools {
 	 * @param {Mixed} [params] Parameters to output into the console
 	 *  alongside the message. This is especially useful for errors.
 	 */
-	static log( str, type = 'debug', params ) {
+	static log( str, type = 'debug', params = undefined ) {
 		const legalTypes = [ 'debug', 'info', 'warn', 'error' ],
 			outputParameters = [ config.outputPrefix + str ];
 

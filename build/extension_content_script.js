@@ -1,4 +1,4 @@
-var theBrowser = chrome || browser;
+const theBrowser = chrome || browser;
 
 /**
  * Unify the way we output console.info

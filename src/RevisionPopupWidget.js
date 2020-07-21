@@ -1,6 +1,10 @@
 import Tools from './Tools';
 
 /**
+ * @external Model
+ */
+
+/**
  * @class
  * @constructor
  * @param {Model} model WhoWroteThat model

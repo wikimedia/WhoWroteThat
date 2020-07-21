@@ -1,10 +1,9 @@
 {
-   "extends": "../.eslintrc",
-   "globals": {
-      "describe": false,
-      "it": false
-   },
-   "rules": {
-      "no-jquery/no-parse-html-literal": "off"
-   }
+	"extends": [
+		"wikimedia/mocha"
+	],
+	"rules": {
+		"mocha/no-setup-in-describe": "off",
+		"no-jquery/no-parse-html-literal": "off"
+	}
 }

@@ -73,7 +73,7 @@ config.outputEnvironment = 'Browser extension';
 				// and the WWT system loads on the page again.
 				// Either way, we only want this to happen once per this session.
 				wwtController.getModel().on( 'enabled', function ( isEnabled ) {
-					var show = isEnabled && !popupShown;
+					const show = isEnabled && !popupShown;
 
 					welcome.toggle( show );
 					popupShown = popupShown || show;
@@ -114,7 +114,7 @@ config.outputEnvironment = 'Browser extension';
 
 		};
 
-	var q = window.RLQ || ( window.RLQ = [] );
+	const q = window.RLQ || ( window.RLQ = [] );
 	q.push( [ [ 'jquery', 'mediawiki.base', 'mediawiki.util', 'mediawiki.api', 'mediawiki.jqueryMsg' ], loadWhoWroteThat ] );
 
 	// For debugging purposes, export methods to the window global

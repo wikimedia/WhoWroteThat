@@ -55,6 +55,7 @@ class Controller {
 			} );
 		}
 
+		// eslint-disable-next-line no-constructor-return
 		return Controller.instance;
 	}
 

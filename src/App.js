@@ -61,6 +61,7 @@ class App {
 
 		} );
 
+		// eslint-disable-next-line no-constructor-return
 		return App.instance;
 	}
 
@@ -218,19 +219,18 @@ class App {
 		 * Modify fragment link scrolling behaviour to take into account the width of the infobar at
 		 * the top of the screen, to prevent the targeted heading or citation from being hidden.
 		 */
-		$content.find( "a[href^='#']" ).on( 'click', event => {
-			var targetId, linkOffset, infobarHeight;
+		$content.find( 'a[href^="#"]' ).on( 'click', event => {
 			if ( !this.widget.isVisible() ) {
 				// Use the default if WWT is not active.
 				return;
 			}
-			targetId = decodeURIComponent( event.currentTarget.hash ).replace( /^#/, '' );
+			const targetId = decodeURIComponent( event.currentTarget.hash ).replace( /^#/, '' );
 			event.preventDefault();
 			// After preventing the default event from doing it, set the URL bar fragment manually.
 			window.location.hash = targetId;
 			// After setting that, manually scroll to the correct place.
-			linkOffset = $( document.getElementById( targetId ) ).offset().top;
-			infobarHeight = this.widget.$element.outerHeight( true );
+			const linkOffset = $( document.getElementById( targetId ) ).offset().top;
+			const infobarHeight = this.widget.$element.outerHeight( true );
 			window.scrollTo( 0, linkOffset - infobarHeight );
 		} );
 	}

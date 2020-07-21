@@ -79,6 +79,8 @@ class Model extends EventEmitter {
 		// If the cache element doesn't already exist, add it.
 		// It will then be re-used for subsequent re-activations of WWT.
 		if ( $cache.length === 0 ) {
+			// Class documented above
+			// eslint-disable-next-line mediawiki/class-doc
 			$cache = $( '<div>' ).addClass( cacheClass );
 			/* eslint-disable-next-line no-jquery/no-global-selector */
 			$( 'body' ).append( $cache );
