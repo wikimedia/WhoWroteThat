@@ -342,5 +342,5 @@ module.exports = function Gruntfile( grunt ) {
 		// Create prod zip files.
 		'extManifests', 'extLocales', 'shell:webextBuild', 'shell:webextLint', 'compress:webextSource'
 	] );
-	grunt.registerTask( 'default', [ 'test', 'build', 'webext' ] );
+	grunt.registerTask( 'default', [ 'build', 'test', 'webext' ] );
 };
