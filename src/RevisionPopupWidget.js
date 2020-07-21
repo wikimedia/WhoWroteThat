@@ -44,6 +44,7 @@ OO.mixinClass( RevisionPopupWidget, OO.ui.mixin.PendingElement );
 
 /**
  * Get jQuery objects for the user links.
+ *
  * @param {Object} data As returned by Api.prototype.getTokenInfo().
  * @return {jQuery}
  */

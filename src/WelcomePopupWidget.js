@@ -3,6 +3,7 @@ import Tools from './Tools';
 /**
  * A popup meant to display as a welcome message after the
  * extension is installed for the first time.
+ *
  * @class
  * @extends OO.ui.PopupWidget
  *

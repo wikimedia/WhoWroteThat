@@ -271,6 +271,7 @@ class Controller {
 
 	/**
 	 * Set the link text and tooltip.
+	 *
 	 * @param {boolean} [active] The state to toggle to.
 	 */
 	toggleLinkActiveState( active ) {

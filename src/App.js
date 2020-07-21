@@ -151,7 +151,9 @@ class App {
 
 	/**
 	 * Gray out elements that aren't or do not contain tokens.
+	 *
 	 * See `untokenizedElements` in config.js for selectors of elements we know aren't tokenized.
+	 *
 	 * @param {jQuery} $content
 	 */
 	grayOutUntokenizedElements( $content ) {
