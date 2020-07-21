@@ -115,7 +115,6 @@ class Controller {
 				mwApi: new mw.Api(),
 				mwConfig: mw.config
 			} );
-			this.api.fetchMessages();
 
 			// Load all messages
 			mw.messages.set(
@@ -370,7 +369,8 @@ class Controller {
 	 * @param {jQuery} $target [description]
 	 */
 	setActiveToken( tokenId, $target ) {
-		const tokenInfo = this.getApi().getTokenInfo( tokenId ),
+		const api = this.getApi(),
+			tokenInfo = api.getTokenInfo( tokenId ),
 			reqStartTime = Date.now();
 
 		// Ensure the popup is attached to the visible content,
@@ -379,14 +379,15 @@ class Controller {
 			$target = $target.find( '.thumb' );
 		}
 
-		if ( !this.getApi().isCached( tokenInfo.revisionId ) ) {
+		if ( !api.isCached( tokenInfo.revisionId ) ) {
 			this.model.setCurrentToken( null, $target, 'pending' );
 		}
-		this.getApi().fetchRevisionData( tokenInfo.revisionId )
+		// Fetch revision data and messages required to display it
+		$.when( api.fetchRevisionData( tokenInfo.revisionId ), api.fetchMessages() )
 			.then(
 				successData => {
 					const delayTime = (
-						!this.getApi().isCached( tokenInfo.revisionId ) &&
+						!api.isCached( tokenInfo.revisionId ) &&
 						Date.now() - reqStartTime < 250
 					) ? 250 : 0;
 

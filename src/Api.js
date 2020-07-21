@@ -19,7 +19,7 @@ class Api {
 
 		this.mwApi = config.mwApi;
 		this.mwConfig = config.mwConfig;
-		this.promiseCache = { data: {}, revisions: {} };
+		this.promiseCache = { data: {}, revisions: {}, messages: null };
 		this.tokenMap = {};
 		this.maxRetries = 4;
 		this.retry = 1;
@@ -41,17 +41,20 @@ class Api {
 	}
 	/**
 	 * Fetch core messages needed for the revision popup, etc., making them available to mw.msg().
-	 * This is called just after the script is first loaded, and the request completes very quickly,
-	 * so we shouldn't need to bother with promises and such.
+	 *
+	 * @return {jQuery.Promise}
 	 */
 	fetchMessages() {
-		this.mwApi.loadMessages( [
-			'parentheses-start',
-			'talkpagelinktext',
-			'pipe-separator',
-			'contribslink',
-			'parentheses-end'
-		] );
+		if ( !this.promiseCache.messagses ) {
+			this.promiseCache.messagses = this.mwApi.loadMessages( [
+				'parentheses-start',
+				'talkpagelinktext',
+				'pipe-separator',
+				'contribslink',
+				'parentheses-end'
+			] );
+		}
+		return this.promiseCache.messages;
 	}
 
 	/**
@@ -69,7 +72,7 @@ class Api {
 		 *  or it's rejected if revision data could not be fetched.
 		 */
 		const fetchRevisionPromise = () => {
-			return this.mwApi.ajax( {
+			return this.mwApi.get( {
 				action: 'compare',
 				fromrev: revId,
 				torelative: 'prev',
