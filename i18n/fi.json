@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"01miki10",
 			"FinlandMan",
 			"Nike",
 			"Pyscowicz",
@@ -26,5 +27,5 @@
 	"whowrotethat-revision-attribution": "Hän on kirjoittanut $1 sivusta.",
 	"whowrotethat-revision-attribution-lessthan": "Hän on kirjoittanut $1 sivusta.",
 	"whowrotethat-revision-attribution-lessthan-percent": "alle 1%",
-	"whowrotethat-revision-deleted-username": "(käyttäjätunnus tai IP-osoite poistettu)"
+	"whowrotethat-revision-deleted-username": "(käyttäjänimi tai IP-osoite poistettu)"
 }
