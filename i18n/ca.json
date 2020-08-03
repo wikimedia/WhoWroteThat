@@ -1,17 +1,34 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Mguix"
 		]
 	},
+	"whowrotethat-ext-name": "Qui va escriure això?",
+	"whowrotethat-ext-name-beta": "Qui va escriure això?(BETA)",
+	"whowrotethat-ext-desc": "Explora la informació d'autoria i de revisió de manera visual i directa en els articles de Wikipedia. Desenvolupat per WikiWho.",
+	"whowrotethat-ext-desc-beta": "Explora la informació d'autoria de Wikipedia. Desenvolupat per WikiWho. Aquesta és la versió BETA, destinada només per a proves.",
+	"whowrotethat-ext-longdesc": "Qui va escriure això? (WWT) és una extensió del navegador, que mostra la informació d'autoria directament en els articles de Wikipedia. Quan es passa el cursor sobre el contingut, l'eina ressalta tot el contingut del mateix autor. Quan fas clic en el contingut, l'eina identifica a l'autor de la revisió, juntament amb els detalls d'aquesta. En general, WWT permet als usuaris descobrir la font i el fons d'una edició, sense haver de buscar en l'historial de revisions.",
+	"whowrotethat-activation-link": "Qui va Escriure Això?",
+	"whowrotethat-activation-link-tooltip": "Activa Qui va Escriure això?",
+	"whowrotethat-deactivation-link": "Tanca Qui va Escriure Això?",
 	"whowrotethat-state-pending": "S’està carregant el $1. Això pot trigar una estona.",
-	"whowrotethat-error-refresh": "Actualitzeu la pàgina o proveu-ho de nou més tard.",
+	"whowrotethat-state-pending-name": "Qui va Escriure Això?",
+	"whowrotethat-state-error": "Error: $1",
+	"whowrotethat-error-refresh": "Actualitzeu o proveu-ho de nou més tard.",
 	"whowrotethat-error-later": "Proveu-ho de nou més tard.",
-	"whowrotethat-error-contact-link": "contacteu-nos",
-	"whowrotethat-tour-welcome-description": "Activeu l’eina a la barra lateral. Poseu el ratolí sobre el text per a mostrar-ne l’autor i les seves altres contribucions a aquesta pàgina. Feu-hi clic per a obtenir més detalls.",
+	"whowrotethat-error-contact": "Actualitzeu o intenteu-ho més tard. $1",
+	"whowrotethat-error-contact-link": "Si el problema persisteix, contacteu-nos.",
+	"whowrotethat-ready-title": "Qui va Escriure Això?",
+	"whowrotethat-ready-general": "Passeu el cursor per a veure les contribucions del mateix autor. Feu clic per a més detalls",
+	"whowrotethat-tour-welcome-title": "$1 està habilitat!",
+	"whowrotethat-tour-welcome-title-name": "Qui va Escriure Això?",
+	"whowrotethat-tour-welcome-description": "Activeu l'eina des de la barra lateral. Passeu el cursor per sobre del text per a destacar les contribucions del mateix autor. Feu-hi clic per a veure l'autor i els detalls de la revisió.",
 	"whowrotethat-tour-welcome-dismiss": "Entesos",
 	"whowrotethat-revision-added": "$1 ho ha afegit el $2.",
 	"whowrotethat-revision-attribution": "Ha escrit $1 de la pàgina.",
+	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "Ha escrit $1 de la pàgina.",
 	"whowrotethat-revision-attribution-lessthan-percent": "menys de l’1%",
 	"whowrotethat-revision-deleted-username": "(s’ha tret l’usuari o la IP)"
