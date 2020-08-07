@@ -1,18 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
+			"Sabelöga",
 			"WikiPhoenix"
 		]
 	},
 	"whowrotethat-ext-name": "Vem skrev detta?",
 	"whowrotethat-ext-name-beta": "Vem skrev detta? (BETA)",
-	"whowrotethat-ext-desc": "Utforska information om författare och sidversioner visuellt och direkt i Wikipedia-artiklar. Tillhandahålls av WikiWho.",
+	"whowrotethat-ext-desc": "Utforska information om författare och sidversioner visuellt och direkt i Wikipediaartiklar. Tillhandahålls av WikiWho.",
 	"whowrotethat-ext-desc-beta": "Utforska författarinformation på Wikipedia. Drivs av WikiWho. Detta är BETAVERSIONEN, som endast är avsedd för att testas.",
 	"whowrotethat-ext-longdesc": "Vem skrev detta? är ett webbläsartillägg som visar författarinformation direkt på Wikipediaartiklar. När du lägger musen över innehåll kommer verktyget visa versionens författare och information. Tillägget låter användare upptäcka källan och bakgrunden till en redigering utan att behöva gräva i historiken.",
 	"whowrotethat-activation-link": "Vem skrev detta?",
 	"whowrotethat-activation-link-tooltip": "Aktivera Vem skrev detta?",
 	"whowrotethat-deactivation-link": "Stäng Vem skrev detta?",
-	"whowrotethat-state-pending": "$1 läser in. Detta kan ta en stund.",
+	"whowrotethat-state-pending": "Läser in $1. Detta kan ta en stund.",
 	"whowrotethat-state-pending-name": "Vem skrev detta?",
 	"whowrotethat-state-error": "Fel: $1",
 	"whowrotethat-error-refresh": "Uppdatera eller försök igen senare.",
@@ -25,7 +26,7 @@
 	"whowrotethat-tour-welcome-title-name": "Vem skrev detta?",
 	"whowrotethat-tour-welcome-description": "Aktivera verktyget från sidofältet. Vila muspekaren över texten för att markera bidrag av samma författare. Klicka för att se författaren och versionsdetaljer.",
 	"whowrotethat-tour-welcome-dismiss": "Uppfattat!",
-	"whowrotethat-revision-added": "$1 lade till detta på $2.",
+	"whowrotethat-revision-added": "$1 la till detta på $2.",
 	"whowrotethat-revision-attribution": "Personen skrev $1 av sidan.",
 	"whowrotethat-revision-attribution-percent": "$1 %",
 	"whowrotethat-revision-attribution-lessthan": "Personen skrev $1 av sidan.",

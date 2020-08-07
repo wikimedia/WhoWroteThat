@@ -31,5 +31,6 @@
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "Ha escrit $1 de la pàgina.",
 	"whowrotethat-revision-attribution-lessthan-percent": "menys de l’1%",
-	"whowrotethat-revision-deleted-username": "(s’ha tret l’usuari o la IP)"
+	"whowrotethat-revision-deleted-username": "(s’ha tret l’usuari o la IP)",
+	"whowrotethat-revision-edit-summary-hidden": "(resum d'edició eliminat)"
 }
