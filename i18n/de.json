@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Lucas Werkmeister",
-			"Tacsipacsi"
+			"Tacsipacsi",
+			"Umherirrender"
 		]
 	},
 	"whowrotethat-ext-name": "Wer hat es geschrieben?",
@@ -15,10 +16,10 @@
 	"whowrotethat-state-pending": "„$1“ wird geladen. Dies kann eine Weile dauern.",
 	"whowrotethat-state-pending-name": "Wer hat es geschrieben?",
 	"whowrotethat-state-error": "Fehler: $1",
-	"whowrotethat-error-refresh": "Bitte lade die Seite neu oder versuche es später erneut.",
+	"whowrotethat-error-refresh": "Aktualisiere oder versuche es später erneut.",
 	"whowrotethat-error-later": "Bitte versuche es später erneut.",
-	"whowrotethat-error-contact": "Bitte $1 über dieses Problem.",
-	"whowrotethat-error-contact-link": "kontaktiere uns",
+	"whowrotethat-error-contact": "Aktualisiere oder versuche es später erneut. $1",
+	"whowrotethat-error-contact-link": "Wenn das Problem bestehen bleibt, kontaktiere uns.",
 	"whowrotethat-ready-title": "Wer hat es geschrieben?",
 	"whowrotethat-ready-general": "Fahre mit der Maus über Text, um Beiträge der gleichen Urhebenden zu sehen. Klicke für weitere Informationen.",
 	"whowrotethat-tour-welcome-title": "„$1“ wird aktiviert!",
