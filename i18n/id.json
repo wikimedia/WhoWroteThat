@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Daud I.F. Argana",
 			"Farras"
 		]
 	},
@@ -8,6 +9,7 @@
 	"whowrotethat-ext-name-beta": "Ini Tulisan Siapa? (BETA)",
 	"whowrotethat-ext-desc": "Dapatkan informasi penulis & revisi secara langsung di halaman artikel Wikipedia. Didukung oleh WikiWho.",
 	"whowrotethat-ext-desc-beta": "Dapatkan informasi penulis Wikipedia. Didukung oleh WikiWho. Versi BETA ini untuk coba-coba saja.",
+	"whowrotethat-ext-longdesc": "Ini Tulisan Siapa? adalah sebuah ekstensi peramban, yang menampilkan informasi penulis secara langsung di artikel Wikipedia. Ketika Anda mengarahkan kursor ke atas konten, perkakas ini mengidentifikasi penulis revisinya, beserta detail mengenai revisi. Secara garis besar, Ini Tulisan Siapa? memungkinkan para pengguna menemukan sumber dan latar belakang suatu suntingan, tanpa menggali riwayat revisi.",
 	"whowrotethat-activation-link": "Ini Tulisan Siapa?",
 	"whowrotethat-activation-link-tooltip": "Aktifkan Ini Tulisan Siapa?",
 	"whowrotethat-deactivation-link": "Tutup Ini Tulisan Siapa?",
@@ -16,8 +18,8 @@
 	"whowrotethat-state-error": "Galat: $1",
 	"whowrotethat-error-refresh": "Muat ulang halaman ini atau coba lagi nanti.",
 	"whowrotethat-error-later": "Silakan coba lagi nanti.",
-	"whowrotethat-error-contact": "$1 tentang masalah ini.",
-	"whowrotethat-error-contact-link": "Beritahu kami",
+	"whowrotethat-error-contact": "Muat ulang halaman ini atau coba lagi nanti. $1",
+	"whowrotethat-error-contact-link": "Jika masalahnya terus terjadi, beritahu kami.",
 	"whowrotethat-ready-title": "Ini Tulisan Siapa?",
 	"whowrotethat-ready-general": "Letakkan kursor untuk melihat kontribusi pengguna yang sama. Klik untuk informasi lebih lanjut.",
 	"whowrotethat-tour-welcome-title": "$1 diaktifkan!",
