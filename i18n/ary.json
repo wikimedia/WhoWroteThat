@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ayoubbouamri"
+		]
+	},
+	"whowrotethat-ext-name": "شكون كتب هادشي؟",
+	"whowrotethat-ext-name-beta": "شكون كتب هادشي؟ (بيطا)",
+	"whowrotethat-ext-desc": "كتاشف معلومات على لكتابة ولمراجعة بشكل مرئي وديريكت فمقالات ويكيپيديا، مدعومة ب ويكيهو",
+	"whowrotethat-ext-desc-beta": "كتاشف معلومات على لكتابة ولمراجعة. مدعومة ب ويكيهو. هادي لفيرسيون بيط، مديورا على ود التجريب وصاف.",
+	"whowrotethat-activation-link": "شكون كتب هادشي؟",
+	"whowrotethat-activation-link-tooltip": "اكتيڤي شكون كتب هادشي؟",
+	"whowrotethat-deactivation-link": "سد شكون كتب هادشي؟",
+	"whowrotethat-state-pending": "$1 كايتشارجا. تقدر يتعطل شوي.",
+	"whowrotethat-state-pending-name": "شكون كتب هادشي؟",
+	"whowrotethat-state-error": "غلط: $1",
+	"whowrotethat-error-refresh": "دير ميزاجور ولا عاود جرب من بعد.",
+	"whowrotethat-error-later": "عاود جرب من بعد.",
+	"whowrotethat-error-contact": "دير ميزاجور ولا عاود جرب من بعد. $1",
+	"whowrotethat-error-contact-link": "الى باقي عندك لمشكل، تواصل معانا.",
+	"whowrotethat-ready-title": "شكون كتب هادشي؟",
+	"whowrotethat-ready-general": "الى بغيتي تشوف مساهمات ديال نفس لكاتب. برك هنا باش تشد معلومات كتر.",
+	"whowrotethat-tour-welcome-title": "$1 خدامة!",
+	"whowrotethat-tour-welcome-title-name": "شكون كتب هادشي؟",
+	"whowrotethat-tour-welcome-dismiss": "فهمتك!",
+	"whowrotethat-revision-added": "$1 زاد هادا على $2",
+	"whowrotethat-revision-attribution": "كتبو $1 ديال لپاج",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "كتبو $1 ديال لپاج.",
+	"whowrotethat-revision-attribution-lessthan-percent": "قل من 1%",
+	"whowrotethat-revision-deleted-username": "(سميت لمستخدم ولا لIP تحيد)",
+	"whowrotethat-revision-edit-summary-hidden": "(لملخًص د التعديل تحيًد)"
+}
