@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bikarhêner"
+		]
+	},
+	"whowrotethat-ext-name": "Kî Nivîsî Vê?",
+	"whowrotethat-ext-name-beta": "Kî Nivîsî Vê (BETA)",
+	"whowrotethat-ext-desc": "Agahiyên revîzyon û nivîskariyê yê rasterast û dîtbarî yê di gotarên Wîkîpediyayê de kişf bike. Ji aliyê WikiWho-yê ve tê xebitandin.",
+	"whowrotethat-ext-desc-beta": "Agahiyên nivîskariya Wîkîpediyayê kişf bike. Ji aliyê WikiWho-yê ve tê xebitandin. Ev versiyona BETAyê ye, ji bo ceribandinê hatiye dîzaynkirin.",
+	"whowrotethat-ext-longdesc": "Kî Nivîsî Vê (KNV) pêvekeke gerokê ye ku agahiyên nivîskaran rasterast li ser gotarên Wîkîpediyayê nîşan dide. Gava li ser naverokê bisekinî, amûr hemû naverokên ji eynî nivîskarê ronî dike. Gava bitikînî ser naverokê, amûr nivîskarê revîzyonê diyar dike, tevî detayên revîzyonê. Bi giştî, KNV îmkan dide bikarhêneran ku paşzemîn û çavkaniya guherandineke peyda bikin, bêyî çûna raboriya revîzyonê.",
+	"whowrotethat-activation-link": "Kî Nivîsî Vê?",
+	"whowrotethat-activation-link-tooltip": "Bila Kî Nivîsî Vê were aktîvkirin?",
+	"whowrotethat-deactivation-link": "Bila Kî Nivîsî Vê were girtin?",
+	"whowrotethat-state-pending": "$1 bar dibe. Dibe ku ev hinek wext bigire.",
+	"whowrotethat-state-pending-name": "Kî Nivîsî Vê?",
+	"whowrotethat-state-error": "Çewtî: $1",
+	"whowrotethat-error-refresh": "Nû bike an paşê cardin biceribîne.",
+	"whowrotethat-error-later": "Ji kerema xwe paşê cardin biceribîne.",
+	"whowrotethat-error-contact": "Nû bike an paşê cardin biceribîne. $1",
+	"whowrotethat-error-contact-link": "Ger pirsgirêk dewam bike, bi me re têkiliyê deyne.",
+	"whowrotethat-ready-title": "Kî Nivîsî Vê?",
+	"whowrotethat-ready-general": "Were ser nivîsê ji bo ku beşdariyên ji eynî nivîskarê ronî bikî. Ji bo detayên zêdetir bitikîne.",
+	"whowrotethat-tour-welcome-title": "$1 hate aktîvkirin!",
+	"whowrotethat-tour-welcome-title-name": "Kî Nivîsî Vê?",
+	"whowrotethat-tour-welcome-description": "Amûrê ji kêlekbendê aktîv bike. Werin ser nivîsê ji bo ku beşdariyên ji eynî nivîskarê ronî bikî. Ji bo ku detayên nivîskar û revîzyonê bibînî bitikîne.",
+	"whowrotethat-tour-welcome-dismiss": "Min fam kir!",
+	"whowrotethat-revision-added": "$1 vê tevlî $2 kir.",
+	"whowrotethat-revision-attribution": "Ew $1 ji rûpelê nivîsiye.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Ew $1 ji rûpelê nivîsiye.",
+	"whowrotethat-revision-attribution-lessthan-percent": "kêmtirî 1%",
+	"whowrotethat-revision-deleted-username": "(navê bikarhêner an IP hate jêbirin)",
+	"whowrotethat-revision-edit-summary-hidden": "(kurteya guhertinê hate rakirin)"
+}
