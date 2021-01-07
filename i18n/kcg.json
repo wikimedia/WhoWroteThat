@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kambai Akau"
+		]
+	},
+	"whowrotethat-ext-name": "A̱nyan Wa Lyuut A̱hwa?",
+	"whowrotethat-ext-name-beta": "A̱nyan Wa Lyuut A̱hwa? (BETA)",
+	"whowrotethat-ext-desc": "Zop a̱tyulyuut ma̱ng nkhang khwifeang mi̱ nwuan ma̱ng di̱di̱ri̱k mami a̱yaati̱kut  Wikipidya. WikiA̱nyan wa nang cet hu.",
+	"whowrotethat-ext-desc-beta": "Zop nkhang a̱tyulyuut Wikipidya. WikiA̱nyan wa nang cet hu. Si̱ huni hwa yet nok BETA hu, mat maí hwa ma̱nyin.",
+	"whowrotethat-ext-longdesc": "A̱nyan Wa Lyuut A̱hwa? (A̱WLA̱) yet bwak brauza hwa, zang hwa tyaat nkhang a̱tyulyuut ma̱ di̱di̱ri̱k ma̱ a̱yaati̱kut Wikipidya. Ka̱ a si̱ keang kyangmami hu, kyangta̱m hu na si̱ mya̱ra̱m a̱mgba̱m kyangmami mbwak a̱tyulyuut a̱nyiung wu. Ka̱ a nyap tazwa kyangmami, kyangta̱m hu na si̱ nghywut ma̱ng a̱tyulyuut wu khwifeang wu, a mbeang a̱cyuang nkhang khwifeang na. Ma̱ a̱mgba̱m A̱WLA̱ nwuat á̱nienta̱m yak lyen a̱vwuoneet ma̱ng nkhang a̱zama jhyuk, di̱ mi̱n lung nkhang gbangbang khwifeang na kap di̱n kap bah.",
+	"whowrotethat-activation-link": "A̱nyan Wa Lyuut A̱hwa?",
+	"whowrotethat-activation-link-tooltip": "Á̱ tyia̱ A̱nyan Wa Lyuut A̱hwa di̱n ta̱m a?",
+	"whowrotethat-deactivation-link": "Á̱ nyim A̱nyan Wa Lyuut A̱hwa a?",
+	"whowrotethat-state-pending": "$1 shyia̱ di̱ nyia̱ lodi. Si̱ huni maai kyiak a̱banjen.",
+	"whowrotethat-state-pending-name": "A̱nyan Wa Lyuut A̱hwa?",
+	"whowrotethat-state-error": "Ghyuap: $1",
+	"whowrotethat-error-refresh": "Tyia̱ shyim ku a bu kwan jenjini̱shi.",
+	"whowrotethat-error-later": "Ma̱sa̱kut kwan jenjini̱shi.",
+	"whowrotethat-error-contact": "Tyia̱ shyim ku a bu kwan jenjini̱shi. $1",
+	"whowrotethat-error-contact-link": "Ka̱ jhya̱ ji ya a̱son, lyiat ma̱ng a̱nzi̱t.",
+	"whowrotethat-ready-title": "A̱nyan Wa Lyuut A̱hwa?",
+	"whowrotethat-ready-general": "Keang a li nwuat mi̱ nwuat hu mbwak a̱tyulyuut a̱nyiung wu. Nyap mat á̱ghyang nkhang.",
+	"whowrotethat-tour-welcome-title": "Á̱ khwuk $1!",
+	"whowrotethat-tour-welcome-title-name": "A̱nyan Wa Lyuut A̱hwa?",
+	"whowrotethat-tour-welcome-description": "Tyia̱ kyangta̱m hu di̱n ta̱m neet shan a̱ta̱m ji. Keang tazwa lyuut a mmya̱ra̱m nwuat mi̱ nwuat mbwak a̱tyulyuut a̱nyiung wu. Nyap a li a̱tyulyuut wu ma̱ng a̱cyuang nkhang khwifeang na.",
+	"whowrotethat-tour-welcome-dismiss": "Mgbealu!",
+	"whowrotethat-revision-added": "$1 mbeang si̱ huni ma̱ $2.",
+	"whowrotethat-revision-attribution": "Ba̱ ku lyuut $1 peji hu.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Ba̱ ku lyuut $1 peji huni.",
+	"whowrotethat-revision-attribution-lessthan-percent": "ku lat 1%",
+	"whowrotethat-revision-deleted-username": "(á̱ turung a̱lyoot-a̱tyuta̱m ku IP)",
+	"whowrotethat-revision-edit-summary-hidden": "(á̱ turung nam-a̱lyiat jhyuk)"
+}
