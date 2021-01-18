@@ -2,12 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Gongsoonyee",
-			"Ykhwong"
+			"Ykhwong",
+			"그냥기여자"
 		]
 	},
 	"whowrotethat-ext-name": "누가 그것을 작성했는가?",
 	"whowrotethat-ext-name-beta": "누가 그것을 작성했는가?(베타 버전)",
+	"whowrotethat-ext-desc": "위키백과 문서에서 직접 저자 및 리비전 정보를 살펴보십시오. WikiWho 제공.",
 	"whowrotethat-ext-desc-beta": "위키백과의 저작자 정보를 살펴봅니다. WikiWho가 지원한다. 이것은 베타 버전이며 테스트 전용으로 만들어졌습니다.",
+	"whowrotethat-ext-longdesc": "Who Wrote That?(WWT)은 위키백과 문서에 직접 저자 정보를 표시하는 브라우저 확장 프로그램입니다.  콘텐츠 위로 마우스를 가져 가면 도구는 동일한 작성자의 모든 콘텐츠를 강조 표시합니다.  콘텐츠를 클릭하면 도구가 리비전 세부 정보 및 작성자를 식별합니다. 곧 WWT를 통해 사용자는 문서 역사를 파헤치지 않고도 해당 편집의 기원과 배경을 찾을 수 있습니다.",
 	"whowrotethat-activation-link": "누가 그것을 작성했는가?",
 	"whowrotethat-activation-link-tooltip": "Who Wrote That을 작동시키겠습니까?",
 	"whowrotethat-deactivation-link": "Who Wrote That을 닫으시겠습니까?",
@@ -22,6 +25,7 @@
 	"whowrotethat-ready-general": "동일한 저자의 기여를 보려면 가리키고 계십시오. 자세한 정보를 보려면 클릭하십시오.",
 	"whowrotethat-tour-welcome-title": "$1이(가) 활성화되었습니다!",
 	"whowrotethat-tour-welcome-title-name": "누가 그것을 작성했는가?",
+	"whowrotethat-tour-welcome-description": "사이드바에서 도구를 활성화하십시오. 텍스트 위로 마우스를 가져가 동일한 저자의 기여를 강조 표시합니다. 작성자 및 리비전 세부 정보를 보려면 클릭하십시오.",
 	"whowrotethat-tour-welcome-dismiss": "알겠습니다!",
 	"whowrotethat-revision-added": "$1님이 $2에 이 텍스트를 추가했습니다.",
 	"whowrotethat-revision-attribution": "그들은 이 페이지에서 $1를 작성했습니다.",
