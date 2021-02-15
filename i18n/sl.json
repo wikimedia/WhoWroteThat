@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"whowrotethat-ext-name": "Kdo je to napisal?",
+	"whowrotethat-ext-name-beta": "Kdo je to napisal? (BETA)",
+	"whowrotethat-ext-desc": "Vizualno raziskujte podatke o avtorjih in redakcijah člankov Wikipedije. Omogoča WikiWho.",
+	"whowrotethat-ext-desc-beta": "Raziščite podatke v avtorjih v Wikipediji. Omogoča WikiWho. To je BETA različica, namenjena samo preizkušanju.",
+	"whowrotethat-ext-longdesc": "»Kdo je to napisal?« (Who Wrote That – WWT) je razširitev brskalnika, ki prikaže podatke o avtorstvu neposredno v člankih Wikipedije. Ob lebdenju nad vsebino orodje označi vso vsebino istega avtorja. Ob kliku vsebine orodje navede avtorja redakcije in podatke o redakciji. WWT na splošno uporabnikom omogoča prepoznati vir in ozadje urejanja, ne da bi se jim bilo treba prebijati skozi zgodovino redakcij.",
+	"whowrotethat-activation-link": "Kdo je to napisal?",
+	"whowrotethat-activation-link-tooltip": "Aktiviram »Kdo je to napisal?«?",
+	"whowrotethat-deactivation-link": "Zaprem »Kdo je to napisal?«?",
+	"whowrotethat-state-pending": "$1 se nalaga. To lahko nekaj časa traja.",
+	"whowrotethat-state-pending-name": "Kdo je to napisal?",
+	"whowrotethat-state-error": "Napaka: $1",
+	"whowrotethat-error-refresh": "Osvežite ali poskusite znova pozneje.",
+	"whowrotethat-error-later": "Prosimo, poskusite znova pozneje.",
+	"whowrotethat-error-contact": "Osvežite ali poskusite znova pozneje. $1",
+	"whowrotethat-error-contact-link": "Če težava vztraja, stopite v stik z nami.",
+	"whowrotethat-ready-title": "Kdo je to napisal?",
+	"whowrotethat-ready-general": "Lebdite nad besedilom, da prikažete prispevke istega avtrja. Kliknite za več podrobnosti.",
+	"whowrotethat-tour-welcome-title": "$1 je omogočeno!",
+	"whowrotethat-tour-welcome-title-name": "Kdo je to napisal?",
+	"whowrotethat-tour-welcome-description": "Aktivirajte orodje iz stranske vrstice. Lebdite nad besedilom, da označite prispevke istega avtorja. Kliknite za prikaz podatkov o avtorju in redakciji.",
+	"whowrotethat-tour-welcome-dismiss": "Razumem!",
+	"whowrotethat-revision-added": "To je dodal/a $1; $2.",
+	"whowrotethat-revision-attribution": "Napisal/a je $1 strani.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Napisal/a je $1 strani.",
+	"whowrotethat-revision-attribution-lessthan-percent": "manj kot 1&nbsp;%",
+	"whowrotethat-revision-deleted-username": "(uporabniško ime ali IP odstranjen)",
+	"whowrotethat-revision-edit-summary-hidden": "(povzetek urejanja odstranjen)"
+}
