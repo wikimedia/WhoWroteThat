@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Lucas Werkmeister",
+			"RacoonyRE",
 			"Tacsipacsi",
 			"Umherirrender"
 		]
@@ -10,6 +11,7 @@
 	"whowrotethat-ext-name-beta": "Wer hat es geschrieben? (BETA)",
 	"whowrotethat-ext-desc": "Entdecke Informationen zu Autoren und Artikelversionen visuell und direkt in Wikipedia-Artikeln. Basierend auf WikiWho.",
 	"whowrotethat-ext-desc-beta": "Erkunde Informationen zur Autorschaft auf Wikipedia. Basierend auf WikiWho. BETA-Version, nur zum Testen vorgesehen.",
+	"whowrotethat-ext-longdesc": "Wer hat das geschrieben? (WWT) ist eine Browser-Erweiterung, die Informationen zur Autorenschaft direkt auf Wikipedia-Artikeln anzeigt. Wenn Sie den Mauszeiger über einen Inhalt bewegen, hebt das Tool alle Inhalte desselben Autors hervor. Wenn Sie auf den Inhalt klicken, identifiziert das Tool den Autor der Überarbeitung, zusammen mit den Details der Überarbeitung. Insgesamt ermöglicht WWT den Benutzern, die Quelle und den Hintergrund einer Bearbeitung zu entdecken, ohne sich durch den Revisionsverlauf zu wühlen.",
 	"whowrotethat-activation-link": "Wer hat es geschrieben?",
 	"whowrotethat-activation-link-tooltip": "„Wer hat es geschrieben?“ aktivieren",
 	"whowrotethat-deactivation-link": "„Wer hat es geschrieben?“ schließen",
