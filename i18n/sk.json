@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jaroslav.micek"
+		]
+	},
+	"whowrotethat-ext-name": "Kto To Napísal?",
+	"whowrotethat-ext-name-beta": "Kto To Napísal? (BETA)",
+	"whowrotethat-ext-desc": "Objavte autorstvo a iné informácie priamo na článkoch vo Wikipédii. Poháňané cez WikiWho.",
+	"whowrotethat-ext-desc-beta": "Objavte autorstvo a iné informácie priamo na článkoch vo Wikipédii. Poháňané cez WikiWho. Verzia BETA, určené len na testovanie.",
+	"whowrotethat-ext-longdesc": "Kto To Napísal? (KTN) je rozšírenie pre prehliadače, ktoré zobrazuje informácie o autorstve priamo na stránkach Wikipédie. Keď podržíte kurzor nad obsahom, tento nástroj zvýrazní všetok obsah od toho istého autora. Keď na obsah kliknete, tento nástroj identifikuje autora verzie aj s detailami o verzii. Celkovo KTN umožňuje používateľom objaviť zdroj a pozadie úpravy bez toho, aby bolo nutné prechádzať celou históriou verzie.",
+	"whowrotethat-activation-link": "Kto To Napísal?",
+	"whowrotethat-activation-link-tooltip": "Aktivovať Kto To Napísal?",
+	"whowrotethat-deactivation-link": "Zatvoriť Kto To Napísal?",
+	"whowrotethat-state-pending": "$1 sa načítava. Môže to chvíľu trvať.",
+	"whowrotethat-state-pending-name": "Kto To Napísal?",
+	"whowrotethat-state-error": "Chyba: $1",
+	"whowrotethat-error-refresh": "Obnovte, alebo skúste znovu neskôr.",
+	"whowrotethat-error-later": "Prosím, skúste neskôr.",
+	"whowrotethat-error-contact": "Obnovte alebo skúste znovu neskôr. $1",
+	"whowrotethat-error-contact-link": "Ak problém pretrváva, kontaktujte nás.",
+	"whowrotethat-ready-title": "Kto To Napísal?",
+	"whowrotethat-ready-general": "Podržte kurzor na mieste, aby ste videli príspevky od toho istého autora. Pre zobrazenie viac detailov, kliknite.",
+	"whowrotethat-tour-welcome-title": "$1 je povolené!",
+	"whowrotethat-tour-welcome-title-name": "Kto To Napísal?",
+	"whowrotethat-tour-welcome-description": "Aktivácia nástroja z bočného panelu. Pre zvýraznenie príspevkov od rovnakého autora podržte kurzor nad textom. Pre zobrazenie autora a detailov verzie kliknite.",
+	"whowrotethat-tour-welcome-dismiss": "Mám to!",
+	"whowrotethat-revision-added": "$1 toto pridal/a $2.",
+	"whowrotethat-revision-attribution": "Týmto autorom je napísané $1 tejto stránky.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Týmto autorom je napísané $1 tejto stránky.",
+	"whowrotethat-revision-attribution-lessthan-percent": "menej než 1%",
+	"whowrotethat-revision-deleted-username": "(používateľské meno alebo IP bolo odstránené)",
+	"whowrotethat-revision-edit-summary-hidden": "(súhrn úprav odstránené)"
+}
