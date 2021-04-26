@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vodnokon4e"
+		]
+	},
+	"whowrotethat-ext-name-beta": "Кой написа това? (БЕТА)",
+	"whowrotethat-activation-link": "Кой написа това?",
+	"whowrotethat-state-pending-name": "Кой написа това?",
+	"whowrotethat-state-error": "Грешка: $1",
+	"whowrotethat-ready-title": "Кой написа това?",
+	"whowrotethat-tour-welcome-title-name": "Кой написа това?",
+	"whowrotethat-tour-welcome-dismiss": "Разбраx!",
+	"whowrotethat-revision-attribution-percent": "$1%"
+}
