@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Besnik b"
+		]
+	},
+	"whowrotethat-ext-name": "Kush e Shkroi?",
+	"whowrotethat-ext-name-beta": "Kush e Shkroi? (BETA)",
+	"whowrotethat-ext-desc": "Eksploroni të dhëna autorësie dhe rishikimesh, në mënyrë pamore dhe drejt e në artikuj Wikipedia. Bazuar në WikiWho.",
+	"whowrotethat-ext-desc-beta": "Eksploroni të dhëna autorësie Wikipedia. Bazuar në WikiWho. Ky është një version BETA, i menduar vetëm për testim.",
+	"whowrotethat-ext-longdesc": "Kush e Shkroi? (WWT) është një zgjerim shfletuesi, i cili shfaq të dhëna autorësie drejt e në artikuj Wikipedia. Kur kaloni kursorin sipër lënde, mjeti thekson krejt lëndën nga i njëjti autor. Kur klikoni mbi lëndë, mjeti identifikon autorin e rishikimit, tok me hollësi mbi rishikimin. Në përgjithësi, WWT u lejon përdoruesve të zbulojnë burimin dhe kontekstin e një përpunimi, pa rrëmuar në historikun e rishikimeve.",
+	"whowrotethat-activation-link": "Kush e Shkroi?",
+	"whowrotethat-activation-link-tooltip": "Të aktivizohet “Kush e Shkroi?”?",
+	"whowrotethat-deactivation-link": "Të mbyllet “Kush e Shkroi?”?",
+	"whowrotethat-state-pending": "$1 po ngarkohet. Kjo mund të zgjasë ca.",
+	"whowrotethat-state-pending-name": "Kush e Shkroi?",
+	"whowrotethat-state-error": "Gabim: $1",
+	"whowrotethat-error-refresh": "Rifreskojeni ose riprovoni më vonë.",
+	"whowrotethat-error-later": "Ju lutemi, riprovoni më vonë.",
+	"whowrotethat-error-contact": "Rifreskojeni ose riprovoni më vonë. $1",
+	"whowrotethat-error-contact-link": "Nëse problemi vazhdon, lidhuni me ne.",
+	"whowrotethat-ready-title": "Kush e Shkroi?",
+	"whowrotethat-ready-general": "Kalojini kursorin përsipër, që të shihni kontribute nga i njëjtin autor. Për më tepër hollësi, klikojeni.",
+	"whowrotethat-tour-welcome-title": "$1 u aktivizua!",
+	"whowrotethat-tour-welcome-title-name": "Kush e Shkroi?",
+	"whowrotethat-tour-welcome-description": "Aktivizojeni mjetin që nga anështylla. Kalojeni kursorin përsipër teksti që të theksohen kontribute nga i njëjti autor. Klikoni që të shihni autorin dhe hollësi rishikimi.",
+	"whowrotethat-tour-welcome-dismiss": "E mora vesh!",
+	"whowrotethat-revision-added": "$1 e shtoi këtë te $2.",
+	"whowrotethat-revision-attribution": "Ka shkruar $1 të faqes.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Ka shkruar $1 të faqes.",
+	"whowrotethat-revision-attribution-lessthan-percent": "më pak se 1%",
+	"whowrotethat-revision-deleted-username": "(emër përdoruesi ose IP e hequr)",
+	"whowrotethat-revision-edit-summary-hidden": "(përmbledhje përpunimi e hequr)"
+}
