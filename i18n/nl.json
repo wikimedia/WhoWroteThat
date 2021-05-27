@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mainframe98",
 			"Robin van der Vliet"
 		]
 	},
@@ -8,6 +9,7 @@
 	"whowrotethat-ext-name-beta": "Wie schreef dat? (BETA)",
 	"whowrotethat-activation-link": "Wie schreef dat?",
 	"whowrotethat-state-error": "Fout: $1",
+	"whowrotethat-error-later": "Probeer later opnieuw.",
 	"whowrotethat-ready-title": "Wie schreef dat?",
 	"whowrotethat-tour-welcome-title": "$1 is ingeschakeld!",
 	"whowrotethat-tour-welcome-title-name": "Wie schreef dat?",
@@ -17,5 +19,6 @@
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "Deze persoon heeft $1 van de pagina geschreven.",
 	"whowrotethat-revision-attribution-lessthan-percent": "minder dan 1%",
-	"whowrotethat-revision-deleted-username": "(gebruikersnaam of IP-adres verwijderd)"
+	"whowrotethat-revision-deleted-username": "(gebruikersnaam of IP-adres verwijderd)",
+	"whowrotethat-revision-edit-summary-hidden": "(bewerkingssamenvatting verwijderd)"
 }
