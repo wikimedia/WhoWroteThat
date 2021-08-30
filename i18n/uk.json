@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DDPAT",
 			"Movses",
 			"Piramidion",
 			"Ата"
@@ -15,7 +16,7 @@
 	"whowrotethat-activation-link-tooltip": "Активувати «Хто це написав?»",
 	"whowrotethat-deactivation-link": "Закрити «Хто це написав?»",
 	"whowrotethat-state-pending": "$1 завантажується. Це може зайняти певний час.",
-	"whowrotethat-state-pending-name": "Who Wrote That?",
+	"whowrotethat-state-pending-name": "Хто це написав?",
 	"whowrotethat-state-error": "Помилка: $1",
 	"whowrotethat-error-refresh": "Оновіть або спробуйте пізніше.",
 	"whowrotethat-error-later": "Будь ласка, спробуйте пізніше",
@@ -24,7 +25,7 @@
 	"whowrotethat-ready-title": "Хто це написав?",
 	"whowrotethat-ready-general": "Наведіть вказівник миші, щоб побачити внесок цього ж автора. Натисніть, щоб дізнатися більше.",
 	"whowrotethat-tour-welcome-title": "$1 увімкнено!",
-	"whowrotethat-tour-welcome-title-name": "Who Wrote That?",
+	"whowrotethat-tour-welcome-title-name": "Хто це написав?",
 	"whowrotethat-tour-welcome-description": "Активуйте інструмент на бічній панелі. Наведіть на текст, щоб виділити внесок того ж автора. Клацніть, щоб переглянути подробиці про автора та версію сторінки.",
 	"whowrotethat-tour-welcome-dismiss": "Зрозуміло!",
 	"whowrotethat-revision-added": "Додано $1 до $2.",

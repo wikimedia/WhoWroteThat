@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Destinid10 2",
 			"Fitoschido",
 			"Hmonroy",
 			"MarcoAurelio"
@@ -10,15 +11,28 @@
 	"whowrotethat-ext-name-beta": "¿Quién lo escribió? (BETA)",
 	"whowrotethat-ext-desc": "Exploración visual directa de la autoría de artículos de Wikipedia. Funciona con WikiWho.",
 	"whowrotethat-ext-desc-beta": "Explora información de autoría en Wikipedia. Funciona con WikiWho. Esta es la versión BETA, destinada solo a pruebas.",
+	"whowrotethat-ext-longdesc": "¿Quién Escribió Eso? (WWT, por sus siglas en inglés) es una extansión de búscador, que muestra información de autoría directamente en los artículos de Wikipedia. Cuando tu pasas el ratón encima del contenido, la herramiento resalta toda la información por el mismo autor. Cuando le das clic al contenido, la herramienta identifica al autor de la revisión, con los detalles de la misma. En general, WWT permite a los usuarios descubrir la fuente y el fondo de una edición, sin tener que buscar a través del historial de revisión.",
 	"whowrotethat-activation-link": "¿Quién lo escribió?",
 	"whowrotethat-activation-link-tooltip": "Activar ¿Quién lo escribió?",
 	"whowrotethat-deactivation-link": "Cerrar ¿Quién lo escribió?",
 	"whowrotethat-state-pending": "$1 está cargándose; esto puede tardar un rato.",
 	"whowrotethat-state-pending-name": "¿Quién lo escribió?",
 	"whowrotethat-state-error": "Error: $1",
+	"whowrotethat-error-refresh": "Recarga la página o intenta de nuevo más tarde.",
+	"whowrotethat-error-later": "Por favor inténtalo de nuevo más tarde.",
+	"whowrotethat-error-contact": "Recarga la página o trata de nuevo más tarde. $1",
+	"whowrotethat-error-contact-link": "Si el problema persiste, contáctanos.",
+	"whowrotethat-ready-title": "¿Quién Escribió Eso?",
+	"whowrotethat-ready-general": "Desplaza por encima para ver contribuciones del mismo autor. Haz clic para más detalles.",
+	"whowrotethat-tour-welcome-title": "¡ $1 está habilitado!",
+	"whowrotethat-tour-welcome-title-name": "¿Quién Escribió Eso?",
+	"whowrotethat-tour-welcome-description": "Activar la herramienta desde la barra lateral. Detén por encima del texto para destacar contribuciones por el mismo autor. Haz clic para ver el autor y los detalles de revisión",
+	"whowrotethat-tour-welcome-dismiss": "¡Entendido!",
+	"whowrotethat-revision-added": "$1 fue añadido en este $2.",
 	"whowrotethat-revision-attribution": "Ha escrito el $1 de la página.",
 	"whowrotethat-revision-attribution-percent": "$1 %",
 	"whowrotethat-revision-attribution-lessthan": "Ha escrito $1 de la página.",
 	"whowrotethat-revision-attribution-lessthan-percent": "menos del 1 %",
+	"whowrotethat-revision-deleted-username": "(usuario o IP removida)",
 	"whowrotethat-revision-edit-summary-hidden": "(resumen de edición eliminado)"
 }
