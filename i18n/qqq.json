@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Hamilton Abreu",
 			"McDutchie",
 			"Nike",
@@ -27,7 +28,7 @@
 	"whowrotethat-tour-welcome-title": "The title for the welcome popup that appears when the extension is enabled for the first time, notifying the user it was installed successfully.",
 	"whowrotethat-tour-welcome-title-name": "The tool's name (emphasised) in the welcome popup title.",
 	"whowrotethat-tour-welcome-description": "The description for the welcome popup that appears when the extension is enabled for the first time, explaining the activation and base usage of the extension.",
-	"whowrotethat-tour-welcome-dismiss": "Button to permanently dismiss the welcome popup that appears when the extension is enabled for the first time.",
+	"whowrotethat-tour-welcome-dismiss": "Button to permanently dismiss the welcome popup that appears when the extension is enabled for the first time.\n\n{{Identical|Got it}}",
 	"whowrotethat-revision-added": "Message shown in a popup that indicates who authored the text of an article.\n* $1 is the username along with (talk | contribs) links, and\n* $2 is a link to the diff with the timestamp as the link text.",
 	"whowrotethat-revision-attribution": "Message indicating how much of the page an editor authored. This is shown immediately after the {{msg-wm|whowrotethat-revision-added}} message.\n\n{{Doc-singularthey}}\n* $1: The percentage that represent how much of the page the editor authored, as defined by {{msg-wm|whowrotethat-revision-attribution-percent}}. This message already includes the percent sign %.",
 	"whowrotethat-revision-attribution-percent": "Emphasised percentage of authorship, to be inserted into {{msg-wm|whowrotethat-revision-attribution}}. Note this message is not parsed, so <nowiki>&nbsp;</nowiki> for instance should not be used.",
