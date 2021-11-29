@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Urbalazs"
+		]
+	},
+	"whowrotethat-ext-name": "Ki írta ezt?",
+	"whowrotethat-ext-name-beta": "Ki írta ezt? (BÉTA)",
+	"whowrotethat-ext-desc": "Fedezze fel a szerzőségre és a módosításra vonatkozó információkat vizuálisan és közvetlenül a Wikipédia-szócikkekben. A WikiWho segítségével készült.",
+	"whowrotethat-ext-desc-beta": "Fedezze fel a Wikipédia szerzőségének információit. A WikiWho segítségével készült. Ez a BÉTA verzió, amely csak tesztelésre ajánlott.",
+	"whowrotethat-ext-longdesc": "A „Ki írta ezt?” (WWT) egy böngészőkiegészítő, amely a szerzőségére vonatkozó információkat jeleníti meg közvetlenül a Wikipédia-szócikkekben. Ha rámutat a tartalomra, akkor az eszköz kiemeli az azonos szerzőtől származó összes tartalmat. Ha rákattint a tartalomra, akkor az eszköz azonosítja a módosítás szerzőjét, valamint a módosítás részleteit. Összességében a WWT lehetővé teszi a felhasználók számára, hogy felfedezzék egy szerkesztés forrását és hátterét, anélkül hogy a módosítási előzményekben kellene kutakodniuk.",
+	"whowrotethat-activation-link": "Ki írta ezt?",
+	"whowrotethat-activation-link-tooltip": "A „Ki írta ezt?” aktiválása",
+	"whowrotethat-deactivation-link": "A „Ki írta ezt?” bezárása",
+	"whowrotethat-state-pending": "A $1 betöltése folyamatban. Ez eltarthat egy ideig.",
+	"whowrotethat-state-pending-name": "Ki írta ezt?",
+	"whowrotethat-state-error": "Hiba: $1",
+	"whowrotethat-error-refresh": "Frissítsen vagy próbálja meg újra később.",
+	"whowrotethat-error-later": "Próbálja meg újra később.",
+	"whowrotethat-error-contact": "Frissítsen vagy próbálja meg újra később. $1",
+	"whowrotethat-error-contact-link": "Ha a hiba továbbra is fennáll, akkor vegye fel velünk a kapcsolatot.",
+	"whowrotethat-ready-title": "Ki írta ezt?",
+	"whowrotethat-ready-general": "Mutasson rá az azonos szerzőtől való közreműködések megtekintéséhez. Kattintson a további részletekért.",
+	"whowrotethat-tour-welcome-title": "A $1 engedélyezve van!",
+	"whowrotethat-tour-welcome-title-name": "Ki írta ezt?",
+	"whowrotethat-tour-welcome-description": "Aktiválja az eszközt az oldalsávból. Mutasson rá a szövegre az azonos szerzőtől való közreműködések kiemeléséhez. Kattintson a szerző és a verzió részleteinek megtekintéséhez.",
+	"whowrotethat-tour-welcome-dismiss": "Értem!",
+	"whowrotethat-revision-added": "$1 adta ezt hozzá $2-kor.",
+	"whowrotethat-revision-attribution": "Ő írta az oldal $1-át.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Ő írta az oldal $1-át.",
+	"whowrotethat-revision-attribution-lessthan-percent": "kevesebb mint 1%",
+	"whowrotethat-revision-deleted-username": "(felhasználónév vagy IP-cím eltávolítva)",
+	"whowrotethat-revision-edit-summary-hidden": "(szerkesztési összefoglaló eltávolítva)"
+}
