@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"P. S. F. Freitas"
+		]
+	},
+	"whowrotethat-ext-name": "Mávapa ohai?",
+	"whowrotethat-ext-name-beta": "Mávapa ohai? (BETA)",
+	"whowrotethat-ext-desc": "Ehechakuaa hasy'ỹhápe mávapa ohai peteĩ kuatiarogue Vikipetãme. WikiWho ojapo.",
+	"whowrotethat-ext-desc-beta": "Ehecha mávapa ohai Vikipetã kuatiarogue. WikiWho omboguata. Kóva niko BETA mba'e, reñeha'ãnte hese.",
+	"whowrotethat-ext-longdesc": "Mávapa Ohai? (WWT, mbykyhápe ingleñe'ẽme) ha'e niko peteĩ internet kundahárare oipytyvõva, kóva niko rohechaukáta hasy'ỹhápe mávapa ohai peteĩ kuatiarogue Vikipetãme. Rembohasávo ne kuã rehegua kuatiarogue marandu ári, ko tembiporu rohechaukáta opamba'e pe haihára ojapo pe kuatiarogue poravopyrépe. Rejopývo marandúre, ko tembiporu rohechaukáta mávapa ohaijey hese, ha mba'e ambuéva. Tenondeitépe, WWT rohechaukáta mávapa ohaiete ha moõgui oñenohẽ pe marandu, natekotevẽi reheka kuatiarogue rembiasakuépe.",
+	"whowrotethat-activation-link": "Mávapa ohai?",
+	"whowrotethat-activation-link-tooltip": "Tomomba'apo Mávapa ohai?",
+	"whowrotethat-deactivation-link": "Toñemboty Mávapa ohai?",
+	"whowrotethat-state-pending": "$1 omba'apo hína. Ikatu hi'aremi.",
+	"whowrotethat-state-pending-name": "Mávapa ohai?",
+	"whowrotethat-state-error": "Mba'e javyː $1",
+	"whowrotethat-error-refresh": "Embopyahu nde kuatiarogue térã eñeha'ãmi hese ãgamie.",
+	"whowrotethat-error-later": "Eñeha'ãmíkena hese ãgamie.",
+	"whowrotethat-error-contact": "Embopyahu nde kuatiarogue térã eñeha'ãmi hese ãgamie. $1",
+	"whowrotethat-error-contact-link": "Iñapañuái meméve, emombe'u oréve.",
+	"whowrotethat-ready-title": "Mávapa ohai?",
+	"whowrotethat-ready-general": "Embohasa ne kuã rehegua marandu ári rehecha hag̃ua mba'e ambuéva ko haihára ojapo avei. Ejopy ko'ápe rehechave marandu ambuéva.",
+	"whowrotethat-tour-welcome-title": "$1 oĩmbámaǃ",
+	"whowrotethat-tour-welcome-title-name": "Mávapa ohai?",
+	"whowrotethat-tour-welcome-description": "Toñemboguata hag̃ua ko tembipuru ne rembirecha yképe. Embohasa ne kuã rehegua jehaipy ári rehecha hag̃ua opa umi mba'e pe haihára ojapo. Ejopy rehecha hag̃ua mávapa pe haihára ha marandu ambuéva.",
+	"whowrotethat-tour-welcome-dismiss": "Oĩmaǃ",
+	"whowrotethat-revision-added": "$1 omoĩma kóva $2 mba'épe.",
+	"whowrotethat-revision-attribution": "Ohai $1 ko kuatiaroguégui.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Ohai $1 ko kuatiaroguégui.",
+	"whowrotethat-revision-attribution-lessthan-percent": "sa'ive 1%-gui",
+	"whowrotethat-revision-deleted-username": "(puruhára réra térã IP ndaipóriva)",
+	"whowrotethat-revision-edit-summary-hidden": "(tembiasakue ñemombyky ndaiporivéima)"
+}
