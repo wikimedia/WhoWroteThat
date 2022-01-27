@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"CptViraj"
+		]
+	},
+	"whowrotethat-ext-name": "તે કોણે લખ્યું?",
+	"whowrotethat-activation-link": "તે કોણે લખ્યું?",
+	"whowrotethat-activation-link-tooltip": "તે કોણે લખ્યું? સક્રિય કરો",
+	"whowrotethat-deactivation-link": "તે કોણે લખ્યું? બંધ કરો",
+	"whowrotethat-state-pending-name": "તે કોણે લખ્યું?",
+	"whowrotethat-state-error": "ત્રુટિ: $1",
+	"whowrotethat-error-later": "પછી પ્રયાસ કરવા વિનંતી.",
+	"whowrotethat-ready-title": "તે કોણે લખ્યું?",
+	"whowrotethat-tour-welcome-title-name": "તે કોણે લખ્યું?"
+}
