@@ -2,7 +2,7 @@ Who Wrote That? for Wikipedia
 =============================
 
 Explore authorship and revision information visually and directly in Wikipedia articles.
-Powered by [WikiWho](https://f-squared.org/wikiwho/).
+Powered by [WikiWho](https://wikiwho.wmflabs.org/).
 
 WhoWroteThat is available as a browser extension for Firefox and Chrome.
 
@@ -19,7 +19,7 @@ Table of Contents:
 * Installation: [for users](#installation-for-users), [for developers](#installation-for-developers)
 * [Releasing the browser extension](#releasing-the-browser-extension)
 * [Debugging](#debugging)
-* [API Proxy](#api-proxy)
+* [WikiWho API](#wikiwho-api)
 * [Changelog](#changelog)
 
 ## Supported Wikipedias
@@ -115,13 +115,12 @@ Available commands are:
 
 * `wwtDebug.resetWelcomePopup()`: Resets the value of the stored 'shown' state of the popup. This is useful in case the popup was dismissed (which means it will never appear again) and for testing purposes, we want to display it again. After confirmation in the console, the popup will be displayed on subsequent refresh of the page.
 
-## API Proxy
+## WikiWho API
 
-To protect the privacy of our users, this tool routes all requests to the WhoColor API through a
-proxy at [wikiwho.wmflabs.org](https://wikiwho.wmflabs.org/).
-Requests can only be made from Wikipedias.
-Refer to [api.wikiwho.net](https://api.wikiwho.net/) if you would like to test making requests to the APIs directly.
-The proxy VPS is [documented on Wikitech](https://wikitech.wikimedia.org/wiki/Tool:CommTech#WikiWho).
+The API used by this tool is available for public use at [wikiwho.wmflabs.org](https://wikiwho.wmflabs.org/).
+The algorithm and server code was originally written and hosted by [Gesis](https://www.gesis.org/) and [KIT](https://www.kit.edu/english/index.php).
+See their [original homepage](https://wikiwho.wmflabs.org/gesis_home) for more information.
+In February 2022 it was officially moved to Wikimedia's own infrastructure.
 
 ## Changelog
 
