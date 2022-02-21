@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari"
+		]
+	},
+	"whowrotethat-ext-name": "దాన్ని రాసినది ఎవరు?",
+	"whowrotethat-ext-name-beta": "Who Wrote That? (బీటా)",
+	"whowrotethat-ext-desc": "వ్యాస కర్తృత్వం, కూర్పు సమాచారాన్ని నేరుగా వికీపీడియా వ్యాసం లోనే చూడండి. WikiWho దీన్ని నడుపుతోంది.",
+	"whowrotethat-ext-desc-beta": "వికీపీడియా కర్తృత్వ సమాచారం తెలుసుకోండి. WikiWho దీన్ని తయారు చేసింది. ఇది, పరీక్ష కోసం ఉద్దేశించిన బీటా కూర్పు మాత్రమే.",
+	"whowrotethat-ext-longdesc": "Who Wrote That? (WWT) అనేది బ్రౌజరు పొడిగింత. ఇది, వికీపీడియా వ్యాసాల కర్తృత్వ సమాచారాన్ని నేరుగా వ్యాసాల్లో చూపిస్తుంది. కంటెంటుపై మౌసును ఉంచినపుడు, ఒక కర్త రాసిన కంటెంటు మొత్తాన్ని హైలైటు చేస్తుంది. కూర్పును సృష్టించిన కర్తను కూర్పు వివరాలతో సహా ఇది గుర్తిస్తుంది. మొత్తమ్మీద, పాఠకులు పేజీ చరిత్ర లోకి వెళ్ళకుండానే దిద్దుబాటు మూలాన్ని, దాని నేపథ్యాన్నీ WWT ద్వారా తెలుసుకోవచ్చు.",
+	"whowrotethat-activation-link": "దాన్ని రాసినది ఎవరు?",
+	"whowrotethat-activation-link-tooltip": "Who Wrote That ను చేతనం చెయ్యండి?",
+	"whowrotethat-deactivation-link": "Who Wrote That ను మూసెయ్యమంటారా?",
+	"whowrotethat-state-pending": "$1 ను లోడు చేస్తున్నాం. దీనికి కొంత సమయం పట్టవచ్చు.",
+	"whowrotethat-state-pending-name": "దాన్ని రాసినది ఎవరు?",
+	"whowrotethat-state-error": "లోపం: $1",
+	"whowrotethat-error-refresh": "రిఫ్రెష్ చెయ్యండి లేదా కాసేపాగి మళ్ళీ ప్రయత్నించండి.",
+	"whowrotethat-error-later": "తరువాత మళ్ళీ ప్రయత్నించండి.",
+	"whowrotethat-error-contact": "రిఫ్రెష్ చెయ్యండి లేదా కాసేపాగి మళ్ళీ ప్రయత్నించండి. $1",
+	"whowrotethat-error-contact-link": "ఈ సమస్య ఇలాగే ఉంటే, మమ్మల్ని సంప్రదించండి.",
+	"whowrotethat-ready-title": "దాన్ని రాసినది ఎవరు?",
+	"whowrotethat-ready-general": "ఇదే రచయిత ఇతర దిదుబాట్లను చూసేందుకు మౌసును దాని పైకి తీసుకెళ్ళండి. మరిన్ని వివరాల కోసం నొక్కండి.",
+	"whowrotethat-tour-welcome-title": "$1 చేతనమైంది!",
+	"whowrotethat-tour-welcome-title-name": "దాన్ని రాసినది ఎవరు?",
+	"whowrotethat-tour-welcome-description": "పరికరాన్ని పక్క పట్టీ నుండి చేతనం చెయ్యండి. అదే రచయిత చేసిన ఇతర దిద్దుబాట్ల కోసం పాఠ్యం పైకి మౌసును పెట్టండి. కర్త, కూర్పుల బ్వివరాల కోసం నొక్కండి.",
+	"whowrotethat-tour-welcome-dismiss": "అర్థమైంది!",
+	"whowrotethat-revision-added": "$1 దీన్ని $2 న చేర్చారు.",
+	"whowrotethat-revision-attribution": "వారు ఈ పేజీలో $1 రాసారు.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "వారు ఈ పేజీలో $1 రాసారు.",
+	"whowrotethat-revision-attribution-lessthan-percent": "1% లోపు",
+	"whowrotethat-revision-deleted-username": "(వాడుకరిపేరు లేదా ఐపీని తొలగించారు)",
+	"whowrotethat-revision-edit-summary-hidden": "(దిద్దుబాటు సారాంశాన్ని తీసివేసారు)"
+}
