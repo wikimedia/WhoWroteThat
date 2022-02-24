@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ayoubbouamri"
+			"Ayoubbouamri",
+			"Ideophagous"
 		]
 	},
 	"whowrotethat-ext-name": "شكون كتب هادشي؟",
@@ -28,6 +29,6 @@
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "كتبو $1 ديال لپاج.",
 	"whowrotethat-revision-attribution-lessthan-percent": "قل من 1%",
-	"whowrotethat-revision-deleted-username": "(سميت لمستخدم ولا لIP تحيد)",
+	"whowrotethat-revision-deleted-username": "(سميت لخدايمي ؤلا لأيپي تحيد)",
 	"whowrotethat-revision-edit-summary-hidden": "(لملخًص د التعديل تحيًد)"
 }

@@ -16,7 +16,7 @@
 	"whowrotethat-activation-link": "The text for the link that turns Who Wrote That on",
 	"whowrotethat-activation-link-tooltip": "The tooltip for the link that turns Who Wrote That on",
 	"whowrotethat-deactivation-link": "The text for the link that turns Who Wrote That off",
-	"whowrotethat-state-pending": "Displays in the information bar during loading.\n* $1 is the tool title, as defined by {{msg-wm|whowrotethat-state-pending-title}}.",
+	"whowrotethat-state-pending": "Displays in the information bar during loading.\n* $1 is the tool title, as defined by {{msg-wm|Whowrotethat-state-pending-name}}.",
 	"whowrotethat-state-pending-name": "Title to display in {{msg-wm|whowrotethat-state-pending}}.",
 	"whowrotethat-state-error": "Prefix for the error display in the information bar in case there were errors while loading.",
 	"whowrotethat-error-refresh": "Error message shown when an error is probably recoverable.",
