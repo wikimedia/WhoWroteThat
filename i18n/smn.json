@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Seipinne"
+		]
+	},
+	"whowrotethat-ext-name": "Kiän čäällim?",
+	"whowrotethat-ext-name-beta": "Kiän čäällim? (BETA)",
+	"whowrotethat-activation-link": "Kiän čäällim?",
+	"whowrotethat-state-pending-name": "Kiän čäällim?",
+	"whowrotethat-state-error": "Feilâ: $1",
+	"whowrotethat-ready-title": "Kiän čäällim?",
+	"whowrotethat-tour-welcome-title-name": "Kiän čäällim?",
+	"whowrotethat-tour-welcome-dismiss": "Čielgâs!"
+}
