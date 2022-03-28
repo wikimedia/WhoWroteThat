@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Beginneruser",
 			"Darafsh",
 			"Fatemi127"
 		]
@@ -32,5 +33,5 @@
 	"whowrotethat-revision-attribution-lessthan": "آن‌ها $1 از صفحه را نوشته‌اند.",
 	"whowrotethat-revision-attribution-lessthan-percent": "کمتر از 1%",
 	"whowrotethat-revision-deleted-username": "(نام کاربری یا آی‌پی حذف شد)",
-	"whowrotethat-revision-edit-summary-hidden": "(خلاصه ویرایش حذف شد)"
+	"whowrotethat-revision-edit-summary-hidden": "(خلاصۀ ویرایش حذف شد)"
 }
