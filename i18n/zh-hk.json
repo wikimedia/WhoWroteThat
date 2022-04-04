@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"C933103",
+			"StarrySky"
+		]
+	},
+	"whowrotethat-ext-name": "Who Wrote That?",
+	"whowrotethat-ext-name-beta": "Who Wrote That?（測試）",
+	"whowrotethat-ext-desc": "在維基百科條目裡直接瀏覽觀看作者與修訂資訊。由 WikiWho 提供技術支援。",
+	"whowrotethat-ext-desc-beta": "瀏覽維基百科作者資訊。由 WikiWho 提供技術支援。此為僅用於測試的 BETA 版本。",
+	"whowrotethat-ext-longdesc": "誰寫的？ （WWT）是瀏覽器擴展程序，可直接在Wikipedia文章上顯示作者信息。當您將鼠標懸停在內容上時，該工具會突出顯示同一作者的所有內容。當您單擊內容時，該工具會識別修訂的作者以及修訂的詳細信息。總體而言，WWT允許用戶發現編輯的來源和背景，而無需深入研究修訂歷史。",
+	"whowrotethat-activation-link": "Who Wrote That?",
+	"whowrotethat-activation-link-tooltip": "啟動 Who Wrote That?",
+	"whowrotethat-deactivation-link": "關閉 Who Wrote That?",
+	"whowrotethat-state-pending": "$1 正在載入中，這會用掉一些時間。",
+	"whowrotethat-state-pending-name": "Who Wrote That?",
+	"whowrotethat-state-error": "錯誤：$1",
+	"whowrotethat-error-refresh": "重新整理或稍後再試。",
+	"whowrotethat-error-later": "請稍後再試。",
+	"whowrotethat-error-contact": "重新整理或稍後再試。$1",
+	"whowrotethat-error-contact-link": "若問題持續，請聯絡我們。",
+	"whowrotethat-ready-title": "Who Wrote That?",
+	"whowrotethat-ready-general": "懸停在上面能查看同一作者的貢獻，點擊則能取得更多詳細內容。",
+	"whowrotethat-tour-welcome-title": "$1 已啟用！",
+	"whowrotethat-tour-welcome-title-name": "Who Wrote That?",
+	"whowrotethat-tour-welcome-description": "從側邊欄來啓動工具。懸停在文字上會突顯出同一作者的貢獻。點擊則能查看作者與修訂詳細內容。",
+	"whowrotethat-tour-welcome-dismiss": "了解！",
+	"whowrotethat-revision-added": "$1於$2添加此。",
+	"whowrotethat-revision-attribution": "此使用者撰寫了該頁面的 $1 內容。",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "此使用者撰寫了該頁面的 $1 內容。",
+	"whowrotethat-revision-attribution-lessthan-percent": "小於 1%",
+	"whowrotethat-revision-deleted-username": " (已移除使用者名稱或 IP)",
+	"whowrotethat-revision-edit-summary-hidden": "（註釋已移除）"
+}
