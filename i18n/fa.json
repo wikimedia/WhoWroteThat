@@ -3,23 +3,25 @@
 		"authors": [
 			"Beginneruser",
 			"Darafsh",
-			"Fatemi127"
+			"Fatemi127",
+			"Mohammad ebz",
+			"Mojtabakd"
 		]
 	},
 	"whowrotethat-ext-name": "چه کسی این را نوشته؟",
 	"whowrotethat-ext-name-beta": "چه کسی این را نوشته؟ (آزمایشی)",
 	"whowrotethat-ext-desc": "دریافت اطلاعات نویسنده و نسخه به صورت مستقیم در مقاله‌های ویکی‌پدیا.\nقدرت گرفته از ویکی‌هو",
 	"whowrotethat-ext-desc-beta": "دریافت اطلاعات نویسنده ویکی‌پدیا. قدرت گرفته از ویکی‌هو. این نسخه بتا و صرفاً جهت آزمایش است.",
-	"whowrotethat-ext-longdesc": "چه کسی آن را نوشت؟ (WWT) یک افزونهٔ مرورگر است که اطلاعات نویسندگی را مستقیماً در مقالات ویکی‌پدیا نمایش می‌دهد. هنگامی که ماوس روی محتوای خاصی قرار داشته‌باشد، ابزار نویسندهٔ محتوا را مشخص می‌کند. وقتی روی محتوا کلیک شود، ابزار نویسندهٔ نسخهٔ را به همراه جزئیات تغییریافته نشان می‌دهد. به طور کلی، WWT به کاربران اجازه می‌دهد بدون مرور تاریخچهٔ نسخه‌ها، منبع و پیشینهٔ ویرایش را کشف کنند.",
+	"whowrotethat-ext-longdesc": "چه کسی این را نوشته؟ (WWT) یک افزونهٔ مرورگر است که اطلاعات نویسندگی را مستقیماً در مقالات ویکی‌پدیا نمایش می‌دهد. هنگامی که ماوس را بر روی محتوا می‌برید، ابزار تمام محتوای همان نویسنده را برجسته می‌کند. وقتی روی محتوا کلیک شود، ابزار نویسندهٔ نسخهٔ را به همراه جزئیات تغییریافته نشان می‌دهد. به طور کلی، WWT به کاربران اجازه می‌دهد بدون مرور تاریخچهٔ نسخه‌ها، منبع و پیشینهٔ ویرایش را کشف کنند.",
 	"whowrotethat-activation-link": "چه کسی این را نوشته؟",
 	"whowrotethat-activation-link-tooltip": "فعال کردن چه کسی این را نوشته؟",
 	"whowrotethat-deactivation-link": "بستن چه کسی این را نوشته؟",
-	"whowrotethat-state-pending": "$1 در حال بارگزاری است. ممکن است کمی طول بکشد.",
+	"whowrotethat-state-pending": "$1 در حال بارگیری است. ممکن است کمی طول بکشد.",
 	"whowrotethat-state-pending-name": "چه کسی این را نوشته؟",
 	"whowrotethat-state-error": "خطا: $1",
-	"whowrotethat-error-refresh": "صفحه را از نو بارگزاری کنید یا بعداً تلاش نمایید.",
+	"whowrotethat-error-refresh": "صفحه را از نو بارگیری کنید یا بعداً تلاش نمایید.",
 	"whowrotethat-error-later": "لطفاً بعداً امتحان کنید.",
-	"whowrotethat-error-contact": "از نو بارگزاری کنید یا بعداً تلاش نمایید. $1",
+	"whowrotethat-error-contact": "از نو بارگیری کرده یا بعداً تلاش نمایید. $1",
 	"whowrotethat-error-contact-link": "اگر مشکل همچنان برقرار بود، با ما تماس بگیرید.",
 	"whowrotethat-ready-title": "چه کسی این را نوشته؟",
 	"whowrotethat-ready-general": "برای دیدن مشارکت‌های همین نویسنده کلیک کنید.",
@@ -32,6 +34,6 @@
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "آن‌ها $1 از صفحه را نوشته‌اند.",
 	"whowrotethat-revision-attribution-lessthan-percent": "کمتر از 1%",
-	"whowrotethat-revision-deleted-username": "(نام کاربری یا آی‌پی حذف شد)",
-	"whowrotethat-revision-edit-summary-hidden": "(خلاصۀ ویرایش حذف شد)"
+	"whowrotethat-revision-deleted-username": "(نام‌کاربری یا آی‌پی حذف شده)",
+	"whowrotethat-revision-edit-summary-hidden": "(خلاصۀ ویرایش حذف شده)"
 }
