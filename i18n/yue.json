@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Z423x5c6"
+		]
+	},
+	"whowrotethat-ext-name": "邊個寫嘅？",
+	"whowrotethat-ext-name-beta": "邊個寫嘅？（測試）",
+	"whowrotethat-state-pending": "$1 載入緊，可能要等一陣。",
+	"whowrotethat-state-pending-name": "邊個寫嘅？",
+	"whowrotethat-state-error": "出錯：$1",
+	"whowrotethat-error-refresh": "重新整理或者轉頭再試。",
+	"whowrotethat-error-later": "唔該等陣再試。",
+	"whowrotethat-error-contact": "重新整理或者轉頭再試。$1",
+	"whowrotethat-error-contact-link": "如果問題持續，請聯絡我哋。",
+	"whowrotethat-ready-title": "邊個寫嘅？",
+	"whowrotethat-tour-welcome-title-name": "邊個寫嘅？",
+	"whowrotethat-revision-attribution-lessthan-percent": "少過 1%",
+	"whowrotethat-revision-deleted-username": "（用戶名已經移除咗）",
+	"whowrotethat-revision-edit-summary-hidden": "（編輯摘要已經移除咗）"
+}
