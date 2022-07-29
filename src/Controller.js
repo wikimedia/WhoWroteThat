@@ -144,7 +144,7 @@ class Controller {
 				// This is due to VE replacing the content element,
 				// rather than inserting new contents into it.
 				// eslint-disable-next-line no-jquery/no-global-selector
-				this.model.initialize( $( '.mw-parser-output' ), config );
+				this.model.initialize( $( '#bodyContent .mw-parser-output' ), config );
 				this.model.toggleEnabled( true );
 			} );
 
