@@ -88,7 +88,7 @@ config.outputEnvironment = 'Browser extension';
 		loadWhoWroteThat = () => {
 			wwtController.initialize(
 				// eslint-disable-next-line no-jquery/no-global-selector
-				$( '.mw-parser-output' ),
+				$( '#bodyContent .mw-parser-output' ),
 				{
 					lang: mw.config.get( 'wgUserLanguage' ),
 					translations: languageBlob,
