@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.16.1] - 2022-07-29
+### Fixed
+- Handle pages that have multiple instances of .mw-parser-output
+
 ## [0.16.0] - 2022-06-06
 ### Changed
 - Remove unused 'activeTab' permission.
@@ -164,7 +168,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.16.0...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.16.1...HEAD
+[0.16.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.16.0...0.16.1
 [0.16.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.4...0.16.0
 [0.15.4]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.3...0.15.4
 [0.15.3]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.2...0.15.3
