@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"GinawaSaHapon"
+		]
+	},
+	"whowrotethat-ext-name": "Who Wrote That?",
+	"whowrotethat-ext-name-beta": "Who Wrote That? (BETA)",
+	"whowrotethat-ext-desc": "Ginagalugad ang impormasyon sa pag-akda at pagbabago nang nakikita at direkta sa mga artikulo ng Wikipedia. Pinapagana ng WikiWho.",
+	"whowrotethat-ext-desc-beta": "Ginagalugad ang impormasyon ng pag-akda sa Wikipedia. Pinapagana ng WikiWho. BETA ito, na ginawa para sa testing lang.",
+	"whowrotethat-ext-longdesc": "Browser extension ang Who Wrote That? (WWT) na nagpapakita ng impormasyon sa pag-akda direkta sa mga artikulo ng Wikipedia. Kapag nag-hover ka sa nilalaman, hina-highlight din nito ang lahat ng mga nilalaman na ginawa ng parehong may-akda, tinutukoy nito ang may-akda sa isang pagbabago, gayundin ang mga detalye ng pagbabago. Sa pangkalahatan, pinapayagan ng WWT na madiskubre ang pinagmulan at background ng isang edit, nang hindi kailanman pupunta pa sa nakaraang pagbabago.",
+	"whowrotethat-activation-link": "Who Wrote That?",
+	"whowrotethat-activation-link-tooltip": "Buksan ang Who Wrote That?",
+	"whowrotethat-deactivation-link": "Isara ang Who Wrote That?",
+	"whowrotethat-state-pending": "Naglo-load ang $1. Baka magtagal ito nang ilang sandali.",
+	"whowrotethat-state-pending-name": "Who Wrote That?",
+	"whowrotethat-state-error": "Error: $1",
+	"whowrotethat-error-refresh": "I-refresh o subukan na lang mamaya.",
+	"whowrotethat-error-later": "Subukan na lang mamaya.",
+	"whowrotethat-error-contact": "I-refresh o subukan na lang mamaya. $1",
+	"whowrotethat-error-contact-link": "Kung may isyu pa rin, kontakin kami.",
+	"whowrotethat-ready-title": "Who Wrote That?",
+	"whowrotethat-ready-general": "Mag-hover para makita ang mga ambag ng parehong may-akda. Pindutin para sa karagdagang detalye.",
+	"whowrotethat-tour-welcome-title": "Nakabukas na ang $1!",
+	"whowrotethat-tour-welcome-title-name": "Who Wrote That?",
+	"whowrotethat-tour-welcome-description": "Buksan ang kagamitan sa sidebar. I-hover ang isang teksto para i-highlight ang mga ambag ng parehong may-akda. Pindutin para makita ang may-akda at detalye ng pagbabago.",
+	"whowrotethat-tour-welcome-dismiss": "Sige!",
+	"whowrotethat-revision-added": "Dinagdag ito ni $1 noong $2.",
+	"whowrotethat-revision-attribution": "Sinulat nila ang $1 ng pahina.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Sinulat nila ang $1 ng pahina.",
+	"whowrotethat-revision-attribution-lessthan-percent": "mababa sa 1%",
+	"whowrotethat-revision-deleted-username": "(tinanggal ang username o IP)",
+	"whowrotethat-revision-edit-summary-hidden": "(tinanggal ang buod)"
+}
