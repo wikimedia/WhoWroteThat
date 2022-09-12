@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Halbast"
+		]
+	},
+	"whowrotethat-ext-name": "کێ ئەوەی نووسیوە؟",
+	"whowrotethat-ext-name-beta": "کێ ئەوەی نووسیوە؟ (بیتا)",
+	"whowrotethat-ext-desc": "زانیاریی خاوەندارێتی و بەسەرداچوونەوە بە بینایی و یەکسەر ببینە لە وتارەکانی ویکیپیدیا. بە یارمەتیی ویکیھوو دروست کراوە.",
+	"whowrotethat-ext-desc-beta": "زانیاریی خاوەندارێتی و بەسەرداچوونەوە بە بینایی و یەکسەر ببینە لە وتارەکانی ویکیپیدیا. بە یارمەتیی ویکیھوو دروست کراوە. ئەمە وەشانی بیتایە، تەنیا بۆ تاقیکردنەوە بەکار دێت.",
+	"whowrotethat-ext-longdesc": "کێ ئەوەی نووسیوە؟ درێژکراوەیەکی وێبگەڕە، کە زانیاریی خاوەندارێتی یەکسەر لەسەر وتارەکانی ویکیپیدیا پیشان دەدات. کاتێک ئاماژەدەرەکە لەسەر ناوەڕۆک ڕادەگریت، ئامرازەکە ھەموو ناوەڕۆکەکانی ھەمان نووسەر پیشان دەدات. کاتێک کرتە لەسەر ناوەڕۆکەکە دەکەیت، ئامرازەکە نووسەری پێداچوونەوەکە دەناسێتەوە، لەگەڵ وردەکارییەکانی پێداچوونەوەکەی. بە گشتی، ئامرازەکە ڕێ بە بەکارھێنەران دەدات کە سەرچاوە و پێشینەی دەستکارییەک بدۆزنەوە، بەبێ ئەوەی پێویست بێت بە مێژووی پێداچوونەوەکاندا بگەڕێیت.",
+	"whowrotethat-activation-link": "کێ ئەوەی نووسیوە؟",
+	"whowrotethat-activation-link-tooltip": "کێ ئەوەی نووسیوە؟ چالاک بکە",
+	"whowrotethat-deactivation-link": "کێ ئەوەی نووسیوە؟ دابخە",
+	"whowrotethat-state-pending": "$1 بار دەکرێت. لەوانەیە کەمێکی پێ بچێت.",
+	"whowrotethat-state-pending-name": "کێ ئەوەی نووسیوە؟",
+	"whowrotethat-state-error": "ھەڵە: $1",
+	"whowrotethat-error-refresh": "پەڕەکە نوێ بکەرەوە یان دووبارە ھەوڵ بدەرەوە.",
+	"whowrotethat-error-later": "تکایە دواتر ھەوڵ بدەرەوە.",
+	"whowrotethat-error-contact": "پەڕەکە نوێ بکەرەوە یان دووبارە ھەوڵ بدەرەوە. $1",
+	"whowrotethat-error-contact-link": "ئەگەر ئەم کێشەیە بەردەوامە، پەیوەندیمان پێوە بکە.",
+	"whowrotethat-ready-title": "کێ ئەوەی نووسیوە؟",
+	"whowrotethat-ready-general": "ئاماژەپێدەرەکە ڕابگرە بۆ بینینی بەشدارییەکان لەلایەن ھەمان نووسەرەوە. کرتە بکە بۆ بینینی وردەکاریی زیاتر.",
+	"whowrotethat-tour-welcome-title": "$1 چالاکە!",
+	"whowrotethat-tour-welcome-title-name": "کێ ئەوەی نووسیوە؟",
+	"whowrotethat-tour-welcome-description": "ئامرازەکە لە لاتووڵەوە کارا بکە. ئاماژەدەرەکە لەسەر دەق ڕابگرە بۆ بینینی بەشدارییەکان لەلایەن ھەمان نووسەرەوە. کرتە بکە بۆ بینینی نووسەر و وردەکارییەکانی پێداچوونەوە.",
+	"whowrotethat-tour-welcome-dismiss": "بەسەرچاو!",
+	"whowrotethat-revision-added": "$1 ئەمەی زیاد کرد لە $2.",
+	"whowrotethat-revision-attribution": "$1ی پەڕەکەیان نووسیوە.",
+	"whowrotethat-revision-attribution-percent": "$1٪",
+	"whowrotethat-revision-attribution-lessthan": "$1ی پەڕەکەیان نووسیوە.",
+	"whowrotethat-revision-attribution-lessthan-percent": "کەمتر لە ١٪",
+	"whowrotethat-revision-deleted-username": "(ناوی بەکارھێنەر یان ئای پی سڕدراوەتەوە)",
+	"whowrotethat-revision-edit-summary-hidden": "(کورتەی دەستکاری سڕدراوەتەوە)"
+}
