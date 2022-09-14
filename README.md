@@ -44,8 +44,9 @@ The tool works on Wikipedias supported by the WhoColor API:
 
 1. Clone the repo: `git clone https://github.com/wikimedia/whowrotethat.git`
 2. Go into its directory: `cd whowrotethat`
-2. Run `npm install`
-3.
+3. Make sure you're using the Node version specified by the .nvmrc file.
+4. Run `npm install`
+5.
    * **Firefox:**
       1. Run `grunt run`
       2. This will open Firefox to a random page on English Wikipedia,
@@ -97,11 +98,11 @@ This is done with the `grunt checkListings` and `grunt checkListings:beta` comma
 These will report any discrepancies with the published names or descriptions of the extension,
 which will need to be resolved manually (because there's no editing API for the browser store).
 
-To manually update the locales, go to https://addons.mozilla.org/en-US/developers/addon/whowrotethat/edit, 
+To manually update the locales, go to https://addons.mozilla.org/en-US/developers/addon/whowrotethat/edit,
 select the locale that needs to be updated from the `Localize for:` dropdown, and update the corresponding fields
-mentioned in the `grunt checkListings` report. 
+mentioned in the `grunt checkListings` report.
 
-There might be locales in the grunt report that are supported by the extension but not availabe in the locales list at the Firefox add-ons store. 
+There might be locales in the grunt report that are supported by the extension but not availabe in the locales list at the Firefox add-ons store.
 
 Localization is not required for Chrome,
 because it reads all names and descriptions from the `_locales/` files.
