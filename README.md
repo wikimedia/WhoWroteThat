@@ -11,16 +11,19 @@ WhoWroteThat is available as a browser extension for Firefox and Chrome.
 * [User interface translation](https://translatewiki.net/wiki/Translating:WhoWroteThat%3F)
 
 [![License: MIT](https://img.shields.io/github/license/wikimedia/WhoWroteThat)](https://github.com/wikimedia/WhoWroteThat/blob/master/MIT-LICENSE)
-[![CircleCI build status](https://img.shields.io/circleci/build/github/wikimedia/WhoWroteThat)](https://circleci.com/gh/wikimedia/WhoWroteThat)
+[![Node](https://github.com/wikimedia/WhoWroteThat/actions/workflows/node.yml/badge.svg)](https://github.com/wikimedia/WhoWroteThat/actions/workflows/node.yml)
 
 Table of Contents:
 
-* [Supported Wikipedias](#supported-wikipedias)
-* Installation: [for users](#installation-for-users), [for developers](#installation-for-developers)
-* [Releasing the browser extension](#releasing-the-browser-extension)
-* [Debugging](#debugging)
-* [WikiWho API](#wikiwho-api)
-* [Changelog](#changelog)
+- [Who Wrote That? for Wikipedia](#who-wrote-that-for-wikipedia)
+  - [Supported Wikipedias](#supported-wikipedias)
+  - [Installation for users](#installation-for-users)
+  - [Installation for developers](#installation-for-developers)
+  - [Releasing the browser extension](#releasing-the-browser-extension)
+    - [Firefox store localization](#firefox-store-localization)
+  - [Debugging](#debugging)
+  - [WikiWho API](#wikiwho-api)
+  - [Changelog](#changelog)
 
 ## Supported Wikipedias
 
