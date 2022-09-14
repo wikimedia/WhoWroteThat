@@ -1,0 +1,23 @@
+name: Node
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: Node
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 12.20.0
+      uses: actions/setup-node@v3
+      with:
+        node-version: 12.20.0
+        cache: 'npm'
+    - run: npm ci
+    - run: |
+        ./node_modules/.bin/grunt
+        git status
+        git status | grep "nothing to commit, working tree clean"
