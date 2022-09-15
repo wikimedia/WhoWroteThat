@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"EdoAug",
 			"Jon Harald Søby"
 		]
 	},
@@ -8,26 +9,28 @@
 	"whowrotethat-ext-name-beta": "Hvem skrev det? (BETA)",
 	"whowrotethat-ext-desc": "Utforsk forfatterskap og revisjonsinformasjon visuelt og direkte i Wikipedia-artikler. Drives med WikiWho.",
 	"whowrotethat-ext-desc-beta": "Utforsk informasjon om Wikipedia-forfatterskap. Drives med WikiWho. Dette er betaversjonen, kun ment for testing.",
+	"whowrotethat-ext-longdesc": "Who Wrote That? (WMT) er en nettleserutvidelse som viser forfatterinformasjon direkte på Wikipedia-artikler. Når du holder pekeren over innhold, så fremhever verktøyet alt innhold fra samme forfatter. Når du trykker på innhold, så viser verktøyet revisjonsforfatteren og -detaljer. WMT tillater brukere å å finne kilden og bakgrunnen for en redigering, uten å måtte grave gjennom revisjonshistorikk.",
 	"whowrotethat-activation-link": "Hvem skrev det?",
 	"whowrotethat-activation-link-tooltip": "Aktivere «Hvem skrev det»?",
 	"whowrotethat-deactivation-link": "Lukke «Hvem skrev det»?",
 	"whowrotethat-state-pending": "$1 laster. Dette kan ta en stund.",
 	"whowrotethat-state-pending-name": "Hvem skrev det?",
-	"whowrotethat-state-error": "API-feil: $1",
-	"whowrotethat-error-refresh": "Oppdater siden eller prøv igjen seinere.",
+	"whowrotethat-state-error": "Feil: $1",
+	"whowrotethat-error-refresh": "Oppdater eller prøv igjen senere.",
 	"whowrotethat-error-later": "Prøv igjen seinere.",
-	"whowrotethat-error-contact": "$1 om dette problemet.",
-	"whowrotethat-error-contact-link": "Kontakt oss",
+	"whowrotethat-error-contact": "Oppdater eller prøv igjen senere. $1",
+	"whowrotethat-error-contact-link": "Om problemet vedvarer, kontakt oss.",
 	"whowrotethat-ready-title": "Hvem skrev det?",
 	"whowrotethat-ready-general": "Hold over for å se bidrag av samme forfatter. Klikk for flere detaljer.",
 	"whowrotethat-tour-welcome-title": "$1 er slått på!",
 	"whowrotethat-tour-welcome-title-name": "Hvem skrev det?",
-	"whowrotethat-tour-welcome-description": "Slå på verktøyet fra verktøyboksen. Hold over tekst for å se hvem som skrev noe, og hva annet de har skrevet på siden. Klikk for flere detaljer.",
+	"whowrotethat-tour-welcome-description": "Slå på verktøyet fra verktøyboksen. Hold pekeren over tekst for å fremheve bidrag fra samme forfatter. Klikk for å se forfatteren og revisjonsdetaljer.",
 	"whowrotethat-tour-welcome-dismiss": "Skjønner!",
 	"whowrotethat-revision-added": "$1 la til dette $2.",
 	"whowrotethat-revision-attribution": "Vedkommende har skrevet $1 av siden.",
 	"whowrotethat-revision-attribution-percent": "$1 %",
 	"whowrotethat-revision-attribution-lessthan": "Vedkommende har skrevet $1 av siden.",
 	"whowrotethat-revision-attribution-lessthan-percent": "mindre enn 1 %",
-	"whowrotethat-revision-deleted-username": "(brukernavn eller IP-adresse fjernet)"
+	"whowrotethat-revision-deleted-username": "(brukernavn eller IP-adresse fjernet)",
+	"whowrotethat-revision-edit-summary-hidden": "(redigeringskommentar fjernet)"
 }
