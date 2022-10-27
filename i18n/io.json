@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joao Xavier"
+		]
+	},
+	"whowrotethat-ext-name": "Quo skribis to?",
+	"whowrotethat-ext-name-beta": "Quo skribis to? (BETA)",
+	"whowrotethat-activation-link": "Quo skribis to?",
+	"whowrotethat-activation-link-tooltip": "Kad uzar ''Quo skribis to''?",
+	"whowrotethat-deactivation-link": "Ka klozar ''Quo skribis to''?",
+	"whowrotethat-state-pending": "Karganta $1. To povas tardigar kelka tempo.",
+	"whowrotethat-state-pending-name": "Quo skribis to?",
+	"whowrotethat-state-error": "Eroro: $1",
+	"whowrotethat-error-refresh": "Aktualigez la pagino, o probez itere plu tarde.",
+	"whowrotethat-error-later": "Voluntez probar itere pose.",
+	"whowrotethat-error-contact": "Aktualigez, o probez itere plu tarde. $1",
+	"whowrotethat-error-contact-link": "Se la problemo duros, kontaktez ni.",
+	"whowrotethat-ready-title": "Quo skribis to?",
+	"whowrotethat-tour-welcome-title": "$1 esas uzebla!",
+	"whowrotethat-tour-welcome-title-name": "Quo skribis to?",
+	"whowrotethat-tour-welcome-dismiss": "Me komprenis!",
+	"whowrotethat-revision-added": "$1 adjuntis ca che $2.",
+	"whowrotethat-revision-attribution": "Li skribesis $1 di la pagino.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Li skribesis $1 di la pagino.",
+	"whowrotethat-revision-attribution-lessthan-percent": "min kam 1%",
+	"whowrotethat-revision-deleted-username": "(uzantonomo o IP-adreso forigita)",
+	"whowrotethat-revision-edit-summary-hidden": "(rezumo di redakti forigesis)"
+}
