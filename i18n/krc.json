@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Къарачайлы"
+		]
+	},
+	"whowrotethat-ext-name": "Буну ким джазды?",
+	"whowrotethat-ext-name-beta": "Буну ким джазды? (BETA)",
+	"whowrotethat-ext-desc": "Википедияны статьяларында авторлукъ эмда ревизия информацияны туурадан статьялада тинтигиз. Вики/Ким-де ишлейди",
+	"whowrotethat-ext-desc-beta": "Википедияда авторлукъ информацияны тинтигиз. ВикиКим-де ишлейди. Бу джангы сынар ючюн хайырланыргъа джарагъан Бета-версияды.",
+	"whowrotethat-ext-longdesc": "Буну ким джазды? (WWT), авторлукъ информацияны туурадан Википедия статьяларында кёргюзген браузер кенгертиудю. Курсорну ичерикни юсюне келтирсегиз, адыр авторну бютеу ичеригин кёргюзюр. Ичерикге бассагъыз, адыр, версияны авторун эмда ачыкъламаланы кёргюзюр. Асламысы бла WWT версияланы тарихин къазмай, тюзетиуюню къайнакъын эмда чуруман табаргъа болушады.",
+	"whowrotethat-activation-link": "Буну ким джазды?",
+	"whowrotethat-activation-link-tooltip": "\"Буну ким джаздыны\" активация этейикми?",
+	"whowrotethat-deactivation-link": "\"Буну ким джаздыны\" джабайыкъмы?",
+	"whowrotethat-state-pending": "$1 джюклене турады. Бу бир талай заман алыргъа боллукъду.",
+	"whowrotethat-state-pending-name": "Буну ким джазды?",
+	"whowrotethat-state-error": "Халат: $1",
+	"whowrotethat-error-refresh": "Джангырт неда джангыдан кечирек сына.",
+	"whowrotethat-error-later": "Кечирек энтда бир кере сынагъыз.",
+	"whowrotethat-error-contact": "Джангыртыгъыз неда кечирек дагъыда сынагъыз. $1",
+	"whowrotethat-error-contact-link": "Проблема кетмесе, бизни бла байлам къуругъуз.",
+	"whowrotethat-ready-title": "Буну ким джазды?",
+	"whowrotethat-ready-general": "Бир авторну кошумларын кёрюр ючюн курсорну юсюне келтир. Аслам информация алыр ючюн юсюне бас.",
+	"whowrotethat-tour-welcome-title": "$1 джаныбды!",
+	"whowrotethat-tour-welcome-title-name": "Буну ким джазды?",
+	"whowrotethat-tour-welcome-description": "Къабыргъа панелден адырны активация этигиз. Авторну къошумун чертир ючюн курсорну текстни юсюне келтиригиз. Автор бла версияны юсюнден информация кёрюр ючюн юсюне басыгъыз.",
+	"whowrotethat-tour-welcome-dismiss": "Англашынды!",
+	"whowrotethat-revision-added": "$1 буну $2 къошду.",
+	"whowrotethat-revision-attribution": "Бетни $1 джаздыла.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Бетни $1 джаздыла.",
+	"whowrotethat-revision-attribution-lessthan-percent": "1% аз",
+	"whowrotethat-revision-deleted-username": "(къошулуучуну аты неда IP кетерилгенди)",
+	"whowrotethat-revision-edit-summary-hidden": "(тюрлендириуню суратлауу кетерилгенди)"
+}
