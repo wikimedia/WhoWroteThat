@@ -25,10 +25,10 @@
 	"whowrotethat-tour-welcome-title-name": "Kdo je to napisal?",
 	"whowrotethat-tour-welcome-description": "Aktivirajte orodje iz stranske vrstice. Lebdite nad besedilom, da označite prispevke istega avtorja. Kliknite za prikaz podatkov o avtorju in redakciji.",
 	"whowrotethat-tour-welcome-dismiss": "Razumem!",
-	"whowrotethat-revision-added": "To je dodal/a $1; $2.",
-	"whowrotethat-revision-attribution": "Napisal/a je $1 strani.",
+	"whowrotethat-revision-added": "To je dodal_a $1; $2.",
+	"whowrotethat-revision-attribution": "Napisal_a je $1 strani.",
 	"whowrotethat-revision-attribution-percent": "$1%",
-	"whowrotethat-revision-attribution-lessthan": "Napisal/a je $1 strani.",
+	"whowrotethat-revision-attribution-lessthan": "Napisal_a je $1 strani.",
 	"whowrotethat-revision-attribution-lessthan-percent": "manj kot 1&nbsp;%",
 	"whowrotethat-revision-deleted-username": "(uporabniško ime ali IP odstranjen)",
 	"whowrotethat-revision-edit-summary-hidden": "(povzetek urejanja odstranjen)"
