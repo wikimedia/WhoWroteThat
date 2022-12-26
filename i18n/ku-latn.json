@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bikarhêner"
+			"Bikarhêner",
+			"Ghybu"
 		]
 	},
 	"whowrotethat-ext-name": "Kî Nivîsî Vê?",
@@ -15,9 +16,9 @@
 	"whowrotethat-state-pending": "$1 bar dibe. Dibe ku ev hinek wext bigire.",
 	"whowrotethat-state-pending-name": "Kî Nivîsî Vê?",
 	"whowrotethat-state-error": "Çewtî: $1",
-	"whowrotethat-error-refresh": "Nû bike an paşê cardin biceribîne.",
+	"whowrotethat-error-refresh": "Rojane bike an paşê cardin biceribîne.",
 	"whowrotethat-error-later": "Ji kerema xwe paşê cardin biceribîne.",
-	"whowrotethat-error-contact": "Nû bike an paşê cardin biceribîne. $1",
+	"whowrotethat-error-contact": "Rojane bike an paşê cardin biceribîne. $1",
 	"whowrotethat-error-contact-link": "Ger pirsgirêk dewam bike, bi me re têkiliyê deyne.",
 	"whowrotethat-ready-title": "Kî Nivîsî Vê?",
 	"whowrotethat-ready-general": "Were ser nivîsê ji bo ku beşdariyên ji eynî nivîskarê ronî bikî. Ji bo detayên zêdetir bitikîne.",
