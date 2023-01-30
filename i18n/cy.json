@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Afalau"
+		]
+	},
+	"whowrotethat-ext-name": "Pwy Nath Sgwennu Hwn?",
+	"whowrotethat-ext-name-beta": "Pwy Nath Sgwennu Hwn? (BETA)",
+	"whowrotethat-activation-link": "Pwy Nath Sgwennu Hwn?",
+	"whowrotethat-activation-link-tooltip": "Cychwyn Pwy Nath Sgwennu Hwn?",
+	"whowrotethat-deactivation-link": "Cau Pwy Nath Sgwennu Hwn?",
+	"whowrotethat-state-pending": "Wrthi'n llwytho $1. Gall hyn gymryd amser.",
+	"whowrotethat-state-pending-name": "Pwy Nath Sgwennu Hwn?",
+	"whowrotethat-state-error": "Gwall: $1",
+	"whowrotethat-error-refresh": "Adnewyddwch neu geisiwch eto yn nes ymlaen.",
+	"whowrotethat-error-later": "Ceisiwch eto yn nes ymlaen.",
+	"whowrotethat-error-contact": "Adnewyddwch neu geisiwch eto yn nes ymlaen. $1",
+	"whowrotethat-ready-title": "Pwy Nath Sgwennu Hwn?",
+	"whowrotethat-tour-welcome-title-name": "Pwy Nath Sgwennu Hwn?",
+	"whowrotethat-tour-welcome-dismiss": "Iawn",
+	"whowrotethat-revision-added": "Ysgrifenodd $1 hwn ar $2.",
+	"whowrotethat-revision-attribution": "Mae'r defnyddiwr hwn wedi ysgrifennu $1 o'r dudalen.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Mae'r defnyddiwr hwn wedi ysgrifennu $1 o'r dudalen.",
+	"whowrotethat-revision-attribution-lessthan-percent": "llai nag 1%",
+	"whowrotethat-revision-deleted-username": "(enw defnyddiwr neu IP wedi ei guddio)",
+	"whowrotethat-revision-edit-summary-hidden": "(cuddiwyd y crynodeb golygu)"
+}
