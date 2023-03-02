@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
 	"whowrotethat-ext-name-beta": "Wien huet dat geschriwwen? (BETA)",
@@ -26,5 +27,6 @@
 	"whowrotethat-revision-attribution-percent": "$1 %",
 	"whowrotethat-revision-attribution-lessthan": "Si hu manner wéi $1 vun der Säit geschriwwen.",
 	"whowrotethat-revision-attribution-lessthan-percent": "manner wéi 1%",
-	"whowrotethat-revision-deleted-username": "(Benotzernumm oder IP ewechgeholl)"
+	"whowrotethat-revision-deleted-username": "(Benotzernumm oder IP ewechgeholl)",
+	"whowrotethat-revision-edit-summary-hidden": "(Resumé vun der Ännerung ewechgeholl)"
 }
