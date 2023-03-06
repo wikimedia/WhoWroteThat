@@ -12,6 +12,7 @@
 	"whowrotethat-ext-name": "Kenen kirjoittama?",
 	"whowrotethat-ext-name-beta": "Kenen kirjoittama? (BETA)",
 	"whowrotethat-ext-desc": "Näe visuaalisesti suoraan Wikipedia-artikkelissa tieto sen tekstin kirjoittajasta ja versiosta. Laajennuksen tarjoaa WikiWho.",
+	"whowrotethat-ext-desc-beta": "Tutustu Wikipedian tekijätietoihin. WikiWhon tuottama. Tämä on beetaversio, joka on tarkoitettu vain testaukseen.",
 	"whowrotethat-ext-longdesc": "Kenen kirjoittama? on selainlaajennus, joka näyttää tekstin kirjoittajan suoraan Wikipedia-artikkelissa. Viemällä hiiren tekstin päälle työkalu korostaa kaiken kyseisen tekstin kirjoittajan sivulle kirjoittaman tekstin. Napauttamalla kohtaa työkalu näyttää tiedot sen kirjoittajasta ja versiosta. Laajennuksen ansiosta näet tekstin taustan ilman, että sinun tarvitsee kahlata läpi muokkaushistoriaa.",
 	"whowrotethat-activation-link": "Kenen kirjoittama?",
 	"whowrotethat-activation-link-tooltip": "Aktivoi Kenen kirjoittama?",
