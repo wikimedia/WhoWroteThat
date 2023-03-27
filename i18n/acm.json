@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"MRidhaAJ"
+		]
+	},
+	"whowrotethat-ext-name": "منو كتب هاذ؟",
+	"whowrotethat-ext-name-beta": "منو كتب هاذ؟ (تجريبي)",
+	"whowrotethat-ext-desc": "استكشف معلومات الكتابة والمراجعة بشكل مرئي ومباشر في مقالات ويكيبيديا، مدعوم من ويكي منو.",
+	"whowrotethat-ext-desc-beta": "استكشف معلومات كتابة ويكيبيديا. مدعوم من ويكي هاو. هاي هي النسخة التجريبية، المخصصة للاختبار بس.",
+	"whowrotethat-activation-link": "منو كتب هاذ؟",
+	"whowrotethat-activation-link-tooltip": "فعل منو كتب هاذ؟",
+	"whowrotethat-deactivation-link": "طفي منو كتب هاذ؟",
+	"whowrotethat-state-pending": "$1 جاي يحمل، يمكن هاذ راح ياخذ وكت.",
+	"whowrotethat-state-pending-name": "منو كتب هاذ؟",
+	"whowrotethat-state-error": "خطأ: $1",
+	"whowrotethat-error-refresh": "حدث الصفحة لو عيد مرة ثانية بعدين."
+}
