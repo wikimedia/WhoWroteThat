@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Proabscorp!"
+		]
+	},
+	"whowrotethat-ext-name": "एकरा के लिखलौ छै?",
+	"whowrotethat-ext-name-beta": "एकरा के लिखलौ छै? (बीटा)",
+	"whowrotethat-ext-desc": "विकिपीडिया लेख मँ देखि क आरो सीधा जानकारी आरो संशोधन जानकारी क अन्वेषण करौ। विकीहू द्वारा संचालित।",
+	"whowrotethat-ext-desc-beta": "विकिपीडिया ऑथरशिप जानकारी क अन्वेषण करौ। विकीहू द्वारा संचालित। हैय बीटा संस्करण छेकै, आरो केवल परिक्षण लेली छेकै।",
+	"whowrotethat-activation-link": "एकरा के लिखलौ छै?",
+	"whowrotethat-activation-link-tooltip": "एकरा के लिखलौ छै? क सक्रिय करौ",
+	"whowrotethat-deactivation-link": "एकरा के लिखलौ छै? क बंद करौ",
+	"whowrotethat-state-pending": "$1 लोड होय रहलौ छै। एकरा मँ कुछु समय लगै सकै छै।",
+	"whowrotethat-state-pending-name": "एकरा के लिखलौ छै?",
+	"whowrotethat-state-error": "त्रुटि: $1",
+	"whowrotethat-error-refresh": "टटका करौ या बादौ मँ फिरू प्रयास करौ।",
+	"whowrotethat-error-later": "कृपया बादौ मँ फिरू प्रयास करौ।",
+	"whowrotethat-error-contact": "टटका करौ या बादौ मँ फिरू प्रयास करौ। $1",
+	"whowrotethat-error-contact-link": "यदि समस्या अभीयो होय छौं, त संपर्क करौ।",
+	"whowrotethat-ready-title": "एकरा के लिखलौ छै?",
+	"whowrotethat-ready-general": "एक्के लेखक द्वारा योगदान देखै लेली होवर। बेसी जानकारी लेली क्लिक करौ।",
+	"whowrotethat-tour-welcome-title": "$1 सक्षम छौं!",
+	"whowrotethat-tour-welcome-title-name": "एकरा के लिखलौ छै?",
+	"whowrotethat-tour-welcome-dismiss": "समझी गेलीयै!",
+	"whowrotethat-revision-added": "$1 न एकरा $2 प जोड़लकै।",
+	"whowrotethat-revision-attribution": "हुनी सिनी न पृष्ठ क $1 लिखलौ छै।",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "हुनी सिनी न पृष्ठ क $1 लिखलौ छै।",
+	"whowrotethat-revision-attribution-lessthan-percent": "1% सँ कम",
+	"whowrotethat-revision-deleted-username": "(सदस्यनाम या IP हटलै)",
+	"whowrotethat-revision-edit-summary-hidden": "(सम्पादन सारांश हटलै)"
+}
