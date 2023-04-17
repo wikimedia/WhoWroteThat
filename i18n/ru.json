@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alexander Yukal",
+			"Max34",
 			"Okras",
 			"Teretalexev"
 		]
@@ -22,12 +23,12 @@
 	"whowrotethat-error-contact": "Попробуйте ещё раз попозже. $1",
 	"whowrotethat-error-contact-link": "Если проблема сохранится, свяжитесь с нами.",
 	"whowrotethat-ready-title": "Who Wrote That?",
-	"whowrotethat-ready-general": "Подведите курсор, чтобы увидеть вклады того же автора. Нажмите для более подробной информации.",
-	"whowrotethat-tour-welcome-title": "$1 включен!",
+	"whowrotethat-ready-general": "Наведите курсор, чтобы увидеть вклады определённого автора. Нажмите, чтобы узнать больше.",
+	"whowrotethat-tour-welcome-title": "$1 включён!",
 	"whowrotethat-tour-welcome-title-name": "Who Wrote That?",
-	"whowrotethat-tour-welcome-description": "Активируйте инструмент с боковой панели. Наведите курсор на текст, чтобы выделить вклад того же автора. Щелкните, чтобы увидеть подробности об авторе и версии.",
+	"whowrotethat-tour-welcome-description": "Активировать инструмент можно на боковой панели. Наведите курсор на текст, чтобы выделить вклады определённого автора. Щёлкните, чтобы увидеть сведения и автора правки.",
 	"whowrotethat-tour-welcome-dismiss": "Понятно!",
-	"whowrotethat-revision-added": "$1 добавил это к $2.",
+	"whowrotethat-revision-added": "$1 добавил это $2.",
 	"whowrotethat-revision-attribution": "Участник написал $1 страницы.",
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "Участник написал $1 страницы.",
