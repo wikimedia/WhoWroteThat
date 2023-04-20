@@ -14,5 +14,6 @@
 	"whowrotethat-state-pending": "$1 جاي يحمل، يمكن هاذ راح ياخذ وكت.",
 	"whowrotethat-state-pending-name": "منو كتب هاذ؟",
 	"whowrotethat-state-error": "خطأ: $1",
-	"whowrotethat-error-refresh": "حدث الصفحة لو عيد مرة ثانية بعدين."
+	"whowrotethat-error-refresh": "حدث الصفحة لو عيد مرة ثانية بعدين.",
+	"whowrotethat-error-later": "الرجاء معاودة المحاوله لاحقًا."
 }
