@@ -15,5 +15,12 @@
 	"whowrotethat-state-pending-name": "منو كتب هاذ؟",
 	"whowrotethat-state-error": "خطأ: $1",
 	"whowrotethat-error-refresh": "حدث الصفحة لو عيد مرة ثانية بعدين.",
-	"whowrotethat-error-later": "الرجاء معاودة المحاوله لاحقًا."
+	"whowrotethat-error-later": "الرجاء معاودة المحاوله لاحقًا.",
+	"whowrotethat-ready-title": "منو كتب هاذ؟",
+	"whowrotethat-tour-welcome-title": "$1 مشتغله!",
+	"whowrotethat-tour-welcome-title-name": "منو كتب هاذ؟",
+	"whowrotethat-tour-welcome-dismiss": "خوش!",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "كتبوا أقل من $1 من الصفحه",
+	"whowrotethat-revision-attribution-lessthan-percent": "أقل من 1%"
 }
