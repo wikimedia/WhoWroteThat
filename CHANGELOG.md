@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.17.0] - 2023-04-26
+### Changed
+- Added support for French Wikipedia.
+- Translation updates.
+
 ## [0.16.2] - 2022-09-14
 ### Changed
 - Remove unused for_reference-greasemonkey_code.js file.
@@ -173,7 +178,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.16.2...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.17.0...HEAD
+[0.17.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.16.2...0.17.0
 [0.16.2]: https://github.com/wikimedia/WhoWroteThat/compare/0.16.1...0.16.2
 [0.16.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.16.0...0.16.1
 [0.16.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.15.4...0.16.0
