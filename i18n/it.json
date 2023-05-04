@@ -1,11 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Beta16"
+			"Beta16",
+			"Superpes15"
 		]
 	},
 	"whowrotethat-ext-name": "Chi l'ha scritto?",
 	"whowrotethat-ext-name-beta": "Chi l'ha scritto? (BETA)",
+	"whowrotethat-ext-desc": "Esplora visivamente e direttamente nelle voci di Wikipedia le informazioni sulla paternità e sulla versione. Offerto da WikiWho.",
+	"whowrotethat-ext-desc-beta": "Esplora le informazioni sulla paternità su Wikipedia. Offerto da WikiWho. Questa è la versione BETA, destinata solo ai test.",
+	"whowrotethat-ext-longdesc": "Chi l'ha scritto? (WWT) è un estensione browser, che mostra le informazioni sugli autori direttamente nelle voci di Wikipedia. Scorrendo con il mouse sul contenuto, lo strumento evidenzierà tutti i contenuti inseriti dallo stesso autore. Cliccando sul contenuto, lo strumento identificherà l'autore della versione e i dettagli di essa. Nel complesso, WWT consente agli utenti di scoprire la fonte e il background di una modifica, senza dover scavare nella cronologia delle versioni.",
 	"whowrotethat-activation-link": "Chi l'ha scritto?",
 	"whowrotethat-activation-link-tooltip": "Attivare chi l'ha scritto?",
 	"whowrotethat-deactivation-link": "Chiudi chi l'ha scritto?",
@@ -17,10 +21,12 @@
 	"whowrotethat-error-contact": "Aggiorna o riprova più tardi. $1",
 	"whowrotethat-error-contact-link": "Se il problema persiste, contattaci.",
 	"whowrotethat-ready-title": "Chi l'ha scritto?",
+	"whowrotethat-ready-general": "Scorri con il mouse per vedere i contributi dello stesso autore. Clicca per ottenere maggiori dettagli.",
 	"whowrotethat-tour-welcome-title": "$1 è attivo!",
 	"whowrotethat-tour-welcome-title-name": "Chi l'ha scritto?",
+	"whowrotethat-tour-welcome-description": "Attiva lo strumento dalla barra laterale. Scorri con il mouse sopra il testo per evidenziare i contributi dello stesso autore. Clicca per vedere i dettagli sull'autore e sulla versione.",
 	"whowrotethat-tour-welcome-dismiss": "Capito!",
-	"whowrotethat-revision-added": "$1 lo ha aggiunto il $2.",
+	"whowrotethat-revision-added": "$1 l'ha aggiunto il $2.",
 	"whowrotethat-revision-attribution": "Ha scritto il $1 della pagina.",
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "Ha scritto il $1 della pagina.",
