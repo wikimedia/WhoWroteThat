@@ -24,7 +24,8 @@
 			"*://tr.wikipedia.org/*",
 			"*://es.wikipedia.org/*",
 			"*://fr.wikipedia.org/*",
-			"*://it.wikipedia.org/*"
+			"*://it.wikipedia.org/*",
+			"*://pt.wikipedia.org/*"
 		],
 		"exclude_globs": [
 			"*://en.wikipedia.org/wiki/Special:*",
@@ -34,13 +35,15 @@
 			"*://fr.wikipedia.org/wiki/Sp%C3%A9cial:*",
 			"*://it.wikipedia.org/wiki/Speciale:*",
 			"*://es.wikipedia.org/wiki/Especial:*",
+			"*://pt.wikipedia.org/wiki/Especial:*",
 			"*://en.wikipedia.org/*title=Special:*",
 			"*://de.wikipedia.org/*title=Spezial:*",
 			"*://eu.wikipedia.org/*title=Berezi:*",
 			"*://tr.wikipedia.org/*title=%C3%96zel:*",
 			"*://es.wikipedia.org/*title=Especial:*",
 			"*://fr.wikipedia.org/*title=Sp%C3%A9cial:*",
-			"*://it.wikipedia.org/*title=Speciale:"
+			"*://it.wikipedia.org/*title=Speciale:",
+			"*://pt.wikipedia.org/*title=Especial:*"
 		],
 		"js": [ "js/contentScript.js" ],
 		"css": [ "generated.whowrotethat.css" ],

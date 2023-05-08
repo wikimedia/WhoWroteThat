@@ -32,7 +32,8 @@ The tool works on Wikipedias supported by the WhoColor API:
 [German](https://de.wikipedia.org/),
 [Basque](https://eu.wikipedia.org/),
 [Turkish](https://tr.wikipedia.org/),
-[Spanish](https://es.wikipedia.org/)
+[Spanish](https://es.wikipedia.org/),
+[Portuguese](https://pt.wikipedia.org/),
 [French](https://fr.wikipedia.org/), and
 [Italian](https://it.wikipedia.org/)
 
