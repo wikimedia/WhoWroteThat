@@ -8,7 +8,7 @@
 	"whowrotethat-ext-name-beta": "Qui ha scribite isto? (BETA)",
 	"whowrotethat-ext-desc": "Exploration visual directe de autores e versiones de articulos de Wikipedia. Actionate per WikiWho.",
 	"whowrotethat-ext-desc-beta": "Explora information sur le autores de Wikipedia. Actionate per WikiWho. Iste es le version beta, destinate pro test solmente.",
-	"whowrotethat-ext-longdesc": "\"Qui ha scribite isto?\" (\"Who Wrote That?\", WWT) es un extension de navigator que monstra informationes sur le autores directemente in articulos de Wikipedia. Quando tu passa le punctator del mouse super un texto, le instrumento colora tote le texto del mesme autor. Quando tu clicca sur un texto, le instrumento identifica le autor del version e monstra detalios del version. In general, WWT permitte que usatores discoperi le origine e le contexto de un modification sin tediose recerca archeologic in le historia de versiones.",
+	"whowrotethat-ext-longdesc": "\"Qui ha scribite isto?\" (\"Who Wrote That?\", WWT) es un extension de navigator que monstra informationes sur le autores directemente in articulos de Wikipedia. Quando tu passa le cursor del mouse super un texto, le instrumento colora tote le texto del mesme autor. Quando tu clicca sur un texto, le instrumento identifica le autor del version e monstra detalios del version. In general, WWT permitte que usatores discoperi le origine e le contexto de un modification sin tediose recerca archeologic in le historia de versiones.",
 	"whowrotethat-activation-link": "Qui ha scribite isto?",
 	"whowrotethat-activation-link-tooltip": "Activar \"Qui ha scribite isto?\"",
 	"whowrotethat-deactivation-link": "Clauder \"Qui ha scribite isto?\"",
