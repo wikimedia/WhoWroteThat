@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"whowrotethat-ext-name": "ആർ എഴുതി?",
+	"whowrotethat-ext-name-beta": "ആർ എഴുതി? (ബീറ്റ)",
+	"whowrotethat-activation-link": "ആർ എഴുതി?",
+	"whowrotethat-activation-link-tooltip": "\"ആർ എഴുതി\" സജീവമാക്കുക",
+	"whowrotethat-state-pending": "$1 ലോഡുചെയ്യുന്നു. ഇതിന് കുറച്ച് സമയമെടുത്തേക്കാം.",
+	"whowrotethat-state-pending-name": "ആർ എഴുതി?",
+	"whowrotethat-error-later": "പിന്നീട് വീണ്ടും ശ്രമിക്കുക.",
+	"whowrotethat-error-contact": "പുതുക്കുക അല്ലെങ്കിൽ പിന്നീട് വീണ്ടും ശ്രമിക്കുക. $1",
+	"whowrotethat-error-contact-link": "പ്രശ്നം നിലനിൽക്കുകയാണെങ്കിൽ, ഞങ്ങളെ ബന്ധപ്പെടുക.",
+	"whowrotethat-ready-title": "ആർ എഴുതി?",
+	"whowrotethat-tour-welcome-title-name": "ആർ എഴുതി?",
+	"whowrotethat-tour-welcome-description": "സൈഡ്‌ബാറിൽ നിന്ന് ഉപകരണം സജീവമാക്കുക. ഒരേ രചയിതാവിന്റെ സംഭാവനകൾ ഹൈലൈറ്റ് ചെയ്യുന്നതിന് എഴുത്തു ഹോവർ ചെയ്യുക. രചയിതാവിനെയും പുനരവലോകന വിശദാംശങ്ങളെയും കാണാൻ ക്ലിക്കുചെയ്യുക.",
+	"whowrotethat-tour-welcome-dismiss": "മനസ്സിലായി!",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-edit-summary-hidden": "(തിരുത്തലിന്റെ ചുരുക്കം മറയ്ക്കപ്പെട്ടിരിക്കുന്നു)"
+}
