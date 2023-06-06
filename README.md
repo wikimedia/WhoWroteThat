@@ -2,7 +2,7 @@ Who Wrote That? for Wikipedia
 =============================
 
 Explore authorship and revision information visually and directly in Wikipedia articles.
-Powered by [WikiWho](https://wikiwho.wmflabs.org/).
+Powered by [WikiWho](https://wikiwho.wmcloud.org/).
 
 WhoWroteThat is available as a browser extension for Firefox and Chrome.
 
@@ -28,14 +28,19 @@ Table of Contents:
 ## Supported Wikipedias
 
 The tool works on Wikipedias supported by the WhoColor API:
-[English](https://en.wikipedia.org/),
-[German](https://de.wikipedia.org/),
 [Basque](https://eu.wikipedia.org/),
-[Turkish](https://tr.wikipedia.org/),
-[Spanish](https://es.wikipedia.org/),
+[English](https://en.wikipedia.org/),
+[Dutch](https://nl.wikipedia.org/),
+[French](https://fr.wikipedia.org/),
+[German](https://de.wikipedia.org/),
+[Hungarian](https://hu.wikipedia.org/),
+[Indonesian](https://id.wikipedia.org/),
+[Italian](https://it.wikipedia.org/),
+[Japanese](https://ja.wikipedia.org/),
+[Polish](https://pl.wikipedia.org/),
 [Portuguese](https://pt.wikipedia.org/),
-[French](https://fr.wikipedia.org/), and
-[Italian](https://it.wikipedia.org/)
+[Spanish](https://es.wikipedia.org/), and
+[Turkish](https://tr.wikipedia.org/)
 
 ## Installation for users
 
@@ -70,7 +75,7 @@ The tool works on Wikipedias supported by the WhoColor API:
 ## Releasing the browser extension
 
 First create your release branch, update the version number in `package.json`
-and ensure the changelog is up to date,
+and ensure the changelog is up-to-date,
 then tag the release branch in Git with the new version.
 Run `grunt` (the default task only) to create
 six zip files such as `dist/extension_firefox/whowrotethat_for_wikipedia-0.2.0.0.zip`
@@ -124,9 +129,9 @@ Available commands are:
 
 ## WikiWho API
 
-The API used by this tool is available for public use at [wikiwho.wmflabs.org](https://wikiwho.wmflabs.org/).
+The API used by this tool is available for public use at [wikiwho.wmcloud.org](https://wikiwho.wmcloud.org/).
 The algorithm and server code was originally written and hosted by [Gesis](https://www.gesis.org/) and [KIT](https://www.kit.edu/english/index.php).
-See their [original homepage](https://wikiwho.wmflabs.org/gesis_home) for more information.
+See their [original homepage](https://wikiwho.wmcloud.org/gesis_home) for more information.
 In February 2022 it was officially moved to Wikimedia's own infrastructure.
 
 ## Changelog
