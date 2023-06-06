@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.19.0] - 2023-06-06
+### Changed
+- Added support for Hungarian, Indonesian, Japanese, Dutch, Polish and
+  Portuguese Wikipedias.
+- Update API URL to its new home at wmcloud.org
+- Translation updates.
+
 ## [0.18.0] - 2023-04-28
 ### Changed
 - Added support for Italian Wikipedia.
@@ -183,7 +190,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.18.0...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.19.0...HEAD
+[0.19.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.18.0...0.19.0
 [0.18.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.17.0...0.18.0
 [0.17.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.16.2...0.17.0
 [0.16.2]: https://github.com/wikimedia/WhoWroteThat/compare/0.16.1...0.16.2
