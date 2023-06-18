@@ -44,6 +44,7 @@ const InfoBarWidget = function InfoBarWidget( config = {} ) {
 	// Initialize
 	this.$element
 		.addClass( 'wwt-infoBarWidget' )
+		.addClass( 'mw-sticky-header-element' ) // T310424
 		.append(
 			this.$pendingAnimation,
 			this.$icon,
