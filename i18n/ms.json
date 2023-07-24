@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"CyberTroopers",
+			"Hakimi97"
+		]
+	},
+	"whowrotethat-ext-name": "Siapa Tulis Itu?",
+	"whowrotethat-ext-name-beta": "Siapa Tulis Itu? (BETA)",
+	"whowrotethat-ext-desc": "Terokai maklumat pengarang dan semakan secara visual dan terus pada rencana Wikipedia. Dikuasakan oleh WikiSiapa.",
+	"whowrotethat-ext-desc-beta": "Terokai maklumat kepengarangan Wikipedia. Dikuasakan oleh WikiSiapa. Ini ialah versi BETA, bertujuan untuk ujian sahaja.",
+	"whowrotethat-ext-longdesc": "Siapa Tulis Itu? (SITI) ialah sambungan penyemak imbas, yang memaparkan maklumat kepengarangan secara langsung pada rencana Wikipedia. Apabila anda menggerakkan tetikus pada isi kandungan, alat itu menyerlahkan semua kandungan yang dilakukan oleh pengarang yang sama. Apabila anda mengklik pada kandungan, alat itu mengenal pasti pengarang pada semakan tertentu, bersama-sama dengan butiran semakan. Secara keseluruhan, SITI membenarkan pengguna menemui sumber dan latar belakang suntingan, tanpa menggali sejarah semakan.",
+	"whowrotethat-activation-link": "Siapa Tulis Itu?",
+	"whowrotethat-activation-link-tooltip": "Mengaktifkan Siapa Tulis Itu?",
+	"whowrotethat-deactivation-link": "Menutup Siapa Tulis Itu?",
+	"whowrotethat-state-pending": "$1 sedang dimuatkan. Ini mungkin mengambil sedikit masa.",
+	"whowrotethat-state-pending-name": "Siapa Tulis Itu?",
+	"whowrotethat-state-error": "Ralat: $1",
+	"whowrotethat-error-refresh": "Muat semula atau cuba lagi kemudian.",
+	"whowrotethat-error-later": "Sila cuba sebentar lagi.",
+	"whowrotethat-error-contact": "Muat semula atau cuba lagi kemudian. $1",
+	"whowrotethat-error-contact-link": "Jika masalah berterusan, hubungi kami.",
+	"whowrotethat-ready-title": "Siapa Tulis Itu?",
+	"whowrotethat-ready-general": "Menggerakkan tetikus untuk melihat sumbangan oleh pengarang yang sama. Klik untuk butiran lanjut.",
+	"whowrotethat-tour-welcome-title": "$1 didayakan!",
+	"whowrotethat-tour-welcome-title-name": "Siapa Tulis Itu?",
+	"whowrotethat-tour-welcome-description": "Aktifkan alat dari bar sisi. Menggerakkan tetikus pada teks untuk menyerlahkan sumbangan oleh pengarang yang sama. Klik untuk melihat butiran pengarang dan semakan.",
+	"whowrotethat-tour-welcome-dismiss": "Faham!",
+	"whowrotethat-revision-added": "$1 menambahkan ini pada $2.",
+	"whowrotethat-revision-attribution": "Mereka telah menulis $1 kali pada laman ini.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Mereka telah menulis $1 kali pada laman ini.",
+	"whowrotethat-revision-attribution-lessthan-percent": "kurang daripada 1%",
+	"whowrotethat-revision-deleted-username": "(nama pengguna atau alamat IP dialih keluar)",
+	"whowrotethat-revision-edit-summary-hidden": "(ringkasan suntingan dibuang)"
+}
