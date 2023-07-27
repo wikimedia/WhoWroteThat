@@ -12,5 +12,7 @@
 	"whowrotethat-state-error": "ત્રુટિ: $1",
 	"whowrotethat-error-later": "પછી પ્રયાસ કરવા વિનંતી.",
 	"whowrotethat-ready-title": "તે કોણે લખ્યું?",
-	"whowrotethat-tour-welcome-title-name": "તે કોણે લખ્યું?"
+	"whowrotethat-tour-welcome-title-name": "તે કોણે લખ્યું?",
+	"whowrotethat-revision-deleted-username": "(સભ્યનામ કે IP હટાવાયું)",
+	"whowrotethat-revision-edit-summary-hidden": "(સંપાદન સારાંશ હટાવાયું)"
 }
