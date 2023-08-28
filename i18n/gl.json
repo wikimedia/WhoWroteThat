@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"whowrotethat-ext-name": "Quen escribiu iso?",
+	"whowrotethat-ext-name-beta": "Quen escribiu iso? (BETA)",
+	"whowrotethat-ext-desc": "Explora a información de autoría e revisión de xeito visual e directo nos artigos da Wikipedia. Desenvolvido por WikiWho.",
+	"whowrotethat-ext-desc-beta": "Explora a información de autoría. Desenvolvido por WikiWho. Esta é unha versión en BETA, unicamente para probas.",
+	"whowrotethat-ext-longdesc": "Quen escribiu iso? é unha extensión do navegador que amosa información sobre a autoría de directamente nos artigos da Wikipedia. Ao pasares o rato sobre o contido, a ferramenta destaca todo o contido do mesmo autor. Ao faceres clic no contido, a ferramenta identifica o autor da revisión, xunto cos detalles da revisión. En xeral, a ferramenta permite aos usuarios descubrir a orixe e o contexto dunha edición, sen explorar o historial de revisións.",
+	"whowrotethat-activation-link": "Quen escribiu iso?",
+	"whowrotethat-activation-link-tooltip": "Activar Quen escribiu iso?",
+	"whowrotethat-deactivation-link": "Pechar Quen escribiu iso?",
+	"whowrotethat-state-pending": "$1 está a cargar. Isto pode levar un tempo.",
+	"whowrotethat-state-pending-name": "Quen escribiu iso?",
+	"whowrotethat-state-error": "Erro: $1",
+	"whowrotethat-error-refresh": "Actualiza ou inténtao de novo máis tarde.",
+	"whowrotethat-error-later": "Por favor, inténtao de novo máis tarde.",
+	"whowrotethat-error-contact": "Actualiza ou inténtao de novo máis tarde. $1",
+	"whowrotethat-error-contact-link": "Se o problema persiste, ponte en contacto con nós.",
+	"whowrotethat-ready-title": "Quen escribiu iso?",
+	"whowrotethat-ready-general": "Pasa o rato por riba para ver as contribucións do mesmo autor. Fai clic para obter máis detalles.",
+	"whowrotethat-tour-welcome-title": "$1 está activado!",
+	"whowrotethat-tour-welcome-title-name": "Quen escribiu iso?",
+	"whowrotethat-tour-welcome-description": "Activa a ferramenta desde a barra lateral. Pasa o rato sobre o texto para destacar as contribucións do mesmo autor. Fai clic para ver o autor e os detalles da revisión.",
+	"whowrotethat-tour-welcome-dismiss": "Entendido!",
+	"whowrotethat-revision-added": "$1 engadiu isto a $2.",
+	"whowrotethat-revision-attribution": "Escribiu o $1 da páxina.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Escribiu $1 da páxina.",
+	"whowrotethat-revision-attribution-lessthan-percent": "menos do 1%",
+	"whowrotethat-revision-deleted-username": "(nome de usuario ou enderezo eliminado)",
+	"whowrotethat-revision-edit-summary-hidden": "(resumo de edición eliminado)"
+}
