@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Paraw2",
+			"TerranBoy"
+		]
+	},
+	"whowrotethat-ext-name": "کێ ئەیە نۊساس؟",
+	"whowrotethat-ext-name-beta": "کێ ئەیە نۊساس؟ (بێتا)",
+	"whowrotethat-activation-link": "کێ ئەیە نۊساس؟",
+	"whowrotethat-activation-link-tooltip": "کێ ئەیە نۊساس؟ چالاک بکە",
+	"whowrotethat-state-pending-name": "کێ ئەیە نۊساس؟",
+	"whowrotethat-state-error": "هەڵە: $1",
+	"whowrotethat-ready-title": "کێ ئەیە نۊساس؟",
+	"whowrotethat-tour-welcome-title": "$1 چالاکە!",
+	"whowrotethat-tour-welcome-title-name": "کێ ئەیە نۊساس؟",
+	"whowrotethat-tour-welcome-dismiss": "فامستم!",
+	"whowrotethat-revision-attribution": "$1 پەڕەگە نۊسانە.",
+	"whowrotethat-revision-attribution-percent": "$1٪",
+	"whowrotethat-revision-attribution-lessthan": "$1 پەڕەگە نۊسانە.",
+	"whowrotethat-revision-attribution-lessthan-percent": "کەمتر لە ۱٪"
+}
