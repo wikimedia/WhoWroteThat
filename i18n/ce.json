@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"whowrotethat-ext-name": "Who Wrote That?",
+	"whowrotethat-ext-name-beta": "Who Wrote That? (BETA)",
+	"whowrotethat-activation-link": "Who Wrote That?",
+	"whowrotethat-activation-link-tooltip": "Who Wrote That жигара йаьккха?",
+	"whowrotethat-deactivation-link": "ДӀачӀагӀа Who Wrote That?",
+	"whowrotethat-state-pending": "$1 чуйолуш йу. Иза кхочушдеш цхьа хан йала мега.",
+	"whowrotethat-state-pending-name": "Who Wrote That?",
+	"whowrotethat-state-error": "ГӀалат: $1",
+	"whowrotethat-error-refresh": "Карлайаккха йа тӀаьхьо йухагӀорта.",
+	"whowrotethat-error-later": "ТӀаьхьо йухагӀорта.",
+	"whowrotethat-error-contact": "ТӀаьхьо йухагӀорта. $1",
+	"whowrotethat-error-contact-link": "ГӀалат дисахь, тхоьца зӀене довла.",
+	"whowrotethat-ready-title": "Who Wrote That?",
+	"whowrotethat-ready-general": "Билгалчу авторан къинхьегаме хьажархьама, курсор тӀейига. ТӀетаӀайе, кхин сов хаа.",
+	"whowrotethat-tour-welcome-title": "$1 латина йу!",
+	"whowrotethat-tour-welcome-title-name": "Who Wrote That?",
+	"whowrotethat-tour-welcome-dismiss": "Кхетта!",
+	"whowrotethat-revision-added": "$1 тӀетоьхна хӀара $2.",
+	"whowrotethat-revision-attribution": "Декъашхочо йазйина $1 агӀо.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Декъашхочо йазйина $1 агӀо.",
+	"whowrotethat-revision-attribution-lessthan-percent": "1% кӀезга",
+	"whowrotethat-revision-deleted-username": "(декъашхочун цӀе йа IP-адрес дӀайаьккхина)",
+	"whowrotethat-revision-edit-summary-hidden": "(нисдарах лаьцна хаам дӀабаьккхина)"
+}
