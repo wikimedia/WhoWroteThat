@@ -45,8 +45,8 @@ class Api {
 	 * @return {jQuery.Promise}
 	 */
 	fetchMessages() {
-		if ( !this.promiseCache.messagses ) {
-			this.promiseCache.messagses = this.mwApi.loadMessages( [
+		if ( !this.promiseCache.messages ) {
+			this.promiseCache.messages = this.mwApi.loadMessages( [
 				'parentheses-start',
 				'talkpagelinktext',
 				'pipe-separator',
