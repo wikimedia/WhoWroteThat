@@ -1,6 +1,6 @@
-import Api from './Api';
-import Model from './Model';
-import Tools from './Tools';
+import Api from './Api.js';
+import Model from './Model.js';
+import Tools from './Tools.js';
 
 /**
  * An activation singleton, responsible for activating and attaching the
@@ -31,7 +31,7 @@ class Controller {
 			this.model = new Model();
 
 			// Events
-			this.model.on( 'active', isActive => {
+			this.model.on( 'active', ( isActive ) => {
 				this.toggleLinkActiveState( isActive );
 				this.model.getContentWrapper()
 					.toggleClass( 'wwt-active', isActive );
@@ -44,11 +44,11 @@ class Controller {
 			} );
 
 			// Events
-			this.model.on( 'enabled', isEnabled => {
+			this.model.on( 'enabled', ( isEnabled ) => {
 				this.getButton().toggle( isEnabled );
 			} );
 
-			this.model.on( 'state', state => {
+			this.model.on( 'state', ( state ) => {
 				// Toggle a class for CSS to style links appropriately.
 				this.model.getContentWrapper()
 					.toggleClass( 'wwt-ready', state === 'ready' );
@@ -197,7 +197,7 @@ class Controller {
 			return this.api.getData()
 				.then(
 					// Success handler.
-					result => {
+					( result ) => {
 						// There could be time that passed between
 						// activating the promise request and getting the
 						// answer. During that time, the user may
@@ -230,7 +230,7 @@ class Controller {
 						return this.model.getContentWrapper();
 					},
 					// Error handler.
-					errorCode => {
+					( errorCode ) => {
 						this.model.setState( 'err', errorCode );
 					}
 				);
@@ -387,7 +387,7 @@ class Controller {
 		// Fetch revision data and messages required to display it
 		$.when( api.fetchRevisionData( tokenInfo.revisionId ), api.fetchMessages() )
 			.then(
-				successData => {
+				( successData ) => {
 					const delayTime = (
 						!api.isCached( tokenInfo.revisionId ) &&
 						Date.now() - reqStartTime < 250
@@ -405,7 +405,7 @@ class Controller {
 					// is still present, which is the important part,
 					// so we'll just show what we have and throw a console
 					// warning.
-					mw.log.warn( `WhoWroteThat failed to fetch data for revision with ID ${tokenInfo.revisionId}` );
+					mw.log.warn( `WhoWroteThat failed to fetch data for revision with ID ${ tokenInfo.revisionId }` );
 					this.model.setCurrentToken( null, $target, 'failure' );
 				}
 			);

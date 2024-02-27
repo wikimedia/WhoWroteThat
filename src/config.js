@@ -11,6 +11,6 @@ const config = {
 };
 
 // Set up a prefix for console outputs
-config.outputPrefix = `Who Wrote That? (${config.outputEnvironment}): `;
+config.outputPrefix = `Who Wrote That? (${ config.outputEnvironment }): `;
 
 export default config;

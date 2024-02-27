@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js 12.20.0
+    - name: Use Node.js 18.17.0
       uses: actions/setup-node@v3
       with:
-        node-version: 12.20.0
+        node-version: 18.17.0
         cache: 'npm'
     - run: npm ci
     - run: |

@@ -1,8 +1,9 @@
 {
 	"extends": [
+		"wikimedia/client/es6",
+		"wikimedia/mediawiki",
 		"wikimedia/server",
-		"wikimedia/jquery",
-		"wikimedia/mediawiki"
+		"wikimedia/jquery"
 	],
 	"env": {
 		"browser": true
@@ -16,7 +17,7 @@
 		"sourceType": "module"
 	},
 	"rules": {
-		"arrow-parens": [ "error", "as-needed" ],
+		"es-x/no-array-prototype-includes": "off",
 		"jsdoc/require-jsdoc": [ "error", {
 			"require": {
 				"FunctionDeclaration": true,

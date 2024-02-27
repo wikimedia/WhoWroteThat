@@ -1,4 +1,4 @@
-import config from './config';
+import config from './config.js';
 
 /**
  * Class to hold some global helper tools
@@ -23,7 +23,7 @@ class Tools {
 		const legalTypes = [ 'debug', 'info', 'warn', 'error' ],
 			outputParameters = [ config.outputPrefix + str ];
 
-		type = legalTypes.indexOf( type ) > -1 ? type : 'debug';
+		type = legalTypes.includes( type ) ? type : 'debug';
 
 		if ( params !== undefined ) {
 			outputParameters.push( params );
@@ -31,6 +31,7 @@ class Tools {
 
 		window.console[ type ].apply( window.console, outputParameters );
 	}
+
 	/**
 	 * Encompass strings with BiDi isolation for RTL/LTR support.
 	 * This should be used on any string that is content language,
@@ -63,7 +64,7 @@ class Tools {
 			// Must not appear in messages.
 			marker = '@@I18N',
 			// Create a list of parameter markers.
-			replacements = Object.keys( params ).map( k => marker + k );
+			replacements = Object.keys( params ).map( ( k ) => marker + k );
 		// Insert the markers into the message, in place of $1, $2, etc.
 		let outputMsg = mw.msg.apply( null, [ msg ].concat( replacements ) );
 		// Replace each marker in the message with the actual HTML.

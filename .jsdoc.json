@@ -34,9 +34,11 @@
         "jQuery.Promise": "https://api.jquery.com/Types/#Promise",
         "jQuery.Event": "https://api.jquery.com/category/events/event-object/",
         "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+        "mw.Api": "https://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw.Api",
+        "mw.Map": "https://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw.Map",
         "Promise": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
         "EventEmitter": "https://nodejs.org/api/events.html",
-        "OO.ui.PopupWidget": "https://doc.wikimedia.org/oojs-ui/master/js/#!/api/OO.ui.PopupWidget"
+        "OO.ui.PopupWidget": "https://doc.wikimedia.org/oojs-ui/master/js/OO.ui.PopupWidget.html"
       }
     }
   }

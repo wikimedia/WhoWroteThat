@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import Tools from '../../src/Tools';
+import Tools from '../../src/Tools.js';
 
 describe( 'Tools test', () => {
 	describe( 'Tools.bidiIsolate', () => {
@@ -28,7 +28,7 @@ describe( 'Tools test', () => {
 			}
 		];
 
-		cases.forEach( testCase => {
+		cases.forEach( ( testCase ) => {
 			it( testCase.msg, () => {
 				expect( Tools.bidiIsolate( testCase.input )[ 0 ].outerHTML )
 					.to.equal( testCase.expected );
@@ -70,9 +70,15 @@ describe( 'Tools test', () => {
 				out: 'String lorem &lt;script&gt;bad&lt;/script&gt; jQuery <span>ipsum</span>'
 			}
 		];
-		cases.forEach( testCase => {
-			// Stub for MediaWiki's msg function.
+		cases.forEach( ( testCase ) => {
 			global.mw = {
+				/**
+				 * Stub for MediaWiki's msg function.
+				 *
+				 * @param {string} msg
+				 * @param {any} params
+				 * @return {string}
+				 */
 				msg: ( msg, ...params ) => {
 					let out = testCase.msgVal;
 					params.forEach( function ( param, idx ) {

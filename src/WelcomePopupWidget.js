@@ -1,4 +1,4 @@
-import Tools from './Tools';
+import Tools from './Tools.js';
 
 /**
  * A popup meant to display as a welcome message after the
