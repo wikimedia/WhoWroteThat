@@ -76,8 +76,7 @@ class App {
 	 * @param {string} html HTML of the new content
 	 */
 	resetContentFromHTML( html ) {
-		// We're getting the div.mw-parser-output but we want
-		// only what's actually inside it
+		// We're getting the div.mw-parser-output, but we want only what's actually inside it.
 		this.$content = $( $.parseHTML( html ) ).contents();
 		this.attachContentListeners( this.$content );
 		this.grayOutUntokenizedElements( this.$content );
