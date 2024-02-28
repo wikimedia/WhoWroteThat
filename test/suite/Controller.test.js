@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import wwtController from '../../src/Controller';
+import wwtController from '../../src/Controller.js';
 
 describe( 'wwtController test', () => {
 	const $someContent = $( '<div>' )
@@ -34,7 +34,7 @@ describe( 'wwtController test', () => {
 	} );
 	*/
 
-	it( 'Controller cannot launch if system is disabled.', done => {
+	it( 'Controller cannot launch if system is disabled.', ( done ) => {
 		wwtController.getModel().toggleEnabled( false );
 		wwtController.launch().fail( () => {
 			// Failure

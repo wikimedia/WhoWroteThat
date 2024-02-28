@@ -1,17 +1,24 @@
-import Tools from './Tools';
+import Tools from './Tools.js';
 
 /**
- * Interface to the [WikiWho](https://www.wikiwho.net/) WhoColor API.
+ * Interface to the [WikiWho](https://www.mediawiki.org/wiki/WikiWho) WhoColor API.
  *
  * @class
  */
 class Api {
 	/**
-	 * @param {Object} config
-	 * @cfg config.url The WikiWho base URL.
-	 * @cfg config.mwApi The mw.Api instance.
-	 * @cfg config.mwConfig The mw.config data (a mw.Map object).
+	 * Configuration options for the Api class.
+	 *
+	 * @memberof Api
+	 * @typedef {Object} Config
+	 * @property {string} url The WikiWho base URL.
+	 * @property {mw.Api} mwApi The `mw.Api` instance.
+	 * @property {mw.Map} mwConfig The `mw.config` data.
+	 */
+
+	/**
 	 * @constructor
+	 * @param {Api.Config} config Configuration options.
 	 */
 	constructor( config = {} ) {
 		// Remove trailing slash from URL.
@@ -28,9 +35,8 @@ class Api {
 	/**
 	 * Check whether a revision ID promise is cached
 	 *
-	 * @param  {string} revId Revision ID
-	 * @param  {string} [type='revision'] Promise data type
-	 *  'revisions' or 'data'
+	 * @param {string} revId Revision ID
+	 * @param {string} [type='revision'] Promise data type: 'revisions' or 'data'
 	 * @return {boolean} The promise is cached
 	 */
 	isCached( revId, type = 'revisions' ) {
@@ -39,6 +45,7 @@ class Api {
 			this.promiseCache[ type ][ revId ]
 		);
 	}
+
 	/**
 	 * Fetch core messages needed for the revision popup, etc., making them available to mw.msg().
 	 *
@@ -79,7 +86,7 @@ class Api {
 				prop: 'parsedcomment|size|user',
 				formatversion: 2
 			} ).then(
-				data => {
+				( data ) => {
 					if ( data.compare ) {
 						return {
 							username: data.compare.touser,
@@ -89,7 +96,7 @@ class Api {
 					}
 					return $.Deferred().reject();
 				},
-				failData => {
+				( failData ) => {
 					return $.Deferred().reject( failData );
 				}
 			);
@@ -233,7 +240,7 @@ class Api {
 	 */
 	getJsonData() {
 		return $.getJSON( this.getAjaxURL() )
-			.then( result => {
+			.then( ( result ) => {
 				// Handle error response.
 				if ( !result.success ) {
 					// The API gives us an error message, but we don't use it because it's only
@@ -249,14 +256,16 @@ class Api {
 					if ( errCode === 'refresh' && this.retry <= this.maxRetries ) {
 						// Return an intermediate Promise to handle the wait.
 						// The time to wait gets progressively longer for each retry.
-						return new Promise( resolve => setTimeout( resolve, 1000 * this.retry ) )
-							.then( () => {
-								// Followed by a (recursive) Promise to do the next request.
-								Tools.log( 'WhoWroteThat Api::getData() retry ' + this.retry );
-								this.retry++;
-								// Recurse
-								return this.getJsonData();
-							} );
+						return new Promise(
+							// eslint-disable-next-line no-promise-executor-return
+							( resolve ) => setTimeout( resolve, 1000 * this.retry )
+						).then( () => {
+							// Followed by a (recursive) Promise to do the next request.
+							Tools.log( 'WhoWroteThat Api::getData() retry ' + this.retry );
+							this.retry++;
+							// Recurse
+							return this.getJsonData();
+						} );
 					}
 					return $.Deferred().reject( errCode );
 				}
@@ -270,7 +279,7 @@ class Api {
 
 				// Return result
 				return result;
-			}, jqXHR => {
+			}, ( jqXHR ) => {
 				// All other errors are likely to be 4xx and 5xx, and the only one that the user
 				// might be able to recover from is 429 Too Many Requests.
 				let errCode = 'contact';

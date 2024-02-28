@@ -1,4 +1,4 @@
-import Tools from './Tools';
+import Tools from './Tools.js';
 
 /**
  * @external Model
@@ -53,9 +53,9 @@ OO.mixinClass( RevisionPopupWidget, OO.ui.mixin.PendingElement );
  * @return {jQuery}
  */
 function getUserLinks( data ) {
-	const contribsUrl = mw.util.getUrl( `Special:Contributions/${data.username}` ),
+	const contribsUrl = mw.util.getUrl( `Special:Contributions/${ data.username }` ),
 		// We typically link to Special:Contribs for IPs.
-		userPageUrl = data.isIP ? contribsUrl : mw.util.getUrl( `User:${data.username}` );
+		userPageUrl = data.isIP ? contribsUrl : mw.util.getUrl( `User:${ data.username }` );
 
 	if ( !data.username ) {
 		// Username was apparently suppressed.
@@ -76,7 +76,7 @@ function getUserLinks( data ) {
 		.add(
 			// Talk page
 			$( '<a>' )
-				.attr( 'href', mw.util.getUrl( `User talk:${data.username}` ) )
+				.attr( 'href', mw.util.getUrl( `User talk:${ data.username }` ) )
 				.text( mw.msg( 'talkpagelinktext' ) )
 		)
 		.add( document.createTextNode( ' ' + mw.msg( 'pipe-separator' ) + ' ' ) )
@@ -156,7 +156,7 @@ RevisionPopupWidget.prototype.updateData = function ( data = {} ) {
 			mw.config.get( 'wgUserLanguage' )
 		).format( 'LLL' ),
 		$diffLink = $( '<a>' )
-			.attr( 'href', mw.util.getUrl( `Special:Diff/${data.revisionId}` ) )
+			.attr( 'href', mw.util.getUrl( `Special:Diff/${ data.revisionId }` ) )
 			.text( dateStr ),
 		scoreMsgKey = Number( data.score ) >= 1 ?
 			'whowrotethat-revision-attribution' :
@@ -196,7 +196,7 @@ RevisionPopupWidget.prototype.updateData = function ( data = {} ) {
 	this.diffSizeLabel.setLabel(
 		data.size === undefined ? '' :
 			new OO.ui.HtmlSnippet(
-				Tools.bidiIsolate( `${data.size > 0 ? '+' : ''}${mw.language.convertNumber( data.size )}` )
+				Tools.bidiIsolate( `${ data.size > 0 ? '+' : '' }${ mw.language.convertNumber( data.size ) }` )
 			)
 	);
 

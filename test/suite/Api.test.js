@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import Api from '../../src/Api';
+import Api from '../../src/Api.js';
 
 describe( 'Api test', () => {
 
@@ -36,7 +36,7 @@ describe( 'Api test', () => {
 		];
 
 		// Run all test cases
-		cases.forEach( testCase => {
+		cases.forEach( ( testCase ) => {
 			// Dummy version of mw.Map to use as config.
 			const config = {
 					data: testCase.config,

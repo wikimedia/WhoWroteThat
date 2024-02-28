@@ -1,11 +1,11 @@
 // eslint-disable-next-line jsdoc/require-jsdoc
 module.exports = function Gruntfile( grunt ) {
+	let langBlob = {};
 	const pkg = grunt.file.readJSON( 'package.json' ),
 		// Get all language files
 		langFiles = grunt.file
 			.expand( { filter: 'isFile', cwd: 'i18n' }, [ '*' ] )
-			.filter( f => f !== 'qqq.json' ),
-		langBlob = {},
+			.filter( ( f ) => f !== 'qqq.json' ),
 		/**
 		 * Generate a language JSON blob from the i18n translation files
 		 *
@@ -17,7 +17,7 @@ module.exports = function Gruntfile( grunt ) {
 			}
 
 			langFiles.forEach( function ( filename ) {
-				const lang = filename.substring( 0, filename.indexOf( '.json' ) ),
+				const lang = filename.slice( 0, filename.indexOf( '.json' ) ),
 					json = grunt.file.readJSON( 'i18n/' + filename );
 
 				delete json[ '@metadata' ];
@@ -165,6 +165,10 @@ module.exports = function Gruntfile( grunt ) {
 			// Compress source code for upload to Firefox web store. Chrome doesn't require this.
 			webextSource: {
 				options: {
+					/**
+					 * Get the path and name of the source ZIP file to create.
+					 * @return {string}
+					 */
 					archive: () => {
 						// Default source archive, if no other zip file exists.
 						let out = './dist/extension_firefox/who_wrote_that_source.zip';
@@ -174,7 +178,7 @@ module.exports = function Gruntfile( grunt ) {
 						const existingZip = grunt.file.expand( './dist/extension_firefox/*0.zip' );
 						if ( existingZip.length >= 1 ) {
 							const basename = existingZip[ 0 ];
-							out = basename.substr( 0, basename.length - 4 ) + '_source.zip';
+							out = basename.slice( 0, basename.length - 4 ) + '_source.zip';
 						}
 						grunt.log.ok( 'Compressing source to ' + out );
 						return out;
@@ -191,10 +195,10 @@ module.exports = function Gruntfile( grunt ) {
 		}
 	} );
 
-	grunt.registerTask( 'extLocales', 'Create web extension locale files in dist/extension/_locales/ (call as "extLocales:beta" for beta versions)', beta => {
+	grunt.registerTask( 'extLocales', 'Create web extension locale files in dist/extension/_locales/ (call as "extLocales:beta" for beta versions)', ( beta ) => {
 		const isBeta = beta === 'beta',
-			langBlob = generateLangBlob(),
 			qqq = grunt.file.readJSON( 'i18n/qqq.json' );
+		langBlob = generateLangBlob();
 		Object.keys( langBlob ).forEach( function ( lang ) {
 			const betaLogMsg = isBeta ? 'beta ' : '',
 				nameMsg = isBeta ? 'whowrotethat-ext-name-beta' : 'whowrotethat-ext-name',
@@ -218,7 +222,7 @@ module.exports = function Gruntfile( grunt ) {
 				if ( name.length > nameLengthMax ) {
 					grunt.log.error( 'The ' + lang + " '" + nameMsg + "' message must be " + nameLengthMax + ' characters or less. Provided: ' + name );
 				}
-				locale.name.message = name.substring( 0, nameLengthMax );
+				locale.name.message = name.slice( 0, nameLengthMax );
 			}
 			// Description (may have beta appended). Maximum 132 characters.
 			if ( langBlob[ lang ][ descMsg ] ) {
@@ -227,7 +231,7 @@ module.exports = function Gruntfile( grunt ) {
 				if ( desc.length > descLengthMax ) {
 					grunt.log.error( 'The ' + lang + " '" + descMsg + "' message must be " + descLengthMax + ' characters or less. Provided: ' + desc );
 				}
-				locale.description.message = desc.substring( 0, descLengthMax );
+				locale.description.message = desc.slice( 0, descLengthMax );
 			}
 			// Write the locale file. The directory name must use underscores, not hyphens.
 			let langDirname = lang;
@@ -259,11 +263,11 @@ module.exports = function Gruntfile( grunt ) {
 			fetch = require( 'node-fetch' ),
 			addonName = 'whowrotethat' + ( isBeta ? '-beta' : '' ),
 			url = 'https://addons.mozilla.org/api/v4/addons/addon/' + addonName,
-			langBlob = generateLangBlob(),
 			done = this.async();
+		langBlob = generateLangBlob();
 		fetch( url )
-			.then( res => res.json() )
-			.then( json => {
+			.then( ( res ) => res.json() )
+			.then( ( json ) => {
 				if ( json.detail === 'Not found.' ) {
 					grunt.log.error( 'Unable to retrieve Addon information for ' + addonName );
 					return;
@@ -317,7 +321,7 @@ module.exports = function Gruntfile( grunt ) {
 	 * in Chrome with this setup, but that's preferable to storage.sync not working at all, which is
 	 * what happens in Firefox if no ID is set).
 	 */
-	grunt.registerTask( 'extManifests', beta => {
+	grunt.registerTask( 'extManifests', ( beta ) => {
 		const isBeta = beta === 'beta',
 			manifest = grunt.file.readJSON( 'dist/extension/manifest.json' );
 

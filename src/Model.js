@@ -230,7 +230,7 @@ class Model extends EventEmitter {
 	 */
 	setState( state, errorCode = '' ) {
 		if (
-			[ 'pending', 'ready', 'err' ].indexOf( state ) > -1 &&
+			[ 'pending', 'ready', 'err' ].includes( state ) &&
 			this.state !== state
 		) {
 			this.state = state;

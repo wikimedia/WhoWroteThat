@@ -1,7 +1,7 @@
-import config from './config';
-import InfoBarWidget from './InfoBarWidget';
-import RevisionPopupWidget from './RevisionPopupWidget';
-import wwtController from './Controller';
+import config from './config.js';
+import InfoBarWidget from './InfoBarWidget.js';
+import RevisionPopupWidget from './RevisionPopupWidget.js';
+import wwtController from './Controller.js';
 
 /* eslint-disable no-jquery/no-global-selector */
 
@@ -43,7 +43,7 @@ class App {
 
 		// Attach events
 		this.$content = null;
-		this.model.on( 'state', state => {
+		this.model.on( 'state', ( state ) => {
 			if ( state === 'ready' ) {
 				this.scrollDown();
 			}
@@ -76,8 +76,7 @@ class App {
 	 * @param {string} html HTML of the new content
 	 */
 	resetContentFromHTML( html ) {
-		// We're getting the div.mw-parser-output but we want
-		// only what's actually inside it
+		// We're getting the div.mw-parser-output, but we want only what's actually inside it.
 		this.$content = $( $.parseHTML( html ) ).contents();
 		this.attachContentListeners( this.$content );
 		this.grayOutUntokenizedElements( this.$content );
@@ -191,7 +190,7 @@ class App {
 	attachContentListeners( $content ) {
 		$content.find( '.editor-token' )
 			.addBack( '.editor-token' )
-			.on( 'mouseenter', e => {
+			.on( 'mouseenter', ( e ) => {
 				if ( this.revisionPopup.isVisible() ) {
 					return;
 				}
@@ -204,7 +203,7 @@ class App {
 				}
 				this.deactivateSpans( $content );
 			} )
-			.on( 'click', e => {
+			.on( 'click', ( e ) => {
 				const ids = this.getIdsFromElement( e.currentTarget );
 
 				this.activateSpans( this.$content, ids.editorId );
@@ -219,7 +218,7 @@ class App {
 		 * Modify fragment link scrolling behaviour to take into account the width of the infobar at
 		 * the top of the screen, to prevent the targeted heading or citation from being hidden.
 		 */
-		$content.find( 'a[href^="#"]' ).on( 'click', event => {
+		$content.find( 'a[href^="#"]' ).on( 'click', ( event ) => {
 			if ( !this.widget.isVisible() ) {
 				// Use the default if WWT is not active.
 				return;

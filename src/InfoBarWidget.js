@@ -1,5 +1,5 @@
-import Tools from './Tools';
-import wwtController from './Controller';
+import Tools from './Tools.js';
+import wwtController from './Controller.js';
 
 /**
  * @class
@@ -79,7 +79,7 @@ InfoBarWidget.prototype.setState = function ( state, errorCode = '' ) {
 	const flags = {};
 
 	if ( this.state !== state ) {
-		this.constructor.static.legalFlags.forEach( flag => {
+		this.constructor.static.legalFlags.forEach( ( flag ) => {
 			flags[ flag ] = flag === state;
 		} );
 		flags.invert = true;

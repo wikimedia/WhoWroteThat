@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import Model from '../../src/Model';
+import Model from '../../src/Model.js';
 const $ = require( 'jquery' );
 
 describe( 'Model test', () => {
@@ -77,7 +77,7 @@ describe( 'Model test', () => {
 			}
 		];
 
-		cases.forEach( testCase => {
+		cases.forEach( ( testCase ) => {
 			const m = new Model();
 
 			it( testCase.msg, () => {
@@ -118,6 +118,7 @@ describe( 'Model test', () => {
 			expect( m.getContentWrapper()[ 0 ].outerHTML )
 				.to.equal( '<div><a>A link instead</a></div>' );
 		} );
+
 		it( 'getOriginalContent returns original content', () => {
 			// Original content includes only the content that was originally
 			// there inside the wrapper

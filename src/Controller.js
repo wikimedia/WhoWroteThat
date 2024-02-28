@@ -1,6 +1,6 @@
-import Api from './Api';
-import Model from './Model';
-import Tools from './Tools';
+import Api from './Api.js';
+import Model from './Model.js';
+import Tools from './Tools.js';
 
 /**
  * An activation singleton, responsible for activating and attaching the
@@ -31,7 +31,7 @@ class Controller {
 			this.model = new Model();
 
 			// Events
-			this.model.on( 'active', isActive => {
+			this.model.on( 'active', ( isActive ) => {
 				this.toggleLinkActiveState( isActive );
 				this.model.getContentWrapper()
 					.toggleClass( 'wwt-active', isActive );
@@ -44,11 +44,11 @@ class Controller {
 			} );
 
 			// Events
-			this.model.on( 'enabled', isEnabled => {
+			this.model.on( 'enabled', ( isEnabled ) => {
 				this.getButton().toggle( isEnabled );
 			} );
 
-			this.model.on( 'state', state => {
+			this.model.on( 'state', ( state ) => {
 				// Toggle a class for CSS to style links appropriately.
 				this.model.getContentWrapper()
 					.toggleClass( 'wwt-ready', state === 'ready' );
@@ -144,7 +144,7 @@ class Controller {
 				// This is due to VE replacing the content element,
 				// rather than inserting new contents into it.
 				// eslint-disable-next-line no-jquery/no-global-selector
-				this.model.initialize( $( '#bodyContent .mw-parser-output' ), config );
+				this.model.initialize( $( '#mw-content-text .mw-parser-output' ), config );
 				this.model.toggleEnabled( true );
 			} );
 
@@ -197,23 +197,18 @@ class Controller {
 			return this.api.getData()
 				.then(
 					// Success handler.
-					result => {
-						// There could be time that passed between
-						// activating the promise request and getting the
-						// answer. During that time, the user may
-						// have dismissed the system.
-						// We should only replace the DOM and declare
-						// ready if the system is actually ready to be
-						// replaced.
-						// On subsequent launches, this promise will run
-						// again (no-op as an already-resolved promise)
-						// and the operation below will be re-triggered
+					( result ) => {
+						// There could be time that passed between activating the promise request
+						// and getting the answer. During that time, the user may have dismissed
+						// the system. We should only replace the DOM and declare ready if the
+						// system is actually ready to be replaced.
+						// On subsequent launches, this promise will run again (no-op as an
+						// already-resolved promise) and the operation below will be re-triggered
 						// with the replacements
 						if ( this.model.isActive() && this.model.getState() !== 'ready' ) {
 							if (
 								this.contentIdentifier !== this.api.getRevisionId()
 							) {
-
 								// The content we get from the API has changed
 								this.app.resetContentFromHTML( result.extended_html );
 								this.contentIdentifier = this.api.getRevisionId();
@@ -230,7 +225,7 @@ class Controller {
 						return this.model.getContentWrapper();
 					},
 					// Error handler.
-					errorCode => {
+					( errorCode ) => {
 						this.model.setState( 'err', errorCode );
 					}
 				);
@@ -387,7 +382,7 @@ class Controller {
 		// Fetch revision data and messages required to display it
 		$.when( api.fetchRevisionData( tokenInfo.revisionId ), api.fetchMessages() )
 			.then(
-				successData => {
+				( successData ) => {
 					const delayTime = (
 						!api.isCached( tokenInfo.revisionId ) &&
 						Date.now() - reqStartTime < 250
@@ -405,7 +400,7 @@ class Controller {
 					// is still present, which is the important part,
 					// so we'll just show what we have and throw a console
 					// warning.
-					mw.log.warn( `WhoWroteThat failed to fetch data for revision with ID ${tokenInfo.revisionId}` );
+					mw.log.warn( `WhoWroteThat failed to fetch data for revision with ID ${ tokenInfo.revisionId }` );
 					this.model.setCurrentToken( null, $target, 'failure' );
 				}
 			);

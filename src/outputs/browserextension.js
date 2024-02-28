@@ -1,6 +1,6 @@
-import config from '../config';
-import wwtController from '../Controller';
-import languageBlob from '../../temp/languages'; // This is generated during the build process
+import config from '../config.js';
+import wwtController from '../Controller.js';
+import languageBlob from '../../temp/languages.js'; // This is generated during the build process
 config.outputEnvironment = 'Browser extension';
 
 ( function () {
@@ -10,7 +10,7 @@ config.outputEnvironment = 'Browser extension';
 	 * @param  {jQuery.Event} e Event data
 	 * @return {boolean} false
 	 */
-	const onActivationLinkClick = e => {
+	const onActivationLinkClick = ( e ) => {
 			wwtController.toggle();
 			e.preventDefault();
 			return false;
@@ -88,7 +88,7 @@ config.outputEnvironment = 'Browser extension';
 		loadWhoWroteThat = () => {
 			wwtController.initialize(
 				// eslint-disable-next-line no-jquery/no-global-selector
-				$( '#bodyContent .mw-parser-output' ),
+				$( '#mw-content-text .mw-parser-output' ),
 				{
 					lang: mw.config.get( 'wgUserLanguage' ),
 					translations: languageBlob,
@@ -119,6 +119,9 @@ config.outputEnvironment = 'Browser extension';
 
 	// For debugging purposes, export methods to the window global
 	window.wwtDebug = {
+		/**
+		 *
+		 */
 		resetWelcomePopup: () => {
 			// Notify the extension
 			window.postMessage( {
