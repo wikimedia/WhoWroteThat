@@ -28,6 +28,7 @@ Table of Contents:
 ## Supported Wikipedias
 
 The tool works on Wikipedias supported by the WhoColor API:
+[Arabic](https://ar.wikipedia.org/),
 [Basque](https://eu.wikipedia.org/),
 [English](https://en.wikipedia.org/),
 [Dutch](https://nl.wikipedia.org/),

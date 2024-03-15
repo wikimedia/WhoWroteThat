@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.22.0] - 2024-03-14
+### Changed
+- Added support for Arabic Wikipedia.
+
 ## [0.21.0] - 2024-02-28
 ### Fixed
 - Fix compatibility with Vector 2022 and pages using status indicators.
@@ -204,7 +208,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.21.0...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.0...HEAD
+[0.21.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.21.0...0.22.0
 [0.21.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.20.0...0.21.0
 [0.20.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.19.0...0.20.0
 [0.19.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.18.0...0.19.0
