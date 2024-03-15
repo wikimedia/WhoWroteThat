@@ -18,6 +18,7 @@
 	},
 	"content_scripts": [ {
 		"matches": [
+			"*://ar.wikipedia.org/*",
 			"*://de.wikipedia.org/*",
 			"*://en.wikipedia.org/*",
 			"*://es.wikipedia.org/*",
@@ -33,6 +34,8 @@
 			"*://tr.wikipedia.org/*"
 		],
 		"exclude_globs": [
+			"*://ar.wikipedia.org/*title=%D8%AE%D8%A7%D8%B5:*",
+			"*://ar.wikipedia.org/wiki/%D8%AE%D8%A7%D8%B5:*",
 			"*://de.wikipedia.org/*title=Spezial:*",
 			"*://de.wikipedia.org/wiki/Spezial:*",
 			"*://en.wikipedia.org/*title=Special:*",
