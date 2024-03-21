@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Meno25",
+			"Riad Salih",
 			"ديفيد",
 			"علاء"
 		]
@@ -10,7 +11,7 @@
 	"whowrotethat-ext-name-beta": "من كتب هذا؟ (بيتا)",
 	"whowrotethat-ext-desc": "استكشف معلومات الكتابة والمراجعة بشكل مرئي ومباشر في مقالات ويكيبيديا، مدعوم من ويكي هاو.",
 	"whowrotethat-ext-desc-beta": "استكشف معلومات كتابة ويكيبيديا. مدعوم من ويكي هاو. هذه هي النسخة التجريبية، المخصصة للاختبار فقط.",
-	"whowrotethat-ext-longdesc": "من كتب ذلك؟ (WWT) هو امتداد للمتصفح يعرض معلومات التأليف مباشرة على مقالات ويكيبيديا. عند التمرير فوق المحتوى، تقوم الأداة بتمييز كل المحتوى من قبل نفس المؤلف. عند النقر فوق المحتوى، تحدد الأداة مؤلف المراجعة، إلى جانب تفاصيل المراجعة. بشكل عام، يسمح WWT للمستخدمين باكتشاف مصدر وخلفية التعديل، دون البحث في سجل المراجعات.",
+	"whowrotethat-ext-longdesc": "من كتب ذلك؟ (WWT) هو إضافة للمتصفح تعرض معلومات التأليف مباشرة على مقالات ويكيبيديا. عند التمرير فوق المحتوى، تقوم الأداة بتمييز كل المحتوى من قبل نفس المستخدم. عند النقر فوق المحتوى، تحدد الأداة صاحب المراجعة، إلى جانب تفاصيل المراجعة. بشكل عام، يسمح WWT للمستخدمين باكتشاف مصدر وخلفية التعديل، دون البحث في سجل المراجعات.",
 	"whowrotethat-activation-link": "من كتب هذا؟",
 	"whowrotethat-activation-link-tooltip": "تفعيل من كتب هذا؟",
 	"whowrotethat-deactivation-link": "إغلاق من كتب هذا؟",
@@ -22,15 +23,15 @@
 	"whowrotethat-error-contact": "حدث أو أعد المحاولة لاحقا. $1",
 	"whowrotethat-error-contact-link": "لو استمرت المشكلة، اتصل بنا.",
 	"whowrotethat-ready-title": "من كتب هذا؟",
-	"whowrotethat-ready-general": "لتتجول في مساهمات المؤلف نفسه. انقر للحصول على مزيد من التفاصيل.",
+	"whowrotethat-ready-general": "لتتجول في مساهمات المستخدم نفسه. انقر للحصول على مزيد من التفاصيل.",
 	"whowrotethat-tour-welcome-title": "$1 مفعلة!",
 	"whowrotethat-tour-welcome-title-name": "من كتب هذا؟",
-	"whowrotethat-tour-welcome-description": "قم بتنشيط الأداة من الشريط الجانبي. مرر الفأرة فوق النص لرؤية مساهمات نفس المؤلف. اضغط لرؤية تفاصيل المؤلف والمراجعة.",
+	"whowrotethat-tour-welcome-description": "فعل الأداة من الشريط الجانبي. مرر الفأرة فوق النص لرؤية مساهمات نفس المؤلف. اضغط لرؤية تفاصيل المستخدم والمراجعة.",
 	"whowrotethat-tour-welcome-dismiss": "حسنا!",
 	"whowrotethat-revision-added": "$1 أضاف هذا على $2.",
-	"whowrotethat-revision-attribution": "لقد كتبوا $1 من الصفحة.",
+	"whowrotethat-revision-attribution": "لقد كتب $1 من الصفحة.",
 	"whowrotethat-revision-attribution-percent": "$1%",
-	"whowrotethat-revision-attribution-lessthan": "لقد كتبوا أقل من $1 من الصفحة.",
+	"whowrotethat-revision-attribution-lessthan": "لقد كتب أقل من $1 من الصفحة.",
 	"whowrotethat-revision-attribution-lessthan-percent": "أقل من 1%",
 	"whowrotethat-revision-deleted-username": "(أُزيل اسم المستخدم أو الآي بي)",
 	"whowrotethat-revision-edit-summary-hidden": "(أُزيل ملخص التعديل)"
