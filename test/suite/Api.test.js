@@ -12,7 +12,7 @@ describe( 'Api test', () => {
 					wgRevisionId: 234,
 					wgPageName: 'Iñtërnâtiônàlizætiøn_(disambig)'
 				},
-				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/Iñtërnâtiônàlizætiøn_(disambig)/234/'
+				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/I%C3%B1t%C3%ABrn%C3%A2ti%C3%B4n%C3%A0liz%C3%A6ti%C3%B8n_(disambig)/234/'
 			},
 			{
 				msg: 'Should only append a revision ID if it is not the current one',
@@ -32,6 +32,15 @@ describe( 'Api test', () => {
 					wgCurRevisionId: 456
 				},
 				expected: 'https://wikiwho.example.com/ru/whocolor/v1.0.0-beta/Foo/123/'
+			},
+			{
+				msg: 'Should encode query parameters',
+				config: {
+					wgServerName: 'en.wikipedia.org',
+					wgRevisionId: 123,
+					wgPageName: 'Test Works?user-ip=0.0.0.0&'
+				},
+				expected: 'https://wikiwho.example.com/en/whocolor/v1.0.0-beta/Test%20Works%3Fuser-ip%3D0.0.0.0%26/123/'
 			}
 		];
 

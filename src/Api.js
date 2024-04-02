@@ -126,7 +126,7 @@ class Api {
 			this.url,
 			subdomain,
 			'whocolor/v1.0.0-beta',
-			this.mwConfig.get( 'wgPageName' ),
+			encodeURIComponent( this.mwConfig.get( 'wgPageName' ) ),
 			// Always include the revision ID, to make sure we are always asking for
 			// the correct revision, whether the page was just edited, or, whether the
 			// page was edited by someone else while we were looking at the current page
