@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.22.1] - 2024-04-02
+### Changed
+- Translation updates.
+### Fixed
+- Fix issue with page titles containing question marks and other special characters.
+
 ## [0.22.0] - 2024-03-14
 ### Changed
 - Added support for Arabic Wikipedia.
@@ -208,8 +214,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.0...HEAD
-[0.21.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.21.0...0.22.0
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.1...HEAD
+[0.22.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.0...0.22.1
+[0.22.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.21.0...0.22.0
 [0.21.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.20.0...0.21.0
 [0.20.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.19.0...0.20.0
 [0.19.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.18.0...0.19.0
