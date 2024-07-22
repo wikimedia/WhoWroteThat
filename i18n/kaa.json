@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Inabat Allanova"
+		]
+	},
+	"whowrotethat-ext-name": "Bunı kim jazǵan?",
+	"whowrotethat-ext-name-beta": "Bunı kim jazǵan? (BETA)",
+	"whowrotethat-ext-desc": "Avtorlıq hám redaktorlıq maǵlıwmatlardı Wikipedia maqalalarında vizual hám tikkeley tárizde úyreniń. WikiWho tiykarında jumıs isleydi.",
+	"whowrotethat-ext-desc-beta": "Wikipedia avtorlıq maǵlıwmatları menen tanısıń. WikiWho tiykarında jumıs isleydi. Bul BETA versiyası tek sınaq ushın arnalǵan.",
+	"whowrotethat-ext-longdesc": "Bunı kim jazǵan? (WWT) brauzer keńeytpesi bolip, avtorlıq maǵlıwmatlardı tikkeley Wikipedia maqalalarında kórsetedi. Kontent ústinde turǵanıńızda, qural bir avtordıń barlıq kontentin ajıratıp kórsetedi. Kontentti basqanıńızda, qural redaktor avtorın hám redaktorlıq maǵlıwmatların anıqlaydı. Ulıwma alǵanda, WWT paydalanıwshılarǵa redaktorlaw tariyxın aqtarıp otırmastan, redaktorlawdıń deregin hám tariyxın tabıw imkanın beredi.",
+	"whowrotethat-activation-link": "Bunı kim jazǵan?",
+	"whowrotethat-activation-link-tooltip": "\"Bunı kim jazǵan?\"dı iske túsiriw",
+	"whowrotethat-deactivation-link": "\"Bunı kim jazǵan?\"dı óshiriw",
+	"whowrotethat-state-pending": "$1 júklenbekte. Bul biraz waqıttı alıwı múmkin.",
+	"whowrotethat-state-pending-name": "Bunı kim jazǵan?",
+	"whowrotethat-state-error": "Qátelik: $1",
+	"whowrotethat-error-refresh": "Jańalań yamasa sońıraq qaytadan urınıp kóriń.",
+	"whowrotethat-error-later": "Ótinish, sońıraq qaytadan urınıp kóriń.",
+	"whowrotethat-error-contact": "Jańalań yamasa sońıraq qaytadan urınıp kóriń. $1",
+	"whowrotethat-error-contact-link": "Eger mashqala sheshilmese, biz benen baylanısıń.",
+	"whowrotethat-ready-title": "Bunı kim jazǵan?",
+	"whowrotethat-ready-general": "Sol avtordıń úleslerin kóriw ushın júrgiziń. Kóbirek maǵlıwmat alıw ushın basıń.",
+	"whowrotethat-tour-welcome-title": "$1 qosıldı!",
+	"whowrotethat-tour-welcome-title-name": "Bunı kim jazǵan?",
+	"whowrotethat-tour-welcome-description": "Bul quraldı qaptal panelden iske túsiriń. Bir avtordıń úleslerin ajıratıp kórsetiw ushın tekst ústine júrgiziń. Avtor hám redaktor maǵlıwmatların kóriw ushın ústin basıń.",
+	"whowrotethat-tour-welcome-dismiss": "Túsindim!",
+	"whowrotethat-revision-added": "$1 $2ǵa usını qostı.",
+	"whowrotethat-revision-attribution": "Olar bettiń $1ın jazdı.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Olar bettiń $1ın jazdı.",
+	"whowrotethat-revision-attribution-lessthan-percent": "1% ten azıraq",
+	"whowrotethat-revision-deleted-username": "(paydalanıwshı atı yamasa IP óshirildi)",
+	"whowrotethat-revision-edit-summary-hidden": "(ózgerisler juwmaǵı óshirildi)"
+}
