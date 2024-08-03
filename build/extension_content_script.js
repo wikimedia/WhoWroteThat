@@ -80,7 +80,7 @@ function main() {
 		node = document.getElementsByTagName( 'body' )[ 0 ];
 	script.id = contentScriptId;
 	script.type = 'text/javascript';
-	script.src = theBrowser.extension.getURL( 'js/generated.pageScript.js' );
+	script.src = theBrowser.runtime.getURL( 'js/generated.pageScript.js' );
 	node.appendChild( script );
 
 	// Write to console, for later debugging and bug filtering process for the extension
