@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "__MSG_name__",
 	"description": "__MSG_description__",
 	"default_locale": "en",
@@ -67,6 +67,26 @@
 		"css": [ "generated.whowrotethat.css" ],
 		"run_at": "document_end"
 	} ],
-	"web_accessible_resources": [ "js/generated.pageScript.js" ],
+	"web_accessible_resources": [
+		{
+			"resources": [ "js/generated.pageScript.js" ],
+			"matches": [
+				"*://ar.wikipedia.org/*",
+				"*://de.wikipedia.org/*",
+				"*://en.wikipedia.org/*",
+				"*://es.wikipedia.org/*",
+				"*://eu.wikipedia.org/*",
+				"*://fr.wikipedia.org/*",
+				"*://hu.wikipedia.org/*",
+				"*://id.wikipedia.org/*",
+				"*://it.wikipedia.org/*",
+				"*://ja.wikipedia.org/*",
+				"*://nl.wikipedia.org/*",
+				"*://pl.wikipedia.org/*",
+				"*://pt.wikipedia.org/*",
+				"*://tr.wikipedia.org/*"
+			]
+		}
+	],
 	"permissions": [ "storage" ]
 }
