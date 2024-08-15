@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nemoralis"
+		]
+	},
+	"whowrotethat-ext-name": "Bunu Kim Yazıb?",
+	"whowrotethat-ext-name-beta": "Bunu Kim Yazıb? (BETA)",
+	"whowrotethat-ext-desc": "Vikipediya məqalələrində vizual və birbaşa olaraq müəlliflik və versiya məlumatlarını araşdırın. WikiWho tərəfindən dəstəklənir.",
+	"whowrotethat-ext-desc-beta": "Vikipediya müəlliflik məlumatlarını araşdırın. WikiWho tərəfindən dəstəklənir. Bu, yalnız sınaq üçün nəzərdə tutulmuş BETA versiyasıdır.",
+	"whowrotethat-ext-longdesc": "Bunu Kim Yazıb? (WWT) birbaşa Vikipediya məqalələrində müəlliflik məlumatlarını göstərən brauzer uzantısıdır. Məzmun üzərinə kliklədiyiniz zaman alət eyni müəllifin bütün yazdığı məzmunu vurğulayır. Məzmun üzərinə kliklədiyiniz zaman alət versiya təfərrüatları ilə birlikdə versiyanın müəllifini müəyyən edir. Ümumiyyətlə, WWT istifadəçilərə redaktə tarixini araşdırmadan redaktənin mənbəyini və arxa planını kəşf etməyə imkan verir.",
+	"whowrotethat-activation-link": "Bunu Kim Yazıb?",
+	"whowrotethat-activation-link-tooltip": "Bunu Kim Yazıb? aktivləşdirin",
+	"whowrotethat-deactivation-link": "Bağlayın",
+	"whowrotethat-state-pending": "$1 yüklənir. Bu bir müddət çəkə bilər.",
+	"whowrotethat-state-pending-name": "Bunu Kim Yazıb?",
+	"whowrotethat-state-error": "Xəta: $1",
+	"whowrotethat-error-refresh": "Yeniləyin və ya daha sonra yenidən cəhd edin.",
+	"whowrotethat-error-later": "Daha sonra yenidən cəhd edin.",
+	"whowrotethat-error-contact": "Yeniləyin və ya daha sonra yenidən cəhd edin. $1",
+	"whowrotethat-error-contact-link": "Problem davam edərsə, bizimlə əlaqə saxlayın.",
+	"whowrotethat-ready-title": "Bunu Kim Yazıb?",
+	"whowrotethat-ready-general": "Eyni müəllifin töhfələrini görmək üçün üzərinə klikləyin. Ətraflı məlumat üçün klikləyin.",
+	"whowrotethat-tour-welcome-title": "$1 aktivdir!",
+	"whowrotethat-tour-welcome-title-name": "Bunu Kim Yazıb?",
+	"whowrotethat-tour-welcome-description": "Aləti yan paneldən aktivləşdirin. Eyni müəllifin töhfələrini vurğulamaq üçün kursoru mətnin üzərinə gətirin. Müəllif və versiya təfərrüatlarını görmək üçün klikləyin.",
+	"whowrotethat-tour-welcome-dismiss": "Başa düşdüm!",
+	"whowrotethat-revision-added": "$1 bunu $2 tarixində əlavə etdi.",
+	"whowrotethat-revision-attribution": "Səhifə məzmununun $1 yazıblar",
+	"whowrotethat-revision-attribution-percent": "$1%-ni",
+	"whowrotethat-revision-attribution-lessthan": "Səhifə məzmununun $1 yazıblar",
+	"whowrotethat-revision-attribution-lessthan-percent": "1%-dən az hissəsini",
+	"whowrotethat-revision-deleted-username": "(istifadəçi adı və ya IP silindi)",
+	"whowrotethat-revision-edit-summary-hidden": "(redaktə xülasəsi silindi)"
+}
