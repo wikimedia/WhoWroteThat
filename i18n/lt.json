@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nokeoo",
+			"Tomasdd"
+		]
+	},
+	"whowrotethat-ext-name": "Kas tai parašė?",
+	"whowrotethat-ext-name-beta": "Kas Tai Parašė? (BETA)",
+	"whowrotethat-ext-desc": "Vizualiai ir tiesiogiai Vikipedijos straipsniuose tyrinėkite autorystės ir taisymo informaciją. Parengta pagal WikiWho.",
+	"whowrotethat-ext-desc-beta": "Naršykite Vikipedijos autorystės informaciją. Parengta pagal WikiWho. Tai BETA versija, skirta tik bandymams.",
+	"whowrotethat-ext-longdesc": "Kas tai parašė? (KTP) yra naršyklės plėtinys, rodantis informaciją apie autorystę tiesiai Vikipedijos straipsniuose. Užvedus pelės žymeklį virš turinio, įrankis paryškina visą to paties autoriaus turinį. Kai spustelėsite turinį, įrankis identifikuoja taisymo autorių ir informaciją apie taisymą. Apskritai KTP leidžia naudotojams atrasti redagavimo šaltinį ir foną, nesigilinant į taisymų istoriją.",
+	"whowrotethat-activation-link": "Kas tai parašė?",
+	"whowrotethat-activation-link-tooltip": "Suaktyvinti Kas tai parašė?",
+	"whowrotethat-deactivation-link": "Uždaryti Kas tai parašė?",
+	"whowrotethat-state-pending": "Įkeliamas $1. Tai gali užtrukti.",
+	"whowrotethat-state-pending-name": "Kas Tai Parašė?",
+	"whowrotethat-state-error": "Klaida: $1",
+	"whowrotethat-error-refresh": "Atnaujinkite arba bandykite dar kartą vėliau.",
+	"whowrotethat-error-later": "Prašom pabandyti vėliau.",
+	"whowrotethat-error-contact": "Atnaujinkite arba bandykite dar kartą vėliau. $1",
+	"whowrotethat-error-contact-link": "Jei problema išlieka, susisiekite su mumis.",
+	"whowrotethat-ready-title": "Kas tai parašė?",
+	"whowrotethat-ready-general": "Užveskite pelės žymeklį, kad pamatytumėte to paties autoriaus indėlį. Spustelėkite norėdami gauti daugiau informacijos.",
+	"whowrotethat-tour-welcome-title": "$1 įjungtas!",
+	"whowrotethat-tour-welcome-title-name": "Kas Tai Parašė?",
+	"whowrotethat-tour-welcome-description": "Suaktyvinkite įrankį iš šoninės juostos. Užveskite pelės žymeklį virš teksto, kad paryškintumėte to paties autoriaus indėlį. Spustelėkite, kad pamatytumėte autoriaus ir taisymo informaciją.",
+	"whowrotethat-tour-welcome-dismiss": "Gerai!",
+	"whowrotethat-revision-added": "$1 pridėjo tai $2.",
+	"whowrotethat-revision-attribution": "Jie parašė $1 puslapio.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Jie parašė $1 puslapio.",
+	"whowrotethat-revision-attribution-lessthan-percent": "mažiau nei 1%",
+	"whowrotethat-revision-deleted-username": "(naudotojo vardas ar IP pašalintas)",
+	"whowrotethat-revision-edit-summary-hidden": "(keitimo santrauka pašalinta)"
+}
