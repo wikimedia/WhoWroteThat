@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Juwan"
+		]
+	},
+	"whowrotethat-ext-name": "jan seme li sitelen e ni?",
+	"whowrotethat-ext-name-beta": "jan seme li sitelen e ni? (ilo namako)",
+	"whowrotethat-ext-desc": "o sona e ante lon lipu kepeken nasin lukin. ilo ni li kama sona tan ilo WikiWho.",
+	"whowrotethat-ext-desc-beta": "o sona e ante lipu. ilo li kama sona tan ilo WikiWho. ni li nasin namako, li ken pakala.",
+	"whowrotethat-activation-link": "jan seme li sitelen e ni?",
+	"whowrotethat-activation-link-tooltip": "o kama e ilo \"jan seme li sitelen e ni?\"",
+	"whowrotethat-deactivation-link": "o weka e ilo \"jan seme li sitelen e ni?\"",
+	"whowrotethat-state-pending": "ilo '$1' li kama. ni li ken wile e tenpo suli.",
+	"whowrotethat-state-pending-name": "jan seme li sitelen e ni?",
+	"whowrotethat-state-error": "pakala: $1",
+	"whowrotethat-error-refresh": "o alasa sin.",
+	"whowrotethat-error-later": "o alasa sin.",
+	"whowrotethat-error-contact": "o alasa sin. $1",
+	"whowrotethat-error-contact-link": "pakala li awen la, o toki tawa mi.",
+	"whowrotethat-ready-title": "jan seme li sitelen e ni?",
+	"whowrotethat-tour-welcome-title": "ilo '$1' li kama!",
+	"whowrotethat-tour-welcome-title-name": "jan seme li sitelen e ni?",
+	"whowrotethat-tour-welcome-dismiss": "sona!",
+	"whowrotethat-revision-added": "jan $1 li sitelen e ni lon $2",
+	"whowrotethat-revision-attribution": "lipu la ona li sitelen e $1.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "ona li sitelen e '$1' lon lipu.",
+	"whowrotethat-revision-deleted-username": "(nimi en nanpa IP li weka)",
+	"whowrotethat-revision-edit-summary-hidden": "(toki ante li weka)"
+}
