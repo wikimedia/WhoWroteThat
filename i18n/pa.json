@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cabal"
+		]
+	},
+	"whowrotethat-ext-name": "ਇਹ ਕਿਸ ਨੇ ਲਿਖਿਆ ਹੈ?",
+	"whowrotethat-ext-name-beta": "ਇਹ ਕਿਸ ਨੇ ਲਿਖਿਆ ਹੈ?  (ਬੀਟਾ)",
+	"whowrotethat-activation-link": "ਇਹ ਕਿਸ ਨੇ ਲਿਖਿਆ ਹੈ?",
+	"whowrotethat-activation-link-tooltip": "ਇਹ ਕਿਸ ਨੇ ਲਿਖਿਆ ਹੈ ਨੂੰ ਚਾਲੂ ਕਰੋ?",
+	"whowrotethat-deactivation-link": "ਇਹ ਕਿਸ ਨੇ ਲਿਖਿਆ ਨੂੰ ਬੰਦ ਕਰੋ ?",
+	"whowrotethat-state-pending-name": "ਇਹ ਕਿਸ ਨੇ ਲਿਖਿਆ ਹੈ?",
+	"whowrotethat-state-error": "ਗਲਤੀ: $1",
+	"whowrotethat-error-refresh": "ਤਾਜ਼ਾ ਕਰੋ ਜਾਂ ਬਾਅਦ ਵਿੱਚ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+	"whowrotethat-error-later": "ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+	"whowrotethat-error-contact": "ਤਾਜ਼ਾ ਕਰੋ ਜਾਂ ਬਾਅਦ ਵਿੱਚ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ। $1",
+	"whowrotethat-error-contact-link": "ਜੇਕਰ ਸਮੱਸਿਆ ਬਣੀ ਰਹਿੰਦੀ ਹੈ, ਤਾਂ ਸਾਡੇ ਨਾਲ ਰਾਬਤਾ ਕਾਇਮ ਕਰੋ।",
+	"whowrotethat-ready-title": "ਇਹ ਕਿਸ ਨੇ ਲਿਖਿਆ ਹੈ?",
+	"whowrotethat-tour-welcome-title-name": "ਇਹ ਕਿਸ ਨੇ ਲਿਖਿਆ ਹੈ?",
+	"whowrotethat-tour-welcome-dismiss": "ਸਮਝ ਲਿਆ!",
+	"whowrotethat-revision-added": "$1 ਨੇ ਇਸ ਨੂੰ $2 ਉੱਤੇ ਜੋਡ਼ਿਆ।",
+	"whowrotethat-revision-attribution": "ਉਹਨਾਂ ਨੇ ਸਫ਼ੇ ਦਾ $1 ਲਿਖਿਆ ਹੈ।",
+	"whowrotethat-revision-attribution-lessthan": "ਉਹਨਾਂ ਨੇ ਸਫ਼ੇ ਦਾ $1 ਲਿਖਿਆ ਹੈ।",
+	"whowrotethat-revision-attribution-lessthan-percent": "1% ਤੋਂ ਘੱਟ",
+	"whowrotethat-revision-deleted-username": "(ਵਰਤੋਂਕਾਰ ਨਾਂ ਜਾਂ IP ਹਟਾਇਆ ਗਿਆ)",
+	"whowrotethat-revision-edit-summary-hidden": "(ਸੋਧ ਸਾਰ ਹਟਾਇਆ ਗਿਆ ਹੈ)"
+}
