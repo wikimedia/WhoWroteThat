@@ -20,10 +20,12 @@
 	"whowrotethat-error-contact": "Абнавіце ці паспрабуйце пазьней. $1",
 	"whowrotethat-error-contact-link": "Калі праблема застанецца, скантактуйцеся з намі.",
 	"whowrotethat-ready-title": "Хто гэта напісаў?",
+	"whowrotethat-ready-general": "Навядзіце, каб паглядзець унёсак таго ж аўтара. Націсьніце, каб атрымаць падрабязнасьці.",
 	"whowrotethat-tour-welcome-title": "$1 уключанае!",
 	"whowrotethat-tour-welcome-title-name": "Хто гэта напісаў?",
 	"whowrotethat-tour-welcome-dismiss": "Зразумела!",
 	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan-percent": "меней за 1%",
 	"whowrotethat-revision-deleted-username": "(імя ўдзельніка ці IP выдаленае)",
 	"whowrotethat-revision-edit-summary-hidden": "(апісаньне зьменаў выдаленае)"
 }
