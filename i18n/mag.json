@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"ऐक्टिवेटेड्"
+		]
+	},
+	"whowrotethat-ext-name": "ई के लिखलक?",
+	"whowrotethat-ext-name-beta": "ई के लिखलक?  (बीटा)",
+	"whowrotethat-activation-link": "ई के लिखलक?",
+	"whowrotethat-activation-link-tooltip": "एकरा के लिखलक हे से सक्रिय करहु",
+	"whowrotethat-tour-welcome-dismiss": "बुझ गेली",
+	"whowrotethat-revision-added": "$1 एकरा $2 पर जोड़लक ।",
+	"whowrotethat-revision-attribution": "ओखनी पन्नाके $1 लिखलन हे ।",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "ओखनी पन्नाके $1 लिखलन हे ।",
+	"whowrotethat-revision-attribution-lessthan-percent": "1% से कम",
+	"whowrotethat-revision-deleted-username": "(सदस्यनाम वा आइपी हट गेल)",
+	"whowrotethat-revision-edit-summary-hidden": "(सम्पादन सारांश हट गेल)"
+}
