@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.22.3] - 2025-05-16
+### Changed
+- Translation updates.
+### Fixed
+- Remove use of the deprecated mw.Uri module
+
 ## [0.22.2] - 2024-08-07
 ### Changed
 - Upgraded to manifest version 3.
@@ -219,7 +225,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.2...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.3...HEAD
+[0.22.3]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.2...0.22.3
 [0.22.2]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.1...0.22.2
 [0.22.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.0...0.22.1
 [0.22.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.21.0...0.22.0
