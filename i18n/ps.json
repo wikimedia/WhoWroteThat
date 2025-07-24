@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"whowrotethat-ext-name": "دا چا ليکلې؟",
+	"whowrotethat-ext-name-beta": "دا چا ليکلې؟ (ازمېښتي)",
+	"whowrotethat-ext-desc": "د ويکيپېډيا ليکنو کې د ليکوالۍ او بياکتنې مالومات په ليدنيز او نېغ ډول راوسپړئ. د ويکي‌څوک له خوا پرمخ وړل شوی.",
+	"whowrotethat-ext-desc-beta": "د ويکيپېډيا ليکوالۍ مالومات راوسپړئ. د ويکي‌څوک له خوا پرمخ وړل کېږي. دا يوه ازمېښتي بلبڼه ده، يوازې د ازموينې لپاره کارېږي.",
+	"whowrotethat-ext-longdesc": "دا چا ليکلې؟ (WWT) يو پالنگر شاتاړی دی، چې په ويکيپېډيا ليکنو کې د ليکوالۍ مالومات نېغ په نېغه ښکاره‌کوي. کله چې تاسو په منځپانگه ځير کېږئ؛ نو دا توکی د هماغه ليکوال ټولې منځپانگې روښانه کوي. کله چې تاسو په منځپانگه کليک کوئ؛ نو دا توکی د بياکتنې ليکوال د بياکتنې له سپيناوي سره پېژني. په ټوليز ډول WWT کارنانو ته اجازه ورکوي چې د يو سمون سرچينه او شاليد کشف کړي، پرته له دې چې د بياکتنې پېښليک راوسپړي.",
+	"whowrotethat-activation-link": "دا چا ليکلې؟",
+	"whowrotethat-activation-link-tooltip": "دا چا ليکلې؟ کارندول",
+	"whowrotethat-deactivation-link": "دا چا ليکلې؟ تړل",
+	"whowrotethat-state-pending": "$1 بارېږي. دا شايد يو څه وخت ونيسي.",
+	"whowrotethat-state-pending-name": "دا چا ليکلې؟",
+	"whowrotethat-state-error": "تېروتنه: $1",
+	"whowrotethat-error-refresh": "تاند يې کړئ يا وروسته بياځلي هڅه وکړئ.",
+	"whowrotethat-error-later": "مهرباني وکړئ وروسته بيا هڅه وکړئ.",
+	"whowrotethat-error-contact": "تاند يې کړئ يا وروسته بياځلي هڅه وکړئ. $1",
+	"whowrotethat-error-contact-link": "که ستونزه دوام وکړي، موږ سره اړيکه ونيسئ.",
+	"whowrotethat-ready-title": "دا چا ليکلې؟",
+	"whowrotethat-ready-general": "د همدې ليکوال د ونډو کتلو لپاره، راوځړېږئ. نورو سپيناوي لپاره کليک وکړئ.",
+	"whowrotethat-tour-welcome-title": "$1 چارن‌شوی!",
+	"whowrotethat-tour-welcome-title-name": "دا چا ليکلې؟",
+	"whowrotethat-tour-welcome-description": "توکی له څنگپټې کارنده کړئ. د همدې کارن ونډو نښه کولو لپاره پر ليک راوگرځئ. د کارن او بياکتنې سپيناوي کتلو لپاره کليک وکړئ.",
+	"whowrotethat-tour-welcome-dismiss": "وپوهېدم!",
+	"whowrotethat-revision-added": "$1 دا په $2 کې ورگډه کړې.",
+	"whowrotethat-revision-attribution": "دوی د مخ $1 ليکلی.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "دوی د مخ $1 ليکلی.",
+	"whowrotethat-revision-attribution-lessthan-percent": "له 1% لږ",
+	"whowrotethat-revision-deleted-username": "(کارن‌نوم يا وېبپته لرې‌شوه)",
+	"whowrotethat-revision-edit-summary-hidden": "(سمون لنډيز لرې‌شو)"
+}
