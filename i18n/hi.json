@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abijeet Patro",
+			"Saurmandal"
+		]
+	},
+	"whowrotethat-ext-name": "यह किसने लिखा?",
+	"whowrotethat-ext-name-beta": "यह किसने लिखा? (बीटा)",
+	"whowrotethat-ext-desc": "विकिपीडिया लेखों पर दृश्यमान रूप से सीधे लेखकत्व और अवतरण की जानकारी देखें। WikiWho द्वारा संचालित।",
+	"whowrotethat-ext-desc-beta": "विकिपीडिया पर लेखकत्व की जानकारी देखेँ। WikiWho द्वारा संचालित। यह बीटा संस्करण है, सिर्फ परीक्षण के लिए।",
+	"whowrotethat-ext-longdesc": "\"यह किसने लिखा?\" (WWT) एक ब्राउज़र एक्सटेंशन है जो विकिपीडिया के लेखों पर सीधे लेखकत्व की जानकारी दिखाता है। जब आप सामग्री पर होवर करते हैं, उपकरण उसी लेखक द्वारा सारी जोड़ी गई सारी सामग्री को हाइलाइट करता है। जब आप सामग्री पर क्लिक करते हैं, उपकरण उस अवतरण के लेखक की पहचान करता है, और अवतरण की जानकारी दिखाता है। कुल मिलाकर, WWT की मदद से सदस्य पृष्ठ इतिहास खोले बिना किसी सम्पादन का स्रोत और पूर्वपीठिका देख सकते हैं।",
+	"whowrotethat-activation-link": "यह किसने लिखा?",
+	"whowrotethat-activation-link-tooltip": "\"यह किसने लिखा?\" सक्षम करें",
+	"whowrotethat-deactivation-link": "\"यह किसने लिखा?\" बंद करें",
+	"whowrotethat-state-pending": "\"$1\" लोड हो रहा है। इसमें कुछ समय लग सकता है।",
+	"whowrotethat-state-pending-name": "यह किसने लिखा?",
+	"whowrotethat-state-error": "त्रुटि: $1",
+	"whowrotethat-error-refresh": "ताज़ा करें या फिर बाद में पुनः प्रयास करें।",
+	"whowrotethat-error-later": "कृपया बाद में पुन: प्रयास करें।",
+	"whowrotethat-error-contact": "ताज़ा करें या फिर बाद में पुनः प्रयास करें। $1",
+	"whowrotethat-error-contact-link": "यदि समस्या बनी रहे तो हमसे संपर्क करें।",
+	"whowrotethat-ready-title": "यह किसने लिखा?",
+	"whowrotethat-ready-general": "किसी एक लेखक द्वारा किए गए योगदान देखने के लिए होवर करें। अधिक जानकारी के लिए क्लिक करें।",
+	"whowrotethat-tour-welcome-title": "$1 सक्षम है!",
+	"whowrotethat-tour-welcome-title-name": "यह किसने लिखा?",
+	"whowrotethat-tour-welcome-description": "उपकरण को साइडबार से सक्षम करें। किसी एक लेखक द्वारा किए गए योगदानों को हाइलाइट करने के लिए टेक्स्ट पर होवर करें। लेखक और अवतरण की जानकारी देखने के लिए क्लिक करें।",
+	"whowrotethat-tour-welcome-dismiss": "समझ गया/गई!",
+	"whowrotethat-revision-added": "$1 ने इसे $2 को जोड़ा था।",
+	"whowrotethat-revision-attribution": "उन्होंने पृष्ठ का $1 हिस्सा लिखा है।",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "उन्होंने पृष्ठ का $1 हिस्सा लिखा है।",
+	"whowrotethat-revision-attribution-lessthan-percent": "1% से भी कम",
+	"whowrotethat-revision-deleted-username": "(सदस्यनाम या IP हटा दिया गया है)",
+	"whowrotethat-revision-edit-summary-hidden": "(सम्पादन सारांश हटा दिया गया है)"
+}
