@@ -27,9 +27,9 @@
 	"whowrotethat-tour-welcome-dismiss": "Entendido!",
 	"whowrotethat-revision-added": "$1 engadiu isto a $2.",
 	"whowrotethat-revision-attribution": "Escribiu o $1 da páxina.",
-	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-percent": "$1 %",
 	"whowrotethat-revision-attribution-lessthan": "Escribiu $1 da páxina.",
-	"whowrotethat-revision-attribution-lessthan-percent": "menos do 1%",
+	"whowrotethat-revision-attribution-lessthan-percent": "menos do 1 %",
 	"whowrotethat-revision-deleted-username": "(nome de usuario ou enderezo eliminado)",
 	"whowrotethat-revision-edit-summary-hidden": "(resumo de edición eliminado)"
 }
