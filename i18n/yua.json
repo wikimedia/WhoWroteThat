@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jmaniyuc"
+		]
+	},
+	"whowrotethat-ext-name": "¿Máax ts'íibt lelo'?",
+	"whowrotethat-ext-name-beta": "¿Máax ts'íibt lelo'? (BETA)",
+	"whowrotethat-ext-desc": "Xak'altik a'alajil t'aan ti' le autoría yéetel le revisión visualmente yéetel Jun ti' le artículos Wikipedia. U muuk'il tumen WikiWho.",
+	"whowrotethat-ext-desc-beta": "Xak'altik u a'almaj t'aanil u ts'íibil Wikipedia. U muuk'il tumen WikiWho. Lela' u versión BETA, chéen uti'al u prueba.",
+	"whowrotethat-ext-longdesc": "¿Máax ts'íibt lelo'? (WWT) leti' jump'éel extensión ti' le navegador, ku ye'esik a'alajil t'aan ti' le autoría Jun ti' le artículos Wikipedia. Le ken a ts'áa le cursor yóok'ol le contenido, le nu'ukula' ku destaca tuláakal le contenido tumen le k'iino' je'el xano' autor. Le ken u beetik clic ti' le contenido, le nu'ukula' identifica le autor le revisión, junto yéetel detalles le revisión. Tu general, WWT ku cha'antik ti' le usuarios descubrir le fuente yéetel le ju'unil tu'ux yaan jump'éel edición, xma' cavar tumen le k'ajláayo' revisión.",
+	"whowrotethat-activation-link": "Máax ts’íib le’lo",
+	"whowrotethat-activation-link-tooltip": "Meyaj, Máax ts’íib le’lo.",
+	"whowrotethat-deactivation-link": "k'al. Máax ts’íib le’lo",
+	"whowrotethat-state-pending": "$1 táan u na'akal. je'el u bisik jump'íit súutuk.",
+	"whowrotethat-state-pending-name": "Máax ts’íib le’lo",
+	"whowrotethat-state-error": "ma': $1",
+	"whowrotethat-error-refresh": "ka'a beet tu ka'atéen jun súutuk.",
+	"whowrotethat-error-later": "Béet túumben tu ka'atéen maas chaan chúunk'in.",
+	"whowrotethat-error-contact": "ka'a beet tu ka'atéen jun súutuk. $1",
+	"whowrotethat-error-contact-link": "waaj le' talamilo' taane' t'aano'ni.",
+	"whowrotethat-ready-title": "Máax ts’íib le’lo",
+	"whowrotethat-ready-general": "Ts'áa u k'ab uti'al a wilik le ba'ax tu beetaj le máax ts'íibtmaj. u beetik clic uti'al a wojéelt uláak' ba'alo'ob.",
+	"whowrotethat-tour-welcome-title": "$1 táan habilitado!",
+	"whowrotethat-tour-welcome-title-name": "Máax ts’íib le’lo",
+	"whowrotethat-tour-welcome-description": "Active le nu'ukula' tak le barra lateral. Ts'áa le cursor yóok'ol le analte'o' utia'al u resaltar le contribuciones tumen le k'iino' je'el xano' autor. u beetik clic uti'al a wilik le máax ts'íibtmaj yéetel u tsoolil le revisióno'.",
+	"whowrotethat-tour-welcome-dismiss": "Na'atik",
+	"whowrotethat-revision-added": "$1 tu ts'áaj le je'ela' ti' $2 .",
+	"whowrotethat-revision-attribution": "Ts'o'ok u ts'íibtiko'ob $1 ti' le linki abas kaambal.",
+	"whowrotethat-revision-attribution-percent": "$1 %",
+	"whowrotethat-revision-attribution-lessthan": "Ts'o'ok u ts'íibtiko'ob $1 ti' le linki abas kaambal.",
+	"whowrotethat-revision-attribution-lessthan-percent": "menos ti' 1%",
+	"whowrotethat-revision-deleted-username": "(k'aaba' usuario wa IP luk'sa'an)",
+	"whowrotethat-revision-edit-summary-hidden": "resumen ti' edicion tuupu"
+}
