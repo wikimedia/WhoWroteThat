@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siddhan"
+		]
+	},
+	"whowrotethat-ext-name": "யார் அதை எழுதியது?",
+	"whowrotethat-ext-name-beta": "யார் அதை எழுதியது? (பீட்டா)",
+	"whowrotethat-activation-link": "யார் அதை எழுதியது?",
+	"whowrotethat-activation-link-tooltip": "அதை எழுதியது யார்? என்பதைச் செயல்படுத்தவும்.",
+	"whowrotethat-deactivation-link": "அதை எழுதியது யார்? என்பதை மூடு",
+	"whowrotethat-state-pending-name": "யார் அதை எழுதியது?",
+	"whowrotethat-state-error": "பிழை: $1",
+	"whowrotethat-error-refresh": "புதுப்பிக்கவும் அல்லது பின்னர் முயற்சிக்கவும்.",
+	"whowrotethat-error-later": "பிறகு முயற்சிக்கவும்.",
+	"whowrotethat-error-contact": "புதுப்பிக்கவும் அல்லது பின்னர் மீண்டும் முயற்சிக்கவும். $1",
+	"whowrotethat-error-contact-link": "சிக்கல் தொடர்ந்தால், எங்களைத் தொடர்பு கொள்ளவும்.",
+	"whowrotethat-ready-title": "யார் அதை எழுதியது?",
+	"whowrotethat-tour-welcome-title": "$1 இயக்கப்பட்டது!",
+	"whowrotethat-tour-welcome-title-name": "யார் அதை எழுதியது?",
+	"whowrotethat-tour-welcome-dismiss": "புரிந்துகொண்டேன்",
+	"whowrotethat-revision-added": "$1 இதை $2 இல் சேர்த்தது.",
+	"whowrotethat-revision-attribution": "அவர்கள் பக்கத்தின் $1 எழுதியுள்ளனர்.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "அவர்கள் பக்கத்தின் $1 எழுதியுள்ளனர்.",
+	"whowrotethat-revision-attribution-lessthan-percent": "1% க்கும் குறைவாக",
+	"whowrotethat-revision-deleted-username": "(பயனர்பெயர் அல்லது ஐபி நீக்கப்பட்டது)",
+	"whowrotethat-revision-edit-summary-hidden": "(திருத்த சுருக்கம் நீக்கப்பட்டது)"
+}
