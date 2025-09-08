@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"GilPe",
 			"Robby",
 			"Soued031",
 			"Volvox"
@@ -28,5 +29,5 @@
 	"whowrotethat-revision-attribution-lessthan": "Si hu manner wéi $1 vun der Säit geschriwwen.",
 	"whowrotethat-revision-attribution-lessthan-percent": "manner wéi 1%",
 	"whowrotethat-revision-deleted-username": "(Benotzernumm oder IP ewechgeholl)",
-	"whowrotethat-revision-edit-summary-hidden": "(Resumé vun der Ännerung ewechgeholl)"
+	"whowrotethat-revision-edit-summary-hidden": "(Resümmee vun der Ännerung ewechgeholl)"
 }
