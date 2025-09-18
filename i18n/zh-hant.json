@@ -10,7 +10,7 @@
 	"whowrotethat-ext-name-beta": "Who Wrote That?（BETA）",
 	"whowrotethat-ext-desc": "在維基百科條目裡直接瀏覽觀看作者與修訂資訊。由 WikiWho 提供技術支援。",
 	"whowrotethat-ext-desc-beta": "瀏覽維基百科作者資訊。由 WikiWho 提供技術支援。此為僅用於測試的 BETA 版本。",
-	"whowrotethat-ext-longdesc": "誰寫的？ （WWT）是瀏覽器擴展程序，可直接在Wikipedia文章上顯示作者信息。當您將鼠標懸停在內容上時，該工具會突出顯示同一作者的所有內容。當您單擊內容時，該工具會識別修訂的作者以及修訂的詳細信息。總體而言，WWT允許用戶發現編輯的來源和背景，而無需深入研究修訂歷史。",
+	"whowrotethat-ext-longdesc": "誰寫的？（Who Wrote That?、WWT）是瀏覽器擴充功能，可直接在維基百科條目上顯示作者資訊。當您將滑鼠游標懸停在內容上時，該工具會突顯出同一作者的所有內容。當您點擊內容時，該工具會識別修訂的作者以及修訂的詳細資訊。總體而言，WWT 允許使用者找出編輯內容的來源和背景，而無需深入查看修訂歷史。",
 	"whowrotethat-activation-link": "Who Wrote That?",
 	"whowrotethat-activation-link-tooltip": "啟動 Who Wrote That?",
 	"whowrotethat-deactivation-link": "關閉 Who Wrote That?",
