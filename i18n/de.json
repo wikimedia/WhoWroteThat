@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"AKlapper",
 			"Doc Taxon",
 			"Lucas Werkmeister",
 			"RacoonyRE",
@@ -12,7 +13,7 @@
 	"whowrotethat-ext-name-beta": "Wer hat es geschrieben? (BETA)",
 	"whowrotethat-ext-desc": "Finde Informationen zu Autoren und Artikelversionen visuell und direkt in Wikipedia-Artikeln, basierend auf WikiWho.",
 	"whowrotethat-ext-desc-beta": "Erkunde Informationen zur Autorschaft auf Wikipedia. Basierend auf WikiWho. BETA-Version, nur zum Testen vorgesehen.",
-	"whowrotethat-ext-longdesc": "Wer hat das geschrieben? (WWT) ist eine Browser-Erweiterung, die Informationen zur Autorenschaft direkt auf Wikipedia-Artikeln anzeigt. Wenn Sie den Mauszeiger über einen Inhalt bewegen, hebt das Tool alle Inhalte desselben Autors hervor. Wenn Sie auf den Inhalt klicken, identifiziert das Tool den Autor der Überarbeitung, zusammen mit den Details der Überarbeitung. Insgesamt ermöglicht WWT den Benutzern, die Quelle und den Hintergrund einer Bearbeitung zu entdecken, ohne sich durch den Revisionsverlauf zu wühlen.",
+	"whowrotethat-ext-longdesc": "Wer hat das geschrieben? (WWT) ist eine Browser-Erweiterung, die Informationen zur Autorenschaft direkt auf Wikipedia-Artikeln anzeigt. Wenn Du den Mauszeiger über einen Inhalt bewegst, hebt das Tool alle Inhalte desselben Autors hervor. Wenn Du auf den Inhalt klickst, identifiziert das Tool den Autor der Überarbeitung, zusammen mit den Details der Überarbeitung. Insgesamt ermöglicht WWT den Benutzern, die Quelle und den Hintergrund einer Bearbeitung zu entdecken, ohne sich durch den Revisionsverlauf zu wühlen.",
 	"whowrotethat-activation-link": "Wer hat es geschrieben?",
 	"whowrotethat-activation-link-tooltip": "„Wer hat es geschrieben?“ aktivieren",
 	"whowrotethat-deactivation-link": "„Wer hat es geschrieben?“ schließen",
@@ -25,7 +26,7 @@
 	"whowrotethat-error-contact-link": "Wenn das Problem bestehen bleibt, kontaktiere uns.",
 	"whowrotethat-ready-title": "Wer hat es geschrieben?",
 	"whowrotethat-ready-general": "Fahre mit dem Mauszeiger über den Text, um alle Beiträge derselben Person zu sehen. Klicke auf eine Textstelle für detaillierte Informationen.",
-	"whowrotethat-tour-welcome-title": "„$1“ wird aktiviert!",
+	"whowrotethat-tour-welcome-title": "„$1“ ist aktiviert!",
 	"whowrotethat-tour-welcome-title-name": "Wer hat es geschrieben?",
 	"whowrotethat-tour-welcome-description": "Aktiviere das Werkzeug in der Seitenleiste. Fahre mit dem Mauszeiger über den Text, um alle Beiträge derselben Person hervorzuheben. Klicke auf eine Textstelle für detaillierte Informationen.",
 	"whowrotethat-tour-welcome-dismiss": "Verstanden!",
