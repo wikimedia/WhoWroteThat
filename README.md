@@ -76,8 +76,8 @@ The tool works on Wikipedias supported by the WhoColor API:
 ## Releasing the browser extension
 
 First create your release branch, update the version number in `package.json`
-and ensure the changelog is up-to-date,
-then tag the release branch in Git with the new version.
+and ensure the changelog is up-to-date, make a pull request with the updated change log and version number in package.json.
+Once the release branch has been merged then tag the release branch in Git with the new version. This can be done by creating a release in Github (https://github.com/wikimedia/WhoWroteThat/releases).
 Run `grunt` (the default task only) to create
 six zip files such as `dist/extension_firefox/whowrotethat_for_wikipedia-0.2.0.0.zip`
 (three for beta and three for production; two for Chrome and four for Firefox).
