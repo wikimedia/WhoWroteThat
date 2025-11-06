@@ -1,6 +1,6 @@
 {
    "repository": "https://github.com/wikimedia/WhoWroteThat",
-   "version": "0.22.3",
+   "version": "0.22.4",
    "license": "MIT",
    "webExt": {
       "sourceDir": "dist/extension/",
