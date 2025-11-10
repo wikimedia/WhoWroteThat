@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin"
+		]
+	},
+	"whowrotethat-ext-name": "ꦱꦥ​ꦱꦶꦁ​ꦤꦸꦭꦶꦱ꧀ꦏꦸꦮꦶ?",
+	"whowrotethat-ext-name-beta": "ꦱꦥ​ꦱꦶꦁ​ꦤꦸꦭꦶꦱ꧀ꦏꦸꦮꦶ?(BETA)",
+	"whowrotethat-ext-desc": "Dapatkan informasi penulis & revisi secara langsung di halaman artikel Wikipedia. Didukung oleh WikiWho.",
+	"whowrotethat-ext-desc-beta": "Dapatkan informasi penulis Wikipedia. Didukung oleh WikiWho. Versi BETA ini untuk coba-coba saja.",
+	"whowrotethat-ext-longdesc": "Ini Tulisan Siapa? adalah sebuah ekstensi peramban, yang menampilkan informasi penulis secara langsung di artikel Wikipedia. Ketika Anda mengarahkan kursor ke atas konten, perkakas ini mengidentifikasi penulis revisinya, beserta detail mengenai revisi. Secara garis besar, Ini Tulisan Siapa? memungkinkan para pengguna menemukan sumber dan latar belakang suatu suntingan, tanpa menggali riwayat revisi.",
+	"whowrotethat-activation-link": "ꦱꦥ​ꦱꦶꦁ​ꦤꦸꦭꦶꦱ꧀ꦏꦸꦮꦶ?",
+	"whowrotethat-activation-link-tooltip": "ꦲꦸꦫꦸꦥ꧀ꦏꦺ​ꦱꦥ​ꦱꦶꦁ​ꦤꦸꦭꦶꦱ꧀ꦏꦸꦮꦶ?",
+	"whowrotethat-deactivation-link": "ꦠꦸꦠꦸꦥ꧀​ꦱꦥ​ꦱꦶꦁ​ꦤꦸꦭꦶꦱ꧀ꦏꦸꦮꦶ?",
+	"whowrotethat-state-pending": "$1ꦭꦒꦶ​ꦢꦶꦩꦺꦴꦠ꧀꧈ꦲꦼꦤ꧀ꦠꦺꦤ꧀ꦤꦤ​ꦱꦝꦺꦭꦺꦴꦏ꧀꧈",
+	"whowrotethat-state-pending-name": "ꦱꦥ​ꦱꦶꦁ​ꦤꦸꦭꦶꦱ꧀ꦏꦸꦮꦶ?",
+	"whowrotethat-state-error": "ꦒꦭꦠ꧀꧇$1",
+	"whowrotethat-error-refresh": "ꦲꦚꦂꦫꦤ꧀ꦤ​ꦲꦸꦠꦮ​ꦩꦺꦁꦏꦺꦴ​ꦢꦶꦕꦺꦴꦧ​ꦩꦭꦶꦃ꧉",
+	"whowrotethat-error-later": "ꦩꦼꦁꦏꦺꦴ​ꦢꦶꦕꦺꦴꦧ​ꦩꦭꦶꦃ꧉",
+	"whowrotethat-error-contact": "ꦲꦚꦂꦫꦤ꧀ꦤ​ꦲꦸꦠꦮ​ꦩꦺꦁꦏꦺꦴ​ꦢꦶꦕꦺꦴꦧ​ꦩꦭꦶꦃ꧉$1",
+	"whowrotethat-error-contact-link": "ꦤꦺꦏ꧀ꦩꦱꦭꦃꦲꦺ​ꦠꦼꦫꦸꦱ꧀ꦠꦼꦫꦸꦱ꧀ꦱꦤ꧀​ ꦏꦺꦴꦤ꧀ꦠꦏ꧀ꦏꦶꦠ꧉",
+	"whowrotethat-ready-title": "ꦱꦥ​ꦱꦶꦁ​ꦤꦸꦭꦶꦱ꧀ꦏꦸꦮꦶ?",
+	"whowrotethat-ready-general": "Letakkan kursor untuk melihat kontribusi pengguna yang sama. Klik untuk informasi lebih lanjut.",
+	"whowrotethat-tour-welcome-title": "$1ꦢꦶꦲꦸꦫꦸꦥ꧀ꦤꦺ!",
+	"whowrotethat-tour-welcome-title-name": "ꦱꦥ​ꦱꦶꦁ​ꦤꦸꦭꦶꦱ꧀ꦏꦸꦮꦶ?",
+	"whowrotethat-tour-welcome-description": "Anda dapat mengaktifkan alat ini di sebelah kiri. Letakkan kursor di teks untuk melihat kontribusi pengguna yang sama. Klik untuk melihat informasi pengguna dan revisinya.",
+	"whowrotethat-tour-welcome-dismiss": "ꦩꦸꦝꦼꦁ!",
+	"whowrotethat-revision-added": "$1ꦤꦩ꧀ꦧꦃꦲꦏꦺ​ꦲꦶꦏꦶ​ꦲꦶꦁ$2.",
+	"whowrotethat-revision-attribution": "ꦝꦺꦮꦺꦏ꧀ꦏꦺ​ꦮꦶꦱ꧀ꦤꦸꦭꦶꦱ꧀$1ꦱꦏ​ꦏꦕ​ꦲꦶꦏꦶ꧉",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "ꦝꦺꦮꦺꦏ꧀ꦏꦺ​ꦮꦶꦱ꧀ꦤꦸꦭꦶꦱ꧀$1ꦱꦏ​ꦏꦕ​ꦲꦶꦏꦶ꧉",
+	"whowrotethat-revision-attribution-lessthan-percent": "<1%",
+	"whowrotethat-revision-deleted-username": "(ꦗꦼꦤꦼꦁ​ꦤꦫꦒꦸꦤ​ꦲꦸꦠꦮIPꦢꦶꦲꦥꦸꦱ꧀)",
+	"whowrotethat-revision-edit-summary-hidden": "(ꦫꦶꦁꦏꦼꦱ꧀ꦱꦤ꧀ꦧꦼꦱꦸꦠ꧀ꦠꦤ꧀ꦢꦶꦲꦥꦸꦱ꧀)"
+}
