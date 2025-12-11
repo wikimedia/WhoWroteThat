@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Daud I.F. Argana",
-			"Farras"
+			"Farras",
+			"Penyuwangi"
 		]
 	},
 	"whowrotethat-ext-name": "Ini Tulisan Siapa?",
@@ -11,7 +12,7 @@
 	"whowrotethat-ext-desc-beta": "Dapatkan informasi penulis Wikipedia. Didukung oleh WikiWho. Versi BETA ini untuk coba-coba saja.",
 	"whowrotethat-ext-longdesc": "Ini Tulisan Siapa? adalah sebuah ekstensi peramban, yang menampilkan informasi penulis secara langsung di artikel Wikipedia. Ketika Anda mengarahkan kursor ke atas konten, perkakas ini mengidentifikasi penulis revisinya, beserta detail mengenai revisi. Secara garis besar, Ini Tulisan Siapa? memungkinkan para pengguna menemukan sumber dan latar belakang suatu suntingan, tanpa menggali riwayat revisi.",
 	"whowrotethat-activation-link": "Ini Tulisan Siapa?",
-	"whowrotethat-activation-link-tooltip": "Aktifkan Ini Tulisan Siapa?",
+	"whowrotethat-activation-link-tooltip": "Nyalakan Ini Tulisan Siapa?",
 	"whowrotethat-deactivation-link": "Tutup Ini Tulisan Siapa?",
 	"whowrotethat-state-pending": "$1 sedang dimuat. Mohon tunggu sejenak.",
 	"whowrotethat-state-pending-name": "Ini Tulisan Siapa?",
