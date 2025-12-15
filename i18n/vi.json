@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Duongvu",
+			"Hide on Rosé"
+		]
+	},
+	"whowrotethat-ext-name": "Ai Viết Nó?",
+	"whowrotethat-ext-name-beta": "Ai Viết Nó? (BETA)",
+	"whowrotethat-ext-desc": "Khám phá thông tin về tác giả và sửa lỗi trực tiếp trong các bài viết Wikipedia. Được phát hành bởi WikiWho",
+	"whowrotethat-ext-desc-beta": "Khám phá thông tin tác giả của Wikipedia. Được cung cấp bởi WikiWho. Đây là phiên bản BETA, chỉ dành cho mục đích thử nghiệm.",
+	"whowrotethat-ext-longdesc": "Who Wrote That? (WWT) là một tiện ích mở rộng trình duyệt, hiển thị thông tin tác giả trực tiếp trên các bài viết Wikipedia. Khi bạn di chuột qua nội dung, công cụ sẽ làm nổi bật tất cả nội dung do cùng một tác giả viết. Khi bạn nhấp vào nội dung, công cụ sẽ xác định tác giả của bản chỉnh sửa, cùng với các chi tiết chỉnh sửa. Nhìn chung, WWT cho phép người dùng khám phá nguồn gốc và bối cảnh của một chỉnh sửa mà không cần phải tìm kiếm trong lịch sử chỉnh sửa.",
+	"whowrotethat-activation-link": "Ai viết nó ?",
+	"whowrotethat-activation-link-tooltip": "Kích hoạt tính năng \"Ai đã viết điều đó?\"",
+	"whowrotethat-deactivation-link": "Ai đã viết điều đó?",
+	"whowrotethat-state-pending": "Đang tải $1. Quá trình này có thể mất một lúc.",
+	"whowrotethat-state-pending-name": "Ai đã viết điều đó?",
+	"whowrotethat-state-error": "Lỗi: $1",
+	"whowrotethat-error-refresh": "Tới thiệu hoặc thử lại sau.",
+	"whowrotethat-error-later": "Xin hãy thử lại sau.",
+	"whowrotethat-error-contact": "Làm mới trang hoặc thử lại sau. 1 đô la",
+	"whowrotethat-error-contact-link": "Nếu vấn đề vẫn tiếp diễn, vui lòng liên hệ với chúng tôi.",
+	"whowrotethat-ready-title": "Ai đã viết điều đó?",
+	"whowrotethat-ready-general": "Di chuột để xem các bài viết của cùng một tác giả. Nhấp chuột để xem thêm chi tiết.",
+	"whowrotethat-tour-welcome-title": "Tính năng $1 đã được kích hoạt!",
+	"whowrotethat-tour-welcome-title-name": "Ai đã viết điều đó?",
+	"whowrotethat-tour-welcome-description": "Kích hoạt công cụ từ thanh bên. Di chuột qua văn bản để làm nổi bật các đóng góp của cùng một tác giả. Nhấp chuột để xem thông tin tác giả và phiên bản.",
+	"whowrotethat-tour-welcome-dismiss": "Đã hiểu",
+	"whowrotethat-revision-added": "$ 1 thêm vào $ 2 này.",
+	"whowrotethat-revision-attribution": "Họ đã viết 1 đô la của trang.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Họ đã viết $1 đô la của trang.",
+	"whowrotethat-revision-attribution-lessthan-percent": "dưới 1%",
+	"whowrotethat-revision-deleted-username": "(tên người dùng đã bị xóa)",
+	"whowrotethat-revision-edit-summary-hidden": "(tóm lược sửa đổi đã bị xóa)"
+}
