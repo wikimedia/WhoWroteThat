@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Duongvu",
+			"Henrydat",
 			"Hide on Rosé"
 		]
 	},
@@ -18,7 +19,7 @@
 	"whowrotethat-state-error": "Lỗi: $1",
 	"whowrotethat-error-refresh": "Tới thiệu hoặc thử lại sau.",
 	"whowrotethat-error-later": "Xin hãy thử lại sau.",
-	"whowrotethat-error-contact": "Làm mới trang hoặc thử lại sau. 1 đô la",
+	"whowrotethat-error-contact": "Làm mới trang hoặc thử lại sau. $1",
 	"whowrotethat-error-contact-link": "Nếu vấn đề vẫn tiếp diễn, vui lòng liên hệ với chúng tôi.",
 	"whowrotethat-ready-title": "Ai đã viết điều đó?",
 	"whowrotethat-ready-general": "Di chuột để xem các bài viết của cùng một tác giả. Nhấp chuột để xem thêm chi tiết.",
@@ -26,8 +27,8 @@
 	"whowrotethat-tour-welcome-title-name": "Ai đã viết điều đó?",
 	"whowrotethat-tour-welcome-description": "Kích hoạt công cụ từ thanh bên. Di chuột qua văn bản để làm nổi bật các đóng góp của cùng một tác giả. Nhấp chuột để xem thông tin tác giả và phiên bản.",
 	"whowrotethat-tour-welcome-dismiss": "Đã hiểu",
-	"whowrotethat-revision-added": "$ 1 thêm vào $ 2 này.",
-	"whowrotethat-revision-attribution": "Họ đã viết 1 đô la của trang.",
+	"whowrotethat-revision-added": "$1 thêm vào $2.",
+	"whowrotethat-revision-attribution": "Họ đã viết $1 trang.",
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan": "Họ đã viết $1 đô la của trang.",
 	"whowrotethat-revision-attribution-lessthan-percent": "dưới 1%",
