@@ -6,7 +6,8 @@
 			"Lucas Werkmeister",
 			"RacoonyRE",
 			"Tacsipacsi",
-			"Umherirrender"
+			"Umherirrender",
+			"Volvox"
 		]
 	},
 	"whowrotethat-ext-name": "Wer hat es geschrieben?",
@@ -32,9 +33,9 @@
 	"whowrotethat-tour-welcome-dismiss": "Verstanden!",
 	"whowrotethat-revision-added": "$1 hat dies am $2 hinzugefügt.",
 	"whowrotethat-revision-attribution": "Diese Person schrieb $1 der Seite.",
-	"whowrotethat-revision-attribution-percent": "$1&#160;%",
+	"whowrotethat-revision-attribution-percent": "$1&nbsp;%",
 	"whowrotethat-revision-attribution-lessthan": "Diese Person schrieb $1 der Seite.",
-	"whowrotethat-revision-attribution-lessthan-percent": "weniger als 1&#160;%",
+	"whowrotethat-revision-attribution-lessthan-percent": "weniger als 1&nbsp;%",
 	"whowrotethat-revision-deleted-username": "(Benutzername oder IP entfernt)",
 	"whowrotethat-revision-edit-summary-hidden": "(Zusammenfassung entfernt)"
 }
