@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Papuass",
+			"Rusjanis"
+		]
+	},
+	"whowrotethat-ext-name": "Kurš to uzrakstīja?",
+	"whowrotethat-ext-name-beta": "Kurš to uzrakstīja? (BETA)",
+	"whowrotethat-state-error": "Kļūda: $1",
+	"whowrotethat-error-contact-link": "Ja problēma joprojām pastāv, sazinieties ar mums.",
+	"whowrotethat-tour-welcome-title": "$1 ir iespējots!",
+	"whowrotethat-tour-welcome-dismiss": "Sapratu!",
+	"whowrotethat-revision-attribution-lessthan-percent": "mazāk kā 1%",
+	"whowrotethat-revision-edit-summary-hidden": "(labojuma kopsavilkums dzēsts)"
+}
