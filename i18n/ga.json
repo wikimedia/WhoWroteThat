@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aindriu80"
+		]
+	},
+	"whowrotethat-ext-name": "Cé a scríobh sin?",
+	"whowrotethat-ext-name-beta": "Cé a Scríobh Sin? (BETA)",
+	"whowrotethat-ext-desc": "Iniúchadh a dhéanamh ar fhaisnéis údair agus athbhreithnithe go hamhairc agus go díreach in ailt Vicipéide. Cumhachtaithe ag WikiWho.",
+	"whowrotethat-ext-desc-beta": "Fiosraigh faisnéis údair Vicipéid. Cumhachtaithe ag WikiWho. Is é seo an leagan BETA, atá beartaithe le haghaidh tástála amháin.",
+	"whowrotethat-ext-longdesc": "Is síneadh brabhsálaí é Cé a Scríobh Sin? (WWT), a thaispeánann faisnéis údair go díreach ar ailt Vicipéid. Nuair a bhogann tú an luchóg thar ábhar, aibhsíonn an uirlis an t-ábhar go léir ón údar céanna. Nuair a chliceálann tú ar ábhar, aithníonn an uirlis údar an athbhreithnithe, mar aon le sonraí an athbhreithnithe. Tríd is tríd, tugann WWT deis d’úsáideoirí foinse agus cúlra eagarthóireachta a fháil amach, gan tochailt trí stair athbhreithnithe.",
+	"whowrotethat-activation-link": "Cé a scríobh sin?",
+	"whowrotethat-activation-link-tooltip": "Gníomhachtaigh Cé a Scríobh Sin?",
+	"whowrotethat-deactivation-link": "Dún Cé a Scríobh Sin?",
+	"whowrotethat-state-pending": "Tá $1 á lódáil. D’fhéadfadh sé seo tamall a thógáil.",
+	"whowrotethat-state-pending-name": "Cé a scríobh sin?",
+	"whowrotethat-state-error": "Earráid: $1",
+	"whowrotethat-error-refresh": "Athnuaigh nó déan iarracht arís ar ball.",
+	"whowrotethat-error-later": "Déan iarracht arís ar ball.",
+	"whowrotethat-error-contact": "Athnuaigh nó déan iarracht arís níos déanaí. $1",
+	"whowrotethat-error-contact-link": "Má leanann an fhadhb ar aghaidh, déan teagmháil linn.",
+	"whowrotethat-ready-title": "Cé a scríobh sin?",
+	"whowrotethat-ready-general": "Bog an luchóg chun ranníocaíochtaí ón údar céanna a fheiceáil. Cliceáil le haghaidh tuilleadh sonraí.",
+	"whowrotethat-tour-welcome-title": "Tá $1 cumasaithe!",
+	"whowrotethat-tour-welcome-title-name": "Cé a scríobh sin?",
+	"whowrotethat-tour-welcome-description": "Gníomhachtaigh an uirlis ón mbarra taoibh. Bog an luchóg thar an téacs chun aird a tharraingt ar ranníocaíochtaí ón údar céanna. Cliceáil chun sonraí an údair agus an athbhreithnithe a fheiceáil.",
+	"whowrotethat-tour-welcome-dismiss": "Tuigim é!",
+	"whowrotethat-revision-added": "Chuir $1 é seo leis ar $2.",
+	"whowrotethat-revision-attribution": "Tá $1 den leathanach scríofa acu.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Tá $1 den leathanach scríofa acu.",
+	"whowrotethat-revision-attribution-lessthan-percent": "níos lú ná 1%",
+	"whowrotethat-revision-deleted-username": "(ainm úsáideora nó IP bainte)",
+	"whowrotethat-revision-edit-summary-hidden": "(achoimre eagarthóireachta bainte)"
+}
