@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Renessaince"
+			"Renessaince",
+			"Ucukor"
 		]
 	},
 	"whowrotethat-ext-name": "Хто гэта напісаў?",
@@ -24,6 +25,7 @@
 	"whowrotethat-tour-welcome-title": "$1 уключанае!",
 	"whowrotethat-tour-welcome-title-name": "Хто гэта напісаў?",
 	"whowrotethat-tour-welcome-dismiss": "Зразумела!",
+	"whowrotethat-revision-added": "$1 дадаў гэта на $2.",
 	"whowrotethat-revision-attribution-percent": "$1%",
 	"whowrotethat-revision-attribution-lessthan-percent": "меней за 1%",
 	"whowrotethat-revision-deleted-username": "(імя ўдзельніка ці IP выдаленае)",
