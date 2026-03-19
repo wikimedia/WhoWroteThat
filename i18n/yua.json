@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"26agcp",
 			"Jmaniyuc"
 		]
 	},
@@ -25,10 +26,10 @@
 	"whowrotethat-tour-welcome-title-name": "Máax ts’íib le’lo",
 	"whowrotethat-tour-welcome-description": "Active le nu'ukula' tak le barra lateral. Ts'áa le cursor yóok'ol le analte'o' utia'al u resaltar le contribuciones tumen le k'iino' je'el xano' autor. u beetik clic uti'al a wilik le máax ts'íibtmaj yéetel u tsoolil le revisióno'.",
 	"whowrotethat-tour-welcome-dismiss": "Na'atik",
-	"whowrotethat-revision-added": "$1 tu ts'áaj le je'ela' ti' $2 .",
+	"whowrotethat-revision-added": "$1 tu ts'áaj le je'ela' tu k'iinil $2.",
 	"whowrotethat-revision-attribution": "Ts'o'ok u ts'íibtiko'ob $1 ti' le linki abas kaambal.",
 	"whowrotethat-revision-attribution-percent": "$1 %",
-	"whowrotethat-revision-attribution-lessthan": "Ts'o'ok u ts'íibtiko'ob $1 ti' le linki abas kaambal.",
+	"whowrotethat-revision-attribution-lessthan": "Ts'o'ok u ts'íibtik u $1il le páajinaa'.",
 	"whowrotethat-revision-attribution-lessthan-percent": "menos ti' 1%",
 	"whowrotethat-revision-deleted-username": "(k'aaba' usuario wa IP luk'sa'an)",
 	"whowrotethat-revision-edit-summary-hidden": "resumen ti' edicion tuupu"
