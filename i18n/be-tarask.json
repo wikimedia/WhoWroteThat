@@ -24,9 +24,12 @@
 	"whowrotethat-ready-general": "Навядзіце, каб паглядзець унёсак таго ж аўтара. Націсьніце, каб атрымаць падрабязнасьці.",
 	"whowrotethat-tour-welcome-title": "$1 уключанае!",
 	"whowrotethat-tour-welcome-title-name": "Хто гэта напісаў?",
+	"whowrotethat-tour-welcome-description": "Актывуйце інструмэнт з бакавой панэлі. Навядзіце на тэкст, каб вылучыць унёсак таго ж аўтара. Націсьніце, каб убачыць аўтара і падрабязнасьці вэрсіі.",
 	"whowrotethat-tour-welcome-dismiss": "Зразумела!",
 	"whowrotethat-revision-added": "$1 дадаў гэта на $2.",
+	"whowrotethat-revision-attribution": "Напісана $1 старонкі.",
 	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Напісана $1 старонкі.",
 	"whowrotethat-revision-attribution-lessthan-percent": "меней за 1%",
 	"whowrotethat-revision-deleted-username": "(імя ўдзельніка ці IP выдаленае)",
 	"whowrotethat-revision-edit-summary-hidden": "(апісаньне зьменаў выдаленае)"
