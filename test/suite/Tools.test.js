@@ -15,6 +15,7 @@ describe( 'Tools test', () => {
 				msg: 'String with spaces'
 			},
 			{
+				// eslint-disable-next-line no-jquery/no-parse-html-literal
 				input: $.parseHTML( '<a href="http://example.com">wrapped link as raw HTML</a>' ),
 				expected: '<bdi><a href="http://example.com">wrapped link as raw HTML</a></bdi>',
 				msg: 'Accepts parsed HTML.'

@@ -120,7 +120,9 @@ config.outputEnvironment = 'Browser extension';
 	// For debugging purposes, export methods to the window global
 	window.wwtDebug = {
 		/**
+		 * Show the welcome pop
 		 *
+		 * @todo Vector-2022 incompatibility (T358628)
 		 */
 		resetWelcomePopup: () => {
 			// Notify the extension
