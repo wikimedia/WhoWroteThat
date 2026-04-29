@@ -38,26 +38,26 @@ module.exports = function Gruntfile( grunt ) {
 	grunt.loadNpmTasks( 'grunt-replace' );
 	grunt.loadNpmTasks( 'grunt-contrib-less' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
-	grunt.loadNpmTasks( 'grunt-jsdoc' );
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 
 	grunt.initConfig( {
-		pkg: pkg,
+		pkg,
 		eslint: {
-			code: {
-				src: [
-					'**/*.js',
-					'!build/**',
-					'!docs/**',
-					'!dist/**',
-					'!node_modules/**',
-					'!temp/**',
-					'!test/**',
-					'test/suite/**',
-					'build/extension_content_script.js'
-				]
-			}
+			options: {
+				overrideConfigFile: '.eslintrc.json'
+			},
+			target: [
+				'**/*.js',
+				'!build/**',
+				'!docs/**',
+				'!dist/**',
+				'!node_modules/**',
+				'!temp/**',
+				'!test/**',
+				'test/suite/**',
+				'build/extension_content_script.js'
+			]
 		},
 		stylelint: {
 			code: {
@@ -68,14 +68,6 @@ module.exports = function Gruntfile( grunt ) {
 		},
 		banana: {
 			all: 'i18n/'
-		},
-		jsdoc: {
-			all: {
-				options: {
-					configure: '.jsdoc.json',
-					pedantic: true
-				}
-			}
 		},
 		less: {
 			browserextension: {
@@ -167,6 +159,7 @@ module.exports = function Gruntfile( grunt ) {
 				options: {
 					/**
 					 * Get the path and name of the source ZIP file to create.
+					 *
 					 * @return {string}
 					 */
 					archive: () => {
@@ -335,7 +328,7 @@ module.exports = function Gruntfile( grunt ) {
 		grunt.file.write( 'dist/extension/manifest_chrome.json', JSON.stringify( manifest, null, 4 ) );
 	} );
 
-	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana', 'jsdoc' ] );
+	grunt.registerTask( 'lint', [ 'eslint', 'stylelint', 'banana' ] );
 	grunt.registerTask( 'test', [ 'lint', 'shell:mocha' ] );
 	grunt.registerTask( 'build', 'Create web extension files in dist/extension/', [ 'clean', 'less', 'replace', 'browserify', 'copy', 'extLocales' ] );
 	grunt.registerTask( 'run', [ 'build', 'webext', 'shell:webextRun' ] );

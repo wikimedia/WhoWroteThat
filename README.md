@@ -34,14 +34,21 @@ The tool works on Wikipedias supported by the WhoColor API:
 [Dutch](https://nl.wikipedia.org/),
 [French](https://fr.wikipedia.org/),
 [German](https://de.wikipedia.org/),
+[Hindi](https://hi.wikipedia.org/),
 [Hungarian](https://hu.wikipedia.org/),
 [Indonesian](https://id.wikipedia.org/),
 [Italian](https://it.wikipedia.org/),
 [Japanese](https://ja.wikipedia.org/),
+[Lower Sorbian](https://dsb.wikipedia.org/),
+[Persian](https://fa.wikipedia.org/),
 [Polish](https://pl.wikipedia.org/),
 [Portuguese](https://pt.wikipedia.org/),
-[Spanish](https://es.wikipedia.org/), and
-[Turkish](https://tr.wikipedia.org/)
+[Russian](https://ru.wikipedia.org/),
+[Spanish](https://es.wikipedia.org/)
+[Swedish](https://sv.wikipedia.org/),
+[Turkish](https://tr.wikipedia.org/),
+[Ukrainian](https://uk.wikipedia.org/), and
+[Vietnamese](https://vi.wikipedia.org/).
 
 ## Installation for users
 

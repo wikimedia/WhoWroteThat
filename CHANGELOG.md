@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.23.0] - 2026-04-29
+### Changed
+- Added support for `dsb`, `fa`, `hi`, `ru`, `sv`, `uk`, and `vi` language
+  Wikipedias.
+- Bump Node dependencies.
+- Translation updates.
+
+### Fixed
+- Add `data_collection_permissions` property to manifest to comply with
+  new browser store requirements.
+
 ## [0.22.4] - 2025-11-06
 ### Changed
 - Translation updates.

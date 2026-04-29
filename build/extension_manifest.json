@@ -13,17 +13,23 @@
 	},
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "whowrotethat-dev@wikimedia"
+			"id": "whowrotethat-dev@wikimedia",
+			"data_collection_permissions": {
+				"required": [ "none" ]
+			}
 		}
 	},
 	"content_scripts": [ {
 		"matches": [
 			"*://ar.wikipedia.org/*",
 			"*://de.wikipedia.org/*",
+			"*://dsb.wikipedia.org/*",
 			"*://en.wikipedia.org/*",
 			"*://es.wikipedia.org/*",
 			"*://eu.wikipedia.org/*",
+			"*://fa.wikipedia.org/*",
 			"*://fr.wikipedia.org/*",
+			"*://hi.wikipedia.org/*",
 			"*://hu.wikipedia.org/*",
 			"*://id.wikipedia.org/*",
 			"*://it.wikipedia.org/*",
@@ -31,21 +37,31 @@
 			"*://nl.wikipedia.org/*",
 			"*://pl.wikipedia.org/*",
 			"*://pt.wikipedia.org/*",
-			"*://tr.wikipedia.org/*"
+			"*://ru.wikipedia.org/*",
+			"*://sv.wikipedia.org/*",
+			"*://tr.wikipedia.org/*",
+			"*://uk.wikipedia.org/*",
+			"*://vi.wikipedia.org/*"
 		],
 		"exclude_globs": [
 			"*://ar.wikipedia.org/*title=%D8%AE%D8%A7%D8%B5:*",
 			"*://ar.wikipedia.org/wiki/%D8%AE%D8%A7%D8%B5:*",
 			"*://de.wikipedia.org/*title=Spezial:*",
 			"*://de.wikipedia.org/wiki/Spezial:*",
+			"*://dsb.wikipedia.org/*title=Specialne:*",
+			"*://dsb.wikipedia.org/wiki/Specialne:*",
 			"*://en.wikipedia.org/*title=Special:*",
 			"*://en.wikipedia.org/wiki/Special:*",
 			"*://es.wikipedia.org/*title=Especial:*",
 			"*://es.wikipedia.org/wiki/Especial:*",
 			"*://eu.wikipedia.org/*title=Berezi:*",
 			"*://eu.wikipedia.org/wiki/Berezi:*",
+			"*://fa.wikipedia.org/*title=%D9%88%DB%8C%DA%98%D9%87:*",
+			"*://fa.wikipedia.org/wiki/%D9%88%DB%8C%DA%98%D9%87:*",
 			"*://fr.wikipedia.org/*title=Sp%C3%A9cial:*",
 			"*://fr.wikipedia.org/wiki/Sp%C3%A9cial:*",
+			"*://hi.wikipedia.org/*title=विशेष:*",
+			"*://hi.wikipedia.org/wiki/विशेष:*",
 			"*://hu.wikipedia.org/*title=Speci%C3%A1lis:*",
 			"*://hu.wikipedia.org/wiki/Speci%C3%A1lis:*",
 			"*://id.wikipedia.org/*title=Istimewa:*",
@@ -60,8 +76,16 @@
 			"*://pl.wikipedia.org/wiki/Specjalna:*",
 			"*://pt.wikipedia.org/*title=Especial:*",
 			"*://pt.wikipedia.org/wiki/Especial:*",
+			"*://ru.wikipedia.org/*title=Служебная:*",
+			"*://ru.wikipedia.org/wiki/Служебная:*",
+			"*://sv.wikipedia.org/*title=Special:*",
+			"*://sv.wikipedia.org/wiki/Special:*",
 			"*://tr.wikipedia.org/*title=%C3%96zel:*",
-			"*://tr.wikipedia.org/wiki/%C3%96zel:*"
+			"*://tr.wikipedia.org/wiki/%C3%96zel:*",
+			"*://uk.wikipedia.org/*title=%D0%A1%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0:*",
+			"*://uk.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B5%D1%86%D1%96%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0:*",
+			"*://vi.wikipedia.org/*title=%C4%90%E1%BA%B7c_bi%E1%BB%87t:",
+			"*://vi.wikipedia.org/wiki/%C4%90%E1%BA%B7c_bi%E1%BB%87t:"
 		],
 		"js": [ "js/contentScript.js" ],
 		"css": [ "generated.whowrotethat.css" ],
@@ -73,10 +97,13 @@
 			"matches": [
 				"*://ar.wikipedia.org/*",
 				"*://de.wikipedia.org/*",
+				"*://dsb.wikipedia.org/*",
 				"*://en.wikipedia.org/*",
 				"*://es.wikipedia.org/*",
 				"*://eu.wikipedia.org/*",
+				"*://fa.wikipedia.org/*",
 				"*://fr.wikipedia.org/*",
+				"*://hi.wikipedia.org/*",
 				"*://hu.wikipedia.org/*",
 				"*://id.wikipedia.org/*",
 				"*://it.wikipedia.org/*",
@@ -84,7 +111,11 @@
 				"*://nl.wikipedia.org/*",
 				"*://pl.wikipedia.org/*",
 				"*://pt.wikipedia.org/*",
-				"*://tr.wikipedia.org/*"
+				"*://ru.wikipedia.org/*",
+				"*://sv.wikipedia.org/*",
+				"*://tr.wikipedia.org/*",
+				"*://uk.wikipedia.org/*",
+				"*://vi.wikipedia.org/*"
 			]
 		}
 	],
