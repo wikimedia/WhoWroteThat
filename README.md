@@ -27,28 +27,7 @@ Table of Contents:
 
 ## Supported Wikipedias
 
-The tool works on Wikipedias supported by the WhoColor API:
-[Arabic](https://ar.wikipedia.org/),
-[Basque](https://eu.wikipedia.org/),
-[English](https://en.wikipedia.org/),
-[Dutch](https://nl.wikipedia.org/),
-[French](https://fr.wikipedia.org/),
-[German](https://de.wikipedia.org/),
-[Hindi](https://hi.wikipedia.org/),
-[Hungarian](https://hu.wikipedia.org/),
-[Indonesian](https://id.wikipedia.org/),
-[Italian](https://it.wikipedia.org/),
-[Japanese](https://ja.wikipedia.org/),
-[Lower Sorbian](https://dsb.wikipedia.org/),
-[Persian](https://fa.wikipedia.org/),
-[Polish](https://pl.wikipedia.org/),
-[Portuguese](https://pt.wikipedia.org/),
-[Russian](https://ru.wikipedia.org/),
-[Spanish](https://es.wikipedia.org/)
-[Swedish](https://sv.wikipedia.org/),
-[Turkish](https://tr.wikipedia.org/),
-[Ukrainian](https://uk.wikipedia.org/), and
-[Vietnamese](https://vi.wikipedia.org/).
+The tool works on Wikipedias supported by WikiWho. See [the full list](https://www.mediawiki.org/wiki/Special:MyLanguage/WikiWho#Currently_supported_wikis).
 
 ## Installation for users
 
