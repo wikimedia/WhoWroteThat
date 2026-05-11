@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.23.1] - 2026-05-10
+### Changed
+- Added support for `ce`, `sr`, `no`, `fi`, `cs`, `ro` and `sh` language
+  Wikipedias.
+
 ## [0.23.0] - 2026-04-29
 ### Changed
 - Added support for `dsb`, `fa`, `hi`, `ru`, `sv`, `uk`, and `vi` language
@@ -240,7 +245,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.4...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.1...HEAD
+[0.23.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.0...0.23.1
+[0.23.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.4...0.23.0
 [0.22.4]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.3...0.22.4
 [0.22.3]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.2...0.22.3
 [0.22.2]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.1...0.22.2
