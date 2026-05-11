@@ -1,13 +1,18 @@
 {
 	"@metadata": {
-		"authors": []
+		"authors": [
+			"Shem.iz"
+		]
 	},
 	"whowrotethat-ext-name": "ആർ എഴുതി?",
 	"whowrotethat-ext-name-beta": "ആർ എഴുതി? (ബീറ്റ)",
+	"whowrotethat-ext-desc": "വിക്കിപീഡിയ ലേഖനങ്ങളിൽ കർത്തൃത്വവും പുനരവലോകന വിവരങ്ങളും ദൃശ്യപരമായും നേരിട്ടും പര്യവേക്ഷണം ചെയ്യുക. വിക്കിഹൂ നൽകുന്ന പിന്തുണ.",
 	"whowrotethat-activation-link": "ആർ എഴുതി?",
 	"whowrotethat-activation-link-tooltip": "\"ആർ എഴുതി\" സജീവമാക്കുക",
 	"whowrotethat-state-pending": "$1 ലോഡുചെയ്യുന്നു. ഇതിന് കുറച്ച് സമയമെടുത്തേക്കാം.",
 	"whowrotethat-state-pending-name": "ആർ എഴുതി?",
+	"whowrotethat-state-error": "പിഴവ്: $1",
+	"whowrotethat-error-refresh": "പുതുക്കുക അല്ലെങ്കിൽ പിന്നീട് വീണ്ടും ശ്രമിക്കുക.",
 	"whowrotethat-error-later": "പിന്നീട് വീണ്ടും ശ്രമിക്കുക.",
 	"whowrotethat-error-contact": "പുതുക്കുക അല്ലെങ്കിൽ പിന്നീട് വീണ്ടും ശ്രമിക്കുക. $1",
 	"whowrotethat-error-contact-link": "പ്രശ്നം നിലനിൽക്കുകയാണെങ്കിൽ, ഞങ്ങളെ ബന്ധപ്പെടുക.",
