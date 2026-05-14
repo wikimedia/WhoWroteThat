@@ -17,9 +17,13 @@
 	"whowrotethat-error-contact": "പുതുക്കുക അല്ലെങ്കിൽ പിന്നീട് വീണ്ടും ശ്രമിക്കുക. $1",
 	"whowrotethat-error-contact-link": "പ്രശ്നം നിലനിൽക്കുകയാണെങ്കിൽ, ഞങ്ങളെ ബന്ധപ്പെടുക.",
 	"whowrotethat-ready-title": "ആർ എഴുതി?",
+	"whowrotethat-tour-welcome-title": "$1 പ്രവർത്തനക്ഷമമാക്കിയിട്ടുണ്ട്!",
 	"whowrotethat-tour-welcome-title-name": "ആർ എഴുതി?",
 	"whowrotethat-tour-welcome-description": "സൈഡ്‌ബാറിൽ നിന്ന് ഉപകരണം സജീവമാക്കുക. ഒരേ രചയിതാവിന്റെ സംഭാവനകൾ ഹൈലൈറ്റ് ചെയ്യുന്നതിന് എഴുത്തു ഹോവർ ചെയ്യുക. രചയിതാവിനെയും പുനരവലോകന വിശദാംശങ്ങളെയും കാണാൻ ക്ലിക്കുചെയ്യുക.",
 	"whowrotethat-tour-welcome-dismiss": "മനസ്സിലായി!",
+	"whowrotethat-revision-added": "$1 ഇത് $2-ൽ ചേർത്തു.",
 	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan-percent": "1% ൽ താഴെ",
+	"whowrotethat-revision-deleted-username": "(ഉപയോക്തൃനാമം അല്ലെങ്കിൽ ഐ. പി നീക്കം ചെയ്തു)",
 	"whowrotethat-revision-edit-summary-hidden": "(തിരുത്തലിന്റെ ചുരുക്കം മറയ്ക്കപ്പെട്ടിരിക്കുന്നു)"
 }
