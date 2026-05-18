@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.23.3] - 2026-05-18
+### Changed
+- Added support for `bg`, `cy`, `da`, `el`, `eo`, `et`, `gl`, `hr`, `ia`, `ka`,
+  `kk`, `lt`, `simple`, `sk`, `uz` and `vec` language Wikipedias.
+- Translation updates.
+
 ## [0.23.2] - 2026-05-13
 ### Changed
 - Added support for `als`, `be`, `bn`, `he`, `ml`, `ms`, `ne`, `sq`, `th`,
@@ -251,7 +257,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.2...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.3...HEAD
+[0.23.3]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.2...0.23.3
 [0.23.2]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.1...0.23.2
 [0.23.1]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.0...0.23.1
 [0.23.0]: https://github.com/wikimedia/WhoWroteThat/compare/0.22.4...0.23.0
