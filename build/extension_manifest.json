@@ -55,6 +55,7 @@
 			"*://ja.wikipedia.org/*",
 			"*://ka.wikipedia.org/*",
 			"*://kk.wikipedia.org/*",
+			"*://ko.wikipedia.org/*",
 			"*://ku.wikipedia.org/*",
 			"*://lt.wikipedia.org/*",
 			"*://lv.wikipedia.org/*",
@@ -62,6 +63,7 @@
 			"*://ml.wikipedia.org/*",
 			"*://mr.wikipedia.org/*",
 			"*://ms.wikipedia.org/*",
+			"*://mt.wikipedia.org/*",
 			"*://ne.wikipedia.org/*",
 			"*://nl.wikipedia.org/*",
 			"*://no.wikipedia.org/*",
@@ -87,7 +89,8 @@
 			"*://ur.wikipedia.org/*",
 			"*://uz.wikipedia.org/*",
 			"*://vec.wikipedia.org/*",
-			"*://vi.wikipedia.org/*"
+			"*://vi.wikipedia.org/*",
+			"*://zh.wikipedia.org/*"
 		],
 		"exclude_globs": [
 			"*://af.wikipedia.org/*title=Spesiaal:*",
@@ -158,6 +161,8 @@
 			"*://ka.wikipedia.org/wiki/%E1%83%A1%E1%83%9E%E1%83%94%E1%83%AA%E1%83%98%E1%83%90%E1%83%9A%E1%83%A3%E1%83%A0%E1%83%98:*",
 			"*://kk.wikipedia.org/*title=%D0%90%D1%80%D0%BD%D0%B0%D0%B9%D1%8B:*",
 			"*://kk.wikipedia.org/wiki/%D0%90%D1%80%D0%BD%D0%B0%D0%B9%D1%8B:*",
+			"*://ko.wikipedia.org/*title=%ED%8A%B9%EC%88%98:*",
+			"*://ko.wikipedia.org/wiki/%ED%8A%B9%EC%88%98:*",
 			"*://ku.wikipedia.org/*title=Taybet:*",
 			"*://ku.wikipedia.org/wiki/Taybet:*",
 			"*://lt.wikipedia.org/*title=Specialus:*",
@@ -172,6 +177,8 @@
 			"*://mr.wikipedia.org/wiki/%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7:*",
 			"*://ms.wikipedia.org/*title=Khas:*",
 			"*://ms.wikipedia.org/wiki/Khas:*",
+			"*://mt.wikipedia.org/*title=Spe%C4%8Bjali:*",
+			"*://mt.wikipedia.org/wiki/Spe%C4%8Bjali:*",
 			"*://ne.wikipedia.org/*title=%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7:*",
 			"*://ne.wikipedia.org/wiki/%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7:*",
 			"*://nl.wikipedia.org/*title=Speciaal:*",
@@ -224,8 +231,10 @@
 			"*://uz.wikipedia.org/wiki/Maxsus:*",
 			"*://vec.wikipedia.org/*title=Spe%C3%A7a%C5%82e:*",
 			"*://vec.wikipedia.org/wiki/Spe%C3%A7a%C5%82e:*",
-			"*://vi.wikipedia.org/*title=%C4%90%E1%BA%B7c_bi%E1%BB%87t:",
-			"*://vi.wikipedia.org/wiki/%C4%90%E1%BA%B7c_bi%E1%BB%87t:"
+			"*://vi.wikipedia.org/*title=%C4%90%E1%BA%B7c_bi%E1%BB%87t:*",
+			"*://vi.wikipedia.org/wiki/%C4%90%E1%BA%B7c_bi%E1%BB%87t:*",
+			"*://zh.wikipedia.org/*title=Special:*",
+			"*://zh.wikipedia.org/wiki/Special:*"
 		],
 		"js": [ "js/contentScript.js" ],
 		"css": [ "generated.whowrotethat.css" ],
@@ -269,6 +278,7 @@
 				"*://ja.wikipedia.org/*",
 				"*://ka.wikipedia.org/*",
 				"*://kk.wikipedia.org/*",
+				"*://ko.wikipedia.org/*",
 				"*://ku.wikipedia.org/*",
 				"*://lt.wikipedia.org/*",
 				"*://lv.wikipedia.org/*",
@@ -276,6 +286,7 @@
 				"*://ml.wikipedia.org/*",
 				"*://mr.wikipedia.org/*",
 				"*://ms.wikipedia.org/*",
+				"*://mt.wikipedia.org/*",
 				"*://ne.wikipedia.org/*",
 				"*://nl.wikipedia.org/*",
 				"*://no.wikipedia.org/*",
@@ -301,7 +312,8 @@
 				"*://ur.wikipedia.org/*",
 				"*://uz.wikipedia.org/*",
 				"*://vec.wikipedia.org/*",
-				"*://vi.wikipedia.org/*"
+				"*://vi.wikipedia.org/*",
+				"*://zh.wikipedia.org/*"
 			]
 		}
 	],
