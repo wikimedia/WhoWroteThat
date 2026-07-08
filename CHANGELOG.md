@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.23.5] - 2026-07-08
+### Changed
+- Added support for `ko`, `mt` and `zh` language Wikipedias.
+- Translation updates.
+
 ## [0.23.4] - 2026-05-26
 ### Changed
 - Added support for `af`, `az`, `bs`, `ku`, `lv`, `mk`, `mr`, `sl`, `sw`, `ta`,
@@ -262,7 +267,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First tagged release
 - Internationalization improvements
 
-[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.4...HEAD
+[Unreleased]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.5...HEAD
+[0.23.5]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.4...0.23.5
 [0.23.4]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.3...0.23.4
 [0.23.3]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.2...0.23.3
 [0.23.2]: https://github.com/wikimedia/WhoWroteThat/compare/0.23.1...0.23.2
