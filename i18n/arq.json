@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bachounda"
+		]
+	},
+	"whowrotethat-ext-name": "شكون لي كتب هادا؟",
+	"whowrotethat-ext-name-beta": "شكون لي كتب هادا؟ (بيتا)",
+	"whowrotethat-ext-desc": "استكشف معلومات التأليف والمراجعة بشكل بصري ومباشر في مقالات ويكيبيديا. مدعوم من WikiWho.",
+	"whowrotethat-ext-desc-beta": "استكشف معلومات التأليف في ويكيبيديا. مدعوم من WikiWho. هادي نسخة بيتا، مخصصة فقط للاختبار.",
+	"whowrotethat-ext-longdesc": "شكون لي كتب هادا؟ (WWT) هي إضافة للمتصفح، تعرض معلومات التأليف مباشرة في مقالات ويكيبيديا. كي تحوم بالماوس على المحتوى، الأداة تولي تظلل كل المحتوى تاع نفس المؤلف. كي تضغط على المحتوى، الأداة توريك المؤلف تاع المراجعة، مع التفاصيل تاعها. بشكل عام، WWT تسمح للمستخدمين يكتشفو مصدر التعديل وخلفيته، من غير ما يتعمقو في تاريخ المراجعات.",
+	"whowrotethat-activation-link": "شكون لي كتب هادا؟",
+	"whowrotethat-activation-link-tooltip": "فعّل \"شكون لي كتب هادا؟\"",
+	"whowrotethat-deactivation-link": "أغلق \"شكون لي كتب هادا\"",
+	"whowrotethat-state-pending": "$1 كاين لي يحمل. ياخذ هادا شوية وقت.",
+	"whowrotethat-state-pending-name": "شكون لي كتب هادا؟",
+	"whowrotethat-state-error": "غلطة: $1",
+	"whowrotethat-error-refresh": "حدّث ولاّ حاول مرة أخرى في وقت لاحق.",
+	"whowrotethat-error-later": "رجاء حاول مرة أخرى في وقت لاحق.",
+	"whowrotethat-error-contact": "حدّث ولاّ حاول مرة أخرى في وقت لاحق. $1",
+	"whowrotethat-error-contact-link": "إذا كانت المشكلة مازالت، اتصل بنا.",
+	"whowrotethat-ready-title": "شكون لي كتب هادا؟",
+	"whowrotethat-ready-general": "حوم بالماوس باش تشوف المساهمات تاع نفس المؤلف. اضغط باش تزيد التفاصيل.",
+	"whowrotethat-tour-welcome-title": "$1 مفعلة!",
+	"whowrotethat-tour-welcome-title-name": "شكون لي كتب هادا؟",
+	"whowrotethat-tour-welcome-description": "فعّل الأداة من الشريط الجانبي. حوم بالماوس على النص باش يظلل المساهمات تاع نفس المؤلف. اضغط باش تشوف المؤلف وتفاصيل المراجعة.",
+	"whowrotethat-tour-welcome-dismiss": "مفهوم!",
+	"whowrotethat-revision-added": "$1 زاد هادا في $2.",
+	"whowrotethat-revision-attribution": "هو/هي كتب $1 من الصفحة.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "هو/هي كتب $1 من الصفحة.",
+	"whowrotethat-revision-attribution-lessthan-percent": "أقل من 1%",
+	"whowrotethat-revision-deleted-username": "(السمية ولاّ عنوان IP محذوف)",
+	"whowrotethat-revision-edit-summary-hidden": "(ملخص التعديل محذوف)"
+}
