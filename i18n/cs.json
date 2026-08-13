@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Comfyquiettree"
+		]
+	},
+	"whowrotethat-ext-name": "Kdo to napsal?",
+	"whowrotethat-ext-name-beta": "Kdo to napsal? (BETA)",
+	"whowrotethat-ext-desc": "Prozkoumejte informace o autorství a revizích vizuálně a přímo v článcích na Wikipedii. Vytvořeno pomocí WikiWho.",
+	"whowrotethat-ext-desc-beta": "Prozkoumejte informace o autorství na Wikipedii. Vytvořeno pomocí WikiWho. Toto je BETA verze, určená pouze pro testování.",
+	"whowrotethat-ext-longdesc": "Kdo to napsal? (WWT) je rozšíření prohlížeče, které zobrazuje informace o autorství přímo u článků na Wikipedii. Když najedete myší na obsah, nástroj zvýrazní veškerý obsah od stejného autora. Po kliknutí na obsah nástroj identifikuje autora revize spolu s podrobnostmi o revizi. Celkově WWT umožňuje uživatelům zjistit zdroj a pozadí úpravy, aniž by museli prohledávat historii revizí.",
+	"whowrotethat-activation-link": "Kdo to napsal?",
+	"whowrotethat-activation-link-tooltip": "Aktivovat Kdo to napsal?",
+	"whowrotethat-deactivation-link": "Zavřít Kdo to napsal?",
+	"whowrotethat-state-pending": "$1 se načítá. Může to chvíli trvat.",
+	"whowrotethat-state-pending-name": "Kdo to napsal?",
+	"whowrotethat-state-error": "Chyba: $1",
+	"whowrotethat-error-refresh": "Obnovte nebo to zkuste znovu později.",
+	"whowrotethat-error-later": "Zkuste to prosím znovu později.",
+	"whowrotethat-error-contact": "Obnovte nebo to zkuste znovu později. $1",
+	"whowrotethat-error-contact-link": "Pokud problém přetrvává, kontaktujte nás.",
+	"whowrotethat-ready-title": "Kdo to napsal?",
+	"whowrotethat-ready-general": "Najeďte myší pro zobrazení příspěvků od stejného autora. Kliknutím zobrazíte další podrobnosti.",
+	"whowrotethat-tour-welcome-title": "$1 je aktivováno!",
+	"whowrotethat-tour-welcome-title-name": "Kdo to napsal?",
+	"whowrotethat-tour-welcome-description": "Aktivujte nástroj z postranního panelu. Najeďte myší na text pro zvýraznění příspěvků od stejného autora. Kliknutím zobrazíte podrobnosti o autorovi a revizi.",
+	"whowrotethat-tour-welcome-dismiss": "Rozumím!",
+	"whowrotethat-revision-added": "$1 přidal*a toto v $2.",
+	"whowrotethat-revision-attribution": "Napsali $1 této stránky.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Napsali $1 této stránky.",
+	"whowrotethat-revision-attribution-lessthan-percent": "méně než 1%",
+	"whowrotethat-revision-deleted-username": "(uživatelské jméno nebo IP adresa odstraněna)",
+	"whowrotethat-revision-edit-summary-hidden": "(shrnutí editace odstraněno)"
+}
