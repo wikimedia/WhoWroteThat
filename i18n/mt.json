@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"JiodoJ"
+		]
+	},
+	"whowrotethat-ext-name": "Min Kitibha?",
+	"whowrotethat-ext-name-beta": "Min Kitibha? (BETA)",
+	"whowrotethat-ext-desc": "Esplora informazzjoni dwar l-awtur u r-reviżjoni viżwalment u direttament fl-artikli tal-Wikipedija. Imħaddem minn WikiMin.",
+	"whowrotethat-ext-desc-beta": "Esplora l-informazzjoni dwar l-awturi tal-Wikipedija. Imħaddem minn WikiMin. Din hija l-verżjoni BETA, maħsuba għall-ittestjar biss.",
+	"whowrotethat-ext-longdesc": "Min Kitibha? (MKT) hija estensjoni tal-brawżer, li turi tagħrif dwar l-awtur direttament fuq l-artikli tal-Wikipedija. Meta tgħaddi fuq il-kontenut, l-għodda tenfasizza l-kontenut kollu mill-istess awtur. Meta tagħfas fuq il-kontenut, l-għodda tidentifika l-awtur tar-reviżjoni, flimkien mad-dettalji tar-reviżjoni. B'mod ġenerali, MKT tħalli l-utenti jiskopru s-sors u l-isfond ta' modifiki, mingħajr ma jfittxu fil-kronoloġija tar-reviżjonijiet.",
+	"whowrotethat-activation-link": "Min Kitibha?",
+	"whowrotethat-activation-link-tooltip": "Ixgħel Min Kitibha?",
+	"whowrotethat-deactivation-link": "Agħlaq Min Kitibha?",
+	"whowrotethat-state-pending": "$1 qed jitgħabba. Se ddum xi ftit.",
+	"whowrotethat-state-pending-name": "Min Kitibha?",
+	"whowrotethat-state-error": "Żball: $1",
+	"whowrotethat-error-refresh": "Ġedded jew erġa' pprova aktar tard.",
+	"whowrotethat-error-later": "Jekk jogħġbok erġa' pprova aktar tard.",
+	"whowrotethat-error-contact": "Ġedded jew erġa' pprova aktar tard. $1",
+	"whowrotethat-error-contact-link": "Jekk il-problema tibqa', ikkuntattjana.",
+	"whowrotethat-ready-title": "Min Kitibha?",
+	"whowrotethat-ready-general": "Għaddi fuq il-kliem biex tara l-kontribuzzjonijiet mill-istess awtur. Agħfas għal aktar dettalji.",
+	"whowrotethat-tour-welcome-title": "$1 nxtegħelet!",
+	"whowrotethat-tour-welcome-title-name": "Min Kitibha?",
+	"whowrotethat-tour-welcome-description": "Ixgħel l-għodda mill-menù tal-ġenb. Għaddi fuq it-test biex tenfasizza l-kontribuzzjonijiet mill-istess awtur. Agħfas biex tara d-dettalji tal-awtur u r-reviżjoni.",
+	"whowrotethat-tour-welcome-dismiss": "Fhimtha!",
+	"whowrotethat-revision-added": "$1 żieduha fuq $2 .",
+	"whowrotethat-revision-attribution": "Huma kitbu $1 tal-paġna.",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "Huma kitbu $1 tal-paġna.",
+	"whowrotethat-revision-attribution-lessthan-percent": "inqas minn 1%",
+	"whowrotethat-revision-deleted-username": "(l-isem tal-utent jew IP tneħħa)",
+	"whowrotethat-revision-edit-summary-hidden": "(taqsira tal-modifika tneħħiet)"
+}
