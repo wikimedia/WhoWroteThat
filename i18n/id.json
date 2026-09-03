@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bennylin",
 			"Daud I.F. Argana",
 			"Farras",
 			"Penyuwangi"
@@ -26,7 +27,7 @@
 	"whowrotethat-tour-welcome-title": "$1 diaktifkan!",
 	"whowrotethat-tour-welcome-title-name": "Ini Tulisan Siapa?",
 	"whowrotethat-tour-welcome-description": "Anda dapat mengaktifkan alat ini di sebelah kiri. Letakkan kursor di teks untuk melihat kontribusi pengguna yang sama. Klik untuk melihat informasi pengguna dan revisinya.",
-	"whowrotethat-tour-welcome-dismiss": "Paham!",
+	"whowrotethat-tour-welcome-dismiss": "Mengerti!",
 	"whowrotethat-revision-added": "$1 menambahkan bagian ini pada $2.",
 	"whowrotethat-revision-attribution": "$1 halaman ini ditambahkan oleh dia.",
 	"whowrotethat-revision-attribution-percent": "$1%",
