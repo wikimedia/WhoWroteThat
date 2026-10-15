@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bugoslav",
+			"Neptune, the Mystic",
+			"Ponor"
+		]
+	},
+	"whowrotethat-ext-name": "Who Wrote That?",
+	"whowrotethat-ext-name-beta": "Who Wrote That? (BETA)",
+	"whowrotethat-ext-desc": "Vizualno istražite informacije o autorstvu i revizijama u Wikipedijinim člancima. Dodatak pokreće WikiWho.",
+	"whowrotethat-ext-desc-beta": "Vizualno istražite informacije o autorstvu i revizijama u Wikipedijinim člancima. Dodatak pokreće WikiWho. Ovo je BETA verzija, namijenjena samo za testiranje.",
+	"whowrotethat-ext-longdesc": "Who Wrote That? (WWT) proširenje je za preglednik koje izravno prikazuje informacije o autorstvu na Wikipedijinim člancima. Kad mišem pređete preko sadržaja, alat istakne sav sadržaj istog autora. Kad kliknete na sadržaj, alat identificira autora izmjene, kao i detalje o njoj. Općenito, WWT suradnicima pomaže otkriti izvor i pozadinu uređivanja tako da ga ne moraju tražiti u povijesti izmjena.",
+	"whowrotethat-activation-link": "Tko je što napisao?",
+	"whowrotethat-activation-link-tooltip": "Pokreni Who Wrote That?",
+	"whowrotethat-deactivation-link": "Isključi Tko je što napisao?",
+	"whowrotethat-state-pending": "Učitava se pomagalo $1. To bi moglo potrajati.",
+	"whowrotethat-state-pending-name": "Tko je što napisao?",
+	"whowrotethat-state-error": "Greška: $1",
+	"whowrotethat-error-refresh": "Osvježite stranicu ili pokušajte ponovno kasnije.",
+	"whowrotethat-error-later": "Pokušajte kasnije.",
+	"whowrotethat-error-contact": "Osvježite stranicu ili pokušajte ponovno kasnije. $1",
+	"whowrotethat-error-contact-link": "Ako problem ne bude riješen, kontaktirajte s nama.",
+	"whowrotethat-ready-title": "Tko je što napisao?",
+	"whowrotethat-ready-general": "Zadržite pokazivač miša iznad teksta kako biste vidjeli doprinose istog autora. Kliknite za više detalja.",
+	"whowrotethat-tour-welcome-title": "Omogućeno je pomagalo $1",
+	"whowrotethat-tour-welcome-title-name": "Tko je što napisao?",
+	"whowrotethat-tour-welcome-description": "Pokrenite pomagalo iz izbornika. Zadržite pokazivač iznad teksta kako biste istaknuli doprinose istog autora. Kliknite kako biste vidjeli detalje o autoru i reviziji.",
+	"whowrotethat-tour-welcome-dismiss": "U redu!",
+	"whowrotethat-revision-added": "$1 u reviziji od $2",
+	"whowrotethat-revision-attribution": "Osoba je napisala $1 teksta stranice.",
+	"whowrotethat-revision-attribution-percent": "$1 %",
+	"whowrotethat-revision-attribution-lessthan": "Osoba je napisala $1 teksta stranice.",
+	"whowrotethat-revision-attribution-lessthan-percent": "manje od 1 %",
+	"whowrotethat-revision-deleted-username": "(uklonjeno suradničko ime)",
+	"whowrotethat-revision-edit-summary-hidden": "(uklonjen sažetak izmjene)"
+}
