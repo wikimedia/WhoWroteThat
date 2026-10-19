@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saraiki",
+			"Tauqeerkhansurani"
+		]
+	},
+	"whowrotethat-ext-name": "ایندا کیہݨ لکھیا؟",
+	"whowrotethat-ext-name-beta": "ایندا کیہݨ لکھیا؟ (BETA)",
+	"whowrotethat-ext-desc": "ویکیپیڈیا مضموناں وچ مصنفاں اتے ترمیماں دیاں معلومات کوں بصری طور تے براہِ راست دریافت کرو۔ WikiWho دی مدد نال۔",
+	"whowrotethat-ext-desc-beta": "ویکیپیڈیا وچ مصنفاں دیاں معلومات دریافت کرو۔ WikiWho دی مدد نال۔ ایہ BETA ورژن ہے، صرف ٹیسٹ کرݨ کیتے۔",
+	"whowrotethat-ext-longdesc": "ایندا کیہݨ لکھیا؟ (WWT) ہک براؤزر ایکسٹینشن ہے، جیہڑا ویکیپیڈیا مضموناں تے براہِ راست مصنفیت دی معلومات ݙکھائیندا ہے۔ جڈاں تساں مواد تے ہوور کریندے ہو، تاں اوزار ہک ای مصنف دا سارا مواد نمایاں کریندا ہے۔ جڈاں تساں مواد تے کلک کریندے ہو، تاں اوزار ترمیم دے مصنف دی نشاندہی کریندا ہے، ترمیم دی تفصیلات سمیت۔ مجموعی طور تے، WWT ورتیندڑاں کوں ترمیم دے ماخذ اتے پس منظر دریافت کرݨ دا موقع ݙیندا ہے، ترمیم دی تاریخ وچ کھوݨ کیتے بغیر۔",
+	"whowrotethat-activation-link": "ایندا کیہݨ لکھیا؟",
+	"whowrotethat-activation-link-tooltip": "ایندا کیہݨ لکھیا؟ کوں چالو کرو",
+	"whowrotethat-deactivation-link": "ایندا کیہݨ لکھیا؟ کوں بند کرو",
+	"whowrotethat-state-pending": "$1 لوڈ تھیندا پیا ہے۔ ایندا کجھ ویلا لڳ سڳدا ہے۔",
+	"whowrotethat-state-pending-name": "ایندا کیہݨ لکھیا؟",
+	"whowrotethat-state-error": "غلطی: $1",
+	"whowrotethat-error-refresh": "تازہ کرو یا بعد وچ ٻیا کوشش کرو۔",
+	"whowrotethat-error-later": "براہ کرم بعد وچ ٻیا کوشش کرو۔",
+	"whowrotethat-error-contact": "تازہ کرو یا بعد وچ ٻیا کوشش کرو۔ $1",
+	"whowrotethat-error-contact-link": "جے مسئلہ برقرار رہے، تاں ساݙے نال رابطہ کرو۔",
+	"whowrotethat-ready-title": "ایندا کیہݨ لکھیا؟",
+	"whowrotethat-ready-general": "ہک ای مصنف دیاں شراکتاں ݙیکھݨ کیتے ہوور کرو۔ مزید تفصیلات کیتے کلک کرو۔",
+	"whowrotethat-tour-welcome-title": "$1 چالو ہے!",
+	"whowrotethat-tour-welcome-title-name": "ایندا کیہݨ لکھیا؟",
+	"whowrotethat-tour-welcome-description": "سائیڈبار توں اوزار کوں چالو کرو۔ ہک ای مصنف دیاں شراکتاں کوں نمایاں کرݨ کیتے متن تے ہوور کرو۔ مصنف اتے ترمیم دی تفصیلات ݙیکھݨ کیتے کلک کرو۔",
+	"whowrotethat-tour-welcome-dismiss": "سمجھ آڳئی!",
+	"whowrotethat-revision-added": "$1 ایندا $2 کوں شامل کیتا۔",
+	"whowrotethat-revision-attribution": "اوہݨاں صفحے دا $1 لکھیا ہے۔",
+	"whowrotethat-revision-attribution-percent": "$1%",
+	"whowrotethat-revision-attribution-lessthan": "اوہݨاں صفحے دا $1 لکھیا ہے۔",
+	"whowrotethat-revision-attribution-lessthan-percent": "1٪ توں گھٹ",
+	"whowrotethat-revision-deleted-username": "(ورتیندڑ ناں یا IP ہٹا ݙتا ڳیا)",
+	"whowrotethat-revision-edit-summary-hidden": "(ترمیم دا خلاصہ ہٹا ݙتا ڳیا)"
+}
